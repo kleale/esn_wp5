@@ -209,11 +209,11 @@ const config = {
             filename: './tours.html'
         }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/matches.html`,
-        //     filename: './matches.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/matches.html`,
+            filename: './matches.html'
+        }),
 
         new HtmlWebpackPlugin({
             hash: false,
@@ -239,27 +239,30 @@ const config = {
             filename: './match_pubg_past.html'
         }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/page_text.html`,
-        //     filename: './page_text.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/page_text.html`,
+            filename: './page_text.html'
+        }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/user_account.html`,
-        //     filename: './user_account.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/user_log.html`,
-        //     filename: './user_log.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/user_reg.html`,
-        //     filename: './user_reg.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/user_account.html`,
+            filename: './user_account.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/user_log.html`,
+            filename: './user_log.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/user_reg.html`,
+            filename: './user_reg.html'
+        }),
+
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/news.html`,
@@ -285,27 +288,27 @@ const config = {
             template: `${PATHS.src}/elements.html`,
             filename: './elements.html'
         }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/players_list.html`,
-        //     filename: './players_list.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/players_list_pubg.html`,
-        //     filename: './players_list_pubg.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/teams_list.html`,
-        //     filename: './teams_list.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/players_list.html`,
+            filename: './players_list.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/players_list_pubg.html`,
+            filename: './players_list_pubg.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/teams_list.html`,
+            filename: './teams_list.html'
+        }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/teams_list2.html`,
-        //     filename: './teams_list2.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/teams_list2.html`,
+            filename: './teams_list2.html'
+        }),
 
         new HtmlWebpackPlugin({
             hash: false,
@@ -342,16 +345,16 @@ const config = {
         //     template: `${PATHS.src}/tour_group_stadia.html`,
         //     filename: './tour_group_stadia.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/team.html`,
-        //     filename: './team.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/player.html`,
-        //     filename: './player.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/team.html`,
+            filename: './team.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/player.html`,
+            filename: './player.html'
+        }),
 
 
         // new HtmlWebpackPlugin({
@@ -369,11 +372,11 @@ const config = {
         //     template: `${PATHS.src}/highlight.html`,
         //     filename: './highlight.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/icons.html`,
-        //     filename: './icons.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/icons.html`,
+            filename: './icons.html'
+        }),
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/search.html`,
@@ -389,44 +392,42 @@ const config = {
         //     template: `${PATHS.src}/job.html`,
         //     filename: './job.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/transfers.html`,
-        //     filename: './transfers.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/team2.html`,
-        //     filename: './team2.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/mail.html`,
-        //     filename: './mail.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/pwd.html`,
-        //     filename: './pwd.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/pwd_count.html`,
-        //     filename: './pwd_count.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/reg.html`,
-        //     filename: './reg.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/externallink.html`,
-        //     filename: './externallink.html'
-        // })
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/transfers.html`,
+            filename: './transfers.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/team2.html`,
+            filename: './team2.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/mail.html`,
+            filename: './mail.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/pwd.html`,
+            filename: './pwd.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/pwd_count.html`,
+            filename: './pwd_count.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/reg.html`,
+            filename: './reg.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/externallink.html`,
+            filename: './externallink.html'
+        })
 
-        // Add your plugins here
-        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
 };
 
