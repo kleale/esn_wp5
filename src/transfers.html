@@ -1,0 +1,529 @@
+{% set title = "Рейтинг команд" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Трансферы Hearthstone</h4><b></b>
+        </div>
+
+        {#
+          <span class="datehead">20 декабря</span>
+        #}
+
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+
+        <hr>
+
+        {% for i in 0..5 %}
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+            <sup>тренер</sup>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+        <hr>
+        {% for i in 0..5 %}
+
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+            <sup>тренер</sup>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+
+        <hr>
+
+        {% for i in 0..5 %}
+        <a class="transferlink sctm" href="#">
+          <span>
+            <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          </span>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="direction">
+            <i class="fa fa-long-arrow-alt-right"></i>
+            <sup>{{ random(['тренер','аренда','']) }}</sup>
+          </span>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+
+        <hr>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>19 декабря</span></div>#}
+        {% for i in 0..8 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+        {#<div class="hblock"><b></b><span>16 декабря</span></div>#}
+        {% for i in 0..1 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>15 декабря</span></div>#}
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>5 декабря</span></div>#}
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>4 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все трансферы</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="transfers_list">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="hblock">
+              <h1>Трансфер</h1><b></b>
+            </div>
+
+
+            <div class="">
+              <table class="table table-hover table-striped t-transfers table-sm">
+                <thead>
+                  <tr>
+                    <th class="w5">
+                      <a href="#" class="down">дата</a>
+                    </th>
+                    <th>
+                      <a href="#" class="up">игроки</a>
+                    </th>
+                    <th class="w10 oldtm">
+                      команда
+                    </th>
+                    <th class="w2">
+                    </th>
+                    <th class="w10 newtm">
+                      команда
+                    </th>
+                    <th>новость</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      2{{i}}.10.2019
+                    </td>
+                    <td class="plrs">
+                      
+                      <a href="#" class="playerName">
+                        <!-- <picture>
+                          <source type="image/webp" srcset="../img/dummy/ava.png">
+                          <img src="./img/dummy/ava.png" alt="ИГРОК">
+                        </picture> -->
+                        <img class="flag" src="../img/dummy/flag1.png" alt="">
+                        <span>
+                          Bonus
+                        </span>
+                      </a>
+                     
+                    </td>
+                    <td class="oldtm">
+                      <a href="#" class="teamNameIco">
+                        <picture>
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x" type="image/webp">
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                          <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <span rel="team">HR</span>
+                      </a>
+                    </td>
+                    <td class="arrw">
+                      <i class="fa fa-long-arrow-alt-right"></i>
+                      <sup>аренда</sup>
+                    </td>
+                    <td class="newtm">
+                      <a href="#" class="teamNameIco">
+                        <picture>
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x" type="image/webp">
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                          <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <span rel="team">HR</span>
+                      </a>
+                    </td>
+                    <td class="tlink">
+                      <a href="#">
+                        <i class="fa fa-chevron-right"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  {% for i in 1..5 %}
+                  <tr>
+                    <td>
+                      2{{i}}.10.2019
+                    </td>
+                    <td class="plrs">
+                      {% for i in 0..2 %}
+                      <a href="#" class="playerName">
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/ava.png">
+                          <img src="./img/dummy/ava.png" alt="ИГРОК">
+                        </picture>
+                        <img class="flag" src="../img/dummy/flag1.png" alt="">
+                        <span>
+                          Bonus
+                          <u>Иванов Иван</u>
+                        </span>
+                      </a>
+                      {% endfor %}
+                    </td>
+                    <td class="oldtm">
+                      <a href="#" class="teamNameIco">
+                        <picture>
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x" type="image/webp">
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                          <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <span rel="team">HR</span>
+                      </a>
+                    </td>
+                    <td class="arrw">
+                      <i class="fa fa-long-arrow-alt-right"></i>
+                    </td>
+                    <td class="newtm">
+                      <a href="#" class="teamNameIco">
+                        <picture>
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x" type="image/webp">
+                          <source srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                          <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <span rel="team">HR</span>
+                      </a>
+                    </td>
+                    <td class="tlink">
+                      <a href="#">
+                        <i class="fa fa-chevron-right"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+
+            <br><br><br><br><br><br>
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+
+            <!-- rightcol -->
+
+            <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+            <div class="hblock">
+              <h4>Фильтр</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <div class="filter" id="filter">
+              <div class="searcher">
+                <input type="text" class="form-control form-control-sm mfilter" rel="t" data-del="" data-upd="" value=""
+                  placeholder="Название команды" autocomplete="off">
+                <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bplayer"><span>Игрок</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="player" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="player" data-del="" data-upd="" id="fplayer">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id=""><span>Турнир</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bregion"><span>Регион</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="region" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="region" data-del="" data-upd="" id="fregion">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bcountry"><span>Страна</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="country" placeholder="Страна по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="country" data-del="" data-upd="" id="fcountry">
+                  </div>
+                </div>
+              </div>
+
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Сравнение команд <i title="Типо хелптекст"
+                    class="tip" data-toggle="tip"></i></label>
+              </div>
+
+              <div class="hblock">
+                <b></b><button type="button" class="btn btn-sm btn-primary">Фильтровать</button><b></b>
+              </div>
+
+            </div> <!--  filter -->
+
+
+            <div class="hblock">
+              <h4>Победители</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+            <!-- <div class="game-select">
+                <a href="#" class="gl dota2 active"></a>
+                <a href="#" class="gl csgo"></a>
+                <a href="#" class="gl lol"></a>
+                <a href="#" class="gl hs"></a>
+                <a href="#" class="gl ow"></a>
+                <a href="#" class="gl fn"></a>
+                <a href="#" class="gl pubg"></a>
+                <a href="#" class="gl rl"></a>
+                <a href="#" class="gl rs"></a>
+                <a href="#" class="gl sc2"></a>
+            </div> -->
+            <section class="tours-winners">
+              <div class="flex-table">
+                {% for i in 0..9 %}
+                <div class="frow" href="#">
+                  <a href="#" class="tour">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                      <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                    </picture>
+                    {{random(tour)}}
+                  </a>
+                  <a href="#" class="team">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                      <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    {{random(team)}}
+                  </a>
+                  <i>
+                    $ 233K
+                  </i>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+            <div class="hblock">
+              <h4>Как рассчитывается рейтинг</h4><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            <section class="col-text">
+              <p>
+                The world ranking is based on teams' achievements over the past year (with severe decay in points
+                throughout each month), recent form over the last 2 months and performance at the last 10 LAN events.
+              </p>
+              <p>
+                All of that is predicated around a 3-man core each team is required to have in order to retain their
+                past points. Online matches and tournaments are included, but with a diminishing factor which means they
+                cannot make a big difference among the top teams, and mainly serve to put new teams on the map.
+              </p>
+            </section>
+
+          </div>
+        </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

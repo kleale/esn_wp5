@@ -1,0 +1,307 @@
+{% set title = "Рейтинг игроков" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+          {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Новости DLS1</h4><b></b><span>20 декабря</span>
+        </div>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все новости DLS1</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="video_list">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+            <div class="hblock">
+              <h1>Видео</h1><b></b>
+            </div>
+
+            <!-- matchesList -->
+            <div id="mobile-filter-holder"></div>
+
+            <section class="video-full">
+              <div class="flex-table">
+                <!--loading -->
+                {% for i in 0..5 %}
+                <a class="article frow" href="#">
+                  <span class="tour">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                      <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                    </picture>
+                  </span>
+                  <div class="teams">
+                    <s><img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""></s>
+                    <span>
+                      <b>{{ random(team) }}</b>
+                      <!-- <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                      </picture> -->
+                    </span>
+                    vs
+                    <span>
+                      <!-- <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                      </picture> -->
+                      <b>{{ random(team) }}</b>
+                    </span>
+                  </div>
+                  <div class="channel">
+                    Dota2RuHub
+                  </div>
+                  <div class="views">
+                    <i class="fa fa-eye"></i> 7,466
+                  </div>
+                  <div class="date">
+                    1{{i}} мар
+                  </div>
+                  <div class="timer">
+                    <i class="fa fa-stopwatch"></i>
+                  </div>
+                </a>
+                {% endfor %}
+              </div>
+            </section>
+
+
+
+            {% include "./tpl/pager.html" %}
+
+
+            <div class="bottom-text">
+              Идейные соображения высшего порядка, а также сложившаяся структура организации требуют от нас анализа
+              соответствующий условий активизации. Не следует, однако забывать, что дальнейшее развитие различных форм
+              деятельности позволяет выполнять важные задания по разработке форм развития. Повседневная практика
+              показывает, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации форм
+              развития. Задача организации, в особенности же начало повседневной работы по формированию позиции требуют
+              от нас анализа модели развития. Таким образом рамки и место обучения кадров в значительной степени
+              обуславливает создание дальнейших направлений развития.
+            </div>
+
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4 mt-0">
+            <!-- rightcol -->
+            <div class="hblock">
+              <h4>Фильтр</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <div class="filter" id="filter">
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bgame"><span>Игра</span><b></b></button>
+                <div class="dropdown-menu mfilter" rel="game" data-del="team" data-upd="team">
+                  <a class="dropdown-item" href="javascript:;" rel="582" data-eng="dota-2"
+                    onclick="filter('game',582)"><u class="gl gl582"></u>Dota 2</a>
+                  <a class="dropdown-item" href="javascript:;" rel="704" data-eng="csgo" onclick="filter('game',704)"><u
+                      class="gl gl704"></u>CS:GO</a>
+                  <a class="dropdown-item" href="javascript:;" rel="755" data-eng="hearthstone"
+                    onclick="filter('game',755)"><u class="gl gl755"></u>Hearthstone</a>
+                  <a class="dropdown-item" href="javascript:;" rel="313" data-eng="lol" onclick="filter('game',313)"><u
+                      class="gl gl313"></u>LoL</a>
+                  <a class="dropdown-item" href="javascript:;" rel="100" data-eng="pubg" onclick="filter('game',100)"><u
+                      class="gl gl100"></u>PUBG</a>
+                  <a class="dropdown-item" href="javascript:;" rel="800" data-eng="overwatch"
+                    onclick="filter('game',800)"><u class="gl gl800"></u>Overwatch</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id=""><span>Турнир</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                  <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" id=""><span>Стадия</span><b></b></button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-form">
+                      <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                        autocomplete="off">
+                    </div>
+                    <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false" id=""><span>Раунд</span><b></b></button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-form">
+                        <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                          autocomplete="off">
+                      </div>
+                      <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                      </div>
+                    </div>
+                  </div>
+
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bteam"><span>Команда</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="team" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="team" data-del="" data-upd="" id="fteam">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bseries"><span>Игрок</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="series" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="series" data-del="" data-upd="" id="fseries">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                  <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" id="bseries"><span>Герой</span><b></b></button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-form">
+                      <input type="text" class="form-control flist" rel="series" placeholder="Поиск по названию"
+                        autocomplete="off">
+                    </div>
+                    <div class="mfilter" rel="series" data-del="" data-upd="" id="fseries">
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bcountry"><span>Язык</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="country" placeholder="Страна по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="country" data-del="" data-upd="" id="fcountry">
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="hblock">
+                <b></b><button type="button" class="btn btn-sm btn-primary">Фильтровать</button><b></b>
+              </div>
+
+            </div> <!--  filter -->
+
+            <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+            <!-- <div class="hblock">
+              <h2>Хайлайты</h2><b></b><span><a href="#">все хайлайты</a><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+            <section class="highlights">
+              {% for i in 0..1 %}
+
+              <div class="bestEvent bestKill">
+                <a href="#">
+                  <b>
+                    <img src="../img/dummy/hl.png">
+                    <span><i class="gl {{random(gamelogo)}}"></i> Jabberwock VS Comanche</span>
+                  </b>
+                  <span>
+                    <figure class="heroava">
+                      <img src="../img/dummy/hero.png">
+                    </figure>
+                    <em>Triple Kill</em>
+                    <u>Ryujin</u>
+                  </span>
+                </a>
+              </div>
+              {% endfor %}
+            </section> -->
+
+          </div>
+        </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+/*
+* Section prognoz
+*/
+#m-koef{
+  > .row {
+    > div{
+      &:first-child{
+        @media (max-width: $XM) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.prp{
+  padding: 10px 12px;
+  position: relative;
+  
+  &:nth-child(even){
+    background: color($bg-main l(25%));
+    .prm{
+      background: color($bg-main l(20%));
+      &:before{
+      background: color($bg-main l(20%));
+      }
+    }
+  }
+  &:nth-child(odd){
+    background: rgb(49, 55, 58);
+  }
+  &.prPay{
+    padding-left: 50px!important;
+    .prh a{
+      color: rgb(218, 212, 136);
+    }
+    .prt{
+      font-size: 13px;
+      b{
+        color: #a6c6cb;
+      }
+      table{
+        width: 100%;
+        text-align: center;
+        label{
+          margin: 0 3px;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+  }
+  &.active,
+  &:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 1px color($bg-dropdown l(60%));
+    .prm{
+      background: color($bg-dropdown l(40%));
+      color: $link-light-blue;
+      &:before{
+        background: color($bg-dropdown l(40%));
+      }
+    }
+  }
+  &.active{
+    box-shadow: inset 0 0 0 1px color($bg-dropdown l(50%));
+    margin-top: -1px;
+  }
+  
+  &.open{
+    .prt{
+      .hh{
+        height: auto;
+        display: inline;
+      }
+    }
+  }
+  
+  .prh{
+    font-size: 12px;
+    padding-bottom: 1px;
+    line-height: 1;
+    table{
+      width: 100%;
+      td{
+        vertical-align: middle;
+        &:last-child{
+          text-align: right;
+        }
+      }
+    }
+    .nwr{
+      white-space: nowrap;
+      padding-left: 5px;
+    }
+    u{
+      text-decoration: none;
+      white-space: nowrap;
+      margin-left: 5px;
+    }
+    > b{
+      font-weight: normal;
+    }
+    button{
+      color: #fff;
+      position: relative;
+      margin: -3px 0 -3px 5px;
+      text-transform: none;
+      font-size: 10px;
+      padding: 3px;
+      
+      &:hover,
+      &:active,
+      &:focus,
+      &.active{
+        color: #fff;
+      }
+    }
+    .gti-rocket{
+      color: $link-blue;
+      margin: 0 2px;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+    .thumb{
+      border: none;
+      padding: 0 5px 0 0;
+      position: relative 0 0 0 0;
+      white-space: nowrap;
+      i{
+        font-size: 14px;
+      }
+      b{
+        font-size: 12px;
+        padding: 0 1px;
+        width: 25px;
+        text-align: center;
+      }
+    }
+    .pris{
+      margin: -1px 1px;
+      width: 20px;
+      height: 20px;
+      vertical-align: bottom;
+    }
+    em{
+      color: $link-blue;
+      font-style: normal;
+      vertical-align: middle;
+    }
+  }
+  
+  .prt{
+    color: #cccccc;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.2;
+    .hh{
+      overflow: hidden;
+      height: 0;
+      transition: $tease;
+      display: block;
+    }
+  }
+  .prm{
+    position: absolute * 0 0 *;
+    display: block;
+    background: color($bg-main l(25%));
+    color: $link-light-blue;
+    text-decoration: none;
+    padding: 1px 9px 3px 6px;
+    font-size: 11px;
+    
+    &:before{
+      background: color($bg-main l(25%));
+      content: '';
+      display: block;
+      width: 10px;
+      height: 100%;
+      position: absolute 0 * 0 -5px;
+      transform: skewX(-15deg);
+      transition: $tease;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      color: $link-white-active;
+      background: color($bg-dropdown l(50%));
+      
+      &:before{
+        background: color($bg-dropdown l(50%));
+      }
+    }
+  }
+  
+  &.prp-free{
+    line-height: 1.2;
+    font-size: 12px;
+    a.nick{
+      font-size: 13px;
+    }
+    b{
+      font-size: 13px;
+      font-weight: normal;
+    }
+    .prt{
+      display: inline;
+    }
+  }
+}
+
+.prp-ava.prp{
+  padding-left: 50px;
+  min-height: 36px;
+  &.prp-logo{
+    padding-left: 85px;
+  }
+  .ava-sm{
+    position: absolute 50% * * 8px;
+    transform: translate(0,-50%);
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+  }
+  .logo{
+    position: absolute 50% * * 50px;
+    transform: translate(0,-50%);
+    img{
+      width: 25px;
+    }
+  }
+  &.open{
+    .prt{
+      .hh{
+        height: auto;
+        display: inline;
+      }
+    }
+    .ava-sm{
+      transform: translate(0);
+      top: 9px;
+    }
+    .logo{
+      top: 13px;
+      transform: translate(0);
+    }
+  }
+}
+
+.sumpr{ 
+  background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
+  border: 1px dashed #58646f;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 5px;
+  &.suk{
+    color: #a6c6cb;
+    p{
+      text-align: center;
+      padding: 21px 15px;
+      margin-bottom: 0;
+      b {
+        color: #e8b038;
+        font-weight: 600;
+      }
+      a {
+        color: #82ac4e;
+      }
+    }
+  }
+  
+  table{
+    width: 49.95%;
+    float: left;
+    &:first-child{
+      text-align: right;
+    }
+    &.win{
+      background: rgba(0, 128, 0, 0.08);
+      b{
+        color: $green;
+      }
+    }
+    &.lose{
+      background: rgba(255, 0, 0, 0.08);
+      b{
+        color: $red;
+      }
+    }
+    td{
+      vertical-align: middle;
+      padding: 15px 10px;
+      white-space: nowrap;
+      a{
+        color: #fff;
+        &:hover{
+          text-decoration: none;
+          span{
+            text-decoration: underline;
+          }
+        }
+        span{
+          white-space: nowrap;
+          overflow: hidden;
+          display: inline-block;
+          text-overflow: ellipsis;
+          max-width: 100px;
+          vertical-align: middle;
+          margin: 0;
+        }
+      }
+      img{
+        height: 40px;
+        margin: 3px;
+        @media (max-width: $SM){
+          height: 26px;
+        }
+      }
+      b{
+        font-size: 18px;
+      }
+      u{
+        text-decoration: none;
+        font-size: 11px;
+        display: block;
+      }
+    }
+  }
+  .btn{
+    position: absolute * * -10px 50%;
+    transform: translate(-50%);
+  }
+} /*sumpr*/
+
+.st-body .table-st{
+  font-size: 12px;
+  margin: 0;
+  thead{
+    th{
+      padding: 7px;
+    }
+    th:last-child{
+      text-align: right;
+    }
+  }
+  tr{
+    td{
+      padding: 7px;
+    }
+  }
+}
+
+.topay{
+    display: block;
+    text-align: center;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px 0 0;
+    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+    border: 1px dashed #58646f;
+  &:hover{
+    text-decoration: none;
+    background-color: #3f4c58;
+  }
+}

@@ -1,0 +1,380 @@
+<!-- rightcol -->
+<a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+
+<div class="hblock">
+    <h2>Трансферы</h2><b></b><span><a href="#">все</a></span>
+</div>
+
+<div class="trans-right-col">
+    <table class="table table-hover table-striped t-transfers table-sm">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    <a href="#" class="up">игроки</a>
+                </th>
+                <th class="oldtm">
+                    команда
+                </th>
+                <th>
+                </th>
+                <th class="newtm">
+                    команда
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in 1..5 %}
+            <tr>
+            <td>
+                <div class="date">
+                    <u class="gl gl704"></u>
+                    <span>2{{i}} сен</span>
+                </div>
+            </td>
+                <td class="plrs">
+                    {% for i in 1..3 %}
+                    <a href="#" class="playerName">
+                        <!-- <picture>
+                <source type="image/webp" srcset="../img/dummy/ava.png">
+                <img src="./img/dummy/ava.png" alt="ИГРОК">
+              </picture> -->
+                        <img class="flag" src="../img/dummy/flag1.png" alt="">
+                        <span>
+                            Bonus
+                        </span>
+                    </a>
+                    {% endfor %}
+                </td>
+                <td class="oldtm">
+                    <a href="#" class="teamNameIco">
+                        <picture>
+                            <source
+                                srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x"
+                                type="image/webp">
+                            <source
+                                srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                            <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <!-- <span rel="team">HR</span> -->
+                    </a>
+                </td>
+                <td class="arrw">
+                    <i class="fa fa-long-arrow-alt-right"></i>
+                    <sup>аренда</sup>
+                </td>
+                <td class="newtm">
+                    <a href="#" class="teamNameIco">
+                        <picture>
+                            <source
+                                srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x"
+                                type="image/webp">
+                            <source
+                                srcset="../img/dummy/{{ random(teamlogo) }}.png, ../img/dummy/{{ random(teamlogo) }}.png 2x">
+                            <img src="../img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <!-- <span rel="team">HR</span> -->
+                    </a>
+                </td>
+                <td class="tlink">
+                    <a href="#">
+                        <i class="fa fa-chevron-right"></i>
+                        </span>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="hblock">
+    <h2>Матчи <span>20 декабря</span></h2><b></b><span><a href="#">все матчи</a></span>
+</div>
+
+<div class="nomsg">
+    В ближайшее время матчей не будет
+</div>
+
+<section class="matches">
+    <div class="flex-table">
+        {% for i in 0..15 %}
+
+        <a class="article{% if i == 0 %} type1{% endif %}" href="#">
+            <div class="time"><i>21:10</i><u class="gl {{random(gamelogo)}}"></u></div>
+            <div class="teams">
+                <span>
+                    <b>{{ random(team) }}</b>
+                    <!-- <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b> -->
+                    <!-- <picture class="logo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture> -->
+                    <picture class="logo">
+                        <source type="image/svg" srcset="../img/ico/team.svg">
+                        <img src="./img/ico/team.svg" alt="">
+                    </picture>
+                </span>
+                <div class="score">
+                    {% if i == 0 %}<span class="type1">30:33</span>
+                    {% elseif i == 1 %}<span class="type1">3:0</span>
+                    {% else %}
+                    <span class="type0">Bo3</span>
+                    {% endif %}
+                </div>
+                <span>
+                    <!-- <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b> -->
+                    <picture class="logo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    <b>{{ random(team) }}</b>
+                </span>
+            </div>
+            <div class="tour">
+                <picture class="logo">
+                    <source type="image/svg" srcset="../img/ico/trophy2.svg">
+                    <img src="./img/ico/trophy2.svg" alt="">
+                </picture>
+            </div>
+        </a>
+
+        {#
+        <article {% if i == 0 %}class="active" {% endif %}>
+            <a class="time" href="#"><i>21:10</i><u class="gl {{random(gamelogo)}}"></u></a>
+            <div class="teams">
+                <a href="#">
+                    <span>{{ random(team) }}</span>
+                    <!-- <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b> -->
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                </a>
+                <div class="score">
+                    {% if i == 0 %}<a href="#" class="live">1:1</a>
+                    {% elseif i == 1 %}<a href="#" class="live">3:0</a>
+                    {% else %}
+                    <a href="#" class="type">Bo3</a>
+                    {% endif %}
+                </div>
+                <a href="#">
+                    <!-- <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b> -->
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    <span>{{ random(team) }}</span>
+                </a>
+            </div>
+            <a class="tour" href="#">
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                    <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                </picture>
+            </a>
+        </article>
+        #}
+
+        {% if i == 5 %}
+        {#
+        <article>
+            <a class="time" href="#"><i>21:10</i><u class="gl pubg"></u></a>
+            <div class="teams">
+                <a href="#">
+                    Regular Season Week 2 • Матч 2
+                </a>
+            </div>
+            <a class="tour" href="#"><img src="../img/dummy/tour2.png" alt=""></a>
+        </article>
+        #}
+
+        <a class="article">
+            <div class="time" href="#"><i>21:10</i><u class="gl pubg"></u></div>
+            <div class="teams">
+                Regular Season Week 2 • Матч 2
+            </div>
+            <div class="tour">
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                    <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                </picture>
+            </div>
+        </a>
+
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="blockbot">время МСК +03:00</div>
+</section>
+
+<div class="hblock">
+    <h2>Турниры</h2><b></b><span><a href="#">все турниры</a><i title="Типо хелптекст" class="tip"
+            data-toggle="tip"></i></span>
+</div>
+
+<section class="tours">
+    <div class="flex-table">
+        {% for i in 0..15 %}
+        <a class="frow" href="#">
+            <u class="gl {{random(gamelogo)}}"></u>
+            <b class="active">{{random(tour)}}</b>
+            <i>
+                <span>7 - 17 дек</span>
+                <span>$ 1,400,000</span>
+            </i>
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+            </picture>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="hblock">
+    <h2>Свежие комментарии</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+
+<section class="comments">
+    {% for i in 0..10 %}
+    <div class="com">
+        <b>{{random(user)}}:</b>
+        {{random(com)}}
+        &nbsp;\&nbsp;
+        {% set source = ["новость", "матч <b>Gambit</b> vs <b>Ehome</b>"] %}
+        <a href="#">{{random(source)}}</a>
+    </div>
+    {% endfor %}
+</section>
+
+<div class="hblock">
+    <h2>Лучшие команды</h2><b></b><span><a href="#">все команды</a><i title="Типо хелптекст" class="tip"
+            data-toggle="tip"></i></span>
+</div>
+<div class="game-select">
+    <a href="#" class="gl dota2 active"></a>
+    <a href="#" class="gl csgo"></a>
+    <a href="#" class="gl lol"></a>
+    <a href="#" class="gl hs"></a>
+    <a href="#" class="gl ow"></a>
+    <a href="#" class="gl fn"></a>
+    <a href="#" class="gl pubg"></a>
+    <a href="#" class="gl rl"></a>
+    <a href="#" class="gl rs"></a>
+    <a href="#" class="gl sc2"></a>
+</div>
+<section class="teams">
+    <div class="flex-table">
+        
+        <div class="hblock">
+            <h2>Северная америка</h2><b></b>
+        </div>
+        {% for i in 0..3 %}
+        <a class="frow" href="#">
+            <!-- <u style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></u> -->
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+            </picture>
+            <b class="active">{{random(team)}}</b>
+            <s>
+                1
+                {% if i == 0 %}<span class="green">+1</span> {% endif %}
+                {% if i == 3 %}<span class="red">-4</span> {% endif %}
+            </s>
+            <i class="money">
+                $ 434K
+            </i>
+        </a>
+        {% endfor %}
+
+        <div class="hblock">
+            <h2>Европа</h2><b></b>
+        </div>
+        {% for i in 0..3 %}
+        <a class="frow" href="#">
+            <!-- <u style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></u> -->
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+            </picture>
+            <b class="active">{{random(team)}}</b>
+            <s>
+                1
+                {% if i == 0 %}<span class="green">+1</span> {% endif %}
+                {% if i == 3 %}<span class="red">-4</span> {% endif %}
+            </s>
+            <i class="money">
+                $ 434K
+            </i>
+        </a>
+        {% endfor %}
+
+        <div class="hblock">
+            <h2>Китай</h2><b></b>
+        </div>
+        {% for i in 0..3 %}
+        <a class="frow" href="#">
+            <!-- <u style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></u> -->
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+            </picture>
+            <b class="active">{{random(team)}}</b>
+            <s>
+                1
+                {% if i == 0 %}<span class="green">+1</span> {% endif %}
+                {% if i == 3 %}<span class="red">-4</span> {% endif %}
+            </s>
+            <i class="money">
+                $ 434K
+            </i>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="hblock">
+    <h2>Хайлайты</h2><b></b><span><a href="#">все хайлайты</a><i title="Типо хелптекст" class="tip"
+            data-toggle="tip"></i></span>
+</div>
+<section class="highlights">
+    {% for i in 0..1 %}
+    <!-- <a class="highlight" href="#">
+        <img src="../img/dummy/hl.png" />
+        <b><u class="gl {{random(gamelogo)}}"></u>Jabberwock VS Comanche</b>
+        <s>
+            <img src="../img/dummy/hero.png" />
+        </s>
+        <i>
+            Triple Kill
+        </i>
+        <em>
+            penchys
+            <u>{{ random(num) }}</u>
+        </em>
+    </a> -->
+
+    <div class="bestEvent bestKill">
+        <a href="#">
+            <b>
+                <img src="../img/dummy/hl.png">
+                <span><i class="gl {{random(gamelogo)}}"></i> Jabberwock VS Comanche</span>
+            </b>
+            <span>
+                <figure class="heroava">
+                    <img src="../img/dummy/hero.png">
+                </figure>
+                <em>Triple Kill</em>
+                <u>Ryujin</u>
+            </span>
+        </a>
+    </div>
+    {% endfor %}
+</section>

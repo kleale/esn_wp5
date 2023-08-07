@@ -1,0 +1,213 @@
+/*page-light.css*/
+
+section.light-head{
+  overflow: hidden;
+  padding: 25px 20px 25px;
+  .news-soc{
+    margin: 8px 0;
+    float: right;
+    position: relative;
+    z-index: 3;
+    li a{
+      margin: 0 3px;
+      font-size: 16px;
+      opacity: .7;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.59);
+      &:hover{
+        text-shadow:none;
+        opacity: 1;
+      }
+    }
+  }
+  .thumb{
+    top: 0;
+    left: 0;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    z-index: 3;
+  }
+  h1{
+    margin: 0 0 4px 0 !important;
+    @media (max-width: 950px){
+      margin: 77px 0 4px 0 !important;
+      text-align: center
+    }
+  }
+  .sub{
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    color: #919191;
+    @media (max-width: 950px){
+      text-align: center
+    }
+    time{
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+}
+
+.player-light{
+  position: relative;
+  z-index: 2;
+  
+  .iframer{
+    height: 675px;
+    @media (max-width: 1599px){
+      height: 563px;
+    }
+    @media (max-width: 1200px){
+      height: 529px;
+    }
+    @media (max-width: 991px){
+      height: 405px;
+    }
+    @media (max-width: 650px){
+      height: 300px;
+    }
+    @media (max-width: 450px){
+      height: 200px;
+    }
+  }
+  .iframerClicker{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: #111;
+    overflow: hidden;
+    background-size: cover;
+    
+    &:after {
+      font-family: 'gticons';
+      content: '\f04b';
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      font-size: 40px;
+      margin: -40px 0 0 -40px;
+      line-height: 80px;
+      transition: all .2s ease;
+      opacity: 1;
+      background-color: rgba(51, 122, 183, 0.7);
+      height: 80px;
+      width: 80px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 70px;
+      padding-left: 10px;
+    }
+    &:hover:after{
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    &.novid{
+      &:after {
+        display: none;
+      }
+      span{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin: -40px 0 0 -60px;
+        transition: all .2s ease;
+        opacity: 1;
+        background-color: rgba(183, 51, 51, 0.7);
+        text-align: center;
+        color: #ffffff;
+        border-radius: 20px;
+        padding: 10px 10px;
+        text-align: center;
+        width: 120px;
+        line-height: 14px;
+        i{
+          font-size: 30px;
+          display: block;
+          margin-bottom: 5px;
+        }
+        b{
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.tb-light{
+  border: 1px solid rgba(57, 62, 64, 0.65);
+  th{
+    text-align: right;
+    padding: 8px 15px 8px 5px;
+    font-size: 11px;
+    color: #ccc;
+    width: 140px;
+    vertical-align: middle;
+    @media (max-width: $M){
+      width: 100px;
+    }
+  }
+  td{
+    padding: 3px;
+    .heropic{
+      width: 50px;
+      padding-right: 0;
+      margin: 5px 15px 5px 0;
+      img{
+        width: 100%;
+      }
+    }
+    .flag{
+      vertical-align: text-bottom;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+        padding: 4px 0;
+      }
+    }
+    .gti-coins{
+      font-size: 14px;
+      vertical-align: text-bottom;
+    }
+    .scd{
+      color: #bfbfbf;
+      font-size: 10px;
+      margin: 0 5px 0 0;
+    }
+    s{
+      margin-right: 5px;
+    }
+    em{
+      color: #eae6b4;
+    }
+  }
+  .dtdt{
+    font-size: 10px;
+    .scd{
+      margin: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!-- stream -->
+<section class="streamblock">
+    <button class="opener_bottom"></button>
+    <div class="stream-list scroller">
+        <strong><u>Стримы</u></strong>
+        <div class="nos">Нет стримов</div>
+        {% for i in 0..3 %}
+        <div class="si {% if i == 0 %}active{% endif %}{% if i == 1 %} checked{% endif %}">
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+                <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+            </picture>
+            <b>
+                RERUN CSGO - Heroic vs BIG Inferno Map 1 - Group B - ESL Pro League Season 9 Europe
+                <u>234 • BeyondTheSummit</u>
+            </b>
+            <s>en</s>
+            <em></em>
+        </div>
+        {% endfor %}
+        <strong><u>Видео</u></strong>
+        <div class="nos">Нет видео</div>
+        {% for i in 1..5 %}
+        <div class="si {% if i == 0 %}active{% endif %}{% if i == 1 %} checked{% endif %}">
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/youtube.webp">
+                <img src="../img/dummy/youtube.png" alt="VIDEO LOGO">
+            </picture>
+            <b>
+                RERUN Gambit vs OG Game 2
+                <u>234 • BeyondTheSummit</u>
+            </b>
+            <s>en</s>
+            <sup title="Номер игры в матче" data-toggle="tip">{{i}}</sup>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="opener_right"></button>
+    <div class="stream">
+        <button class="pi"><svg class="player-icon-play" id="icon_play" viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.447 14.105l-14-7A1 1 0 0 0 7 8v14a.999.999 0 0 0 1.447.894l14-7a1 1 0 0 0 0-1.789"></path>
+            </svg>
+        </button>
+        <!--<div class="white_noize"></div>-->
+        <div class="cnl">
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+                <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+            </picture>
+            <div>
+                <h2>Смотреть стрим матча</h2>
+                <h1>RERUN: PG.Barracx vs DeToNator Game 1 - DreamLeague S11 SEA Qual: Losers R1 - Xyclopzz | 02 Feb 2019
+                </h1>
+                <u>Dota 2 транслируется для 561 зрителя</u>
+                <s>English</s>
+            </div>
+        </div>
+        <img src="../img/dummy/live_user_epulzegaming_ru-1280x720.jpg" alt="STREAM NAME">
+        <div class="message">
+            Посмотреть стрим матча Gambit против OG можно 19 марта в 13:00 MSK
+        </div>
+    </div>
+</section>

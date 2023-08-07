@@ -1,0 +1,753 @@
+/*
+  teams.html
+*/
+
+section.hero{
+    text-align: center;
+    position: relative;
+    padding: 5px 20px;
+    background-color: rgb(32, 37, 39);
+    background-position: 0 100%;
+    background-size: cover;
+/*    min-height: 160px;
+    margin-bottom: -50px;*/
+    overflow: hidden;
+  
+  @media (max-width: $XM){
+    padding: 20px;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+  &:before {
+    position: absolute 0 0 0 0;
+    content: '';
+    display: block;
+    background: url(../img/bgtop.png) no-repeat center;
+    background-size: auto;
+    opacity: .85;
+  }
+  &:after {
+    content: '';
+    position: absolute * 0 0 0;
+    display: block;
+    height: 300px;
+    max-height: 100%;
+    background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgba(46,51,55,1) 100%);
+  }
+  p{
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    text-shadow: 1px 1px 7px #000;
+  }
+  h1{
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    margin: 10px 0;
+    @media (max-width: $XM){
+      font-size: 18px;
+    }
+  }
+}
+
+.ava-sm{
+  display: inline-block;
+  overflow: hidden;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  img{
+    width: 100%;
+    display: block;
+    background-color: #24282b;
+  }
+}
+
+.temsList{
+  margin-left: -30px;
+  @media (max-width: $XM){
+    margin: 5px -14px 0;
+  }
+  thead{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    tr{
+      border-bottom: 0!important;
+    }
+    th{
+      text-align: right;
+      font-size: 10px;
+      background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+      @media (max-width: $SM){
+        font-size: 8px;
+      }
+      &:first-child{
+        padding-left: 10px;
+        padding-right: 20px;
+        @media (max-width: $XM){
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+      &:last-child{
+        padding-right: 20px;
+      }
+      &:nth-child(2){
+        text-align: left;
+      }
+      &.role{
+        @media (max-width: $SM){
+          display: none;
+        }
+      }
+      span, a{
+        cursor: pointer;
+        color: #fff;
+        position: relative;
+        &:hover,
+        &:active,
+        &:focus{
+          color: $link-light-blue;
+          text-decoration: none;
+        }
+        &.active{
+          color: #a6c6cb;
+        }
+        @media (max-width: $SM){
+          display: inline-block;
+          max-width: 100%;
+          text-overflow: ellipsis;
+          vertical-align: inherit;
+          .sorter{
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -9px;
+          }
+        }
+      }
+    }
+  }/*thead*/
+  .mtable{
+    border-top:0;
+    .t-item{
+      color: #ccc;
+      font-weight: 300;
+      
+      &:hover,
+      &:active,
+      &:focus{
+        color: #fff;
+        .flag{
+          opacity: 1;
+        }
+        a{
+          color: #fff;
+        }
+      }
+      &.active_top{
+        border-top: 2px solid #516677;
+      }
+      td{
+          h4{
+            font-weight: 400;
+            font-size: 14px;
+            margin: 0;
+            position: relative;
+            padding-left: 30px;
+            @media (max-width: $SM){
+              padding-left: 20px;
+              white-space: nowrap;
+              overflow: hidden;
+              max-width: 100%;
+              text-overflow: ellipsis;
+            }
+          }
+          @media (max-width: $SM){
+            a{
+              font-size: 12px;
+            }
+            em{
+              display: block;
+              margin-left: 25px;
+            }
+            u{
+              display: none;
+            }
+          }
+          .logo{
+            width: 30px;
+            margin: -2px 0;
+            float: right;
+            position: relative;
+            z-index: 1;
+            transition: $tease;
+            &:hover{
+              transform: scale(1.1);
+            }
+            img{
+              width: 100%;
+            }
+            @media (max-width: $M){
+              display: none;
+            }
+          }
+          .flag{
+            opacity: .7;
+            position: absolute 0 * * 0;
+            img{
+              width: 20px;
+              margin: -5px 0;
+              vertical-align: baseline;
+              @media (max-width: $SM){
+                width: 16px;
+                margin: -2px 0 -4px;
+              }
+            }
+          }
+          u{
+            opacity: .6;
+            text-decoration: none;
+            font-size: .8em;
+            font-weight: 300;
+            @media (max-width: $SM){
+              display: none;
+            }
+          }
+          a{
+            color: $link-light-blue;
+          }
+        &.teaminfo{
+          h4{
+            
+          }
+          .logo{
+            margin: -2px 0;
+          }
+          .flag{
+            position: absolute auto auto auto auto;
+            img{
+              margin: -3px 0;
+            }
+          }
+        }
+        &:nth-child(1){
+          padding-left: 10px;
+          padding-right: 10px;
+          text-align: center;
+          @media (max-width: $SM){
+            width: 40px;
+          }
+        }
+        &:nth-child(2){
+        }
+        &.role{
+          @media (max-width: $SM){
+            display: none;
+          }
+        }
+        &:nth-child(3){
+          text-align: right;
+        }
+        &:nth-child(4){
+          text-align: right;
+        }
+        &:nth-child(5){
+          text-align: right;
+        }
+        &:nth-child(6){
+          text-align: right;
+        }
+        &:last-child{
+          text-align: right;
+          padding-right: 20px;
+        }
+      }
+      
+      &.first-team{
+        box-shadow: 0 1px 0 1px #524811 inset, 0 0px 0 1px #524811 inset;
+        background: #2d2a00 url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0!important;
+        td{
+          font-size: 15px;
+          color: #a7a183;
+          &:first-child{
+            background: url(http://game-tournaments.com/html/img/trophy.png) no-repeat scroll 49% 54%;
+          }
+        }
+        &:hover {
+          background: #2d2a00  url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0!important;
+        }
+        td.teaminfo{
+          .logo {
+            height: 70px;
+            float: right;
+            display: block;
+            margin: 0;
+            width: 60px;
+            line-height: 60px;
+          }
+          h4{
+            font-size: 17px;
+            margin: 25px 0 0 0;
+          }
+          .flag{
+            img{
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }/*mtable*/
+}/*temsList*/
+
+.filter{
+  position: relative;
+  .row{
+    margin-right: -5px;
+    margin-left: -5px;
+    @media (max-width: $XM){
+      margin-left: -5px;
+    }
+    >div{
+      padding: 0 5px;
+      margin-bottom: 10px;
+    }
+  }
+  .btn{
+    display: block;
+    width: 100%;
+  }
+  .mlt-filter {
+    input{
+      height: 34px;
+      padding: 6px 25px 6px 8px;
+      font-size: 13px; 
+    }
+    .sicon{
+      top: 0;
+    }
+  }
+  .notm {
+    font-size: 11px;
+    line-height: 21px;
+    margin-top: 0;
+    color: #c7cccc;
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.historyBlock{
+  display: block;
+  margin-bottom: 30px;
+  background: #3c4b58;
+  text-align: center;
+  position: relative;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  
+  &:hover{
+    text-decoration: none;
+    color: #fff;
+    
+    .miHlink{
+      color: #fff;
+    }
+    &:before{
+      top: 0;
+    }
+    &:after{
+      bottom: 5px;
+    }
+  }
+
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    height: 20px;
+    display: block;
+    box-shadow: 0 2px 30px 3px #2196F3;
+    border-radius: 200px /20px;
+    z-index: 0;
+    transition: $tease;
+  }
+  &:after{
+    top: auto;
+    bottom: 15px;
+  }
+  >div{
+    overflow: hidden;
+    position: relative;
+    padding: 5px 15px 15px 15px;
+    background: #3c4b58; 
+    z-index: 1;
+  }
+  .ibg{
+    position: absolute -30px -30px -30px -40px;
+    transform: translate(11.05px, -28.425px);
+    opacity: .2;
+    
+    background-image: url(../img/teams.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  i.mi-history {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    background-image: url(../img/mi16.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .miHlink{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7fa2ba;
+    margin: 0;
+    position: relative;
+    transition: $tease;
+  }
+}/*historyBlock*/
+
+.winners{
+    overflow: hidden;
+    margin: 3px 0 0 0;
+    background: #2a2f33;
+    border-top: 1px solid #454a4e;
+    border-bottom: 1px solid rgba(24, 27, 29, 0.6);
+    border-right: 1px solid rgba(24, 27, 29, 0.6);
+  @media (max-width: $SM){
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
+  a.wtr{
+    display: block;
+    overflow: hidden;
+    float: left;
+    width: 150px;
+    height: 60px;
+    margin-right: -20px;
+    position: relative;
+    margin: 0;
+    
+    @media (max-width: $M){
+      height: 80px;
+    }
+    @media (max-width: $SM){
+      height: auto;
+      float: none;
+      width: auto;
+    }
+    
+    img{
+      min-height: 100%;
+      width: 100%;
+      @media (max-width: $SM){
+        min-height: 0;
+      }
+    }
+  }
+  .winblock{
+    background: url(../img/kletka.png) repeat 100% 0;
+    position: relative;
+    margin-left: 150px;
+    padding: 10px 10px 5px 10px;
+    height: 60px;
+    @media (max-width: $M){
+      height: 80px;
+    }
+    @media (max-width: $SM){
+      margin-left: 0;
+      height: auto;
+      padding: 10px 10px 15px 10px;
+    }
+    &:before{
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: -15px;
+      position: absolute;
+      width: 30px;
+      background: #2a2f33 url(../img/kletka.png) repeat 100% 0;
+      transform: skewX(20deg);
+      @media (max-width: $SM){
+        display: none;
+      }
+    }
+    .progress{
+      margin: 3px 5px 10px 0;
+      opacity: .8;
+      @media (max-width: $SM){
+        margin: 3px 5px 15px 5px;
+      }
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      display: table;
+      table-layout: fixed;
+      width: 97%;
+      
+      li{
+        list-style: none;
+        display: table-cell;
+        font-size: 11px;
+        position: relative;
+        font-weight: 600;
+        line-height: 11px;
+        min-width: 140px;
+        vertical-align: top;
+        padding: 0 2px;
+        
+        b{
+          display: inline-block;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          color: #222;
+          border-radius: 50%;
+          float: left;
+          border: 1px solid;
+          opacity: .7;
+          @media (max-width: $SM){
+            margin: 0 auto 6px;
+            float: none;
+            display: block;
+          }
+        }
+        a{
+          margin: 0 0 0 10px;
+          display: inline-block;
+          white-space: nowrap;
+          line-height: 11px;
+          color: #fff;
+          @media (max-width: $SM){
+            margin: 0;
+            line-height: 14px;
+          }
+          
+          &:hover,
+          &:active,
+          &:focus{
+            text-decoration: none;
+          }
+          
+          u{
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            font-weight: 400;
+          }
+          .logo{
+            width: 22px;
+            float: left;
+            margin-right: 7px;
+            @media (max-width: $SM){
+              display: none;
+            }
+          }
+          .flag{
+            width: 14px;
+            margin: -3px 1px;
+            vertical-align: baseline;
+          }
+        }
+        
+        &.gold {
+          b{
+            color: #ffb83b;
+          }
+          u{
+            color: #ffb83b;
+          }
+        }
+        &.silver {
+          b{
+            color: #c0c0c0;
+          }
+          u{
+            color: #c0c0c0;
+          }
+        }
+        &.bronze {
+          b{
+            color: #ae8d3d;
+          }
+          u{
+            color: #ae8d3d;
+          }
+        }
+      }
+    }
+  }
+}
+
+.progress-bar-gold{
+  background: #ffb83b;
+}
+.progress-bar-silver{
+  background: #c0c0c0;
+}
+.progress-bar-bronze{
+  background: #ae8d3d;
+}
+
+.spider_chart_team{
+  height: 360px;
+  margin-bottom: 50px;
+  @media (max-width: $SM){
+    height: 180px; 
+    margin: 40px 0;
+  }
+}
+.pageTeam .spider_chart_team{
+  height: 310px;
+  margin-bottom: 30px;
+  @media (max-width: $SM){
+    height: 180px; 
+    margin: 40px 0;
+  }
+}
+
+.grphilter{
+  text-align: center;
+  > div{
+    display: inline-block;
+    .input-group{
+      width: 230px;
+      .input-group-btn{
+        .btn{
+          height: 28px;
+          padding: 5px 10px;
+          font-size: 12px;
+          box-shadow: none;
+          .caret {
+            margin: 7px 0;
+          }
+        }
+      }
+      .dropdown-menu{
+        width: 230px;
+      }
+    }
+  }
+}
+
+.pageTeam .mtable.stattable{
+  width: 100%;
+  @media (max-width: 1600px){
+    width: 100%;
+  }
+}
+
+.mtable.stattable{
+  width: 49%;
+  border: 0!important;
+  float: left;
+  table-layout: fixed;
+  @media (max-width: 1600px){
+    width: 100%;
+    white-space: normal;
+  }
+  @media (min-width: 1600px){
+    th{
+      height: 48px;
+    }
+  }
+  thead{
+    th{
+      text-align: center;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+  tr{
+    td{
+      text-align: center;
+      b{
+        color: #b2daf7;
+        font-size: 16px;
+      }
+    }
+    &.t2{
+      b{
+        color: #ff9191;
+        font-size: 12px;
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      background: inherit;
+    }
+  }
+}
+.double-table .mtable{
+  width:50%;
+}
+
+.pTeamOther{
+  table-layout: fixed;
+  &.table>tbody>tr>td, 
+  &.table>tbody>tr>th, 
+  &.table>tfoot>tr>td, 
+  &.table>tfoot>tr>th, 
+  &.table>thead>tr>td, 
+  &.table>thead>tr>th {
+    vertical-align: middle;
+  }
+  .ava-sm{
+    margin-left: 5px;
+    top: 2px;
+  }
+  .nick{
+    font-size: 13px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    
+    u{
+      text-decoration: none;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: none;
+      u{
+        text-decoration: underline;
+      }
+    }
+  }
+  thead>tr>th:last-child{
+    text-align: left;
+  }
+}
+
+.team-matches .block_matches_past .mtable .tdate{
+  padding-right: 15px!important;
+  @media (max-width: $XM){
+    padding-right: 15px!important;
+    text-align: right;
+  }
+}
+

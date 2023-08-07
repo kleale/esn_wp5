@@ -1,0 +1,19 @@
+<!-- newsCards.html -->
+
+<section class="newsCards row">
+    {% for i in 0..2 %}
+    <article class="col-lg-4">
+        <a href="" style="background-image: url(../img/dummy/newscard.png)">
+            <!-- <img src="../img/dummy/newscard.png" alt="ТЕМА"> -->
+            <b>
+                Бывший босс Alliance и EG получил 9 млн долларов на киберспортивный стартап
+                <s>Dota</s>
+                <u>12</u>
+            </b>
+            {% if i == 0 %}<em class="badge badge-danger">Важно</em>{% endif %}
+            {% if i == 1 %}<em class="badge badge-warning">Слухи</em>{% endif %}
+            {% if i == 2 %}<em class="badge badge-info">Видео</em>{% endif %}
+        </a>
+    </article>
+    {% endfor %}
+</section>

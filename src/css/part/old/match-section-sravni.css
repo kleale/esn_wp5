@@ -1,0 +1,248 @@
+/*
+* Section team compare
+*/
+
+.m-odd{
+  background: color($bg-sub l(14%));
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.rigter{
+  float: right;
+  text-transform: uppercase;
+  
+  .dropdown{
+    display: inline-block;
+    margin-left: 2px;
+    
+    .dropdown-menu{
+      right: 0;
+      left: auto;
+      width: inherit;
+    }
+  }
+  > b{
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: 300;
+  }
+}
+
+.sr_t{
+  margin-top: 70px;
+  
+  .sr_pic{
+    display: block;
+    height: 85px;
+    width: 85px;
+    line-height: 75px;
+    padding: 7px;
+    position: relative;
+    background-color: rgba(3, 125, 181, 0.13);
+    border-radius: 50%;
+    text-align: center;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute * * -10px 50%;
+      width: 21px;
+      height: 21px;
+      margin-left: -10px;
+      background: #eee;
+      border-radius: 50px;
+    }
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  > div{
+    padding-top: 20px;
+    h3{
+      margin: 0;
+      font-size: 24px;
+      color: #fff;
+    }
+    u{
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #8f8f8f;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+  &.sr_t1{
+    text-align: right;
+    margin-right: -50px;
+    @media (max-width: $XM){
+      text-align: center;
+      margin: 0;
+    }
+    > div{
+      margin-right: 100px;
+      
+      @media (max-width: $XM){
+        margin-right: 0;
+      }
+    }
+    .sr_pic{
+      float: right;
+      margin-left: 20px;
+      &:after{
+        background: $blue;
+      }
+      @media (max-width: $XM){
+        float: none;
+        margin: 0 0 20px 0;
+        display: inline-block;
+      }
+    }
+  }
+  &.sr_t2{
+    text-align: left;
+    margin-left: -50px;
+    
+    @media (max-width: $XM){
+      text-align: center;
+      margin: 0;
+    }
+    
+    > div{
+      margin-left: 100px;
+      
+      @media (max-width: $XM){
+        margin:0;
+      }
+    }
+    &.sr_t2 .sr_pic{
+      float: left;
+      margin-right: 20px;
+      
+      @media (max-width: $XM){
+        float: none;
+        margin: 0 0 20px 0;
+        display: inline-block;
+      }
+      
+      &:after{
+        background: $red;
+      }
+    }
+  }
+  
+  .thumb{
+    margin: 0;
+    border-color: #203C50;
+    &:hover,
+    &:active,
+    &:focus{
+      cursor: pointer;
+      background: color($button-blue l(21%));
+      border-color: color($button-blue l(50%));
+      i{
+        color: color($button-blue l(50%));
+      }
+    }
+  }
+  
+}
+
+.spider_chart{
+  height: 270px;
+  margin-top: -20px;
+  @media (max-width: $XM){
+    margin-top: 0;
+    padding: 20px 0;
+    height: 220px;
+  }
+}
+.spider{
+  margin: 0 0 20px 0;
+}
+#m-teams {
+  .block-content{
+    margin-bottom: 0;
+  }
+}
+.teams_stats{
+  position: relative;
+  td, th{
+     font-size: 12px;
+  }
+  .teams_bars{
+    margin: 0 200px;
+    height: 100px;
+    &.ts2{
+      height: auto;
+      margin: 0 10%;
+    }
+    @media (max-width: $XM){
+      margin: 20px 0;
+    }
+    .tbsb{
+      position: relative;
+      .tcgraf{
+        position: absolute -6px 10px -7px 10px;
+        margin: 0 20%;
+        z-index: 1;
+      }
+      .intable{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        tr{
+          background: transparent;
+          td {
+            font-size: 14px;
+            padding: 3px 5px;
+            height: 20px;
+            &:first-child {
+              text-align: right;
+              color: #fff;
+              width: 20%;
+            }
+            &:nth-child(2) {
+              text-transform: uppercase;
+              font-size: 11px;
+              color: #fff;
+              text-shadow: 0 1px 1px #000;
+            }
+            &:last-child {
+              text-align: left;
+              color: #fff;
+              width: 20%;
+            }
+          }
+        }
+        .red a{
+          color: #ea6465;
+          text-decoration: none;
+        }
+        .green a{
+          color: #82ac4e;
+          text-decoration: none;
+        }
+        a{
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#teams_compare{
+  margin: -5px 30px;
+}
+.ts2{
+  #teams_compare{
+    margin: 0 20%;
+  }
+}
+
+

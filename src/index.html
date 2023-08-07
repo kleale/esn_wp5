@@ -1,0 +1,255 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["gl100","dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почему я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="pageIndex dark-mode">
+  <div class="wrap">
+      <!---->
+        <noindex><a rel="nofollow" href="/ru/go?to=gg" class="abr-mob" target="_blank">
+          <img src="/img/bnrs/GGBetBanner_bg_2_mob.jpg">
+        </a></noindex>
+        <style>
+        @media (max-width: 768px) {
+          a.abr{
+            display: none;
+          }
+          a.abr-mob{
+            display: block;
+          }
+        }
+        </style>
+      <!----->
+    {% include "./tpl/aside.html" %}
+    <main class="index">
+    
+      {% include "./tpl/mainPage/newsFirst2.html" %}
+
+      <!-- <noindex><a rel="nofollow" href="#" class="btn1050 mb-3" target="_blank"><img src="/img/dummy/b1050.png"></a></noindex> -->
+      <noindex><a rel="nofollow" href="#" class="btn1050 mb-3" target="_blank"><img src="/img/bnrs/ggbet1050_2.jpg"></a></noindex>
+
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+            
+            {% include "./tpl/mainPage/newsFirst.html" %}
+            
+            {% include "./tpl/mainPage/mainNews.html" %}
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4" id="rightcol">
+
+            <div class="card card-poll">
+              <img class="card-img-top" src="https://ggscore.com/media/tournament/e2456.png" alt="Опрос image">
+              
+              <div class="card-body">
+                <!-- <h5 class="card-title"><i class="fas fa-poll-h blue-text mb-2"></i> Опрос</h5> -->
+                <p class="card-text">Какой ваш любимый игрок в чемпионате Dota2 International 2021</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value=""> Excellent - 15%
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value=""> Good - 23%
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 23%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value=""> Good - 13%
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 13%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio">  Needs Improvement - 5%
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Poor - 44%
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 44%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="survey-footer clearfix">
+                <button class="btn btn-sm btn-primary">Отправить</button>
+                <button class="btn btn-sm btn-outline-secondary float-right">Результаты</button>
+              </div>
+            </div>
+
+            <div class="card card-poll poll-white">
+              
+              <div class="card-body">
+                <!-- <h5 class="card-title"><i class="fas fa-poll-h blue-text mb-2"></i> Опрос</h5> -->
+                <p class="card-text">Какой ваш любимый игрок в чемпионате Dota2 International 2021</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Good
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Satisfactory
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio">  Needs Improvement
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Poor
+                    </label>
+                  </div>
+                  <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="survey-footer clearfix">
+                <button class="btn btn-sm btn-primary">Отправить</button>
+                <button class="btn btn-sm btn-outline-secondary float-right">Результаты</button>
+              </div>
+            </div>
+
+            <div class="card card-poll poll-white">
+              
+              <div class="card-body">
+                <!-- <h5 class="card-title"><i class="fas fa-poll-h blue-text mb-2"></i> Опрос</h5> -->
+                <p class="card-text">Какой ваш любимый игрок в чемпионате Dota2 International 2021</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Good
+                    </label>
+                  </div>
+                  <div class="progress hidden" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Satisfactory
+                    </label>
+                  </div>
+                  <div class="progress hidden" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio">  Needs Improvement
+                    </label>
+                  </div>
+                  <div class="progress hidden" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio"> Poor
+                    </label>
+                  </div>
+                  <div class="progress hidden" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="survey-footer clearfix">
+                <button class="btn btn-sm btn-primary">Отправить</button>
+                <button class="btn btn-sm btn-outline-secondary float-right">Результаты</button>
+              </div>
+            </div>
+
+            {% include "./tpl/mainPage/rightcol.html" %}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {% include "./tpl/bar.html" %}
+
+  <noindex><a rel="nofollow" href="/ru/go?to=gg" class="abr" target="_blank" style="background-image:url(/img/bnrs/GGBetBanner_bg_2.jpg)"></a></noindex>
+
+  {#
+  {% include "./tpl/branding.html" %}
+#}
+  {% include "./tpl/modal.html" %}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

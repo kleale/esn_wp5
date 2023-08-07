@@ -1,0 +1,140 @@
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/highcharts-theme.js"></script>
+
+<!-- <script src="../inc/assets/js/highcharts.js"></script>
+<script src="../inc/assets/js/highcharts-more.js"></script>
+<script src="../inc/assets/js/highcharts-theme.js"></script> -->
+
+<script>
+    /* Player spider graph*/
+    $(function () {
+        $('#spider_chart_player').highcharts({
+            colors: ["#F26868", "#5DBEE8", "#84E08D", "#E9B01E", "#E91EBC", "#837DC8"],
+            chart: {
+                polar: true,
+                type: 'line',
+                backgroundColor: 'none',
+                spacingBottom: 5,
+                spacingTop: 5,
+                spacingLeft: 0,
+                spacingRight: 0
+            },
+            title: {
+                text: '',
+                x: -80
+            },
+            pane: {
+                size: '70%'
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: ['ФОРМА', 'СИЛА', 'ИГРОВЫЕ ПОКАЗАТЕЛИ', 'ПУЛ ГЕРОЕВ', 'ЛЕЙНИНГ', 'ЗОЛОТО', 'БИТВЫ', 'ОПЫТ'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0,
+                labels: {
+                    style: {
+                        textTransform: 'uppercase',
+                        color: '#30404F'
+                    }
+                }
+            },
+            yAxis: {
+                gridLineInterpolation: 'polygon',
+                //lineWidth: 0,
+                tickInterval: 2,
+                min: 0,
+                max: 101,
+                title: {
+                    enabled: true
+                },
+                labels: {
+                    enabled: false
+                },
+                plotBands: [{ // visualize
+                    from: 0,
+                    to: 10,
+                    color: 'rgba(236, 239, 243, .5)'
+                },{
+                    from: 10,
+                    to: 20,
+                    color: 'rgba(249, 249, 249, .5)'
+                },{
+                    from: 20,
+                    to: 30,
+                    color: 'rgba(236, 239, 243, .5)'
+                },{
+                    from: 40,
+                    to: 50,
+                    color: 'rgba(249, 249, 249, .5)'
+                },{
+                    from: 50,
+                    to: 60,
+                    color: 'rgba(236, 239, 243, .5)'
+                },{
+                    from: 60,
+                    to: 70,
+                    color: 'rgba(249, 249, 249, .5)'
+                },{
+                    from: 70,
+                    to: 80,
+                    color: 'rgba(236, 239, 243, .5)'
+                },{
+                    from: 80,
+                    to: 90,
+                    color: 'rgba(249, 249, 249, .5)'
+                },{
+                    from: 90,
+                    to: 100,
+                    color: 'rgba(236, 239, 243, .5)'
+                }
+                ]
+            },
+            plotOptions: {
+                series: {
+                    fillOpacity: 0.3,
+                    title: '',
+                    stickyTracking: false
+                }
+            },
+            tooltip: {
+                shared: true,
+                ///followPointer: true,
+                outside: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            legend: {
+                enabled: false
+            },
+            series: [
+            // {
+            //     name: 'Team 1',
+            //     type: 'area',
+            //     data: [20, 10, 15, 15, 40, 80, 34, 76],
+            //     pointPlacement: 'on'
+            // },{
+            //     name: 'Team 2',
+            //     type: 'area',
+            //     data: [76, 54, 37, 93, 3, 76, 22, 34],
+            //     pointPlacement: 'on'
+            // },{
+            //     name: 'Team 3',
+            //     type: 'area',
+            //     data: [43, 11, 87, 54, 34, 67, 2, 23],
+            //     pointPlacement: 'on'
+            // },
+            {
+                name: 'Team 4',
+                type: 'area',
+                data: [11, 54, 22, 100, 77, 76, 76, 100],
+                pointPlacement: 'on'
+            }]
+
+        });
+    });
+</script>
+<div id="spider_chart_player" style="height: 240px" class="spider_chart_player"></div>

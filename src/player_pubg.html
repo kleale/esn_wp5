@@ -1,0 +1,292 @@
+{% set title = "Турнир" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set wpn = ["wpn1", "wpn2", "wpn3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+          {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Новости Boss</h4><b></b><span>20 декабря</span>
+        </div>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все новости Boss</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="player-page">
+
+      {% include "./tpl/playerteam/player-page-topper.html" %}
+
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="hblock mb-0">
+              <h2>Последние матчи Boss</h2><b></b>
+              <span>
+                <i title="хелптекст" class="tip" data-toggle="tip"></i>
+                <a href="#" title="" class="moptions" data-toggle="tip" data-original-title="Перезагрузить"></a>
+              </span>
+            </div>
+
+            <div class="responsive-table">
+              <table class="table table-hover table-striped table-sm t-player-last-games">
+                <thead>
+                  <tr>
+                    <th class="tour">турнир</th>
+                    <th scope="col" class="rez">результат</th>
+                    <th scope="col" class="team">
+                      за
+                    </th>
+                    <th scope="col" class="survive">
+                      <a href="#" class="up active">survive</a>
+                    </th>
+                    <th scope="col" class="khskn"><a href="#">K(HS)+Kn</a></th>
+                    <th scope="col" class="dmg"><a href="#">dmg</a></th>
+                    <th scope="col" class="dist"><a href="#">dist</a></th>
+                    <th scope="col" class="longest"><a href="#">longest kill</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 1..20 %}
+                  <tr>
+                    <td class="tour">
+                      <a href="#" class="tourNemaIco" data-toggle="tip" title="{{random(tour)}}">
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                          <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                        </picture>
+                        <!-- {{random(tour)}} -->
+                      </a>
+                    </td>
+                    <td>
+                      <span class="red">
+                        5 место
+                      </span>
+                      \ 3д назад
+                    </td>
+                    <td data-toggle="tip" title="{{random(team)}}">
+                      <a href="#" class="teamNameIco">
+                        <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <!-- <span>
+                            {{random(team)}}
+                          </span> -->
+                      </a>
+                    </td>
+                    <td class="srv">
+                      <i class="fa fa-user"></i> #14/64 <br>
+                      <i class="fa fa-clock"></i> 24м
+                    </td>
+                    <td>
+                      0 +1
+                    </td>
+                    <td>
+                      {{i}}05
+                    </td>
+                    <td>
+                      1.{{i}}km
+                    </td>
+                    <td>
+                      <picture class="wpn">
+                        <source type="image/webp" srcset="../img/dummy/{{ random(wpn) }}.png">
+                        <img src="./img/dummy/{{ random(wpn) }}.png" alt="">
+                      </picture>
+                      <span> 23{{i}}m</span>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            {% include "./tpl/pager.html" %}
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+
+            <div class="hblock">
+              <h3>За какие команды играл </h3><b></b><span><a href="#" class="all">все</a> <i title="хелптекст"
+                  class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <section class="player-money">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..4 %}
+                  <tr>
+                    <td>
+                      <a href="#" class="teamNameIco">
+                        <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <span>
+                          {{random(team)}}
+                        </span>
+                      </a>
+                    </td>
+                    <td>
+                      2{{i}}
+                    </td>
+                    <td>
+                      фев 201{{i}} - сен 201{{i}}
+                    </td>
+                    <td class="text-right">$4{{i}},000k</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </section>
+
+            <div class="hblock">
+              <h3>Достижения Boss</h3><b></b>
+            </div>
+
+            <section class="player-ach">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..8 %}
+                  <tr>
+                    <td class="tplc pl{{i}}">{{i}}</td>
+                    <td>
+                      <a href="#">{{random(tour)}}</a>
+                    </td>
+                    <td>
+                      <a href="#" class="teamNameIco" title="Название команды" data-toggle="tip">
+                        <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <!-- <span>
+                            {{random(team)}}
+                          </span> -->
+                      </a>
+                    </td>
+                    <td>1{{i}} июл 2018</td>
+                    <td class="text-right">$4{{i}},000M</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              {% include "./tpl/pager.html" %}
+            </section>
+
+            <div class="hblock">
+              <h3>Last 25 matches guns</h3><b></b>
+              <span><i title="хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+            <section class="player-guns">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..5 %}
+                  <tr>
+                    <td>
+                      <picture class="wpn">
+                        <source type="image/webp" srcset="../img/dummy/{{ random(wpn) }}.png">
+                        <img src="./img/dummy/{{ random(wpn) }}.png" alt="">
+                      </picture>
+                      <!-- <div class="weapon">
+                          <picture class="wpn">
+                            <source type="image/webp" srcset="../img/dummy/{{ random(wpn) }}.png">
+                            <img src="./img/dummy/{{ random(wpn) }}.png" alt="">
+                          </picture>
+                          <b>Scar-L</b>
+                          <s>24 &bull; 12%</s>
+                        </div> -->
+                    </td>
+                    <td>Scar-L</td>
+                    <td class="text-right">19%</td>
+                    <td class="text-right">1{{i}}%</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </section>
+
+            <div class="hblock">
+              <h3>Старые ники Boss</h3><b></b>
+            </div>
+            <section class="bottom-text">
+              <b>Играл под никами:</b> BOSS, Nagibator3000, Nagibator2000,
+              Nagibator1000, Nagibator100
+            </section>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

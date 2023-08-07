@@ -1,0 +1,71 @@
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/highcharts-theme.js"></script>
+<script>
+    /* Player spider graph*/
+    $(function () {
+        $('#spider_chart_player2').highcharts({
+            colors: ["#82ac4e"],
+            chart: {
+                type: 'bar',
+                backgroundColor: 'none'
+            },
+            title: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: ["vs Охотник на демонов", "vs Друид", "vs Охотник", "vs Маг", "vs Палладин", "vs Жрец", "vs Разбойник", "vs Шаман", "vs Чернокнижник", "vs Воин"],
+                //tickmarkPlacement: 'on',
+                //lineWidth: 0,
+                labels: {
+                    style: {
+                        textTransform: 'uppercase',
+                        color: '#30404F'
+                    }
+                },
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                title: {
+                    enabled: false
+                },
+                labels: {
+                    enabled: false
+                }
+            },
+            plotOptions: {
+                bar: {
+                    pointWidth: 8,
+                    //grouping: false,
+                    dataLabels: {
+                        enabled: true
+                    },
+                    className: "hc_smallbar"
+                }
+            },
+            tooltip: {
+                shared: true,
+                ///followPointer: true,
+                outside: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            legend: {
+                enabled: false
+            },
+            series: [{
+                name: "винрейт",
+                data: [{{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}, {{ random(100) }}],
+                //pointPlacement: 'on'
+            }]
+
+        });
+    });
+</script>
+<div id="spider_chart_player2" style="height: 240px" class="spider_chart_player"></div>

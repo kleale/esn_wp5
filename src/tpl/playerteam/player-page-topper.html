@@ -1,0 +1,151 @@
+<div class="page-topper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 order-last">
+        <div class="card card-player-lg">
+          <div class="playerlogoholder">
+            <div>
+              <picture class="playerlogo">
+                <source type="image/webp" srcset="../img/dummy/ava-lg.jpg">
+                <img src="../img/dummy/ava-lg.jpg" alt="LOGO">
+              </picture>
+              <picture class="teamlogo-sm">
+                <source type="image/webp" srcset="../img/dummy/team.png">
+                <img src="../img/dummy/team.png" alt="LOGO">
+              </picture>
+            </div>
+          </div>
+          <table class="tinfo table table-sm">
+            <tr>
+              <th>Призовые места</th>
+              <td>
+                <span class="plc pl1" title="Колличество первых мест" data-toggle="tip">23</span>
+                <span href="#" class="plc pl2" title="Колличество вторых мест" data-toggle="tip">2</span>
+                <span href="#" class="plc pl3" title="Колличество третьих мест" data-toggle="tip">43</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Имя</th>
+              <td>Vladislav Fomin</td>
+            </tr>
+            <tr>
+              <th>Возраст</th>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th>Страна</th>
+              <td>Europe
+                <img class="flag float-right" src="../img/dummy/{{random(flag)}}.png" alt="">
+              </td>
+            </tr>
+
+            <tr>
+              <th>Команда</th>
+              <td>
+                95 / <span class="text-muted">691</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>Роль</th>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th>Заработано</th>
+              <td>
+                $325K / <span class="text-muted">$17.6M</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>Всего игр </th>
+              <td>
+                38 / <span class="text-muted">17</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+          </table>
+          <div class="sbscr">
+            <a href="#" class="btn btn-warning btn-sbscr shadow-sm">Подписаться <span>234 фанов</span> </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="hblock">
+          <h1>BOSS <small>Amer al-Barqawi</small></h1><b></b>
+        </div>
+        <div class="tourdescription">
+          <p>
+            <strong>Amer «Boss» al-Barqawi</strong> is the mider for Vega Squadron. He was previously known as
+            Aman.
+          </p>
+          <p>
+            Начал свою карьеру в 2013 году, играя за украинскую команду LAN DODGERS. Затем побывал в Courage
+            Gaming, Amazing Gaming и некоторых других менее заметных коллективах. В середине сентября 2014
+            Александр присоединился к более серьезной команде — HellRaisers, откуда уже через пять месяцев
+            вместе
+            с markeloff перешел в dAT Team. Последних спустя еще месяц подписала организация FlipSid3 Tactics.
+            Из-за внутренних проблем в июле 2015 года s1mple покинул команду и сообщил, что берет паузу и
+            какое-то
+            время не будет играть. Однако «отпуск» был недолгим, и через несколько дней игрок вернулся в составе
+            команды Evolution, а затем перешел в коллектив Evolution. Dark, который просуществовал всего месяц.
+            Поиграв еще немного в команде Worst Players, Александр стал помогать своим бывшим командам, играя
+            стендином сначала за HellRaisers, а затем за FlipSid3 Tactics.
+          </p>
+        </div>
+        <div class="hblock">
+          <h2>Статистика Boss</h2><b></b>
+        </div>
+
+        <div class="radialchart">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                {% include "../../tpl/spider.html" %}
+              </div>
+              <div class="col-lg-5">
+                <div class="legend">
+                  <div class="searcher">
+                    <input type="text" class="form-control form-control-sm shadow-sm mfilter" rel="t" data-del=""
+                      data-upd="" value="" placeholder="Имя или ник" autocomplete="off">
+                    <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+                  </div>
+                  <small id="passwordHelpBlock" class="form-text text-muted">
+                    Чаще <b>Boss.<small>Liquid</small></b> сравнивют с <a href="#">RAMZES666.<small>OG</small></a>,
+                    <a href="#">Miracle.<small>Liquid</small></a>
+                  </small>
+
+                  <ul>
+                    {% for i in 0..1 %}
+                    <li>
+                      <b class="clr" style="background-color: {% if i == 0 %}red{% else %}blue{% endif %}"></b>
+                      <a href="#" class="playerName">
+                        <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                        <!-- <picture>
+                                <source type="image/webp" srcset="../img/dummy/ava.png">
+                                <img src="./img/dummy/ava.png" alt="ИГРОК">
+                              </picture> -->
+                        <span>
+                          {{ random(user) }}
+                          <!-- .<u>{{ random(team) }}</u> -->
+                          <sup>{{ random(team) }}</sup>
+                        </span>
+                      </a>
+                      <a href="#" class="del">
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

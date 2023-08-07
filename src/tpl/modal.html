@@ -1,0 +1,543 @@
+<!-- Modal STAVKA -->
+<div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        
+        <div class="prwms_ico"><b class="gti-dice"></b></div>
+        <h4>
+          Сделать ставку на матч 
+        </h4>
+      </div>
+      <div class="modal-body">
+          
+        Табличка букмекеров
+        <hr>
+        стата?
+        
+      </div>
+      <div class="modal-footer">
+        <i class="gti-info-circle"></i> Текстик о ставках
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- -->
+
+
+<!-- Modal Prognoz -->
+<div class="modal bet-wms fade" id="prognoz" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        <div class="prwms_ico"><b class="gti-dice"></b></div>
+      </div>
+      <div class="modal-body">
+       
+        <section class="betheader">
+         <div class="mop1">
+            <div class="teamlogo">
+              <a class="mteamlogo" href="/dota-2/team/og"><img src="http://game-tournaments.com/media/logo/_60/pic-20151102-100x100-6558096911.png"></a>
+            </div>
+            <a class="mteamname" href="/dota-2/team/og">OG<img class="odtip country" title="Europe" src="http://game-tournaments.com/media/flag/25.png"></a>
+          </div>
+          <div class="maction"><span>
+            20 июн, 18:00 MSK<br>
+            Best of 5
+         </span></div>
+          <div class="mop2">
+            <div class="teamlogo">
+              <a class="mteamlogo" href="/dota-2/team/navi"><img src="http://game-tournaments.com/media/logo/_60/navi-8110101.png"></a>
+            </div>
+              <a href="/dota-2/team/navi" class="mteamname">Natus Vincere<img class="odtip country" title="Ukraine" src="http://game-tournaments.com/media/flag/14.png"></a>
+          </div>
+        </section>
+        
+        <div class="bets-block bc">
+          <h2>Коэффициенты букмекеров &bull; Ставки на реальные деньги</h2>
+            <table class="table">
+                <tbody><tr>
+                  <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                  <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                  <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                  <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                  <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+                </tr>
+                <tr>
+                  <td><img class="bl" src="http://game-tournaments.com/html/img/logo_bmc.png" alt=""></td>
+                  <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                  <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                  <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                  <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+                </tr>
+                <tr>
+                  <td><img class="bl" src="http://game-tournaments.com/html/img/logo_headshot.png" alt=""></td>
+                  <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                  <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                  <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                  <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+                </tr>
+                <tr>
+                  <td><img class="bl" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
+                  <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                  <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                  <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                  <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+                </tr>
+                <tr>
+                  <td><img class="bl" src="http://game-tournaments.com/html/img/logo_egb.png" alt=""></td>
+                  <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                  <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                  <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                  <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+                </tr>
+              </tbody></table>
+            </div>
+        {#
+        <div class="bets-block">
+          <h2>Синдикат прогнозов график</h2>
+          {% include "match-page/section-prognoz-sind.html" %}
+        </div>
+        #}
+        <div class="bets-block" style="">
+          <h2 style="margin-top: 0;!important">Прогнозы</h2>
+          
+{% set txt = ['Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была','Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же']%}
+
+{% set nick =["entryAd","STORM BETS","Global Bets | Dota","4 года опыта","КАТАВАСИЯ В ДОТА 2","Аналитика от Den-а"] %}
+
+{% set logo =['http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png','http://ggscore.com/media/logo/_60/pic-20161027-600x600-9332827152.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png']%}
+
+{% set pl =['http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg','http://ggscore.com/media/logo/_60/Dai.jpeg','http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg','http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg']%}
+          <div class="pr_block">
+            <div class="bc tab-content">
+              <div class="sumpr clearfix">
+                <table class="win">
+                  <tr>
+                    <td>
+                      <a href="">
+                       <span>Team Liquid</span>
+                       <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png" alt="">
+                      </a>
+                    </td>
+                    <td>
+                      <b>54%</b>
+                    </td>
+                  </tr>
+                </table><table class="lose">
+                  <tr>
+                   <td>
+                      <b>46%</b>
+                    </td>
+                    <td>
+                      <a href="">
+                        <img src="http://game-tournaments.com/media/logo/pic-20161009-256x256-7743742014.png" alt="">
+                        <span>Secret Secret Secret Secret</span>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#prognozList">Подробнее</a>
+              </div>
+
+              <div id="p-all" role="tabpanel" class="tab-pane active">
+                  <div class="block_prognoz">
+                      {% for i in 1..5%}
+                        <div class="prp prp-free prp-ava prp-logo {{random(['active','',''])}}">
+
+                          <a href="" class="ava-sm">
+                            <img src="{{random(pl)}}" alt="">
+                          </a>
+                          <a href="" class="logo">
+                            <img src="{{random(logo)}}" alt="">
+                          </a>
+                          <div class="prt">
+                            {{random(txt)}}<em>...</em>
+                            <span class="hh">
+                                турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
+                            </span>
+                          </div>
+                          <a class="prm" href="javascript:;">еще</a>
+                        </div>
+                      {% endfor %}
+
+                      <a data-toggle="tab" href="#p-pay" class="topay">еще 25 платных прогнозов</a>
+                  </div>
+              </div>
+
+              <div id="p-pay" role="tabpanel" class="tab-pane">
+                <div class="block_pay_prognoz">
+                  <div class="prp prPay prp-ava active">
+                    <a href="" class="ava-sm">
+                      <img src="{{random(pl)}}" alt="">
+                    </a>
+                    <div class="prt">
+                      <table>
+                        <tr>
+                          <td>Прогнозы <b>32</b></td>
+                          <td>Проходимость <b>76.6%</b>	</td>
+                          <td>Подписка <span class="label label-primary">Оформлена</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+                  </div>
+                  {% for i in 1..5%}
+                  <div class="prp prPay prp-ava">
+                    <a href="" class="ava-sm">
+                      <img src="{{random(pl)}}" alt="">
+                    </a>
+                    <div class="prt">
+                      <table>
+                        <tr>
+                          <td>Прогнозы: <b>32</b></td>
+                          <td>Проходимость <b>76.6%</b>	</td>
+                          <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                 {#
+                  <div class="prp active prPay">
+                        <div class="prh">
+                          <table>
+                            <tbody><tr>
+                              <td>
+                                <a href="">entryAd</a> &nbsp;&bull;&nbsp;
+                            <b>{{random(["Secret","Liquid"])}}</b>
+                              </td>
+                              <td class="nwr">
+                                <u>
+                                  <em>123 <i class="gti-user tip" title="число подписчиков"></i></em>
+                                  <button class="btn btn-xs btn-primary">подписка оформлена</button>
+                                </u>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                        </div>
+                        <div class="prt">
+                          Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
+                        </div>
+                        <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+                      </div>
+
+                  <div class="prp prPay">
+                    <div class="prh">
+                      <table>
+                        <tbody><tr>
+                          <td>
+                            <a href="">entryAd</a> &nbsp;&bull;&nbsp;
+                        <b>{{random(["Secret","Liquid"])}}</b>
+                          </td>
+                          <td class="nwr">
+                            <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+                    <div class="pr_st">
+                      <table>
+                        <tbody><tr>
+                          <th>Прогнозы</th>
+                          <th>Проходимость</th>
+                          <th>ROI</th>
+                          <th>Ставки</th>
+                          <th>Подписки</th>
+                        </tr>
+                        <tr>
+                          <td>32</td>
+                          <td>76.6%</td>
+                          <td>76.6%</td>
+                          <td>23</td>
+                          <td>239</td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+                    <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+                  </div>
+                  {% for i in 1..2%}
+                    <div class="prp prPay">
+                      <div class="prh">
+                        <table>
+                          <tbody><tr>
+                            <td>
+                              <a href="">entryAd</a>&nbsp;&bull;&nbsp;
+                        <b>{{random(["Secret","Liquid"])}}</b>
+                            </td>
+                            <td class="nwr">
+                              <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button>
+                              </u>
+                            </td>
+                          </tr>
+                        </tbody></table>
+                      </div>
+                      <div class="prt">
+                        Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
+                      </div>
+                      <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+                    </div>
+                  {% endfor %}
+                  #}
+                </div>
+              </div>
+            </div><!--bc-->
+          </div><!--pr_block-->
+
+         
+          
+          {#
+          <div class="tse-content">
+
+            <div class="prp active">
+              <div class="prh">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <u><em>до 30 апр <i class="gti-check"></i></em></u>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div class="prt">
+                Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+              </div>
+              <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+            </div>
+            <div class="prp active">
+              <div class="prh">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <b class="pris p-i-2"></b>
+                      <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div class="pr_st">
+                <table>
+                  <tbody><tr>
+                    <th>Прогнозы</th>
+                    <th>Проходимость</th>
+                    <th>ROI</th>
+                    <th>Ставки</th>
+                    <th>Подписки</th>
+                  </tr>
+                  <tr>
+                    <td>32</td>
+                    <td>76.6%</td>
+                    <td>76.6%</td>
+                    <td>23</td>
+                    <td>239</td>
+                  </tr>
+                </tbody></table>
+              </div>
+            </div>
+
+            <div class="prp">
+              <div class="prh">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <b class="pris p-i-2"></b>
+                      <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
+                      </u>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div class="prt">
+                Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+              </div>
+              <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+            </div>
+
+            <div class="prp">
+              <div class="prh">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <b class="pris p-i-2"></b>
+                      <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
+                      </u>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div class="prt">
+                Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+              </div>
+              <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+            </div>
+
+            <div class="prp">
+              <div class="prh">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <b class="pris p-i-2"></b>
+                      <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
+                      </u>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div class="prt">
+                Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+              </div>
+              <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+            </div>
+            
+          </div>
+          #}
+        </div>
+      </div>
+      <!--<div class="modal-footer text-center">
+        <a href="" class="btn btn-success">Закрыть</a>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+{% set team =["Secret","Liquid"]%}
+<!-- Modal Prognoz -->
+<div class="modal fade" id="prognozList" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        <h4 class="modal-title"><i class="gti-bullhorn"></i>&nbsp;&nbsp;&nbsp; Прогнозы</h4>
+      </div>
+      <div class="modal-body st-body">
+        <div class="sumpr clearfix" style="margin: -16px -15px 20px;    border: 1px solid #4d5963;">
+          <table class="win">
+            <tr>
+              <td>
+                <a href="">
+                 <span>Team Liquid</span>
+                 <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png" alt="">
+                </a>
+              </td>
+              <td>
+                <b>54%</b>
+                <u class="tip" title="Букмекеры">59%</u>
+              </td>
+            </tr>
+          </table>
+          <table class="lose">
+            <tr>
+             <td>
+                <b>46%</b>
+                <u class="tip" title="Букмекеры">41%</u>
+              </td>
+              <td>
+                <a href="">
+                  <img src="http://game-tournaments.com/media/logo/pic-20161009-256x256-7743742014.png" alt="">
+                  <span>Secret Secret Secret Secret</span>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table class="mtable table-st">
+          <thead>
+            <tr>
+              <th>Прогнозист</th>
+              <th class="text-right">Ставка на команду</th>
+            </tr>
+          </thead>
+          {% for i in 1..10%}
+            <tr>
+              <td>
+                <a href="">Nikname {{i}}</a>
+              </td>
+              <td class="text-right">
+                {{random(team)}}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+        <nav class="nav-pager">
+          <ul class="pagination">
+            <li class="active"><a href="javascript:;" onclick="match_pages('past',1)">1</a></li>
+            <li><a href="javascript:;" onclick="match_pages('past',2)">2</a></li>
+            <li><a href="javascript:;" onclick="match_pages('past',3)">3</a></li>
+            <li><a href="javascript:;" onclick="match_pages('past',4)">4</a></li>
+            <li><a href="javascript:;" onclick="match_pages('past',5)">5</a></li>
+            <li><a href="javascript:;" onclick="match_pages('past',1008)"><span aria-hidden="true">»</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal prwms fade" id="prm1" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        
+        <div class="prwms_ico"><b class="p-i-1"></b></div>
+        <h4>
+          Прогнозы и аналитика от entryAd 
+        </h4>
+        <span class="thumb"><i class="gti-thumbs-up"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+      </div>
+      <div class="modal-body">
+          
+        Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Отписаться</button> <span class="label label-dash">Подписка до 30 апр</span>
+      </div>
+    </div>
+  </div>
+</div>
+  
+

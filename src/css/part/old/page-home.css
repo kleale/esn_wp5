@@ -1,0 +1,689 @@
+/* page-home.css */
+
+.indexwrap{
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3); 
+}
+.index{
+  .footer{
+    background: #18252d url(../img/spoiler.png) center repeat;
+  }
+}
+.hpower{
+  overflow: hidden;
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  
+  &:before{
+    content: '';
+    display: block;
+    position: absolute 0 0 0 0;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 300px rgba(3, 169, 244, 0.3) inset;
+    border: 1px solid rgba(3, 169, 244, 0.3);
+  }
+  >div{
+    z-index: 1;
+    padding: 50px 0 0;
+    position: relative;
+    text-align: center;
+    i{
+      display: block;
+      text-align: center;
+      font-size: 160px;
+      margin-bottom: 0;
+      color: #7faec3;
+    }
+    h3{
+      color: #eee;
+      font-weight: 300;
+      font-size: 30px;
+      margin: 0 10% 45px;
+      padding: 0;
+      span{
+        &:before,
+        &:after{
+          margin-top: -27px;
+        }
+      }
+    }
+    .icons{
+      text-align: center;
+      margin: 10px 10%;
+      span{
+        display: inline-block;
+        vertical-align: top;
+        color: #7faec3;
+        margin: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        width: 100px;
+        i{
+          display: block;
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.hgames{
+  background: #0f191f  url(../img/spoiler.png) center repeat;
+  overflow: hidden;
+  padding: 0 1px;
+  a{
+    display: block;
+    float: left;
+    width: calc(100%/5);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: #acddf3;
+    padding: 30px 10px;
+    border-top: 2px solid #111;
+    border-left: 1px solid #111;
+    border-right: 1px solid #111;
+    border-bottom: 2px solid #111;
+    box-shadow:  0 0 2px rgb(3, 169, 244) inset;
+    
+    @media (max-width: $M) {
+      width: 50%;
+      &:last-child{
+        width: 100%;
+      }
+    }
+    
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: none;
+      color: #eee;
+      
+      &:before{
+        box-shadow: 0 0 100px rgba(3, 169, 244, 0.53) inset;
+      }
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute 0 0 0 0;
+      background: rgba(0, 0, 0, 0.65);
+      transition: $tease;
+      box-shadow: 0 0 100px rgba(18, 45, 66, 0.81) inset;
+    }
+    > i,
+    > b,
+    >em{
+      position: relative;
+      z-index: 1;
+    }
+    i{
+      display: block;
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #7faec3;
+      &.gti-582{
+        color: rgb(164, 39, 16);
+      }
+      &.gti-704{
+        color: #dbd4c8;
+      }
+      &.gti-313{
+        color: #d4be58;
+      }
+      &.gti-800{
+        color: #fa9c1e;
+      }
+      &.gti-755{
+        color: #0091d3;
+      }
+      &.gti-100{
+        color: #c58100;
+      }
+    }
+    b{
+      display: block;
+      height: 40px;
+    }
+    em{
+      font-weight: 200;
+      display: inline-block;
+      font-style: normal;
+      font-size: 20px;
+      margin-top: 10px;
+      border-radius: 60px;
+      width: 80px;
+      height: 41px;
+      line-height: 40px;
+      border: 1px solid rgba(127, 174, 195, 0.40);
+    }
+  }
+}
+
+.homepage{
+  overflow: hidden;
+  background-color: rgb(46,51,55);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .heroBg{
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    height: 350px;
+    background-color: rgb(32, 37, 39);
+    background-position: center 0;
+    background-size: cover;
+    &:before{
+      content: '';
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 300px rgba(3, 169, 244, 0.3) inset;
+      border: 1px solid rgba(3, 169, 244, 0.3);
+    }
+    &:after{
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      display: block;
+      background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgba(46,51,55,1) 100%);
+    }
+  }
+  > div{
+    z-index: 1;
+    position: relative;
+  }
+}
+
+a.game, span.game{
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.36);
+}
+
+.homepage-content{
+  padding: 30px;
+  @media (max-width: $M) {
+    padding: 20px 10px;
+  }
+  
+  .block-filter{
+    list-style: none;
+    float: right;
+    padding: 1px 0 0 0;
+    margin: 0;
+    li{
+      float: left;
+      padding: 0 0 0 7px;
+      a{
+        color: #58686f;
+        &.btn{
+          box-shadow: none;
+          font-size: 10px;
+          line-height: 10px;
+          padding: 2px 5px;
+          background: #7faec3;
+          color: #fff;
+          opacity: 1;
+          position: relative;
+          top: -1px;
+        }
+        &:hover,
+        &:active,
+        &:focus{
+          text-decoration: none;
+          color: #7faec3;
+        }
+      }
+      &.active{
+        a {
+          color: #7faec3;
+        }
+      }
+    }
+  }
+  .mlh{
+    font-size: 14px;
+    text-align: left;
+    @media (max-width: $M) {
+      padding: 2px 0 15px;
+    }
+    span{
+      padding: 0 10px 0 0;
+      &:after{
+        margin-top: -12px;
+      }
+    }
+  }
+  .tnb-mini{
+    .nlist {
+      list-style: none;
+      li{
+        margin-bottom: 10px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        &.hot{
+          border-top: 2px solid #ff7836;
+          em.hot{
+            background: #ff7836;
+            position: absolute 0 * * 0;
+            font-size: 10px;
+            color: #000;
+            font-weight: 300;
+            font-style: normal;
+            padding: 1px 5px 1px 7px;
+            z-index: 2;
+            text-transform: uppercase;
+            &:after{
+              content: '';
+              display: block;
+              position: absolute 0 -3px 0 *;
+              width: 6px;
+              background: #ff7836;
+              transform: skewX(-20deg);
+            }
+          }
+        }
+        .game{
+          color: #7faec3;
+          margin: 0 0 0 5px;
+          position: relative;
+          top: 2px;
+          float: right;
+          &:hover{
+            opacity: .8;
+          }
+        }
+        > i {
+          color: #7faec3;
+          position: relative;
+        }
+        > a{
+          position: relative;
+        }
+        .pic{
+          margin: -10px -15px -50px -15px;
+          display: block;
+          overflow: hidden;
+          max-height: 200px;
+          position: relative;
+          z-index: 0;
+          
+          &:after{
+            content: '';
+            top: 20%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            display: block;
+            background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(54, 59, 64) 100%);
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  .matches{
+    /*margin: 0 -1.44% 0;
+    padding: 10px;*/
+    background: #363b40 url(../img/spoiler.png) center repeat;
+    padding: 10px 5px 15px;
+    box-shadow: 0 -15px 20px 0 rgba(0, 0, 0, 0.2) inset;
+    border-bottom: 1px solid #4a5056;
+    border-left: 1px solid #3a3f46;
+    border-right: 1px solid #3d4146;
+    border-top: 1px solid #434c50;
+    .mmain{
+      display: inline-block;
+      vertical-align: top;
+      width: 31%;
+      margin: 0 1%;
+      height: 140px;
+      @media (max-width: 1600px) {
+        width: 30.8%;
+        height: 130px;
+      }
+      @media (max-width: $M) {
+        margin: 0 .8%;
+        width: 47.8%;
+        &:nth-child(1){
+          margin: 0 1% 5px;
+          width: 97.8%;
+        }
+      }
+      @media (max-width: $SM) {
+        margin: 5px 0;
+        width: auto;
+        display: block;
+        &:nth-child(1){
+          margin: 5px 0;
+          width: auto;
+        }
+      }
+      .mtr{
+        @media (max-width: $XXL) {
+          font-size: 9px;
+          padding: 5px 5px 0;
+        }
+      }
+      .tms{
+        em{
+          background: transparent;
+          i{
+            font-size: 20px;
+            color: #7faec3;
+            top: 12px;
+          }
+        }
+      }
+    }
+  }
+  .mlt-sm{
+    margin-bottom: 25px;
+    .mtable{
+      .m-item{
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        td{
+          padding: 7px 2px;
+        }
+        .gametd{
+          width: 35px;
+          padding-left: 10px;
+          .game{
+            font-size: 15px;
+            color: #7faec3;
+            margin: -2px 0;
+            position: relative;
+            top: 1px;
+            &:hover,
+            &:active,
+            &:focus{
+              text-decoration: none;
+              color: #6790a2;
+            }
+          }
+        }
+        .tname {
+          display: table-cell;
+          width: 66px;
+          @media (max-width: $M) {
+            display: none;
+          }
+        }
+        .bet-p{
+          display: inline-block;
+        }
+        .td-m{
+          .tn1, .tn2{
+            &:hover{
+              color: #a6c6cb;
+            }
+            img{
+              width:  20px;
+              max-height: 20px;
+              @media (max-width: $M) {
+                display: none;
+              }
+            }
+          }
+          @media (max-width: $SM) {
+            .mp1,.mp2{
+              display: none;
+            }
+          }
+        }
+        .tdate{
+          width: 106px;
+          text-align: right;
+          padding-right: 10px;
+        }
+        .mscore{
+          @media (max-width: $M) {
+            width: 15px;
+          }
+        }
+      } 
+    }
+  }
+  .tournaments{
+    background: #363b40 url(../img/spoiler.png) center repeat;
+    padding: 10px 5px 25px;
+    box-shadow: 0 -15px 20px 0 rgba(0, 0, 0, 0.2) inset;
+    border-bottom: 1px solid #4a5056;
+    border-left: 1px solid #3a3f46;
+    border-right: 1px solid #3d4146;
+    border-top: 1px solid #434c50;
+    .tra{
+      display: inline-block;
+      width: 30%;
+      margin: 0 1.44%;
+      vertical-align: top;
+      i{
+        position: absolute 5px * * 5px;
+        font-size: 15px;
+        color: #d2e1e8;
+        text-shadow: 1px 1px 1px #000;
+      }
+      span{
+        font-size: 14px;
+        padding: 25px 15px 20px 15px;
+      }
+      @media (max-width: $XXL) {
+        height: 100px;
+        s, span{
+          font-size: 13px;
+        }
+      }
+      @media (max-width: $M) {
+        margin: 0 .8%;
+        width: 47.8%;
+        &:nth-child(1){
+          margin: 0 1% 15px;
+          width: 97.8%;
+          height: 140px;
+        }
+      }
+      @media (max-width: $SM) {
+        margin: 0 0 20px 0;
+        width: auto;
+        display: block;
+        height: 140px;
+        &:nth-child(1){
+          margin:  0 0 20px 0;
+          width: auto;
+        }
+      }
+    }
+  }
+  .trlist2{
+    margin-bottom: 25px;
+    li{
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      a{
+        padding: 8px 5px;
+        .game{
+          font-size: 15px;
+          color: #7faec3;
+          margin: -4px 10px -5px 5px;
+          position: relative;
+          top: 1px;
+          float: left;
+        }
+        u{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .players-n-teams{
+    margin: 0 -1.44% 25px;
+    .block-plw{
+      display: inline-block;
+      width: 46.5%;
+      margin: 0 1.5%;
+      vertical-align: top;
+      span.game{
+        margin: 3px;
+        float: right;
+        color: #7faec3;
+      }
+      table{
+        td.game{
+          color: #7faec3;
+          width: 22px;
+          font-size: 12px;
+          i{
+            position: relative;
+            top: 1px;
+          }
+        }
+        td:nth-child(3){
+          line-height: 13px;
+          width: 40px;
+        }
+      }
+      &.block-bs{
+        table{
+          td:nth-child(3){
+            width: 80px;
+            b{
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      @media (max-width: $XXL) {
+        .plw{
+          min-height: 103px;
+        }
+      }
+      @media (max-width: $M) {
+        width: auto;
+        display: block;
+        margin: 0 10px 15px;
+        .plw{
+          min-height: auto;
+        }
+      }
+    }
+  }
+  .highlights{
+    background: #363b40 url(../img/spoiler.png) center repeat;
+    padding: 15px 5px 15px;
+    box-shadow: 0 -15px 20px 0 rgba(0, 0, 0, 0.2) inset;
+    border-bottom: 1px solid #4a5056;
+    border-left: 1px solid #3a3f46;
+    border-right: 1px solid #3d4146;
+    border-top: 1px solid #434c50;
+    .bestEvent{
+      display: inline-block;
+      width: 30%;
+      margin: 0 1.44%;
+      vertical-align: top;
+      a > span{
+        em{
+          font-size: 14px;
+        }
+      }
+      @media (max-width: $XXL) {
+        a > b{
+          min-height: 80px;
+        }
+        a > span {
+          margin-top: -26px;
+          .heroava{
+            width: 60px;
+            margin: 0 5px 0 5px;
+          }
+          em{
+            font-size: 12px;
+          }
+          u{
+            font-size: 11px;
+          }
+        }
+        a > b > span{
+          padding: 3px 5px;
+          font-size: 10px;
+          i{
+            display: none;
+          }
+        }
+      }
+      
+      @media (max-width: $SM) {
+        width: auto;
+        display: block;
+        margin: 0 10px 15px;
+      }
+      
+    }
+    @media (max-width: $XXL) {
+      .comeBack a > span {
+        margin-top: -20px;
+        .teamLogo {
+          width: 50px;
+          margin: 0 5px 10px 5px;
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+        em{
+          font-size: 12px;
+        }
+        u {
+          font-size: 10px;
+          i {
+            margin: 0;
+            font-size: 8px;
+          }
+        }
+      }
+      .multideath a > span {
+        em{
+          font-size: 12px;
+          margin: -36px 0 0 14px;
+        }
+        .teamHeroes u.heroava {
+          min-height: 20px;
+          width: 20%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .hlist{
+    margin-bottom: 25px;
+    li{
+      padding: 9px 5px;
+      .game{
+        font-size: 15px;
+        color: #7faec3;
+        margin: -2px 10px -4px 5px;
+        position: relative;
+        top: 1px;
+        float: left;
+      }
+    }
+  }
+}
+
+
+
+

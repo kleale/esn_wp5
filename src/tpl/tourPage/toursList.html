@@ -1,0 +1,100 @@
+<style>
+    .tours .frow picture {
+        margin-right: .5rem;
+    }
+
+    .tours .frow u {
+        margin: 0 .3rem;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="hblock">
+    <h1>Турниры</h1><b></b>
+</div>
+{% set city = ["Сан-Франциско", "Москва", "Пекин", "Владивосток", "село Кукуево"] %}
+<section class="tours">
+    <div class="flex-table table-lg">
+        <div class="hblock" style="margin-top:0">
+            <h2>Будущие турниры</h2><b></b>
+        </div>
+        {% for i in 0..3 %}
+        <div class="frow m-result {% if i == 3 %} type3{% endif %}">
+            <span class="tplc pl">–</span>
+            <b class="active"><a href="#">The International 2019</a></b>
+            <s>
+            </s>
+            <i class="date">
+            </i>
+            <picture class="tourlogo">
+                <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+            </picture>
+            <div></div>
+        </div>
+        {% endfor %}
+
+        <div class="hblock">
+            <h2>Текущие турниры</h2><b></b>
+        </div>
+
+        {% for i in 0..3 %}
+        <div class="frow m-result type1">
+            <span class="tplc pl3">3</span>
+            <b class="active"><a href="#"></a>Adrenaline Cyber League 2019</a></b>
+            <s>
+                <div class="matches">
+                    <a class="article" href="/ru/dota-2/adrenaline-cyber-league-2019/finals/navi-vs-virtus-pro-213665">
+                        <div class="teams">
+                            <div class="score">
+                                <span class="type2">1 : 2</span>
+                            </div>
+                            <span>
+                                <picture>
+                                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                                </picture>
+                                <b>VP</b>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </s>
+            <i class="date">
+                <span class="sct" data-format="%j% %m% %y%" datetime="2019-05-25 15:41:00">25 мая</span>
+                <span class="scm" data-nsrt="1" data-value="$5000">$5,000</span>
+            </i>
+            <picture class="tourlogo">
+                <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+            </picture>
+        </div>
+        {% endfor %}
+
+        <div class="hblock">
+            <h2>Прошедшие турниры</h2><b></b>
+        </div>
+
+        {% for i in 0..10 %}
+        <a class="frow{% if i == 5 %} active{% endif %} {% if i == 1 %} type1{% endif %}{% if i == 2 %} type2{% endif %}{% if i == 3 %} type3{% endif %}" href="#">
+            <!-- <u class="gl {{random(gamelogo)}}"></u> -->
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+            </picture>
+            <b class="active">{{random(tour)}}</b>
+            <!-- <s><img src="../img/dummy/{{random(flag)}}.png" alt="">{{random(city)}}</s> -->
+            <i class="date">
+                <span>7 - 17 дек, 2019</span>
+                <span>$ 1,400,000</span>
+            </i>
+            <u class="gl {{random(gamelogo)}}"></u>
+            <!-- <picture>
+                <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+            </picture> -->
+        </a>
+        {% endfor %}
+    </div>
+</section>

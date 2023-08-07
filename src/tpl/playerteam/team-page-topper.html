@@ -1,0 +1,164 @@
+<div class="page-topper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 order-last">
+        <div class="card card-team-lg">
+          <div class="tourlogo">
+            <picture>
+              <source type="image/webp" srcset="../img/dummy/team.png">
+              <img src="../img/dummy/team.png" alt="LOGO">
+            </picture>
+          </div>
+          <table class="tinfo table table-sm">
+            <tr>
+              <th>Призовые места</th>
+              <td>
+                <span class="plc pl1" title="Колличество первых мест" data-toggle="tip">23</span>
+                <span href="#" class="plc pl2" title="Колличество вторых мест" data-toggle="tip">2</span>
+                <span href="#" class="plc pl3" title="Колличество третьих мест" data-toggle="tip">43</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Country</th>
+              <td>Europe
+                <img class="flag float-right" src="../img/dummy/{{random(flag)}}.png" alt="">
+              </td>
+            </tr>
+            <tr>
+              <th>Ranking</th>
+              <td>#5
+
+              </td>
+            </tr>
+            <tr>
+              <th>Matches</th>
+              <td>
+                95 / <span class="text-muted">691</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>Win Rate</th>
+              <td>
+                65% / <span class="text-muted">62%</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>Current streak</th>
+              <td>3 wins in a row</td>
+            </tr>
+            <tr>
+              <th>Record win streak</th>
+              <td>15 wins</td>
+            </tr>
+            <tr>
+              <th>Record lose streak</th>
+              <td>5 lose</td>
+            </tr>
+            <tr>
+              <th>Earned</th>
+              <td>
+                $325K / <span class="text-muted">$17.6M</span>
+                <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>MVP</th>
+              <td><a>
+                  <a href="#" class="playerName">
+                    <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/ava.png">
+                      <img src="./img/dummy/ava.png" alt="ИГРОК">
+                    </picture>
+                    <span>
+                      Miracle-
+                      .<u>Иванов Иван</u>
+                      <!-- <sup>{{ random(team) }}</sup> -->
+                    </span>
+                  </a>
+              </td>
+            </tr>
+
+          </table>
+          <div class="sbscr">
+            <a href="#" class="btn btn-warning btn-sbscr shadow-sm">Подписаться <span>234 фанов</span> </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="hblock">
+          <h1>Статистика команды Team Liqiud</h1><b></b>
+        </div>
+        <div class="tourdescription">
+          <p>
+            Team Liquid is a professional team, founded in the Netherlands in 2000. Originally a Brood War clan,
+            the team switched to StarCraft II during the SC2 Beta in 2010, and became one of the most successful
+            western teams. On December 6, 2012, it was announced that the team had formed a Dota 2 division.[1]
+          </p>
+          <p>
+            Team Liquid is also strongly associated with its website, TeamLiquid.net. Launched on May 1, 2001,
+            it
+            has developed through the years into a focal point for StarCraft and Dota 2 coverage, eventually
+            becoming the most-browsed StarCraft-related website in the world, gathering thousands of members
+            (including several professional players) and centralizing news about the global SC2 scene. On August
+            30, 2012, Teamliquid.net announced expansion into Dota 2 coverage.[2] The website also features a
+            progaming database, the TLPD, as well as a wiki dedicated to Brood War, StarCraft II, Hearthstone,
+            Dota 2, Super Smash Brothers: Melee, Heroes of the Storm and Overwatch, Liquipedia.
+          </p>
+        </div>
+        <div class="hblock">
+          <h3>Статистика команды Team Liqiud</h3><b></b>
+        </div>
+
+        <div class="radialchart">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                {% include "../../tpl/spider.html" %}
+              </div>
+              <div class="col-lg-5">
+                <div class="legend">
+                  <div class="searcher">
+                    <input type="text" class="form-control form-control-sm shadow-sm mfilter" rel="t" data-del=""
+                      data-upd="" value="" placeholder="Команда для сравнения" autocomplete="off">
+                    <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+                  </div>
+                  <small id="passwordHelpBlock" class="form-text text-muted">
+                    Чаще <b>Luquid</b> сравнивют с
+                    <a href="#">Virtus.Pro</a>, <a href="#">Secret</a>, <a href="#">Alliance</a>, <a href="#">Ehome</a>,
+                    <a href="#">Vici</a>
+                  </small>
+
+                  <ul>
+                    {% for i in 0..1 %}
+                    <li>
+                      <b class="clr" style="background-color: {% if i == 0 %}red{% else %}blue{% endif %}"></b>
+                      <a href="#" class="teamNameIco">
+                        <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                        </picture>
+                        <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                        <span>{{ random(team) }}</span>
+                      </a>
+                      <a href="#" class="del">
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

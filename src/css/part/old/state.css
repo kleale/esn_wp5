@@ -1,0 +1,363 @@
+/*
+  State
+*/
+
+.htip{
+  background-color: #0d1921!important;
+  &.bottom>.arrow{
+    top: -8px;
+    border-bottom-color: #0d1921!important;
+    &:after {
+      border-bottom-color: #0d1921!important;
+    }
+  }
+  &.bottom {
+    margin-top: 12px!important;
+  }
+  .popover-content {
+    padding: 0;
+    position: relative;
+    width: 128px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  figure {
+    margin: 0;
+    position: relative;
+    
+    &:after{
+      content: '';
+      display: block;
+      background: linear-gradient(to bottom, rgba(13,25,33,0) 0%,rgba(13,25,33,0.99) 99%,rgba(13,25,33,1) 100%);
+      position: absolute * 0 0 0;
+      height: 15px;
+      z-index: 1;
+    }
+  }
+
+  .popover-inner {
+    background: #0d1921;
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: -22px 5px 2px;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+  }
+
+  u {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 3px;
+  }
+
+  b.gren {
+    color: #01FF01;
+  }
+
+  b.red {
+    color: #F94B4B;
+  }
+
+  em {
+    text-align: center;
+    display: block;
+    padding: 5px;
+    font-style: inherit;
+    color: #00B2DC;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+} /*htip*/
+
+
+@media (min-width: $XM) {
+.toggled_stream{
+  
+  .srteamview{
+    margin-right: 60px;
+    
+    .iframer{
+      height: 640px;
+    }
+  }
+  .srteamtoggle{
+      width:60px;
+    
+    .player-menu{
+      display: block;
+      background: none;
+      margin-top: 5px;
+      
+      li{
+        display: block;
+        
+        &.active{
+          a{
+            background: none;
+          }
+        }
+        a{
+          padding: 20px 0;
+          
+          i{
+            font-size: 21px;
+            margin-bottom: 0;
+          }
+          span{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .stmblocks{
+    display: none;
+  }
+}
+}
+
+#stream-compress{
+  display: none;
+}
+
+
+/*EXPAND*/
+.noscroll{
+  overflow: hidden;
+  height: 100%;
+}
+.expanded{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1000;
+  
+  .srteamview {
+    bottom: 0;
+    height: 100%;
+    position: fixed;
+    margin-right: 0 !important;
+    top:0;
+    left:50px;
+    @media (max-width: $XM){
+      height: auto;
+      margin-right: 0 !important;
+      top: 0;
+      left: 0;
+      right: 0!important;
+      bottom: 300px;
+    }
+  }
+  
+  .srteamtoggle{
+    bottom: 0;
+    height: 100% !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    @media (max-width: $XM){
+      height: 300px !important;
+      top: auto;
+      left: 0;
+      width: auto !important;
+    }
+    .st_inner{
+      @media (max-width: $XM){
+        position: relative;
+      }
+    }
+  }
+  .stmblock{
+    height: auto;
+    max-height:none;
+    padding-bottom:15px;
+  }
+  .tse-sc{
+    height:100%!important;
+  }
+  
+  &.toggled_stream{
+    
+    .srteamview {
+      right:328px;
+    }
+    #kof {
+      bottom: -4px;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  #kof{
+    display:none;
+  }
+}
+
+.expanded .srteamview .iframer{
+  position: absolute 0 0 90px 0;
+  height: auto;
+  @media (max-width: $XM){
+    bottom: 0;
+  }
+}
+.expanded .srteamview .bn{
+  position: absolute * 0 0 0;
+  height: 90px;
+  @media (max-width: $XM){
+    height: auto;
+  }
+}
+
+
+#srteamslider.expanded.branded.toggled_stream .srteamtoggle{
+    width:60px;
+}
+#srteamslider.expanded.toggled_stream.branded .srteamview {
+    right: 60px;
+}
+#srteamslider.expanded.branded .srteamtoggle{
+  width:368px;
+}
+#srteamslider.expanded.branded .srteamview {
+    right: 368px;
+}
+
+.expanded.toggled_stream .stm_koef {
+    background: #3c3c3c;
+    display: block;
+    margin: 5px 0 0 0;
+    padding: 15px 5px;
+    text-align: center;
+    z-index: 10;
+    
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+
+/*BRAND*/
+.expanded.toggled_stream.branded .st_brand {
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height:60px;
+}
+.expanded.branded .srteamtoggle .stat_m_select .dropdown .btn {
+    background: #333;
+}
+.expanded.branded .srteamtoggle .stmblock {
+    background: rgba(0, 0, 0, 0.5) ;
+}
+.expanded.toggled_stream.branded .srteambrand{
+    opacity:.2;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:block!important;
+    z-index:1;
+}
+.expanded.toggled_stream.branded .srteambrandhead{
+    display:block!important;
+    height:100px;
+}
+.expanded.branded.toggled_stream .stm_koef {
+    background:rgba(0, 0, 0, 0.54);
+    box-shadow:none;
+}
+.expanded.branded.toggled_stream .stm_koef::after {
+    display:none;
+}
+
+/*
+  BRANDS BG
+*/
+/*
+.st_brand{
+    transition:all .2s linear;
+}
+
+#srteamslider.expanded.branded.toggled_stream.b_headshot .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_head.jpg") no-repeat scroll 50% 0;
+}
+.b_headshot .st_brand{
+    background-image: url(/html/imgbrand/sbrand_head.png);
+}
+
+
+#srteamslider.expanded.branded.toggled_stream.b_egb .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_egb.jpg") no-repeat scroll 50% 0;
+}
+.b_egb .st_brand{
+    background-image: url(/html/imgbrand/sbrand_egb.png);
+}
+
+
+#srteamslider.expanded.branded.toggled_stream.b_vital .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_vital.jpg") no-repeat scroll 50% 0;
+}
+.b_vital .st_brand{
+    background-image: url(/html/imgbrand/sbrand_vital.png);
+}
+*/
+/* -- */
+
+
+/*HOVERS*/
+/*
+.hi-1::after {
+    border-radius: 50px;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+.hi-1 {
+    transition: background 0.2s ease 0s, color 0.2s ease 0s;
+    position: relative;
+}
+.hi-1::after {
+    box-shadow: 0 0 0 2px #fff;
+    left: -3px;
+    opacity: 0;
+    padding: 3px;
+    top: -3px;
+    transform: scale(0.8);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+.hi-1a:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #303539;
+}
+.hi-1a:hover *{
+    color: #303539 !important;
+}
+.hi-1a:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+*/
+

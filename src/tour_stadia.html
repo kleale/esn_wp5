@@ -1,0 +1,262 @@
+{% set title = "Турнир" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+          {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Новости DLS1</h4><b></b><span>20 декабря</span>
+        </div>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все новости DLS1</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="tour-page">
+
+      <!--d-flex-->
+      <div class="header">
+        <!-- <picture>
+            <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+            <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+          </picture> -->
+        <div class="hh">
+          <div class="hblock">
+            <h1>DreamLeague Seson 11</h1><b></b>
+          </div>
+          <span>19 марта - 3 апреля &nbsp;•&nbsp; <i class="fa fa-trophy"></i> 120 000$</span>
+        </div>
+        <div class="hr">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="gti-star" rel="5" onclick="rate(5)"></span>
+              <span class="gti-star" rel="4" onclick="rate(4)"></span>
+              <span class="gti-star starred-half" rel="3" onclick="rate(3)"></span>
+              <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span id="brate">4.5</span>
+          </div>
+          <div class="sc">
+            <a href="#" class="fab fa-vk"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+
+      {% include "./tpl/stages.html" %}
+      <!-- <div class="substage">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div> -->
+
+      <div class="page-topper">
+
+        <div class="hblock">
+          <h3>EU OpenQualifier #1</h3>
+          <span>
+            <em class="badge badge-border"> 7 фев - 21 мар</em>
+            <em>Week 3</em>
+          </span>
+          <b></b>
+          <span>
+            <!-- <i title="Типо хелптекст" class="tip" data-toggle="tip"></i> -->
+          </span>
+        </div>
+
+        {% include "./tpl/playoff.html" %}
+
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="hblock">
+              <h2>Расписание матчей DreamLeague Seson 11</h2><b></b>
+              <span>
+                <i title="Типо хелптекст" class="tip" data-toggle="tip"></i>
+                <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a>
+                <a href="#" title="Перезагрузить" class="moptions" data-toggle="tip"></a>
+              </span>
+            </div>
+
+            <!-- <section class="matches matches-full">
+            <div class="flex-table">
+              <div class="nodata">Нет матчей</div>
+            </div>
+          </section> -->
+
+            {% include "./tpl/matches/matchesList.html" %}
+            {% include "./tpl/pager.html" %}
+
+            <div class="hblock">
+              <h2>Результаты матчей</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i><a
+                  href="#" title="Перезагрузить" class="moptions" data-toggle="tip"></a></span>
+            </div>
+            {% include "./tpl/matches/matchesList.html" %}
+            {% include "./tpl/pager.html" %}
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+            <div class="card card-team-lg card-team-lg-bg mt-4">
+              <div class="tourlogo">
+                <picture>
+                  <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                  <img src="../img/dummy/{{random(tourlogo)}}.png" alt="STREAM LOGO">
+                </picture>
+              </div>
+              <table class="tinfo table table-sm">
+                <tr>
+                  <th>дата</th>
+                  <td>14 марта - 10 апреля</td>
+                </tr>
+                <tr>
+                  <th>призовые</th>
+                  <td>$ 1,000,000</td>
+                </tr>
+                <tr>
+                  <th>место</th>
+                  <td>Стокгольм, Швеция <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                    <br> стадион «Annexet»</td>
+                </tr>
+                <tr>
+                  <th>серия</th>
+                  <td>DreamLeague</td>
+                </tr>
+                <tr>
+                  <th>участвует</th>
+                  <td>20 команд</td>
+                </tr>
+              </table>
+              <div class="tourdescription">
+                <p><b>DreamLeague Season 11</b> (или Chongqing Major) станет третьим major турниром сезона 2018/19 Dota
+                  Pro
+                  Circuit. 16 команд сразятся за $1,000,000 и 15,000 DPC очков в марте 2019. Последние 3 дня турнира
+                  пройдут перед живой аудиторией.</p>
+              </div>
+            </div>
+
+            <section class="tour-teams-block">
+              <div class="hblock">
+                <h3>Current Legends</h3><b></b>
+              </div>
+
+              {% for i in 0..6 %}
+              <a href="#" class="card-team">
+                <span>{{random(team)}}</span>
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                  </picture>
+                </figure>
+                <em>Southeast Asia #1</em>
+              </a>
+              {% endfor %}
+
+              <div class="hblock">
+                <h3>Minor Challengers</h3><b></b>
+              </div>
+              {% for i in 0..4 %}
+              <a href="#" class="card-team">
+                <span>{{random(team)}}</span>
+                <figure>
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                      <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                  </figure>
+                <em>Southeast Asia #1</em>
+              </a>
+              {% endfor %}
+            </section>
+
+            <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

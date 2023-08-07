@@ -1,0 +1,136 @@
+<!-- aside -->
+<aside class="sidebar" id="sidebar">
+    <div class="scroller">
+
+        <div id="mobile-menu-holder"></div>
+
+        {% include "./../tpl/gamenav.html" %}
+
+        <div id="newsBlock" class="newsBlock">
+            <div class="hblock">
+                <h4>Новости</h4><b></b><span>20 декабря</span>
+            </div>
+
+            <!---  важная новость --->
+            <div class="media important">
+                <div class="media-body">
+                    <i class="sct">10:13</i>
+                    <b>DOTA2</b>
+                    <span class="nico-2 tt" data-original-title="Видео"></span>
+                    Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor
+                    <u>21</u>
+                </div>
+            </div>
+
+            <div class="media">
+                <div class="media-body">
+                    <i class="sct">10:13</i>
+                    <b>DOTA2</b>
+                    <span class="nico-2 tt" data-original-title="Видео"></span>
+                    Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor
+                    <u>21</u>
+                </div>
+            </div>
+
+            <div class="media important3">
+                <div class="media-body">
+                    <i class="sct">10:13</i>
+                    <b>DOTA2</b>
+                    <span class="nico-2 tt" data-original-title="Видео"></span>
+                    Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor
+                    <u>21</u>
+                </div>
+            </div>
+
+
+            {% for i in 0..15 %}
+            {% include "./newsblock.html" %}
+            {% endfor %}
+
+{#
+            <div class="hblock"><b></b><span>19 декабря</span></div>
+
+            <div class="newsCards" style="margin: .5rem 0rem .5rem 1rem">
+                <article>
+                    <a href="/ru/csgo/news/9587-astralis-vpervye-vyigrala-u-fnatic-v-koronavirusnuyu-eru-kak-eto-bylo"
+                        style="background-image: url(https://escorenews.com/media/news/_468/n9587.jpeg)">
+                        <b>Astralis впервые выиграла у Fnatic в «коронавирусную» эру. Как это было?<s>CS:GO</s>
+                            <!--<u>0</u>--></b>
+                    </a>
+                </article>
+            </div>
+
+            <div class="media op opened">
+
+                <div class="media-body">
+                    <i>10:1</i>
+                    <b>HEARTSTONE</b>
+                    <span class="badge badge-info">Видео</span>
+                    <a href="#">Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай из-за личных
+                        обстоятельств»</a>
+                    <u>1</u>
+                </div>
+                <div class="ypic">
+                    <a href="#">
+                        <picture>
+                            <source type="image/webp" srcset="https://escorenews.com/media/news/_468/n5685.jpeg">
+                            <img src="https://escorenews.com/media/news/_468/n5685.jpeg" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+
+            {% for i in 0..5 %}
+            {% include "./newsblock.html" %}
+            {% endfor %}
+
+
+            <div class="media op">
+                <!-- <img src="..." class="mr-3" alt="..."> -->
+                <div class="media-body">
+                    <i>10:1{{i}}</i>
+                    <b>{{ random(game) }}</b>
+                    <span class="badge badge-info">Видео</span>
+                    <a href="#">Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай из-за личных
+                        обстоятельств»</a>
+                    <u>{{ random(num) }}</u>
+                </div>
+                <div class="ypic">
+                    <a href="#">
+                        <picture>
+                            <source type="image/webp" srcset="../img/dummy/youtube.jpg">
+                            <img src="../img/dummy/youtube.jpg" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <div class="m-autor mal">
+                    <a href="#" class="ava">
+                        <i class="fab fa-vk"></i>
+                        <picture>
+                            <source type="image/webp" srcset="../img/dummy/ava.png">
+                            <img src="../img/dummy/ava.png" alt="LOGO">
+                        </picture>
+                    </a>
+                    <a href="#" class="name">Артем "Sadovnik" Данилюк / Natus Vincere</a>
+                    <a href="#" class="team">
+                        <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <div class="mCom">
+                    <u>{{ random(user) }}</u>:
+                    Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+                </div>
+            </div>
+
+#}
+
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-sm btn-primary">Все новости</button>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</aside>

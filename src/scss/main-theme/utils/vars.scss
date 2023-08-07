@@ -1,0 +1,83 @@
+// Font
+$mainFont                : 'Roboto', Arial, sans-serif;
+// icons
+$ico                     : 'Font Awesome 5 Free' !important;
+$ico2                    : 'esnicons' !important;
+
+// Size
+$mainFontColor           : #30404F;
+$mainFontSize            : 18px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+$xxl                     : 1930px;
+$xl                      : 1200px;
+$lg                      : 992px;
+$md                      : 768px;
+$sm                      : 576px;
+$xs                      : 576px;
+
+// Main color
+$default-color           : #ffffff;
+$primary-color           : #304661;
+$success-color           : #26de81;
+$danger-color            : #fc5c65;
+$warning-color           : #fed330;
+$info-color              : #17a2b8;
+$light-color             : #999999;
+$purple-color            : #8854d0;
+
+// Neutral Color
+$neutral-primary         : #303133;
+$neutral-regular         : #606266;
+$neutral-secondary       : #909399;
+$neutral-placeholder     : #C0C4CC;
+
+// Border Color
+$border-base             : #DCDFE6;
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
+
+// Background
+$bg-body                 : rgb(30, 80, 156);
+$bg-subcolor             : #304661;
+
+//links
+//$linkH                   : #7cb7d1;
+$linkH                   : #0776bd;
+//$link                    : #649CB4;
+$link                    :#3764a0;
+
+$link2                   : #4E6C7F;
+$link3                   : #3d7e9b;
+
+//actions
+$select                  : #F14800;
+$select-sub              : #fff;
+$selectDarker            : rgb(218, 66, 1);
+
+//text
+$headertext              : #000000;
+$graytext                : #707070;
+$graymuted               : #BABDCE;
+$lightgray               : #E0E0E0;
+
+//colored
+$lightblue               : #5DBEE8;
+$green                   : #82AC4E;
+$red                     : #EB5757;
+$orange                  : #fc7c00;
+$blue                    : rgb(0, 133, 190);
+$yellow                  : #f2c94c;
+$purple                  : #a35ace;
+
+//table
+$activerow               : #DAECF5;
+$rowcolor                : #F3F4F8;
+$linecolor               : #C4C4C4;
+$grayicon                : #CBCDD8;
+$tbg                     : #F3F4F8;
+
+//animation
+$tease                   : all .3s ease;

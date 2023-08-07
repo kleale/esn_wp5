@@ -1,0 +1,36 @@
+<!-- pager.html -->
+<div class="nav-pager2">
+    <span class="tablezoom">
+        <a id="tablezoom" href="javascript:;"><i class="fas fa-expand"></i></a>
+    </span>
+    <script>
+    $(document).ready(function () {
+    $("#tablezoom").click(function () {
+        $(".center").toggleClass('col-xl-12 col-lg-12');
+        $(".rcol").toggleClass('col-xl-0 col-lg-0');
+        $(this).html() == '<i class="fas fa-compress-arrows-alt"></i> свернуть таблицу' ? $(this).html('<i class="fas fa-expand"></i> развернуть таблицу') : $(this).html('<i class="fas fa-compress-arrows-alt"></i> свернуть таблицу');
+    });
+    });
+    </script>
+    <nav>
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">»</a>
+    </nav>
+</div>
+
+{#
+<!-- 
+    <nav class="nav-pager">
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">»</a>
+    </nav>
+-->
+#}

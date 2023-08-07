@@ -1,0 +1,773 @@
+{% set title = "Турнир" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Новости DLS1</h4><b></b><span>20 декабря</span>
+        </div>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все новости DLS1</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="tour-page">
+      <div class="header">
+        <!-- <picture>
+            <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+            <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+          </picture> -->
+        <div class="hh">
+          <div class="hblock">
+            <h1>DreamLeague Seson 11</h1><b></b>
+          </div>
+          <span>19 марта - 3 апреля &nbsp;•&nbsp; <i class="fa fa-trophy"></i> 120 000$</span>
+        </div>
+        <div class="hr">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="gti-star" rel="5" onclick="rate(5)"></span>
+              <span class="gti-star" rel="4" onclick="rate(4)"></span>
+              <span class="gti-star starred-half" rel="3" onclick="rate(3)"></span>
+              <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span id="brate">4.5</span>
+          </div>
+          <div class="sc">
+            <a href="#" class="fab fa-vk"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+
+      {% include "./tpl/stages.html" %}
+      <!-- <div class="substage">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div> -->
+
+      <div class="stage-block">
+        <div class="hblock">
+          <h3>EU OpenQualifier &nbsp;/&nbsp; Group Stage &nbsp;/&nbsp; </h3>
+          <span>
+            <em class="grey">7 фев - 21 мар</em>
+          </span>
+          <b></b>
+          <span>
+            <i title="Типо хелптекст" class="tip" data-toggle="tip"></i>
+            <span class="hlegend">
+              <s class="green">прошли</s>
+              <s class="yellow">тай-брейк</s>
+              <s class="red">вылетели</s>
+            </span>
+          </span>
+        </div>
+
+
+
+          <div class="gdiv">
+            <div class="row">
+
+            <div class="col-sm-6">
+              <div class="gtable">
+                <table class="table-striped table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Table</th>
+                      <th>И</th>
+                      <th>В</th>
+                      <th>H</th>
+                      <th>П</th>
+                      <th>О</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="crows1">
+                      <td>1</td>
+                      <td>
+                        <a href="/ru/dota-2/team/prodota-gaming" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t5563.webp, /media/logo/_60/t5563.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t5563.png, /media/logo/_60/t5563.png 2x">
+                            <img src="/media/logo/_30/t5563.png">
+                          </picture>
+                          <span>ProDota <sup>ProDota Gaming</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">10</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">30</td>
+                    </tr>
+                    <tr class="crows1">
+                      <td>2</td>
+                      <td>
+                        <a href="/ru/dota-2/team/imperial" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t10783.webp, /media/logo/_60/t10783.webp 2x"
+                              type="image/webp">
+                            <source srcset="/media/logo/_30/t10783.png, /media/logo/_60/t10783.png 2x">
+                            <img src="/media/logo/_30/t10783.png">
+                          </picture>
+                          <span>Imperial <sup>The Imperial</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">9</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">3</td>
+                      <td class="tpo">27</td>
+                    </tr>
+                    <tr class="crows1">
+                      <td>3</td>
+                      <td>
+                        <a href="/ru/dota-2/team/elements-one" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t8759.webp, /media/logo/_60/t8759.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t8759.png, /media/logo/_60/t8759.png 2x">
+                            <img src="/media/logo/_30/t8759.png">
+                          </picture>
+                          <span>Elements One <sup>Elements One</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">9</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">3</td>
+                      <td class="tpo">27</td>
+                    </tr>
+                    <tr class="crows1">
+                      <td>4</td>
+                      <td>
+                        <a href="/ru/dota-2/team/power-rangers" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t3452.webp, /media/logo/_60/t3452.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t3452.png, /media/logo/_60/t3452.png 2x">
+                            <img src="/media/logo/_30/t3452.png">
+                          </picture>
+                          <span>PR <sup>Power Rangers</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">8</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">4</td>
+                      <td class="tpo">24</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>5</td>
+                      <td>
+                        <a href="/ru/dota-2/team/tbe" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t5954.webp, /media/logo/_60/t5954.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t5954.png, /media/logo/_60/t5954.png 2x">
+                            <img src="/media/logo/_30/t5954.png">
+                          </picture>
+                          <span>TBE <sup>Team Bad English</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">8</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">4</td>
+                      <td class="tpo">24</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>6</td>
+                      <td>
+                        <a href="/ru/dota-2/team/fantastic-5" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t5423.webp, /media/logo/_60/t5423.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t5423.png, /media/logo/_60/t5423.png 2x">
+                            <img src="/media/logo/_30/t5423.png">
+                          </picture>
+                          <span>Fantastic Five <sup>Fantastic Five</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">8</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">4</td>
+                      <td class="tpo">24</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>7</td>
+                      <td>
+                        <a href="/ru/dota-2/team/valkyrie" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t8758.webp, /media/logo/_60/t8758.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t8758.png, /media/logo/_60/t8758.png 2x">
+                            <img src="/media/logo/_30/t8758.png">
+                          </picture>
+                          <span>Valkyrie <sup>Valkyrie eSports Gaming</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">7</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">5</td>
+                      <td class="tpo">21</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>8</td>
+                      <td>
+                        <a href="/ru/dota-2/team/alternate-attax" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t4544.webp, /media/logo/_60/t4544.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t4544.png, /media/logo/_60/t4544.png 2x">
+                            <img src="/media/logo/_30/t4544.png">
+                          </picture>
+                          <span>Alternate Attax <sup>Team Alternate</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">7</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">5</td>
+                      <td class="tpo">21</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>9</td>
+                      <td>
+                        <a href="/ru/dota-2/team/yellow-submarine" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t4186.webp, /media/logo/_60/t4186.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t4186.png, /media/logo/_60/t4186.png 2x">
+                            <img src="/media/logo/_30/t4186.png">
+                          </picture>
+                          <span>YeS <sup>Yellow Submarine</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">4</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">8</td>
+                      <td class="tpo">12</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>10</td>
+                      <td>
+                        <a href="/ru/dota-2/team/team-toast" class="teamNameIco">
+                          <picture>
+                            <img class="notsvg" src="/media/logo/not.svg">
+                          </picture>
+                          <span>_TT_ <sup>Team Toast</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">4</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">8</td>
+                      <td class="tpo">12</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>11</td>
+                      <td>
+                        <a href="/ru/dota-2/team/4-vikings-dane" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t7297.webp, /media/logo/_60/t7297.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t7297.png, /media/logo/_60/t7297.png 2x">
+                            <img src="/media/logo/_30/t7297.png">
+                          </picture>
+                          <span>4V+D <sup>4 Vikings + Dane</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">3</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">9</td>
+                      <td class="tpo">9</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>12</td>
+                      <td>
+                        <a href="/ru/dota-2/team/sqreen-squad" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t3757.webp, /media/logo/_60/t3757.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t3757.png, /media/logo/_60/t3757.png 2x">
+                            <img src="/media/logo/_30/t3757.png">
+                          </picture>
+                          <span>Sqreens Squad <sup>Sqreens Squad</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">11</td>
+                      <td class="tpo">3</td>
+                    </tr>
+                    <tr class="crows3">
+                      <td>13</td>
+                      <td>
+                        <a href="/ru/dota-2/team/flipside-tactics" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t3576.webp, /media/logo/_60/t3576.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t3576.png, /media/logo/_60/t3576.png 2x">
+                            <img src="/media/logo/_30/t3576.png">
+                          </picture>
+                          <span>Flip.Sid3 <sup>Flipside Tactics</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">12</td>
+                      <td class="tpo">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="gtable">
+                <table class="table-striped table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2">2-3 place Tiebreakers</th>
+                      <th>И</th>
+                      <th>В</th>
+                      <th>H</th>
+                      <th>П</th>
+                      <th>О</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td>1</td>
+                      <td>
+                        <a href="/ru/dota-2/team/imperial" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t10783.webp, /media/logo/_60/t10783.webp 2x"
+                              type="image/webp">
+                            <source srcset="/media/logo/_30/t10783.png, /media/logo/_60/t10783.png 2x">
+                            <img src="/media/logo/_30/t10783.png">
+                          </picture>
+                          <span>Imperial <sup>The Imperial</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">3</td>
+                    </tr>
+                    <tr class="">
+                      <td>2</td>
+                      <td>
+                        <a href="/ru/dota-2/team/elements-one" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t8759.webp, /media/logo/_60/t8759.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t8759.png, /media/logo/_60/t8759.png 2x">
+                            <img src="/media/logo/_30/t8759.png">
+                          </picture>
+                          <span>Elements One <sup>Elements One</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="gtable">
+                <table class="table-striped table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2">4-6 place Tiebreakers</th>
+                      <th>И</th>
+                      <th>В</th>
+                      <th>H</th>
+                      <th>П</th>
+                      <th>О</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td>1</td>
+                      <td>
+                        <a href="/ru/dota-2/team/power-rangers" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t3452.webp, /media/logo/_60/t3452.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t3452.png, /media/logo/_60/t3452.png 2x">
+                            <img src="/media/logo/_30/t3452.png">
+                          </picture>
+                          <span>PR <sup>Power Rangers</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">6</td>
+                    </tr>
+                    <tr class="">
+                      <td>2</td>
+                      <td>
+                        <a href="/ru/dota-2/team/tbe" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t5954.webp, /media/logo/_60/t5954.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t5954.png, /media/logo/_60/t5954.png 2x">
+                            <img src="/media/logo/_30/t5954.png">
+                          </picture>
+                          <span>TBE <sup>Team Bad English</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">3</td>
+                    </tr>
+                    <tr class="">
+                      <td>3</td>
+                      <td>
+                        <a href="/ru/dota-2/team/fantastic-5" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t5423.webp, /media/logo/_60/t5423.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t5423.png, /media/logo/_60/t5423.png 2x">
+                            <img src="/media/logo/_30/t5423.png">
+                          </picture>
+                          <span>Fantastic Five <sup>Fantastic Five</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">2</td>
+                      <td class="tpo">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="gtable">
+                <table class="table-striped table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2">7-8 place Tiebreakers</th>
+                      <th>И</th>
+                      <th>В</th>
+                      <th>H</th>
+                      <th>П</th>
+                      <th>О</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td>1</td>
+                      <td>
+                        <a href="/ru/dota-2/team/valkyrie" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t8758.webp, /media/logo/_60/t8758.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t8758.png, /media/logo/_60/t8758.png 2x">
+                            <img src="/media/logo/_30/t8758.png">
+                          </picture>
+                          <span>Valkyrie <sup>Valkyrie eSports Gaming</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">3</td>
+                    </tr>
+                    <tr class="">
+                      <td>2</td>
+                      <td>
+                        <a href="/ru/dota-2/team/alternate-attax" class="teamNameIco">
+                          <picture>
+                            <source srcset="/media/logo/_30/t4544.webp, /media/logo/_60/t4544.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t4544.png, /media/logo/_60/t4544.png 2x">
+                            <img src="/media/logo/_30/t4544.png">
+                          </picture>
+                          <span>Alternate Attax <sup>Team Alternate</sup></span>
+                        </a>
+                      </td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">0</td>
+                      <td class="tpo">1</td>
+                      <td class="tpo">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+
+
+
+        <div class="gdiv">
+          {% for i in 1..3 %}
+          <div class="gtable">
+            <table class="table-striped table table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">Группа {{i}}</th>
+                  <th><span data-toggle="tip" title="Игр">И</span></th>
+                  <th><span data-toggle="tip" title="Выиграно">В</span></th>
+                  <th><span data-toggle="tip" title="Hичьих">H</span></th>
+                  <th><span data-toggle="tip" title="Проиграно">П</span></th>
+                  <th><span data-toggle="tip" title="Очков">О</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in 1..8 %}
+                <tr
+                  class="{% if i == 1 or i == 2 %} first{% endif %}{% if i == 3 or i == 4 %} second{% endif %}{% if i >= 5 %} third{% endif %}">
+                  <td>{{i}}</td>
+                  <td>
+                    <a href="#" class="teamNameIco">
+                      <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                      <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                      </picture>
+                      <span>
+                        {{random(team)}}
+                        <!-- .<u>{{ random(team) }}</u> -->
+                        <sup>{{ random(team) }}</sup>
+                      </span>
+                    </a>
+                  </td>
+                  <td class="tpo">5</td>
+                  <td class="tpo">3</td>
+                  <td class="tpo">1</td>
+                  <td class="tpo">1</td>
+                  <td class="tpo">7</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="stage-block-odd stage-block">
+        <div class="hblock">
+          <h3>EU Playoff &nbsp;/&nbsp; </h3>
+          <span>
+            <em class="grey">22 мар - 1 апр</em>
+          </span>
+          <b></b>
+          <span>
+            <i title="Типо хелптекст" class="tip" data-toggle="tip"></i>
+          </span>
+        </div>
+        {% include "./tpl/playoff.html" %}
+      </div>
+
+      <div class="stage-block">
+        <div class="hblock">
+          <h3>EU Tiebreaker &nbsp;/&nbsp; </h3>
+          <span>
+            <em class="grey">22 мар - 1 апр</em>
+          </span>
+          <b></b>
+          <span>
+            <i title="Типо хелптекст" class="tip" data-toggle="tip"></i>
+          </span>
+        </div>
+        {% include "./tpl/playoff.html" %}
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="hblock">
+              <h2>Расписание матчей DreamLeague Seson 11</h2><b></b>
+              <span>
+                <i title="Расписание пока не известно" class="tip" data-toggle="tip"></i>
+                <!-- <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a> -->
+                <a href="#" title="Перезагрузить" class="moptions" data-toggle="tip"></a>
+              </span>
+            </div>
+
+            <section class="matches matches-full">
+              <div class="flex-table">
+                {% for i in 0..14 %}
+                <article class="article tbd">
+                  <div class="time">
+                    <b href="#" class="live"></b>
+                    <u></u>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b></b>
+                      <picture>
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="live"></span>
+                    </div>
+                    <span>
+                      <picture>
+                      </picture>
+                      <b></b>
+                    </span>
+                  </div>
+                  <div class="tpic">
+                    <picture class="tour">
+                    </picture>
+                  </div>
+                </article>
+                {% endfor %}
+              </div>
+            </section>
+
+            <!-- <a href="#" class="btn720">
+            <img src="../img/dummy/b720.png" alt="">
+          </a> -->
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+            <div class="card card-team-lg card-team-lg-bg mt-4">
+              <div class="tourlogo">
+                <picture>
+                  <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                  <img src="../img/dummy/{{random(tourlogo)}}.png" alt="STREAM LOGO">
+                </picture>
+              </div>
+              <table class="tinfo table table-sm">
+                <tr>
+                  <th>дата</th>
+                  <td>14 марта - 10 апреля</td>
+                </tr>
+                <tr>
+                  <th>призовые</th>
+                  <td>$ 1,000,000</td>
+                </tr>
+                <tr>
+                  <th>место</th>
+                  <td>Стокгольм, Швеция <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                    <br> стадион «Annexet»</td>
+                </tr>
+                <tr>
+                  <th>серия</th>
+                  <td>DreamLeague</td>
+                </tr>
+                <tr>
+                  <th>участвует</th>
+                  <td>20 команд</td>
+                </tr>
+              </table>
+              <div class="tourdescription">
+                <p><b>DreamLeague Season 11</b> (или Chongqing Major) станет третьим major турниром сезона 2018/19 Dota
+                  Pro
+                  Circuit. 16 команд сразятся за $1,000,000 и 15,000 DPC очков в марте 2019. Последние 3 дня турнира
+                  пройдут перед живой аудиторией.</p>
+              </div>
+            </div>
+
+            <section class="tour-teams-block">
+              <div class="hblock">
+                <h3>Участники неизвестны</h3><b></b>
+              </div>
+
+              {% for i in 0..3 %}
+              <a href="#" class="card-team tbd">
+                <span></span>
+                <picture>
+                </picture>
+                <em></em>
+              </a>
+              {% endfor %}
+
+            </section>
+
+            <!-- <a href="#" class="rbn mt-3"><img src="../img/dummy/rbn.png" alt=""></a> -->
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

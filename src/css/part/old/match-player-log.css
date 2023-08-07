@@ -1,0 +1,103 @@
+/*
+* Log
+*/
+
+.log-filter{
+  width: calc(100% - 35px);
+  padding: 8px 10px;
+  
+  input{
+    background-color: #0b242e;
+    color: #3f79a2;
+    font-size: 12px;
+    display: block;
+    height: 30px;
+    line-height: 14px;
+    padding: 5px 10px;
+    border: 0;
+    border-bottom: 1px solid #284b5e;
+    width: 100%;
+  }
+}
+
+.logger {
+  bottom: 0;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  
+  .tse-list {
+    padding-bottom: 20px;
+    
+    > div time {
+      color: #CBCBD8;
+      margin-right: 15px;
+    }
+  }
+  .inline-icon{
+    height: 17px;
+    width: auto;
+    vertical-align: middle;
+  }
+}/*logger*/
+
+.h-dire {
+  color: #C23C2A !important;
+}
+.h-radiant {
+    color: #92A525 !important;
+}
+
+/*Log objects colors*/
+.roshan {
+    color: #b49982 !important;
+}
+.sentry-ward {
+  color: #30BFD2 !important;
+}
+.observer-ward {
+    color: #F2CC67 !important;
+}
+.smoke-of-deceit {
+    color: #AA8ADB !important;
+}
+.glyph {
+    color: #D5C064 !important;
+}
+.rune-bounty {
+    color: #ff5200;
+}
+.rune-invisibility {
+    color: #9B55CA;
+}
+.rune-haste {
+    color: #FC725A;
+}
+.rune-regeneration {
+    color: #3BC022;
+}
+.rune-double-damage {
+    color: #1CA2FA;
+}
+.dust-of-appearance, .smoke-of-deceit {
+    color: #AA8ADB !important;
+}
+.rune-illusion {
+    color: #FDCB5A;
+}
+.rune-arcane {
+    color: #ed7dfb;
+}
+.aegis-of-the-immortal {
+    color: #F88A32 !important;
+}
+.gold {
+    color: #FBB829;
+}
+.xp {
+    color: #76B8A6;
+}
+/*.Log objects colors*/

@@ -1,0 +1,190 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+
+      <div class="block-ava">
+
+        <div id="preview" class="uava">
+          <img id="logo2" src="../img/dummy/avatar.png">
+        </div>
+        <div class="uavaload">
+          <div data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+          <div class="uava-btns">
+            <div>
+              <span>
+                <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;"
+                  style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file"
+                    style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a>
+              </span>
+              <span>
+                <a id="lb1" onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;"
+                  class="btn btn-danger btn-sm"> Удалить</a>
+              </span>
+              <span>
+                <a id="lb2" onclick="avatar_block()" href="javascript:;" class="btn btn-default btn-sm"> Миниатюра</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="avatar_block" style="display:none">
+          <div class="imgframe well bg-warning" style="position:relative;">
+            <p>Выбери область на картинке</p>
+            <img style="opacity:1" id="logo" data-width="566" data-height="600" src="../img/dummy/avatar.png"
+              width="200px">
+            <div><a href="javascript:;" onclick="sform('update');" class="btn btn-primary btn-sm">Обновить</a>
+            </div>
+          </div>
+        </div>
+        <div class="nikblock">
+          Banan <span class="badge pro-badge">PRO</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <main>
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-12">
+
+            <div class="hblock">
+              <h2>Настройки</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+
+            <form>
+              <div class="form-group row">
+                <label for="nik" class="col-sm-4 col-form-label text-right">Ник</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="nik" value="Banan">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-4 col-form-label text-right">Email</label>
+                <div class="col-sm-8">
+                  <input type="text" readonly class="form-control" id="staticEmail" value="email@example.com">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="tans" class="col-sm-4 col-form-label text-right">Транслит</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="tans" value="Banan ">
+                </div>
+              </div>
+
+
+              <div class="form-group row" rel="timezone">
+                <label for="inputPassword2" class="col-sm-4 col-form-label text-right">Часовой пояс</label>
+                <div class="col-sm-8">
+                  <select rel="1" name="timezone" class="form-control input" tabindex="4">
+                    <option value="0">Часовой пояс</option>
+                    <option value="-720">22:00 (UTC -12:00)</option>
+                    <option value="-660">23:00 (UTC -11:00)</option>
+                    <option value="-600">00:00 (UTC -10:00)</option>
+                    <option value="-540">01:00 (UTC -9:00)</option>
+                    <option value="-480">02:00 PST (UTC -8:00)</option>
+                    <option value="-420">03:00 PDT (UTC -7:00)</option>
+                    <option value="-360">04:00 CST (UTC -6:00)</option>
+                    <option value="-300">05:00 EST (UTC -5:00)</option>
+                    <option value="-240">06:00 EDT (UTC -4:00)</option>
+                    <option value="-210">06:30 (UTC -3:30)</option>
+                    <option value="-180">07:00 CLST (UTC -3:00)</option>
+                    <option value="-120">08:00 (UTC -2:00)</option>
+                    <option value="-60">09:00 (UTC -1:00)</option>
+                    <option value="0">10:00 (UTC +0:00)</option>
+                    <option value="60">11:00 CET (UTC +1:00)</option>
+                    <option value="120">12:00 CEST (UTC +2:00)</option>
+                    <option value="180" selected="">13:00 MSK (UTC +3:00)</option>
+                    <option value="210">13:30 (UTC +3:30)</option>
+                    <option value="240">14:00 (UTC +4:00)</option>
+                    <option value="270">14:30 (UTC +4:30)</option>
+                    <option value="300">15:00 (UTC +5:00)</option>
+                    <option value="330">15:30 (UTC +5:30)</option>
+                    <option value="360">16:00 (UTC +6:00)</option>
+                    <option value="420">17:00 (UTC +7:00)</option>
+                    <option value="480">18:00 SGT (UTC +8:00)</option>
+                    <option value="540">19:00 (UTC +9:00)</option>
+                    <option value="570">19:30 (UTC +9:30)</option>
+                    <option value="600">20:00 (UTC +10:00)</option>
+                    <option value="660">21:00 (UTC +11:00)</option>
+                    <option value="720">22:00 (UTC +12:00)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label text-right">Пароль</label>
+                <div class="col-sm-8">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputPassword2" class="col-sm-4 col-form-label text-right">Повторите пароль</label>
+                <div class="col-sm-8">
+                  <input type="password" id="inputPassword2" class="form-control" placeholder="Повторите пароль"
+                    required>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="soc" class="col-sm-4 col-form-label text-right">Привязать соцсети</label>
+                <div class="col-sm-8 usedSoc">
+                  <a class="small btn btn-default active" href="#"><i class="fab fa-vk"></i></a>
+                  <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="soc" class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-8 usedSoc">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Уведомления</label>
+                  </div>
+                </div>
+              </div>
+
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

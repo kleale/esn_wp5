@@ -1,0 +1,201 @@
+@import "./utils/libs";
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/fonts";
+@import "./utils/iconmoon";
+@import "./utils/fonts-fa";
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $xl) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $lg) {
+		font-size: 17px;
+  }
+  @media screen and (max-width: $sm) {
+		font-size: 18px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  color: $mainFontColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background: $bg-body;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  //background: url(/img/dummy/main.jpg) 0 0 no-repeat;
+  background: rgb(30, 28, 39) url(/img/bg.png) 0 0 repeat;
+}
+
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a {
+	text-decoration: none;
+  color: $link;
+
+  &:hover {
+    color: $linkH;
+    text-decoration: underline;
+  }
+  &:focus,
+  &:active{
+    text-decoration: none;
+  }
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// section, .section {
+//   position: relative;
+//   padding: 0;
+//   @media screen and (max-width: $lg) {
+//     padding: 20px 0;
+//   }
+// }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4,
+.h5, h5,
+.h6, h6{
+  margin-bottom: .5rem;
+}
+
+.h1, h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.h2, h2 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.h3, h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.h4, h4 {
+  font-size: .8rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.h5, h5 {
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+.h6, h6 {
+  font-size: .7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+.blockquote,
+blockquote{
+  font-size: .9rem;
+}
+.toast{
+  font-size: .75rem;
+  line-height: 1;
+}
+
+.input-group-append {
+  margin-left: 0;
+}
+
+.input-group-text {
+  border: 1px solid #edeef2 !important;
+  font-size: .8rem;
+  background: #edf2f557;
+}
+
+.table td{
+  vertical-align: middle
+}
+
+.table-striped tbody tr td {
+  border-top: 0;
+}
+
+.badge{
+  border-radius: .1rem;
+}
+.badge-border{
+  border: 1px solid $graymuted;
+  padding: .2rem;
+}
+
+.text,
+.tourdescription {
+  ul, ul li{
+    list-style-image: none;
+    list-style-type: circle;
+  }
+  ul, ol{
+    list-style-position: outside;
+    padding: 0 0 1rem 2rem;
+    font-size: 90%;
+  }
+  ol{
+    li{
+        list-style-type: decimal;
+    }
+  }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: $select;
+}
+
+
+@import "./parts/base";
+@import "./parts/videohighlights";
+@import "./parts/bar";
+@import "./parts/highlights";
+@import "./parts/404";
+@import "./parts/poll";

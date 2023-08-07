@@ -1,0 +1,428 @@
+<!-- rightcol -->
+<div class="hblock">
+    <h2>Фильтр</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+
+<div class="filter">
+
+    <!--
+    <div class="input-group input-group-sm searcher">
+        <input type="text" class="form-control ftour" value="" placeholder="Поиск" autocomplete="off">
+        <div class="input-group-append" id="ftour">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" onclick="">RedRain Cup Season 1</a>
+            </div>
+        </div>
+    </div>
+-->
+
+    <div class="searcher">
+        <input type="text" class="form-control form-control-sm mb-2" id="inlineFormInput" placeholder="Jane Doe">
+        <a href="" class="go"></a>
+    </div>
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Игра</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            <a class="dropdown-item" href="#"><u class="gl gl582"></u>DOTA2</a>
+            <a class="dropdown-item" href="#"><u class="gl gl100"></u>PUBG</a>
+            <a class="dropdown-item" href="#"><u class="gl gl313"></u>LOL</a>
+        </div>
+    </div>
+
+    <!-- <div class="input-group input-group-sm">
+        <input type="text" class="form-control ftour" value="" placeholder="Игра вар 2 (старая верстка)"
+            autocomplete="off">
+        <div class="input-group-append" id="ftour">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"></button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" onclick="mfilter('event','2192');">RedRain Cup Season 1</a>
+                <a class="dropdown-item" onclick="mfilter('event','2157');">Bishkek Stars League #8</a>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Турнир</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            {% for i in 1..5 %}
+            <a class="dropdown-item" href="#">
+                <span class="tourNemaIco">
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{ random(tourlogo) }}.png">
+                        <img src="./img/dummy/{{ random(tourlogo) }}.png" alt="">
+                    </picture>
+                    {{ random(tour) }}
+                </span>
+            </a>
+            {% endfor %}
+            <a class="dropdown-item" href="#">
+                <span class="tourNemaIco">
+                    <picture>
+                        <source type="image/webp" srcset="../img/ico/trophy.svg">
+                        <img src="./img/ico/trophy.svg" alt="">
+                    </picture>
+                    {{ random(tour) }}
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Команда</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            {% for i in 1..5 %}
+            <a class="dropdown-item" href="javascript:;" rel="16" onclick="filter('team',16)">
+                <u class="gl gl582"></u>
+                <span class="teamNameIco">
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                    </picture>
+                    <span>{{ random(team) }}</span>
+                    <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                </span>
+            </a>
+            {% endfor %}
+
+            <a class="dropdown-item" href="#">
+                <u class="gl gl582"></u>
+                <span class="teamNameIco">
+                    <picture>
+                        <source type="image/webp" srcset="../img/ico/not.svg">
+                        <img src="./img/ico/not.svg" alt="">
+                    </picture>
+                    <span>{{ random(team) }}</span>
+                    <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Игрок</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            {% for i in 1..5 %}
+            <a class="dropdown-item" href="#">
+                <span class="playerName">
+                    <img class="flag" src="../img/dummy/flag2.png" alt="">
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/ava.png">
+                        <img src="./img/dummy/ava.png" alt="ИГРОК">
+                    </picture>
+                    <span>
+                        Bonus .<u>EG</u>
+                        <sup>Michael Brown</sup>
+                    </span>
+                </span>
+            </a>
+            {% endfor %}
+            <a class="dropdown-item" href="#">
+                <span class="playerName">
+                    <img class="flag" src="../img/dummy/flag2.png" alt="">
+                    <picture>
+                        <source type="image/webp" srcset="../img/ico/nop.svg">
+                        <img src="./img/ico/nop.svg" alt="ИГРОК">
+                    </picture>
+                    <span>
+                        Bonus .<u>EG</u>
+                        <sup>Michael Brown</sup>
+                    </span>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Регион</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            <a class="dropdown-item" href="#">
+                <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                Россия
+            </a>
+            <a class="dropdown-item" href="#">
+                <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                Франция
+            </a>
+            <a class="dropdown-item" href="#">
+                <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                Китай
+            </a>
+        </div>
+    </div>
+
+    <div class="dropdown d-light">
+        <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Серия</span>
+        </button>
+        <div class="dropdown-menu">
+            <div class="dropdown-form">
+                <input type="text" class="form-control" placeholder="Поиск игры по названию" autocomplete="off">
+            </div>
+            {% for i in 1..5 %}
+            <a class="dropdown-item" href="#">
+                <span class="tourNemaIco">
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{ random(tourlogo) }}.png">
+                        <img src="./img/dummy/{{ random(tourlogo) }}.png" alt="">
+                    </picture>
+                    {{ random(tour) }}
+                </span>
+            </a>
+            {% endfor %}
+            <a class="dropdown-item" href="#">
+                <span class="tourNemaIco">
+                    <i class="icon-trophy"></i> <!-- иконки тоже поддерживает -->
+                    {{ random(tour) }}
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Offline турниры</label>
+    </div>
+
+    <div class="hblock">
+        <b></b><button type="button" class="btn btn-sm btn-primary">Фильтровать</button><b></b>
+    </div>
+</div>
+
+<a href="" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+<div class="hblock">
+    <h2>Победители</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+<div class="game-select">
+    <a href="" class="gl dota2 active"></a>
+    <a href="" class="gl csgo"></a>
+    <a href="" class="gl lol"></a>
+    <a href="" class="gl hs"></a>
+    <a href="" class="gl ow"></a>
+    <a href="" class="gl fn"></a>
+    <a href="" class="gl pubg"></a>
+    <a href="" class="gl rl"></a>
+    <a href="" class="gl rs"></a>
+    <a href="" class="gl sc2"></a>
+</div>
+<section class="tours-winners">
+    <div class="flex-table">
+        {% for i in 0..15 %}
+        <div class="frow" href="#">
+            <a href="" class="tour">
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                    <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                </picture>
+                {{random(tour)}}
+            </a>
+            <a href="" class="team">
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                </picture>
+                {{random(team)}}
+            </a>
+            <i>
+                $ 233K
+            </i>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="hblock">
+    <h2>Призовые по играм</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+<section class="tours-prize">
+    {#<div class="flex-table wprogress">
+        {% for i in 0..5 %}
+        <a class="frow" href="#">
+            <span style="width:70%" class="progress"></span>
+            <u href="" class="gl {{random(gamelogo)}}"></u>
+            <b>{{random(game)}}</b>
+            <i>
+                $ 21 млн
+            </i>
+        </a>
+        {% endfor %}
+    </div>
+    #}
+
+    <table class="table table-hover table-striped table-sm">
+        <tbody>
+            <tr>
+                {% for i in 1..5 %}
+                <td class="tplc pl1">{{i}}</td>
+                <td>
+                    <!--<a href="//team/vg"></a>-->
+                    <a href="#" class="teamNameIco">
+                        <picture>
+                            <source srcset="/media/logo/_30/t1.webp, /media/logo/_60/t1.webp 2x" type="image/webp">
+                            <source srcset="/media/logo/_30/t1.png, /media/logo/_60/t1.png 2x">
+                            <img src="/media/logo/_30/t1.png">
+                        </picture>
+                        <span>VG</span>
+                        <!--<img class="flag" src="../img/dummy/flag2.png" alt="">-->
+                    </a>
+                </td>
+                <td>
+                    {{5-i}}5.5% из $15млн
+                </td>
+                <!-- <td>
+                    <a href="#" class="tour">
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/tour4.png">
+                          <img src="./img/dummy/tour4.png" alt="">
+                        </picture>
+                        Kuala-Lumpur Major 2019
+                    </a>
+                </td> -->
+                <td class="text-right">${{5-i}}50,000</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<div class="hblock">
+    <h2>Призовые по странам</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+<section class="country-prize">
+    <div class="flex-table wprogress">
+        {% for i in 0..5 %}
+        <a class="frow" href="#">
+            <span style="width:70%" class="progress"></span>
+            <b>
+                <img src="../img/dummy/{{random(flag)}}.png" alt="{{random(flag)}}">
+                {{random(country)}}
+            </b>
+            <i>
+                $ 21 млн
+            </i>
+        </a>
+        {% endfor %}
+
+        <div class="collapse" id="collapseExample">
+            <a class="frow" href="#">
+                <span style="width:70%" class="progress"></span>
+                <b>
+                    <img src="../img/dummy/{{random(flag)}}.png" alt="{{random(flag)}}">
+                    {{random(country)}}
+                </b>
+                <i>
+                    $ 21 млн
+                </i>
+            </a>
+        </div>
+
+        <div class="hblock">
+            <b></b>
+            <a class="showlink collapsed" data-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                развернуть \ свернуть
+            </a>
+            <b></b>
+        </div>
+
+    </div>
+</section>
+
+<div class="hblock">
+    <h2>Популярность игр</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+</div>
+
+
+<div class="popchart">
+    <figure>
+        <div class="figure-content">
+            <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut" aria-labelledby="beers-title beers-desc"
+                role="img">
+                <title id="beers-title">Popular Games</title>
+                <desc id="beers-desc">Donut chart showing 10 total games by popularity.</desc>
+                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" role="presentation">
+                </circle>
+                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4"
+                    stroke-width="3" role="presentation"></circle>
+
+                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99"
+                    stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25"
+                    aria-labelledby="donut-segment-1-title donut-segment-1-desc">
+                    <title id="donut-segment-1-title">CSGO</title>
+                    <desc id="donut-segment-1-desc">описание</desc>
+                </circle>
+                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e"
+                    stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85">
+                    <title id="donut-segment-2-title">Dota2</title>
+                    <desc id="donut-segment-2-desc">описание</desc>
+                </circle>
+                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc"
+                    stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65">
+                    <title id="donut-segment-3-title">LOL</title>
+                    <desc id="donut-segment-3-desc">описание</desc>
+                </circle>
+                <!-- unused 10% -->
+                <g class="chart-text">
+                    <!-- <text x="50%" y="50%" class="chart-number">
+                    10
+                    </text>
+                    <text x="50%" y="50%" class="chart-label">
+                    игр
+                    </text> -->
+
+                </g>
+            </svg>
+        </div>
+        <figcaption class="figure-key">
+            <p class="sr-only">Donut chart showing 10 total games by popularity.</p>
+
+            <ul class="figure-key-list" aria-hidden="true" role="presentation">
+                <li>
+                    <span class="shape-circle shape-fuschia"></span> CS-GO
+                </li>
+                <li>
+                    <span class="shape-circle shape-lemon-lime"></span> DOTA2
+                </li>
+                <li>
+                    <span class="shape-circle shape-blue"></span> LOL
+                </li>
+            </ul>
+        </figcaption>
+    </figure>
+</div>

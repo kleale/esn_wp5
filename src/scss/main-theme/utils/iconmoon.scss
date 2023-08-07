@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'esnicons';
+  src:  url('../fonts/esnicons.eot?p54c73');
+  src:  url('../fonts/esnicons.eot?p54c73#iefix') format('embedded-opentype'),
+    url('../fonts/esnicons.ttf?p54c73') format('truetype'),
+    url('../fonts/esnicons.woff?p54c73') format('woff'),
+    url('../fonts/esnicons.svg?p54c73#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"],
+[class^="nico-"], [class*=" nico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'esnicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**************************/
+.icon-swords:before,
+.icon-highlights:before {
+  content: "\e918";
+}
+//.icon-teams:before,
+.icon-team:before {
+  content: "\e91e";
+}
+//.icon-trophy:before,
+.icon-event:before {
+  content: "\e91f";
+}
+.icon-play:before,
+.icon-video:before  {
+  content: "\e914";
+}
+.icon-hl:before,
+.icon-highlights:before {
+  content: "\e911";
+}
+
+.nico-1:before{
+  content: "\e92a";
+}
+.nico-2:before{
+  content: "\e918";
+}
+.nico-3:before{
+  content: "\e902";
+}
+.nico-4:before{
+  content: "\e90b";
+}
+.nico-5:before{
+  content: "\e909";
+}
+.nico-6:before{
+  /*content: "\e91c";*/
+  content: "\f005";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+/**************************/
+
+
+.icon-rumor::before {
+  content: "\e902";
+}
+.icon-velorant:before {
+  content: "\e903";
+}
+.icon-rumor1:before {
+  content: "\e901";
+}
+.icon-artifact:before {
+  content: "\e9a3";
+}
+.icon-csgo:before {
+  content: "\e9a4";
+}
+.icon-dota2:before {
+  content: "\e9a5";
+}
+.icon-fn:before {
+  content: "\e9a6";
+}
+.icon-hs:before {
+  content: "\e9a7";
+}
+.icon-lol:before {
+  content: "\e9a8";
+}
+.icon-ow:before {
+  content: "\e9a9";
+}
+.icon-pubg:before {
+  content: "\e9aa";
+}
+.icon-rl:before {
+  content: "\e9ab";
+}
+.icon-rs:before {
+  content: "\e9ac";
+}
+.icon-sc2:before {
+  content: "\e9ad";
+}
+.icon-important1:before {
+  content: "\e92b";
+}
+.icon-important2:before {
+  content: "\e92c";
+}
+.icon-microphone:before {
+  content: "\e921";
+}
+.icon-profile:before {
+  content: "\e908";
+}
+.icon-pictures:before {
+  content: "\e909";
+}
+.icon-camera:before {
+  content: "\e90a";
+}
+.icon-rumor0:before {
+  content: "\e91b";
+}
+.icon-interview:before {
+  content: "\e90b";
+}
+.icon-main2:before {
+  content: "\e904";
+  color: #cbcdd8;
+}
+.icon-main:before {
+  content: "\e905";
+}
+.icon-chiken:before {
+  content: "\e900";
+}
+.icon-chiken2 .path1:before {
+  content: "\e906";
+  color: rgb(253, 222, 173);
+}
+.icon-chiken2 .path2:before {
+  content: "\e907";
+  margin-left: -0.9541015625em;
+  color: rgb(146, 105, 69);
+}
+.icon-coins:before {
+  content: "\e90c";
+}
+.icon-coins2:before {
+  content: "\e90d";
+}
+.icon-coins3:before {
+  content: "\e90e";
+}
+.icon-dmg:before {
+  content: "\e90f";
+}
+.icon-dragon:before {
+  content: "\e910";
+}
+.icon-hl:before {
+  content: "\e911";
+}
+.icon-news:before {
+  content: "\e912";
+}
+.icon-no_player:before {
+  content: "\e913";
+}
+.icon-play:before {
+  content: "\e914";
+}
+.icon-player:before {
+  content: "\e915";
+}
+.icon-sword:before {
+  content: "\e916";
+}
+.icon-sword1:before {
+  content: "\e917";
+}
+.icon-swords2:before {
+  content: "\e919";
+}
+.icon-swords3:before {
+  content: "\e91a";
+}
+.icon-teams:before {
+  content: "\e91e";
+}
+.icon-trophy:before {
+  content: "\e91f";
+}
+.icon-trophy1:before {
+  content: "\e922";
+}
+.icon-u:before {
+  content: "\e923";
+}
+.icon-user2:before {
+  content: "\e928";
+}
+.icon-user3:before {
+  content: "\e929";
+}
+.icon-vs:before {
+  content: "\e9a2";
+}
+.icon-video:before {
+  content: "\e918";
+}
+.icon-important:before {
+  content: "\e92a";
+}
+.icon-male:before {
+  content: "\e91c";
+}

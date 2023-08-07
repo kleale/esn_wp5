@@ -1,0 +1,53 @@
+<div class="media">
+    <!-- <img src="..." class="mr-3" alt="..."> -->
+    <div class="{% if i == 2 %}media-body today{% else%}media-body{% endif %}">
+        {% if i == 1 %}<i class="vtime">10<s>:</s>1{{i}}</i>{% elseif i == 2 %}<i class="sct">14 фев</i>{% else%}<i class="sct">10:1{{i}}</i>{% endif %}
+        <b>{{ random(game) }}</b>
+
+        {#
+        {% if i == 2 %}<span class="icon-important tt" title="Важно"></span>
+        <span class="icon-important1 tt" title="Важно"></span>{% endif %}
+        {% if i == 4 %}<span class="icon-video tt" title="Видео"></span>{% endif %}
+        {% if i == 5 %}<span class="icon-rumor tt" title="Слухи"></span>
+                        <span class="icon-rumor1 tt" title="Слухи"></span>
+        {% endif %}
+        {% if i == 6 %}<span class="icon-microphone tt" title="Интервью"></span>
+                        <span class="icon-interview tt" title="Интервью"></span>{% endif %}
+        {% if i == 7 %}<span class="icon-pictures tt" title="Фото"></span>{% endif %}
+        {% if i == 3 %}<span class="icon-male tt" title="Трансфер"></span>{% endif %}
+#}
+
+        {% if i == 2 %}<span class="nico-1 tt" title="Важно"></span>{% endif %}
+        {% if i == 3 %}<span class="nico-2 tt" title="Видео"></span>{% endif %}
+        {% if i == 4 %}<span class="nico-3 tt" title="Слухи"></span>{% endif %}
+        {% if i == 5 %}<span class="nico-4 tt" title="Интервью"></span>{% endif %}
+        {% if i == 6 %}<span class="nico-5 tt" title="Фото"></span>{% endif %}
+        {% if i == 7 %}<span class="nico-6 tt" title="Трансфер"></span>{% endif %}
+
+
+
+        {% if i == 8 %}<span class="badge badge-1">Важно</span>{% endif %}
+        {% if i == 9 %}<span class="badge badge-2">Видео</span>{% endif %}
+        {% if i == 10 %}<span class="badge badge-3">Слухи</span>{% endif %}
+        {% if i == 11 %}<span class="badge badge-4">Интервью</span>{% endif %}
+        {% if i == 12 %}<span class="badge badge-5">Фото</span>{% endif %}
+
+        {% if i == 13 %}<span class="badge badge-danger">Важно</span>{% endif %}
+        {% if i == 14 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+        {% if i == 15 %}<span class="badge badge-info">Видео</span>{% endif %}
+
+        {{ random(news) }}
+        <u>{{ random(num) }}</u>
+    </div>
+    {% if i == 2 %}
+        <div class="m-autor">
+            <i class="fab fa-vk"></i> Артем "Sadovnik" Данилюк / Natus Vincere
+        </div>
+    {% endif %}
+    {% if i == 5 %}
+        <div class="mCom">
+            <u>{{ random(user) }}</u>:
+            Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия... 
+        </div>
+    {% endif %}
+</div>

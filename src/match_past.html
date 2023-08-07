@@ -1,0 +1,722 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+    {% include "./tpl/aside.html" %}
+    <main class="match-page">
+
+
+      <div class="header">
+        <picture>
+          <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+          <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+        </picture>
+        <div class="hh">
+          <h1>Матч Gambit vs OG на <a href="#">Dream League 2019</a></h1>
+          <span>Group Stage • Group B • 19 марта 2019 • 13:00 MSK • Best of 3</span>
+        </div>
+        <div class="hr">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="gti-star" rel="5" onclick="rate(5)"></span>
+              <span class="gti-star" rel="4" onclick="rate(4)"></span>
+              <span class="gti-star starred-half" rel="3" onclick="rate(3)"></span>
+              <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span id="brate">4.5</span>
+          </div>
+          <div class="sc">
+            <a href="#" class="fab fa-vk"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+
+      {% include "./tpl/stages.html" %}
+
+      {% include "./tpl/matches/stream.html" %}
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-12">
+            <div class="teams-on-live">
+              <span>
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <img src="./img/dummy/team-lg.png" alt="">
+                  </picture>
+                  <b>{{ random(team) }}</b>
+                </a>
+                <u>Россия</u>
+                <s>23</s>
+                <sup>
+                  <a class="win tt mtype1" title="Победа"></a><a class="loose mtype-1 tt" title="Проигрыш"></a> <a
+                    href="#" class="mtype0"></a>
+                  <a class="mtype0" href="#"></a>
+                  <a class="mtype0" href="#"></a>
+                  <a href="#"></a><a href="#"></a><a href="#"></a>
+                  <a href="#"></a><a href="#"></a><a href="#"></a>
+                </sup>
+              </span>
+
+              <div class="score">
+                <h3>19 марта 2019, 13:00 MSK, Best of 3</h3>
+                <b>Матч окончен</b>
+                <span class="live ended">1<s>:</s>1</span>
+                <span class="kf">Коэффициенты</span>
+                <div class="progress">
+                  <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%" aria-valuenow="15"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%"
+                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <span>
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <img src="./img/dummy/team-lg.png" alt="">
+                  </picture>
+                  <h2>{{ random(team) }}</h2>
+                </a>
+                <u>Россия</u>
+                <s>23</s>
+                <sup>
+                  <a class="win tt" title="Победа"></a><a class="loose tt" title="Проигрыш"></a> <a href="#"></a><a
+                    href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a>
+                </sup>
+              </span>
+
+            </div>
+
+            <div class="hblock">
+              <h2>Результаты матча</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <section class="match-rezults">
+              <div class="flex-table openable">
+                {% for i in 0..3 %}
+                <article class="frow{% if i == 0 %} active{% endif %}{% if i == 0 %}{% else %} collapsed{% endif %}"
+                  data-toggle="collapse" data-target="#colblock{{i}}">
+                  <span class="map">
+                    Карта {{i}}
+                  </span>
+                  <div class="heroes t1">
+                    {% for i in 0..4 %}
+                    <picture class="hero">
+                      <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                      <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                      <b>{{i}}</b>
+                    </picture>
+                    {% endfor %}
+                  </div>
+                  <div class="teams">
+                    <span class="team green win">{{ random(team) }}</span>
+                    <b>14</b>
+                    <s>:</s>
+                    <b>23</b>
+                    <span class="team red {% if i == 0 %}win{% endif %}">sdfdsfdsfdsfsdf sdfdsf</span>
+                  </div>
+                  <div class="heroes t2">
+                    {% for i in 0..4 %}
+                    <picture class="hero">
+                      <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                      <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                      <b>{{i}}</b>
+                    </picture>
+                    {% endfor %}
+                  </div>
+                  <div class="time">
+                    <i class="fa fa-clock"></i>
+                    1:35:23
+                  </div>
+                  <span href="#" class="opener{% if i == 0 %}{% else %} collapsed{% endif %}" data-toggle="collapse"
+                    data-target="#colblock{{i}}"></span>
+                </article>
+                <div class="g582 collapse{% if i == 0 %} show{% endif %}" id="colblock{{i}}">
+                  <div class="shower">
+
+                    <div class="bans">
+                      <div class="fb1"></div>
+                      <div class="banhero">
+                        {% for i in 0..6 %}
+                        <picture class="hero">
+                          <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                          <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                          <b>{{i}}</b>
+                        </picture>
+                        {% endfor %}
+                      </div>
+                      <div class="teams">
+                        баны
+                      </div>
+                      <div class="banhero">
+                        {% for i in 0..6 %}
+                        <picture class="hero">
+                          <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                          <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                          <b>{{i}}</b>
+                        </picture>
+                        {% endfor %}
+                      </div>
+                      <div class="fb2"></div>
+                    </div>
+
+                    <div class="chart">
+                      <canvas id="myChart" width="400" height="100"></canvas>
+                    </div>
+
+                    <div class="alert alert-sm text-center" role="alert">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      Данные в графике примерные, точные данные появятся после обработки реплея матча
+                    </div>
+
+                    <div class="reztable table-responsive">
+                      <table class="table table-striped table-sm table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="tname">
+                              <a class="team" href="#">{{ random(team) }}</a>
+                              <i class="fa fa-trophy"></i>
+                            </th>
+                            <th scope="col" class="score">SCORE <b>32</b></th>
+                            <th scope="col">K</th>
+                            <th scope="col">D</th>
+                            <th scope="col">A</th>
+                            <th scope="col" class="orange">NET</th>
+                            <th scope="col" class="text-left">Items</th>
+                            <th scope="col">LH/DN</th>
+                            <th scope="col">%</th>
+                            <th scope="col">Laning</th>
+                            <th scope="col">Fights</th>
+                            <th scope="col">MVP</th>
+                            <th scope="col" class="orange">GPM</th>
+                            <th scope="col">XP</th>
+                            <th scope="col">Damage</th>
+                            <th scope="col">Heal</th>
+                            <th scope="col">Tower dmg</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for i in 0..4 %}
+                          <tr>
+                            <th scope="row" colspan="2">
+                              <div class="playHero">
+                                <picture class="hero">
+                                  <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                                  <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                                  <span>Carry</span>
+                                </picture>
+                                <div class="name">
+                                  <a href="#">ninjabongie</a>
+                                  <span><s>20</s> Lion</span>
+                                </div>
+                              </div>
+                            </th>
+                            <td class="bb">3</td>
+                            <td class="bb">9</td>
+                            <td class="bb">13</td>
+                            <td class="orange">9,123</td>
+                            <td>
+                              <div class="items">
+                                {% for i in 0..3 %}
+                                <picture class="item">
+                                  <source type="image/webp" srcset="../img/dummy/item.png">
+                                  <img src="./img/dummy/item.png" alt="">
+                                </picture>
+                                {% endfor %}
+                              </div>
+                            </td>
+                            <td>59 / 3</td>
+                            <td>32%</td>
+                            <td>1%</td>
+                            <td>65%</td>
+                            <td>11%</td>
+                            <td class="orange">342</td>
+                            <td>367</td>
+                            <td>3,300</td>
+                            <td>2,450</td>
+                            <td>1,334</td>
+                          </tr>
+                          {% endfor %}
+
+                          <tr>
+                            <th scope="col" class="tname">
+                              <a class="team" href="#">{{ random(team) }}</a>
+                              <i class="fa fa-trophy"></i>
+                            </th>
+                            <th scope="col" class="score">SCORE <b>32</b></th>
+                            <td colspan="15"></td>
+                          </tr>
+
+                          {% for i in 0..4 %}
+                          <tr>
+                            <th scope="row" colspan="2">
+                              <div class="playHero">
+                                <picture class="hero">
+                                  <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                                  <img src="./img/dummy/{{ random(hero) }}.png" alt="">
+                                </picture>
+                                <div class="name">
+                                  <a href="#">ninjabongie</a>
+                                  <span><s>20</s> Lion</span>
+                                </div>
+                              </div>
+                            </th>
+                            <td class="bb">3</td>
+                            <td class="bb">9</td>
+                            <td class="bb">13</td>
+                            <td class="orange">9,123</td>
+                            <td>
+                              <div class="items">
+                                {% for i in 0..3 %}
+                                <picture class="item">
+                                  <source type="image/webp" srcset="../img/dummy/item.png">
+                                  <img src="./img/dummy/item.png" alt="">
+                                </picture>
+                                {% endfor %}
+                              </div>
+                            </td>
+                            <td>59 / 3</td>
+                            <td>32%</td>
+                            <td>1%</td>
+                            <td>65%</td>
+                            <td>11%</td>
+                            <td class="orange">342</td>
+                            <td>367</td>
+                            <td>3,300</td>
+                            <td>2,450</td>
+                            <td>1,334</td>
+                          </tr>
+                          {% endfor %}
+
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+            <div class="hblock">
+              <h2>Коэффициенты на матч</h2><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            <section class="kefs">
+              <div class="flex-table">
+                {% for i in 0..3 %}
+                <article class="frow">
+                  <a href="#" class="kl">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{ random(bet) }}.png">
+                      <img src="./img/dummy/{{ random(bet) }}.png" alt="">
+                    </picture>
+                  </a>
+                  <div>
+                    <a href="#">{{ random(team) }}</a>
+                    <b class="green">3.4</b>
+                    <s>:</s>
+                    <b class="red">1.23</b>
+                    <a href="#">{{ random(team) }}</a>
+                  </div>
+                  <span>
+                    <button class="btn btn-success btn-sm">
+                      Сделать ставку
+                    </button>
+                  </span>
+                </article>
+                {% endfor %}
+              </div>
+            </section>
+
+            <div class="tooltip bs-tooltip-auto" x-placement="top" role="tooltip"
+              style="display:block; width:175px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+
+                  <b class="ttsideblue">
+                    <i>123</i>
+                    <s></s>
+                    <i>4343</i>
+                  </b>
+                  <u class="ttsideblue">
+                    <i>12</i>
+                    <s></s>
+                    <i>4351</i>
+                  </u>
+
+                  <div class=ttsidered>
+                    <span>
+                      <img src=https://escorenews.com/media/game/hero/313/_33/1.png>
+                    </span>
+                    <div><s></s><i>12:11</i></div>
+                    <span>
+                      <img src=https://escorenews.com/media/game/hero/313/_33/9.png>
+                      <img src=https://escorenews.com/media/game/hero/313/_33/9.png>
+                      <img src=https://escorenews.com/media/game/hero/313/_33/9.png>
+                    </span>
+                  </div>
+                  <div class=ttsidered>
+                    <span><img src=https://escorenews.com/media/game/hero/313/_33/2.png></span>
+                    <div><s></s><i>12:11</i></div>
+                    <span><img src=https://escorenews.com/media/game/hero/313/_33/7.png></span>
+                  </div>
+                  <div class=ttsideblue>
+                    <span><img src=https://escorenews.com/media/game/hero/313/_33/7.png></span>
+                    <div><s></s></div>
+                    <span><img src=https://escorenews.com/media/game/icon/313/timeline/inhibitor_building_t2.png></span>
+                  </div>
+                  <div class=ttsideblue>
+                    <span><img src=https://escorenews.com/media/game/hero/313/_33/6.png></span>
+                    <div></div>
+                    <span><img src=https://escorenews.com/media/game/icon/313/timeline/tower_building_t2.png></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tooltip fade bs-tooltip-top show" role="tooltip" id="tooltip316877"
+              style="position: absolute; transform: translate3d(430px, 1489px, 0px); top: 0px; left: 0px; will-change: transform;"
+              x-placement="top">
+              <div class="arrow" style="left: 77px;"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+
+                  <b class="ttsideblue">
+                    <i>123</i>
+                    <s></s>
+                    <i>4343</i>
+                  </b>
+                  <u class="ttsideblue">
+                    <i>12</i>
+                    <s></s>
+                    <i>4351</i>
+                  </u>
+
+                  <div class="ttsideblue"><span><img
+                        src="https://escorenews.com//media/game/hero/313/_33/523.png"></span>
+                    <div><s></s><i>21:00</i></div><span><img
+                        src="https://escorenews.com//media/game/hero/313/_33/223.png"></span>
+                  </div>
+                  <div class="ttsidered"><span><img src="https://escorenews.com//media/game/hero/313/_33/81.png"></span>
+                    <div><s></s><i>21:27</i></div><span><img
+                        src="https://escorenews.com//media/game/hero/313/_33/111.png"></span>
+                  </div>
+                  <div class="ttsidered"><span><img src="https://escorenews.com//media/game/hero/313/_33/81.png"></span>
+                    <div><s></s><i>21:29</i></div><span><img
+                        src="https://escorenews.com//media/game/hero/313/_33/523.png"></span>
+                  </div>
+                  <div class="ttsidered"><span><img src="https://escorenews.com//media/game/hero/313/_33/24.png"></span>
+                    <div><s></s><i>21:49</i></div><span><img
+                        src="https://escorenews.com//media/game/hero/313/_33/62.png"></span>
+                  </div>
+                  <div class="ttsideblue">
+                    <span>
+                      <img src="https://escorenews.com//media/game/hero/313/_33/48.png">
+                    </span>
+                    <div><s></s></div>
+                    <span>
+                      <img src="https://escorenews.com//media/game/icon/313/timeline/baron_nashor_t1.png">
+                  </div>
+                  </span>
+                  <div class="ttsidered"><img
+                      src="https://escorenews.com//media/game/icon/313/timeline/minion_t2.png"><s></s><img
+                      src="https://escorenews.com//media/game/icon/313/timeline/tower_building_t1.png"></div>
+                  <div class="ttsidered"><img src="https://escorenews.com//media/game/hero/313/_33/81.png"><s></s><img
+                      src="https://escorenews.com//media/game/icon/313/timeline/tower_building_t1.png"></div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip bs-tooltip-auto" x-placement="top" role="tooltip"
+              style="display:block; opacity:1;position: absolute; left: 200px;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <div class=ttsidered>
+                    <span><img src=https://escorenews.com/media/game/hero/313/_33/1.png></span>
+                    <div><s></s><i>12:11</i></div>
+                    <span>
+                      {% for i in 0..9 %}
+                      <img src=https://escorenews.com/media/game/hero/582/_59/120.png>
+                      {% endfor %}
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <b>
+                    <i>123</i>
+                    <s></s>
+                    <i>4343</i>
+                  </b>
+                  <u>
+                    <i>12</i>
+                    <s></s>
+                    <i>4351</i>
+                  </u>
+                  <div class=ttsidered>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                    <div><s></s><i>12:11</i></div>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                  </div>
+                  <div class=ttsidegreen>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                    <div><s></s><i>12:11</i></div>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <div class=ttsidered>
+                    <em>Казармы лучников</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <div class=ttsidegreen>
+                    <em>3-я башня</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <div class=ttsidegreen>
+                    <em> <i class="fa fa-exclamation-triangle"></i> 3-я башня</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <div class=ttsidegreen>
+                    <em><img src=./img/ico/aegis.png> 3-я башня</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block; width:150px; opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttgraph">
+                  <b>
+                    <i>123</i>
+                    <s></s>
+                    <i>1k</i>
+                  </b>
+                  <u>
+                    <i>12</i>
+                    <s></s>
+                    <i>2k</i>
+                  </u>
+                  <div class=ttsidered>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                    <div><s></s><i>12:11</i></div>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                  </div>
+                  <div class=ttsidegreen>
+                    <div class=ro>
+                      <b></b>
+                      <div>
+                        <span>
+                          <s></s>
+                          <i>13k</i>
+                        </span>
+                        <span>
+                          <s></s>
+                          <i>0</i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class=ttsidegreen>
+                    <span><img src=https://escorenews.com/media/game/hero/582/_59/120.png></span>
+                    <div><sup></sup></div>
+                    <span class=aegis><img src=./img/ico/aegis.png></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="tooltip" role="tooltip" style="display:block;  opacity:1;position: relative;">
+              <div class="arrow"></div>
+              <div class="tooltip-inner">
+                <div class="ttpubg">
+
+                  <div class=ttside>
+                    <i class=ideath>
+                      <img src=./img/ico/death.png>
+                    </i>
+                    <span>RF_Snake</span>
+                    <div class=pubgi>
+                      <span><img src=./img/dummy/wpn2.png></span>
+                      <i>123m x2</i>
+                    </div>
+                    <span>KOW_Bipp</span>
+                  </div>
+
+                  <div class=ttside>
+                    <i class=idnbored>
+                      <img src=./img/ico/dnbo.png>
+                    </i>
+                    <span>RF_BANANAPIEERROR</span>
+                    <div class=pubgi>
+                      <span><img src=./img/dummy/wpn2.png></span>
+                      <i>123m x4</i>
+                    </div>
+                    <span>KOW_HOANGUWAFD</span>
+                  </div>
+
+                  <div class=ttside>
+                    <i class=idnbogray>
+                      <img src=./img/ico/dnbo.png>
+                    </i>
+                    <span>RF_Snake</span>
+                    <div class=pubgi>
+                      <span><img class=pbgw src=./img/dummy/Grenade.png></span>
+                      <i>23m x6</i>
+                    </div>
+                    <span>KOW_Bipp</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="hblock">
+              <h2>Комментарии <s>34</s></h2><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            {% include "./tpl/comments.html" %}
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+
+
+  <!-- https://www.chartjs.org/docs/latest/axes/cartesian/linear.html -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      lineTension: 0,
+      fill: false,
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3]
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+  <!-- <script>
+    $(document).ready(function() {
+      $('.match-rezults .openable .frow').on('click', function() {
+          $(this).toggleClass('active');
+      });
+    });
+  </script> -->
+
+</body>
+
+</html>

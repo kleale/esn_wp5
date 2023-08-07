@@ -1,0 +1,601 @@
+{% set title = "Турнир" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Новости Liquid</h4><b></b><span>20 декабря</span>
+        </div>
+
+        <style>
+          .sidebar .newsHero {
+              margin: 0 1rem;
+          }
+          .sidebar .newsHero .n-body .n-title>a {
+            color: inherit;
+            font-weight: 500;
+            font-size: .7rem;
+          }
+
+          .sidebar .newsHero .n-body .n-title .n-tags .gtag {
+
+            color: #7ca6c1;
+          }
+        </style>
+
+        <div class="newsHero">
+
+          <div class="n-body">
+            <a class="n-img"
+              href="/ru/dota-2/news/9517-natus-vincere-poterpeli-vtoroe-porajenie-podryad-na-omega-league">
+              <picture>
+                <source srcset="https://escorenews.com/media/news/_234/n9216.webp" type="image/webp">
+                <img src="https://escorenews.com/media/news/_234/n9216.webp">
+              </picture>
+            </a>
+            <div class="n-title">
+              <a href="/ru/dota-2/news/9517-natus-vincere-poterpeli-vtoroe-porajenie-podryad-na-omega-league">Natus
+                Vincere потерпели второе поражение подряд на OMEGA League</a>
+              <div class="n-tags">
+                <a class="gtag" href="/ru/dota-2">Dota 2</a> <span class="badge badge-1">Важно</span> </div>
+            </div>
+          </div>
+
+          <div class="n-body">
+            <a class="n-img"
+              href="/ru/dota-2/news/9517-natus-vincere-poterpeli-vtoroe-porajenie-podryad-na-omega-league">
+              <picture>
+                <source srcset="https://escorenews.com/media/news/_234/n9376.webp" type="image/webp">
+                <img src="https://escorenews.com/media/news/_234/n9376.webp">
+              </picture>
+            </a>
+            <div class="n-title">
+              <a href="/ru/dota-2/news/9517-natus-vincere-poterpeli-vtoroe-porajenie-podryad-na-omega-league">Natus
+                Vincere потерпели второе поражение подряд на OMEGA League</a>
+              <div class="n-tags">
+                <a class="gtag" href="/ru/dota-2">Dota 2</a> <span class="badge badge-1">Важно</span> </div>
+            </div>
+          </div>
+
+        </div>
+        {% for i in 0..3 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="newsCards" style="margin: .5rem 0rem .5rem 1rem">
+          <article>
+            <a href="/ru/csgo/news/9587-astralis-vpervye-vyigrala-u-fnatic-v-koronavirusnuyu-eru-kak-eto-bylo"
+              style="background-image: url(https://escorenews.com/media/news/_468/n9587.jpeg)">
+              <b>Astralis впервые выиграла у Fnatic в «коронавирусную» эру. Как это было?<s>CS:GO</s>
+                <!--<u>0</u>--></b>
+            </a>
+          </article>
+
+          <article>
+            <a href="/ru/csgo/news/9587-astralis-vpervye-vyigrala-u-fnatic-v-koronavirusnuyu-eru-kak-eto-bylo"
+              style="background-image: url(https://escorenews.com/media/news/_234/n9644.webp)">
+              <b>Astralis впервые выиграла у Fnatic в «коронавирусную» эру. Как это было?<s>CS:GO</s>
+                <!--<u>0</u>--></b>
+            </a>
+          </article>
+
+          {% for i in 0..3 %}
+          {% include "./tpl/newsblock.html" %}
+          {% endfor %}
+
+          <div class="hblock"><b></b><span>19 декабря</span></div>
+
+          <div class="newsHero">
+
+            <div class="n-body n-bigpic">
+              <a class="n-img"
+                href="/ru/dota-2/news/9537-menya-vbili-kolenom-litsom-v-pol-lasthero-rasskazal-pro-svoe-zaderjanie-v-belarusi">
+                <picture>
+                  <source srcset="https://escorenews.com/media/news/_234/n9644.webp" type="image/webp">
+                  <img src="https://escorenews.com/media/news/_234/n9644.webp">
+                </picture>
+              </a>
+              <div class="n-title">
+                <a
+                  href="/ru/dota-2/news/9537-menya-vbili-kolenom-litsom-v-pol-lasthero-rasskazal-pro-svoe-zaderjanie-v-belarusi">«Меня
+                  вбили коленом лицом в пол»: LastHero рассказал про свое задержание в Беларуси</a>
+                <div class="n-tags">
+                  <a class="gtag" href="/ru/dota-2">Dota 2</a> <span class="badge badge-1">Важно</span> </div>
+              </div>
+            </div>
+
+            <div class="n-body n-bigpic">
+              <a class="n-img"
+                href="/ru/dota-2/news/9537-menya-vbili-kolenom-litsom-v-pol-lasthero-rasskazal-pro-svoe-zaderjanie-v-belarusi">
+                <picture>
+                  <source srcset="https://escorenews.com/media/news/_234/n9644.webp" type="image/webp">
+                  <img src="https://escorenews.com/media/news/_234/n9644.webp">
+                </picture>
+              </a>
+              <div class="n-title">
+                <a
+                  href="/ru/dota-2/news/9537-menya-vbili-kolenom-litsom-v-pol-lasthero-rasskazal-pro-svoe-zaderjanie-v-belarusi">«Меня
+                  вбили коленом лицом в пол»: LastHero рассказал про свое задержание в Беларуси</a>
+                <div class="n-tags">
+                  <a class="gtag" href="/ru/dota-2">Dota 2</a> <span class="badge badge-1">Важно</span> </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/newsblock.html" %}
+        {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все новости Liquid</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="team-page">
+
+      <div class="page-topper">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 order-last">
+              <div class="card card-team-lg">
+                <div class="tourlogo">
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/team.png">
+                    <img src="../img/dummy/team.png" alt="LOGO">
+                  </picture>
+                </div>
+                <table class="tinfo table table-sm">
+                  <tr>
+                    <th>Призовые места</th>
+                    <td>
+                      <span class="plc pl1" title="Колличество первых мест" data-toggle="tip">23</span>
+                      <span href="#" class="plc pl2" title="Колличество вторых мест" data-toggle="tip">2</span>
+                      <span href="#" class="plc pl3" title="Колличество третьих мест" data-toggle="tip">43</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Country</th>
+                    <td>Europe
+                      <img class="flag float-right" src="../img/dummy/{{random(flag)}}.png" alt="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Ranking</th>
+                    <td>#5
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Matches</th>
+                    <td>
+                      95 / <span class="text-muted">691</span>
+                      <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Win Rate</th>
+                    <td>
+                      65% / <span class="text-muted">62%</span>
+                      <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Current streak</th>
+                    <td>3 wins in a row</td>
+                  </tr>
+                  <tr>
+                    <th>Record win streak</th>
+                    <td>15 wins</td>
+                  </tr>
+                  <tr>
+                    <th>Record lose streak</th>
+                    <td>5 lose</td>
+                  </tr>
+                  <tr>
+                    <th>Earned</th>
+                    <td>
+                      $325K / <span class="text-muted">$17.6M</span>
+                      <i title="хелптекст" class="tip float-right" data-toggle="tip"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>MVP</th>
+                    <td><a>
+                        <a href="#" class="playerName">
+                          <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/ava.png">
+                            <img src="./img/dummy/ava.png" alt="ИГРОК">
+                          </picture>
+                          <span>
+                            Miracle-
+                            .<u>Иванов Иван</u>
+                            <!-- <sup>{{ random(team) }}</sup> -->
+                          </span>
+                        </a>
+                    </td>
+                  </tr>
+
+                </table>
+                <div class="sbscr">
+                  <a href="#" class="btn btn-warning btn-sbscr shadow-sm">Подписаться <span>234 фанов</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="hblock">
+                <h1>Статистика команды Team Liqiud</h1><b></b>
+              </div>
+              <div class="tourdescription">
+                <p>
+                  Team Liquid is a professional team, founded in the Netherlands in 2000. Originally a Brood War clan,
+                  the team switched to StarCraft II during the SC2 Beta in 2010, and became one of the most successful
+                  western teams. On December 6, 2012, it was announced that the team had formed a Dota 2 division.[1]
+                </p>
+                <!-- <p>
+                  Team Liquid is also strongly associated with its website, TeamLiquid.net. Launched on May 1, 2001,
+                  it
+                  has developed through the years into a focal point for StarCraft and Dota 2 coverage, eventually
+                  becoming the most-browsed StarCraft-related website in the world, gathering thousands of members
+                  (including several professional players) and centralizing news about the global SC2 scene. On August
+                  30, 2012, Teamliquid.net announced expansion into Dota 2 coverage.[2] The website also features a
+                  progaming database, the TLPD, as well as a wiki dedicated to Brood War, StarCraft II, Hearthstone,
+                  Dota 2, Super Smash Brothers: Melee, Heroes of the Storm and Overwatch, Liquipedia.
+                </p> -->
+              </div>
+
+              <div class="row const-block team-players">
+                <div class="col-lg-6">
+                  <div class="hblock hblock-sm">
+                    <h2>Состав Liquid</h2><b></b>
+                  </div>
+                  <table class="table table-hover table-striped table-sm const">
+                    <tbody>
+                      {% for i in 1..5 %}
+                      <tr>
+                        <td>
+                          <a href="#" class="playerName">
+                            <picture>
+                              <source type="image/webp" srcset="../img/dummy/ava.png">
+                              <img src="./img/dummy/ava.png" alt="ИГРОК">
+                            </picture>
+                            <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                            <span>
+                              <u>{{random(position)}}</u>. {{random(user)}}
+                              <!-- .<u>Иванов Иван</u> -->
+                              <!-- <sup>{{ random(team) }}</sup> -->
+                            </span>
+                          </a>
+                        </td>
+                        <td class="when">
+                          {{i}}д назад<br>
+                          за <a href="#">Liquid</a> vs <a href="#">{{random(team)}}</a>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  <div class="hblock hblock-sm stuff">
+                    <h2>Stuff Liquid</h2><b></b>
+                  </div>
+                  <table class="table table-hover table-striped table-sm const">
+                    <tbody>
+                      {% for i in 1..2 %}
+                      <tr>
+                        <td>
+                          <a href="#" class="playerName">
+                            <!-- <picture>
+                              <source type="image/webp" srcset="../img/dummy/ava.png">
+                              <img src="./img/dummy/ava.png" alt="ИГРОК">
+                            </picture> -->
+                            <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                            <span>
+                              <u>Директор</u>. {{random(user)}}
+                              <!-- .<u>Иванов Иван</u> -->
+                              <!-- <sup>{{ random(team) }}</sup> -->
+                            </span>
+                          </a>
+                        </td>
+                        <td class="when">
+                          1д назад
+                          <!-- <br> за <a href="#">Liquid</a> vs <a href="#">{{random(team)}}</a> -->
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hblock hblock-sm">
+                    <h2>Другие игроки Liquid</h2><b></b><span><a href="#" class="all">бывшие игроки</a></span>
+                  </div>
+                  <table class="table table-hover table-striped table-sm const">
+                    <tbody>
+                      {% for i in 1..8 %}
+                      <tr>
+                        <td>
+                          <a href="#" class="playerName">
+                            <picture>
+                              <source type="image/webp" srcset="../img/dummy/ava.png">
+                              <img src="./img/dummy/ava.png" alt="ИГРОК">
+                            </picture>
+                            <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                            <span>
+                              <u>{{random(position)}}</u>. {{random(user)}}
+                              <!-- .<u>Иванов Иван</u> -->
+                              <!-- <sup>{{ random(team) }}</sup> -->
+                            </span>
+                          </a>
+                        </td>
+                        <!-- <td>
+                          <span title="хелптекст" data-toggle="tip"><img src="./img/dummy/pos-ico.png" alt=""></span>
+                        </td> -->
+                        <td class="when">
+                          1д назад
+                          <!-- <br> за <a href="#">Liquid</a> vs <a href="#">{{random(team)}}</a> -->
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  <div class="hblock">
+                    <b></b><button type="button" class="btn btn-sm">еще</button><b></b>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+            <div class="hblock">
+              <h3>Статистика команды Team Liqiud</h3><b></b>
+            </div>
+            <div class="radialchart">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    {% include "./tpl/spider.html" %}
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="legend">
+                      <div class="searcher">
+                        <input type="text" class="form-control form-control-sm shadow-sm mfilter" rel="t" data-del=""
+                          data-upd="" value="" placeholder="Команда для сравнения" autocomplete="off">
+                        <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+                      </div>
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Чаще <b>Luquid</b> сравнивют с
+                        <a href="#">Virtus.Pro</a>, <a href="#">Secret</a>, <a href="#">Alliance</a>, <a
+                          href="#">Ehome</a>,
+                        <a href="#">Vici</a>
+                      </small>
+
+                      <ul>
+                        {% for i in 0..1 %}
+                        <li>
+                          <b class="clr" style="background-color: {% if i == 0 %}red{% else %}blue{% endif %}"></b>
+                          <a href="#" class="teamNameIco">
+                            <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                            <picture>
+                              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                            </picture>
+                            <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                            <span>{{ random(team) }}</span>
+                          </a>
+                          <a href="#" class="del">
+                            <i class="fa fa-times"></i>
+                          </a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="hblock">
+              <h2>Расписание матчей</h2><b></b>
+              <span>
+                <i title="хелптекст" class="tip" data-toggle="tip"></i>
+                <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a>
+              </span>
+            </div>
+
+            <section class="matches matches-full">
+              <div class="flex-table">
+                <div class="nodata">Нет матчей</div>
+              </div>
+            </section>
+
+            {% include "./tpl/matches/matchesList.html" %}
+            {% include "./tpl/pager.html" %}
+
+            <div class="hblock">
+              <h2>Результаты матчей</h2><b></b><span><i title="хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+            {% include "./tpl/matches/matchesList.html" %}
+            {% include "./tpl/pager.html" %}
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+
+            <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+
+            <div class="hblock">
+              <h3>Сколько заработали Liquid</h3><b></b><span><a href="#" class="all">все</a> <i title="хелптекст"
+                  class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <section class="team-money">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..4 %}
+                  <tr>
+                    <td>
+                      201{{i}}
+                    </td>
+                    <td class="text-right">$ 4{{i}},000M</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </section>
+
+            <div class="hblock">
+              <h3>Достижения Liquid</h3><b></b>
+            </div>
+
+            <section class="team-ach">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..8 %}
+                  <tr>
+                    <td class="tplc pl{{i}}">{{i}}</td>
+                    <td>
+                      <a href="#">{{random(tour)}}</a>
+                    </td>
+                    <td>1{{i}} июл 2018</td>
+                    <td class="text-right">$ 4{{i}},000M</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              {% include "./tpl/pager.html" %}
+            </section>
+
+            <div class="hblock">
+              <h3>Текущие турниры Liquid</h3><b></b>
+              <span><a href="#" class="all">все</a></span>
+            </div>
+            <section class="team-ach">
+              <table class="table table-hover table-striped table-sm">
+                <tbody>
+                  {% for i in 1..5 %}
+                  <tr class="">
+                    <td
+                      class="{% if i == 1 or i == 2 %} teammaby{% endif %}{% if i == 3 or i == 4 %} teamin{% endif %}{% if i >= 5 %} teamout{% endif %}">
+                      <a href="#" class="tourNemaIco">
+                        <picture>
+                          <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                          <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                        </picture>
+                        {{random(tour)}}
+                      </a>
+                    </td>
+                    <td
+                      class="{% if i == 1 or i == 2 %} yellow{% endif %}{% if i == 3 or i == 4 %} green{% endif %}{% if i >= 5 %} red{% endif %}">
+                      {% if i == 1 or i == 2 %} отбор{% endif %}
+                      {% if i == 3 or i == 4 %} прошла{% endif %}
+                      {% if i == 5 %} выбыла{% endif %}
+                      {% if i > 5 %} не прошла{% endif %}
+                    </td>
+                    <td class="text-right">1{{i}}-20 мая</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </section>
+
+            <div class="hblock">
+              <h3>Стримы DreamLeague Seson 11</h3><b></b>
+            </div>
+
+            <section class="stream-list-mini">
+              {% for i in 1..3 %}
+              <a href="#">
+                <span>
+                  <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                  <b>Dota2RuHub</b>
+                  <i class="fa fa-eye"></i>
+                  <em>{{i}}314</em>
+                </span>
+                <span><b class="badge badge-danger">LIVE</b></span>
+              </a>
+              {% endfor %}
+            </section>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

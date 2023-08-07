@@ -1,0 +1,131 @@
+{% set title = "Регистрация" %}
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="loginPage">
+
+  <style>
+    :root {
+      --input-padding-x: 1rem;
+      --input-padding-y: 0.75rem;
+    }
+  </style>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-md-12 col-lg-6 bg-image">
+
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 mx-auto">
+                <div class="flex">
+                  <h3 class="login-heading mb-4 mt-1"><i class="icon-main mr-1"></i> Вход</h3>
+                  <div class="text-right soc mb-3">
+                      <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                    </div>
+                </div>
+                <form>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmailLog" class="form-control form-control-sm" placeholder="Email"
+                      required autofocus>
+                    <label for="inputEmailLog">Email</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPasswordLog" class="form-control" placeholder="Пароль" required>
+                    <label for="inputPasswordLog">Пароль</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="remember">
+                    <label class="custom-control-label" for="remember">Запомнить меня</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                    type="submit">Войти</button>
+                  <div class="text-center mb-3">
+                    <a class="small" href="#">Напомнить пароль</a>
+                  </div>
+                  <!-- <div class="text-center soc">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-12 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 mx-auto">
+                <div class="flex">
+                  <h3 class="login-heading mb-4 mt-1"><i class="icon-main mr-1"></i> Регистрация</h3>
+                  <div class="text-right soc mb-3">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <label for="inputEmail">Email</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="" id="nik" class="form-control" placeholder="Ник" required autofocus>
+                    <label for="nik">Ник</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+                    <label for="inputPassword">Пароль</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword2" class="form-control" placeholder="Повторите пароль"
+                      required>
+                    <label for="inputPassword2">Повторите пароль</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="rules">
+                    <label class="custom-control-label" for="rules">Я согласен с <a href="">правилами сайта</a></label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                    type="submit">Регистрация</button>
+                  <!-- <div class="text-center">
+                    <a class="small" href="#">А я уже зарегистрирован, хочу просто войти</a>
+                  </div> -->
+                  <!-- <div class="text-center soc">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

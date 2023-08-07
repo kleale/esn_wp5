@@ -1,0 +1,58 @@
+<!-- matchesList -->
+
+{% set tname = ["PUBG Champions League R7", "PUBG Champions League R6", "PUBG League", "DHL PUBG 2019"] %}
+
+<section class="matches matches-full">
+    <div class="flex-table">
+        <!--loading -->
+        {% for i in 0..15 %}
+
+        {% if i == 0 %}
+        <a class="article v_gl100">
+            <span class="time"><i>21:10</i><u class="gl pubg"></u></span>
+            <div class="teams">
+                <b>PUBG Champions League R4</b>
+                <span>
+                    <picture class="logo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    <b>{{ random(team) }}</b>
+                </span>
+                <!-- <img class="chiken" src="./img/ico/chiken.svg" alt=""> -->
+            </div>
+            <!-- <s><img src="../img/dummy/{{random(flag)}}.png" alt=""></s> -->
+            <picture class="tour">
+                <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+            </picture>
+        </a>
+        {% endif %}
+
+
+        <a class="article v_gl100">
+            <span class="time"><i>21:10</i><u class="gl pubg"></u></span>
+
+            <div class="teams">
+                <b>{{random(tname)}}</b>
+                <span class="winner">
+                    <picture class="logo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    <b>{{ random(team) }}</b>
+                    <!-- <img class="chiken" src="./img/ico/chiken.svg" alt=""> -->
+                </span>
+            </div>
+
+            <!-- <s><img src="../img/dummy/{{random(flag)}}.png" alt=""></s> -->
+            <picture class="tour">
+                <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+            </picture>
+        </a>
+
+
+        {% endfor %}
+    </div>
+</section>

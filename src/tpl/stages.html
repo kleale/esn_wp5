@@ -1,0 +1,16 @@
+<!-- stages --->
+<div class="stages">
+  <a class="stat" href="#"><span>Статистика турнира</span></a>
+  <button class="tol"></button>
+  <nav>
+    <div>
+      <a class="s-pass" href="#"><span>Турнир</span></a>
+      {% for i in 0..10 %}
+      <a href="#" title="Group A"><img src="../img/dummy/{{random(flag)}}.png" alt=""><span>Group A</span></a>
+      <a class="s-pass" href="#" title="Group B"><span>Group B</span></a>
+      {% endfor %}
+      <a class="s-pass active" href="#" title="Playoff"><span>Playoff</span></a>
+    </div>
+  </nav>
+  <button class="tor"></button>
+</div>

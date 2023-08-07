@@ -1,0 +1,381 @@
+{% set title = "News List" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set country = ["Россия", "США", "Китай", "Европа", "Корея"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        <div class="hblock">
+          <h4>Трансферы</h4><b></b><span><a href="#" class="all">все</a><i title="123" class="tip" data-toggle="tip"
+              data-original-title="Типо хелптекст"></i></span>
+        </div>
+        {% for i in 0..5 %}
+        <div class="media transfer">
+          <div class="media-body">
+            <i>1{{i}}.04.19</i>
+            <b>{{ random(game) }}</b>
+            {{ random(user) }}<span class="fio">.Виталий Сорокин</span> из {{ random(team) }} перешел в
+            {{ random(team) }}
+            <u>{{ random(num) }}</u>
+          </div>
+        </div>
+        {% endfor %}
+
+        <div class="hblock">
+          <h4>Интервью</h4><b></b><span><a href="#" class="all">все</a></span>
+        </div>
+        {% for i in 0..5 %}
+        <div class="media op">
+          <div class="media-body">
+            <i>1{{i}} мая 19 10:1{{i}}</i>
+            <b>{{ random(game) }}</b>
+            {{ random(news) }}
+            <u>{{ random(num) }}</u>
+          </div>
+          <div class="ypic">
+            <a href="#">
+              <picture>
+                <source type="image/webp" srcset="../img/dummy/youtube.jpg">
+                <img src="../img/dummy/youtube.jpg" alt="">
+              </picture>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+
+        <div class="hblock">
+          <h4>Видео</h4><b></b><span><a href="#" class="all">все</a></span>
+        </div>
+        {% for i in 0..5 %}
+        <div class="media">
+          <div class="media-body">
+            <i class="vtime">10<s>:</s>1{{i}}</i>
+            <i>10:1{{i}}</i>
+            <b>{{ random(game) }}</b>
+            Матч Virtus.pro VS Empire на турнире IEM Katowice Major без единой в Ганновере
+            <u>{{ random(num) }}</u>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </aside>
+
+    <main class="news_list">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <section class="mainNews" id="news_s">
+              <div class="hblock">
+                <h1>Новости киберспорта</h1><b></b>
+              </div>
+
+              <div id="mobile-filter-holder"></div>
+
+              {#
+              {% for i in 0..5 %}
+              <article class="nb{% if i == 2 or i == 3 or i == 4 %} bolded{% endif %} nb2">
+                <i class="date">10:1{{i}}</i>
+                <div class="txt">
+                  {% if i == 4 %}<span class="badge badge-danger">Важно</span>{% endif %}
+                  {% if i == 3 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+                  {% if i == 2 %}<span class="badge badge-info">Видео</span>{% endif %}
+                  <a href="#">{{ random(news) }}</a>
+                  <u>{{ random(num) }}</u>
+                  <p>
+                    Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без единой  Singularity и <span class="finded">Dendy</span>   в закрытую европейскую квалификацию на Dota Pit Minor ...
+                  </p>
+                  {% if i == 0 %}
+                    <div class="mCom">
+                      <u>{{ random(user) }}</u>:
+                      Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+                    </div>
+                  {% endif %}
+                </div>
+                <b class="game"><a href="#">{{ random(game) }}</a></b>
+              </article>
+              {% endfor %}
+
+              {% for i in 0..5 %}
+              <article class="nb{% if i == 2 or i == 3 or i == 4 %} bolded{% endif %} nb2">
+                <i class="date">10:1{{i}}</i>
+                <div class="txt">
+                  {% if i == 4 %}<span class="badge badge-danger">Важно</span>{% endif %}
+                  {% if i == 3 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+                  {% if i == 2 %}<span class="badge badge-info">Видео</span>{% endif %}
+                  <a href="#">{{ random(news) }}</a>
+                  <u>{{ random(num) }}</u>
+                  <p>
+                    Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без единой  Singularity и <span class="finded">Dendy</span>   в закрытую европейскую квалификацию на Dota Pit Minor ...
+                  </p>
+                  {% if i == 0 %}
+                    <div class="mCom">
+                      <u>{{ random(user) }}</u>:
+                      Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+                    </div>
+                  {% endif %}
+                </div>
+                <b class="game-ico"><a href="#" title="{{random(game)}}" class="gl {{random(gamelogo)}}"></a></b>
+              </article>
+              {% endfor %}
+
+#}
+
+              <h4>19 декабря</h4>
+
+              {% for i in 0..5 %}
+              <article class="nb{% if i == 2 or i == 3 or i == 4 %} bolded{% endif %}">
+                <i>10:1{{i}}</i>
+                <b><a href="#">{{ random(game) }}</a></b>
+                {% if i == 4 %}<span class="badge badge-danger">Важно</span>{% endif %}
+                {% if i == 3 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+                {% if i == 2 %}<span class="badge badge-info">Видео</span>{% endif %}
+                <a href="#">{{ random(news) }}</a>
+                <u>{{ random(num) }}</u>
+                {% if i == 0 %}
+                <div class="mCom">
+                  <u>{{ random(user) }}</u>:
+                  Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+                </div>
+                {% endif %}
+              </article>
+              {% endfor %}
+
+              <h4>18 декабря</h4>
+
+              {% for i in 0..5 %}
+              <article class="nb{% if i == 2 or i == 3 or i == 4 %} bolded{% endif %}">
+                <i>10:1{{i}}</i>
+                <b><a href="#">{{ random(game) }}</a></b>
+                {% if i == 4 %}<span class="badge badge-danger">Важно</span>{% endif %}
+                {% if i == 3 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+                {% if i == 2 %}<span class="badge badge-info">Видео</span>{% endif %}
+                <a href="#">{{ random(news) }}</a>
+                <u>{{ random(num) }}</u>
+                {% if i == 0 %}
+                <div class="mCom">
+                  <u>{{ random(user) }}</u>:
+                  Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+                </div>
+                {% endif %}
+              </article>
+              {% endfor %}
+
+            </section>
+
+            {% include "./tpl/pager.html" %}
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+            <div class="hblock">
+              <h2>Фильтр</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <div class="filter" id="filter">
+              <div class="searcher">
+                <input type="text" class="form-control mfilter" rel="t" data-del="" data-upd="" value=""
+                  placeholder="Поиск по тексту" autocomplete="off">
+                <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bgame"><span>Игра</span><b></b></button>
+                <div class="dropdown-menu mfilter" rel="game" data-del="team" data-upd="team">
+                  <a class="dropdown-item" href="javascript:;" rel="582" data-eng="dota-2"
+                    onclick="filter('game',582)"><u class="gl gl582"></u>Dota 2</a>
+                  <a class="dropdown-item" href="javascript:;" rel="704" data-eng="csgo" onclick="filter('game',704)"><u
+                      class="gl gl704"></u>CS:GO</a>
+                  <a class="dropdown-item" href="javascript:;" rel="755" data-eng="hearthstone"
+                    onclick="filter('game',755)"><u class="gl gl755"></u>Hearthstone</a>
+                  <a class="dropdown-item" href="javascript:;" rel="313" data-eng="lol" onclick="filter('game',313)"><u
+                      class="gl gl313"></u>LoL</a>
+                  <a class="dropdown-item" href="javascript:;" rel="100" data-eng="pubg" onclick="filter('game',100)"><u
+                      class="gl gl100"></u>PUBG</a>
+                  <a class="dropdown-item" href="javascript:;" rel="800" data-eng="overwatch"
+                    onclick="filter('game',800)"><u class="gl gl800"></u>Overwatch</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id=""><span>Турнир</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bteam"><span>Команда</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="team" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="team" data-del="" data-upd="" id="fteam">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bseries"><span>Игрок</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="series" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="series" data-del="" data-upd="" id="fseries">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bseries"><span>Тип новости</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="series" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="series" data-del="" data-upd="" id="fseries">
+                  </div>
+                </div>
+              </div>
+              <div class="hblock">
+                <b></b><button type="button" class="btn btn-sm btn-primary">Фильтровать</button><b></b>
+              </div>
+            </div>
+
+            <a href="#" class="rbn"><img src="../img/dummy/rbn.png" alt=""></a>
+
+            <div class="alert alert-warning text-center mt-3">
+              <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-envelope"></i> &nbsp; Письмо в редакцию</a>
+            </div>
+
+            <div class="hblock">
+              <h4>Другие новости</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <!-- newsCards.html -->
+
+            <div class="newsCards hnews">
+              <article>
+                <a href="/ru/dota-2/news/3939-esl-one-los-angeles-otkrytye-kvalifkiatsii-v-sng">
+                  <picture>
+                    <source type="image/webp" srcset="https://escorenews.com/media/news/_468/n3939.webp">
+                    <img src="https://escorenews.com/media/news/_468/n3939.jpeg">
+                  </picture>
+                  <b>
+                    Бывший босс Alliance и EG получил 9 млн долларов на киберспортивный стартап
+                    <s>Dota</s>
+                    <u>12</u>
+                  </b>
+                  <em class="badge badge-success">ТЕМА</em>
+                </a>
+              </article>
+              <article>
+                  <a href="/ru/dota-2/news/3939-esl-one-los-angeles-otkrytye-kvalifkiatsii-v-sng">
+                    <picture>
+                      <source type="image/webp" srcset="https://escorenews.com/media/news/_468/n3939.webp">
+                      <img src="https://escorenews.com/media/news/_468/n3939.jpeg">
+                    </picture>
+                    <b>
+                      Бывший босс Alliance и EG получил 9 млн долларов на киберспортивный стартап
+                      <s>Dota</s>
+                      <u>12</u>
+                    </b>
+                    <em class="badge badge-success">ТЕМА</em>
+                  </a>
+                </article>
+            </div>
+
+
+            <!-- <div class="newsCards nomrgn">
+              <article>
+                <a href="#" style="background-image: url(../img/dummy/newscard.png)">
+                  <b>
+                    Бывший босс Alliance и EG получил 9 млн долларов на киберспортивный стартап
+                    <s>Dota</s>
+                    <u>12</u>
+                  </b>
+                  <em class="badge badge-success">ТЕМА</em>
+                </a>
+              </article>
+            </div> -->
+
+            <section class="newsCards">
+              <div class="container">
+                <div class="row">
+                  {% for i in 0..3 %}
+                  <article class="col-6">
+                    <a href="#" style="background-image: url(../img/dummy/newscard.png)">
+                      <!-- <img src="../img/dummy/newscard.png" alt="ТЕМА"> -->
+                      <b>
+                        Бывший босс Alliance и EG получил 9 млн долларов на киберспортивный стартап
+                        <s>Dota</s>
+                        <u>12</u>
+                      </b>
+                      {% if i == 0 %}<em class="badge badge-danger">Важно</em>{% endif %}
+                      {% if i == 1 %}<em class="badge badge-warning">Слухи</em>{% endif %}
+                      {% if i == 2 %}<em class="badge badge-info">Видео</em>{% endif %}
+                    </a>
+                  </article>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

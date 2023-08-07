@@ -1,0 +1,814 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+        {% include "./tpl/gamenav.html" %}
+      </div>
+    </aside>
+
+    <main class="text-page ">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-12">
+
+            <div class="hblock">
+              <h1>Главные новости</h1><b></b>
+            </div>
+
+            <article class="text">
+              <p>
+                G:G (ggscore.com) – киберспортивный проект, посвященный популярным компьютерным играм. В данный момент
+                на сайте представлено 5 игр:
+              </p>
+              <ul>
+                <li>Dota 2</li>
+                <li> CS:GO</li>
+                <li>LoL</li>
+                <li>Overwatch</li>
+                <li>Hearthstone</li>
+              </ul>
+              <p>Благодаря G:G вы всегда будете находиться в курсе последних событий: какие турниры проводятся сейчас
+                или планируются на ближайшее время, какие матчи можно посмотреть сегодня или в обозримом будущем. В
+                нашем архиве вы сможете найти видеозаписи большинства прошедших игр.
+              </p>
+              <p>
+                На G:G вы сможете получить исчерпывающую информацию о командах: составы, матчи, рейтинг, историю. Более
+                того, на G:G вы сможете узнать, каковы заработки команд за последний год или за всю историю их
+                существования.
+              <p>
+                Мы также предлагаем вам полную и достоверную информацию об игроках: в каких турнирах они принимали
+                участие; честь каких команд отстаивали; статистика по играм и героям. Более того, вы можете
+                просмотреть видеозаписи матчей, в которых игрок принимал участие.
+              </p>
+              <p>
+                Одна из отличительных особенностей G:G - это наличие коэффициентов на матчи от различных букмекеров.
+                Т.е. вы можете просмотреть все коэффициенты на нашем сайте, выбрать наиболее приемлемые и перейти на
+                сайт букмекера, чтобы сделать ставку.
+              </p>
+
+<style>
+
+.tour-type {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 20px 15px 10px 15px;
+    border-radius: 6px;
+    background: #f7f7f7;
+}
+
+.rules {
+    display: flex;
+    align-items: flex-start;
+}
+
+.rules span.rank-badge {
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    color: #333;
+    border-radius: 3px;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.rules .row {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 7px 4px;
+}
+
+.rules .points {
+    font-size: .8rem;
+}
+
+main .rules h4 {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.rules .row:last-child {
+    border: 0;
+}
+
+</style>
+
+              <div class="rules">
+                <div class="tour-type">
+                  <h4>Huge Tournament</h4>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1.</span></div>
+                    <div class="points">+1150 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">2.</span></div>
+                    <div class="points">+700 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3.</span></div>
+                    <div class="points">+500 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3-4.</span></div>
+                    <div class="points">+450 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4.</span></div>
+                    <div class="points">+400 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4-5.</span></div>
+                    <div class="points">+360 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5.</span></div>
+                    <div class="points">+320 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-6.</span></div>
+                    <div class="points">+300 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6.</span></div>
+                    <div class="points">+280 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-8.</span></div>
+                    <div class="points">+262.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6-7.</span></div>
+                    <div class="points">+260 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7.</span></div>
+                    <div class="points">+240 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7-8.</span></div>
+                    <div class="points">+225 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8.</span></div>
+                    <div class="points">+210 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8-9.</span></div>
+                    <div class="points">+195 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9.</span></div>
+                    <div class="points">+180 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-10.</span></div>
+                    <div class="points">+170 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10.</span></div>
+                    <div class="points">+160 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-11.</span></div>
+                    <div class="points">+160 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-12.</span></div>
+                    <div class="points">+150 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-11.</span></div>
+                    <div class="points">+150 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11.</span></div>
+                    <div class="points">+140 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-12.</span></div>
+                    <div class="points">+140 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11-12.</span></div>
+                    <div class="points">+130 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12.</span></div>
+                    <div class="points">+120 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12-13.</span></div>
+                    <div class="points">+110 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12-14.</span></div>
+                    <div class="points">+101.667 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13.</span></div>
+                    <div class="points">+100 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-14.</span></div>
+                    <div class="points">+92.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14.</span></div>
+                    <div class="points">+85 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-15.</span></div>
+                    <div class="points">+85 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-16.</span></div>
+                    <div class="points">+77.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14-15.</span></div>
+                    <div class="points">+77.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">15.</span></div>
+                    <div class="points">+70 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14-16.</span></div>
+                    <div class="points">+70 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">15-16.</span></div>
+                    <div class="points">+62.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">16.</span></div>
+                    <div class="points">+55 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">16-17.</span></div>
+                    <div class="points">+47.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">17.</span></div>
+                    <div class="points">+40 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">17-18.</span></div>
+                    <div class="points">+35 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">18.</span></div>
+                    <div class="points">+30 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">17-19.</span></div>
+                    <div class="points">+30 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">17-20.</span></div>
+                    <div class="points">+25 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">18-19.</span></div>
+                    <div class="points">+25 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">19.</span></div>
+                    <div class="points">+20 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">18-20.</span></div>
+                    <div class="points">+20 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">19-20.</span></div>
+                    <div class="points">+15 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">20.</span></div>
+                    <div class="points">+10 pts.</div>
+                    
+                  </div>
+                </div>
+                <div class="tour-type">
+                  <h4>Large</h4>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1.</span></div>
+                    <div class="points">+1000 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">2.</span></div>
+                    <div class="points">+600 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3.</span></div>
+                    <div class="points">+450 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3-4.</span></div>
+                    <div class="points">+400 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4.</span></div>
+                    <div class="points">+350 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4-5.</span></div>
+                    <div class="points">+312.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5.</span></div>
+                    <div class="points">+275 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-6.</span></div>
+                    <div class="points">+257.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6.</span></div>
+                    <div class="points">+240 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-8.</span></div>
+                    <div class="points">+222.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6-7.</span></div>
+                    <div class="points">+222.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7.</span></div>
+                    <div class="points">+205 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7-8.</span></div>
+                    <div class="points">+187.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7-9.</span></div>
+                    <div class="points">+171.667 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8.</span></div>
+                    <div class="points">+170 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8-9.</span></div>
+                    <div class="points">+155 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9.</span></div>
+                    <div class="points">+140 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-10.</span></div>
+                    <div class="points">+127.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10.</span></div>
+                    <div class="points">+115 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-11.</span></div>
+                    <div class="points">+115 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-12.</span></div>
+                    <div class="points">+102.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-11.</span></div>
+                    <div class="points">+102.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11.</span></div>
+                    <div class="points">+90 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-12.</span></div>
+                    <div class="points">+90 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11-12.</span></div>
+                    <div class="points">+77.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12.</span></div>
+                    <div class="points">+65 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12-13.</span></div>
+                    <div class="points">+52.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12-14.</span></div>
+                    <div class="points">+45 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13.</span></div>
+                    <div class="points">+40 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-14.</span></div>
+                    <div class="points">+35 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14.</span></div>
+                    <div class="points">+30 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-15.</span></div>
+                    <div class="points">+30 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">13-16.</span></div>
+                    <div class="points">+25 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14-15.</span></div>
+                    <div class="points">+25 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">15.</span></div>
+                    <div class="points">+20 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">14-16.</span></div>
+                    <div class="points">+20 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">15-16.</span></div>
+                    <div class="points">+15 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">16.</span></div>
+                    <div class="points">+10 pts.</div>
+                    
+                  </div>
+                </div>
+                <div class="tour-type">
+                  <h4>Medium Tournament</h4>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1.</span></div>
+                    <div class="points">+850 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">2.</span></div>
+                    <div class="points">+500 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3.</span></div>
+                    <div class="points">+390 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3-4.</span></div>
+                    <div class="points">+345 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4.</span></div>
+                    <div class="points">+300 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4-5.</span></div>
+                    <div class="points">+270 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5.</span></div>
+                    <div class="points">+240 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-6.</span></div>
+                    <div class="points">+220 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6.</span></div>
+                    <div class="points">+200 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-8.</span></div>
+                    <div class="points">+180 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6-7.</span></div>
+                    <div class="points">+180 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7.</span></div>
+                    <div class="points">+160 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7-8.</span></div>
+                    <div class="points">+140 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8.</span></div>
+                    <div class="points">+120 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8-9.</span></div>
+                    <div class="points">+100 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9.</span></div>
+                    <div class="points">+80 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-10.</span></div>
+                    <div class="points">+70 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10.</span></div>
+                    <div class="points">+60 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-11.</span></div>
+                    <div class="points">+60 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">9-12.</span></div>
+                    <div class="points">+50 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-11.</span></div>
+                    <div class="points">+50 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11.</span></div>
+                    <div class="points">+40 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">10-12.</span></div>
+                    <div class="points">+40 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">11-12.</span></div>
+                    <div class="points">+30 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">12.</span></div>
+                    <div class="points">+20 pts.</div>
+                    
+                  </div>
+                </div>
+                <div class="tour-type">
+                  <h4>Small Tournament</h4>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1.</span></div>
+                    <div class="points">+700 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">2.</span></div>
+                    <div class="points">+420 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3.</span></div>
+                    <div class="points">+320 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3-4.</span></div>
+                    <div class="points">+285 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4.</span></div>
+                    <div class="points">+250 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4-5.</span></div>
+                    <div class="points">+215 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5.</span></div>
+                    <div class="points">+180 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-6.</span></div>
+                    <div class="points">+157.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6.</span></div>
+                    <div class="points">+135 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">5-8.</span></div>
+                    <div class="points">+112.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">6-7.</span></div>
+                    <div class="points">+112.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7.</span></div>
+                    <div class="points">+90 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">7-8.</span></div>
+                    <div class="points">+67.5 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">8.</span></div>
+                    <div class="points">+45 pts.</div>
+                    
+                  </div>
+                </div>
+                <div class="tour-type">
+                  <h4>Tiny Tournament</h4>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1.</span></div>
+                    <div class="points">+500 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">1-2.</span></div>
+                    <div class="points">+400 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">2.</span></div>
+                    <div class="points">+300 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3.</span></div>
+                    <div class="points">+160 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">3-4.</span></div>
+                    <div class="points">+120 pts.</div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="place"><span class="rank-badge">4.</span></div>
+                    <div class="points">+80 pts.</div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+  {#{% include "./tpl/devmenu.html" %}#}
+
+</body>
+
+</html>

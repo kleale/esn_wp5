@@ -1,0 +1,160 @@
+
+
+<script>
+    /* Player spider graph*/
+    $(function () {
+        $('#spider_chart_player').highcharts({
+            colors: ["#F26868", "#5DBEE8", "#84E08D", "#E9B01E", "#E91EBC", "#837DC8"],
+            chart: {
+                //polar: true,
+                //type: 'line',
+                type: 'pie',
+                backgroundColor: 'none',
+                spacingBottom: 5,
+                spacingTop: 5,
+                spacingLeft: 0,
+                spacingRight: 0
+            },
+            title: {
+                text: '',
+                x: -80
+            },
+            pane: {
+                size: '70%'
+            },
+            credits: {
+                enabled: false
+            },
+            // xAxis: {
+            //     categories: ["Охотник на демонов","Друид","Охотник","Маг","Палладин","Жрец","Разбойник","Шаман","Чернокнижник","Воин"],
+            //     tickmarkPlacement: 'on',
+            //     lineWidth: 0,
+            //     labels: {
+            //         style: {
+            //             textTransform: 'uppercase',
+            //             color: '#30404F'
+            //         }
+            //     }
+            // },
+            // yAxis: {
+            //     gridLineInterpolation: 'polygon',
+            //     //lineWidth: 0,
+            //     tickInterval: 2,
+            //     min: 0,
+            //     max: 101,
+            //     title: {
+            //         enabled: true
+            //     },
+            //     labels: {
+            //         enabled: false
+            //     },
+            //     plotBands: [{ // visualize
+            //         from: 0,
+            //         to: 10,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     },{
+            //         from: 10,
+            //         to: 20,
+            //         color: 'rgba(249, 249, 249, .5)'
+            //     },{
+            //         from: 20,
+            //         to: 30,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     },{
+            //         from: 40,
+            //         to: 50,
+            //         color: 'rgba(249, 249, 249, .5)'
+            //     },{
+            //         from: 50,
+            //         to: 60,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     },{
+            //         from: 60,
+            //         to: 70,
+            //         color: 'rgba(249, 249, 249, .5)'
+            //     },{
+            //         from: 70,
+            //         to: 80,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     },{
+            //         from: 80,
+            //         to: 90,
+            //         color: 'rgba(249, 249, 249, .5)'
+            //     },{
+            //         from: 90,
+            //         to: 100,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     },{
+            //         from: 90,
+            //         to: 100,
+            //         color: 'rgba(236, 239, 243, .5)'
+            //     }
+            //     ]
+            // },
+            plotOptions: {
+                // series: {
+                //     fillOpacity: 0.3,
+                //     title: '',
+                //     stickyTracking: false
+                // }
+                pie: {
+                    shadow: false,
+                    center: ['50%', '50%'],
+                    borderWidth: 0
+                }
+            },
+            tooltip: {
+                shared: true,
+                ///followPointer: true,
+                outside: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            legend: {
+                enabled: false
+            },
+            series: [{
+        name: 'Процент пиков',
+        colorByPoint: true,
+        data: [{
+            name: 'Охотник на демонов',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Друид',
+            y: 11.84
+        }, {
+            name: 'Охотник',
+            y: 10.85
+        }, {
+            name: 'Маг',
+            y: 4.67
+        }, {
+            name: 'Палладин',
+            y: 4.18
+        }, {
+            name: 'Sogou Explorer',
+            y: 1.64
+        }, {
+            name: 'Жрец',
+            y: 1.6
+        }, {
+            name: 'Разбойник',
+            y: 1.2
+        }, {
+            name: 'Шаман',
+            y: 2.61
+        }, {
+            name: 'Чернокнижник',
+            y: 2.61
+        }, {
+            name: 'Воин',
+            y: 2.61
+        }]
+    }]
+
+
+        });
+    });
+</script>
+<div id="spider_chart_player" style="height: 240px" class="spider_chart_player"></div>

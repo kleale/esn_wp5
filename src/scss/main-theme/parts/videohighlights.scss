@@ -1,0 +1,103 @@
+.video-full {
+  .article {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: #30404f;
+    padding: 0.2rem 0.3rem;
+    width: 100%;
+    font-size: 0.65rem;
+    line-height: 0.7rem;
+    min-height: 2rem;
+    position: relative;
+
+    picture {
+      width: 1.2rem;
+      min-width: 1.2rem;
+      height: 1.2rem;
+      display: flex;
+      overflow: hidden;
+      text-align: center;
+      margin: 0 0.2rem;
+      margin-right: 0.2rem;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.4rem;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .tour {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    .teams {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-grow: 1;
+      span {
+          margin: 0 .2rem;
+        b {
+            font-weight: normal;
+            color: $link;
+        }
+      }
+    }
+    .channel {
+        flex-basis: 5rem;
+    }
+    .views {
+        flex-basis: 5rem;
+        text-align: right;
+    }
+    .date{
+        flex-basis: 5rem;
+        text-align: right;
+    }
+    .timer {
+        flex-basis: 2rem;
+        padding: 0 .5rem;
+        text-align: right;
+        color: $select;
+    }
+  }
+}
+
+.video-highlight{
+    .streamblock.hide-list .stream {
+        height: 585px;
+
+        @media (max-width: $xl) {
+            height: auto;
+            min-height: 200px;
+        }
+    }
+}
+
+.hl-stats-tbl{
+    > tbody{
+        > tr {
+            &:first-child{
+                th,td{
+                    border-top:0;
+                }
+            }
+            > th{
+                vertical-align: middle;
+                text-align: right;
+                padding-right: 2rem;
+                border-right: 1px dotted #ccc;
+                max-width: 6rem;
+            }
+            > td{
+                padding-left: 2rem;
+            }
+        }
+    }
+}

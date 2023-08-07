@@ -1,0 +1,260 @@
+<div class="comments">
+    {% for i in 0..1 %}
+    <div class="comment creply">
+        <article id="com-36">
+            <div class="rate">
+                <button class="like"></button>
+                <span>33{{i}}</span>
+                <button class="dislike"></button>
+            </div>
+            <!-- <a href="#">
+                <img src="../img/ico/user5.svg" alt="">
+            </a> -->
+            <div class="cbody">
+                <div class="ch">
+                    <a class="name" href="#">GT_user</a>
+                    <a class="ut" href="#">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="{{ random(team) }}">
+                        {{ random(team) }}
+                    </a>
+                    <span class="sct" data-format="%j% %ms%%y%, %h%:%i%" data-time="1557164827">06 мая,
+                        20:47</span>
+                    <span class="prognoz">прогноз</span>
+                    
+                </div>
+                <p>
+                    С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с <br>
+                    Выход с ульты это считается как с
+                </p>
+                <div class="action">
+                    <a href="">Ответить</a>
+                    <!-- <a href="">Поделиться</a>
+                    <a href="">Сообщить о проблеме</a> -->
+                </div>
+            </div>
+            {% if i == 2 %}
+            <div class="comment_prognoz">
+                <span>Победит<br>{{ random(team) }}</span>
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                </picture>
+            </div>
+            {% endif %}
+        </article>
+        <div class="comment_child">
+            <article>
+                <div class="rate green">
+                    <button class="like"></button>
+                    <span>33{{i}}</span>
+                    <button class="dislike"></button>
+                </div>
+                <!-- <a href="#">
+                            <img src="../img/ico/user5.svg" alt="">
+                        </a> -->
+                <div class="cbody">
+                    <div class="ch">
+                        <a class="name" href="#">GT_user</a>
+                        <a class="ut" href="#">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="{{ random(team) }}">
+                            {{ random(team) }}
+                        </a>
+                        <span class="sct" data-format="%j% %ms%%y%, %h%:%i%" data-time="1557164827">06 мая,
+                            20:47</span>
+                        <!-- <span class="prognoz">прогноз</span> -->
+                        
+                    </div>
+                    <p>
+                        С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с <br>
+                        Выход с ульты это считается как с
+                    </p>
+                    <div class="action">
+                        <a href="">Ответить</a>
+                        <a href="">Поделиться</a>
+                        <a href="">Сообщить о проблеме</a>
+                    </div>
+                </div>
+                {% if i == 2 %}
+                <div class="comment_prognoz">
+                    <span>Победит<br>{{ random(team) }}</span>
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                </div>
+                {% endif %}
+            </article>
+            <article>
+                <div class="rate red">
+                    <button class="like"></button>
+                    <span>33{{i}}</span>
+                    <button class="dislike"></button>
+                </div>
+                <!-- <a href="#">
+                    <img src="../img/ico/user5.svg" alt="">
+                </a> -->
+                <div class="cbody">
+                    <div class="ch">
+                        <a class="name" href="#">GT_user</a>
+                        <a class="ut" href="#">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="{{ random(team) }}">
+                            {{ random(team) }}
+                        </a>
+                        <span class="sct" data-format="%j% %ms%%y%, %h%:%i%" data-time="1557164827">06 мая,
+                            20:47</span>
+                        <!-- <span class="prognoz">прогноз</span> -->
+                    </div>
+                    <p>
+                        С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с <br>
+                        Выход с ульты это считается как с
+                    </p>
+                </div>
+                {% if i == 2 %}
+                <div class="comment_prognoz">
+                    <span>Победит<br>{{ random(team) }}</span>
+                    <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                </div>
+                {% endif %}
+            </article>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="comment">
+        <article>
+            <div class="rate red">
+                <button class="like"></button>
+                <span>33{{i}}</span>
+                <button class="dislike"></button>
+            </div>
+            <!-- <a href="#">
+                <img src="../img/ico/user5.svg" alt="">
+            </a> -->
+            <div class="cbody">
+                <div class="ch">
+                    <a class="name" href="#">GT_user</a>
+                    <a class="ut" href="#">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="{{ random(team) }}">
+                        {{ random(team) }}
+                    </a>
+                    <span class="sct" data-format="%j% %ms%%y%, %h%:%i%" data-time="1557164827">06 мая,
+                        20:47</span>
+                    <!-- <span class="prognoz">прогноз</span> -->
+                </div>
+                <p>
+                    С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с <br>
+                    Выход с ульты это считается как с
+                </p>
+                <div class="action">
+                    <a href="">Ответить</a>
+                    <a href="">Поделиться</a>
+                    <a href="">Сообщить о проблеме</a>
+                </div>
+            </div>
+            {% if i == 2 %}
+            <div class="comment_prognoz">
+                <span>Победит<br>{{ random(team) }}</span>
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                </picture>
+            </div>
+            {% endif %}
+        </article>
+    </div>
+    <div class="comment">
+        <article>
+            <div class="rate green">
+                <button class="like"></button>
+                <span>{{i}}</span>
+                <button class="dislike"></button>
+            </div>
+            <!-- <a href="#">
+                <img src="../img/ico/user5.svg" alt="">
+            </a> -->
+            <div class="cbody">
+                <div class="ch">
+                    <a class="name" href="#">GT_user</a>
+                    <a class="ut" href="#">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="{{ random(team) }}">
+                        {{ random(team) }}
+                    </a>
+                    <span class="sct" data-format="%j% %ms%%y%, %h%:%i%" data-time="1557164827">06 мая,
+                        20:47</span>
+                    <span class="prognoz">прогноз</span>
+                   
+                </div>
+                <p>
+                    С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с <br>
+                    Выход с ульты это считается как с
+                </p>
+                <div class="action">
+                    <a href="">Ответить</a>
+                    <a href="">Поделиться</a>
+                    <a href="">Сообщить о проблеме</a>
+                </div>
+            </div>
+            {% if i == 2 %}
+            <div class="comment_prognoz">
+                <span>Победит<br>{{ random(team) }}</span>
+                <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                </picture>
+            </div>
+            {% endif %}
+        </article>
+    </div>
+</div>
+
+<div class="commment_form">
+    <picture class="ava">
+        <img src="../img/ico/user5.svg" alt="">
+    </picture>
+    <div class="tablock">
+        <div class="textareacom">
+            <textarea class="textarea" placeholder="Напиши, комментарий и нажми «Ctrl + Enter»" oninput="auto_grow(this)"></textarea>
+            <button class="btn-com btn btn-primary"></button>
+            <p id="ferr" class="invalid-feedback" >Сначала нужно <a href="javascript:;" onclick="wmsc(); window.open('/ru/login?c');" target="_blank">войти</a> или <a href="javascript:;" onclick="wmsc(); window.open('/ru/login?c');" target="_blank">зарегистрироваться</a></p>
+        </div>
+        <div class="comment_panel">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">
+                    победит
+                    <!-- <picture class="teamlogo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture> -->
+                    <!-- <span>{{ random(team) }}</span> -->
+                </label>
+                <div class="btn-group tinyDrop">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      выбрать команду
+                    </button>
+                    <div class="dropdown-menu">
+                        <input class="search" placeholder="Поиск">
+                        {% for i in 0..1 %}
+                            <a class="dropdown-item" href="#">{{ random(team) }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">
+                    победит
+                    <picture class="teamlogo">
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    <span>{{ random(team) }}</span>
+                </label>
+            </div> -->
+        </div>
+    </div>
+</div>

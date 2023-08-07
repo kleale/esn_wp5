@@ -1,0 +1,91 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set country = ["Россия", "США", "Китай", "Европа", "Корея"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+    {% include "./tpl/aside.html" %}
+    <main class="matches-page">
+      
+          <a href="#" class="bn900 upsrtm">
+              <img src="../img/dummy/b900.png" alt="">
+          </a>
+          {% include "./tpl/matches/stream.html" %}
+          
+        <!--d-flex-->
+        <div class="container"></div>
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="hblock">
+              <h2>Расписание матчей</h2><b></b>
+              <span>
+                <i title="Типо хелптекст" class="tip" data-toggle="tip"></i>
+                <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a>
+              </span>
+            </div>
+
+            <div id="mobile-filter-holder"></div>
+            
+            {#
+            <section class="matches matches-full">
+                <div class="flex-table">
+                    <div class="nodata">Нет матчей</div>
+                </div>
+            </section>
+            #}
+            
+              {% include "./tpl/matches/matchesList.html" %}
+              {% include "./tpl/pager.html" %}
+            
+            <div class="hblock">
+              <h2>Результаты матчей</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+            {% include "./tpl/matches/matchesListPubg.html" %}
+            {% include "./tpl/pager.html" %}
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            {% include "./tpl/matches/rightcol.html" %}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+ 
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set bet = ["gg", "1xbet", "es", "egb"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set country = ["Россия", "США", "Китай", "Европа", "Корея"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+    {% include "./tpl/aside.html" %}
+    <main class="video-highlight">
+     
+        <div class="header">
+          <!-- <picture>
+            <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+            <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+          </picture> -->
+          <div class="hh">
+            <h1>gang zi cun zhu zhao zhi Triple Kill on Phantom Assassin vs BlackJack <a href="#">Dream League 2019</a>
+            </h1>
+            <span> Victory vs BlackJack • Игра 2 • Rainbow Cup • 17 мар, 11:56 </span>
+          </div>
+          <div class="hr">
+            <div class="mr">
+              <span id="rates" class="m-rate">
+                <span class="gti-star" rel="5" onclick="rate(5)"></span>
+                <span class="gti-star" rel="4" onclick="rate(4)"></span>
+                <span class="gti-star starred-half" rel="3" onclick="rate(3)"></span>
+                <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+                <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+              </span>
+              <span id="brate">4.5</span>
+            </div>
+            <div class="sc">
+              <a href="#" class="fab fa-vk"></a>
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- stream -->
+        <section class="streamblock hide-list">
+          <button class="opener_bottom"></button>
+          <!-- <button class="opener_right"></button> -->
+          <div class="stream">
+            <button class="pi"><svg class="player-icon-play" id="icon_play" viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.447 14.105l-14-7A1 1 0 0 0 7 8v14a.999.999 0 0 0 1.447.894l14-7a1 1 0 0 0 0-1.789"></path>
+              </svg>
+            </button>
+            <!--<div class="white_noize"></div>-->
+            <div class="cnl">
+              <picture>
+                <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+                <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+              </picture>
+              <div>
+                <h2>Смотреть стрим матча</h2>
+                <h1>RERUN: PG.Barracx vs DeToNator Game 1 - DreamLeague S11 SEA Qual: Losers R1 - Xyclopzz | 02 Feb 2019
+                </h1>
+                <u>Dota 2 транслируется для 561 зрителя</u>
+                <s>English</s>
+              </div>
+            </div>
+            <div class="vid">
+              <img src="../img/dummy/live_user_epulzegaming_ru-1280x720.jpg" alt="STREAM NAME">
+            </div>
+            <div class="message">
+              Посмотреть стрим матча Gambit против OG можно 19 марта в 13:00 MSK
+            </div>
+          </div>
+        </section>
+
+
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-12">
+            <div class="row">
+              <div class="col-lg-7 col-xl-8 mt-4">
+                <table class="table table-sm hl-stats-tbl">
+                  <tbody>
+                    <tr>
+                      <th>
+                        Игрок
+                      </th>
+                      <td>
+                        <a href="#" class="playerName">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/ava.png">
+                            <img src="./img/dummy/ava.png" alt="ИГРОК">
+                          </picture>
+                          <img class="flag" src="../img/dummy/flag1.png" alt="">
+                          <span>
+                            <!-- <u>Top</u>.  -->
+                            Bonus
+                            .<u>Иванов Иван</u>
+                            <sup>Liquid</sup>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Команда
+                      </th>
+                      <td>
+                        <a href="#" class="team">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/team2.png">
+                            <img src="./img/dummy/team5.png" alt="">
+                          </picture>
+                          Mineski
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Герой
+                      </th>
+                      <td>
+                        <div class="playHero">
+                          <picture class="hero">
+                            <source type="image/webp" srcset="../img/dummy/hero2.png">
+                            <img src="./img/dummy/hero2.png" alt="">
+                            <span>Carry</span>
+                          </picture>
+                          <div class="name">
+                            <a href="#">Bonus</a>
+                            <span><s>20</s> Lion</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Нанесенный урон
+                      </th>
+                      <td>
+                        <b class="red">5,756 dmg</b> за 50 сек
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Полученное золото
+                      </th>
+                      <td class="orange">
+                        <s class="gold"></s> 1,161
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Убийства
+                      </th>
+                      <td>
+                        <table class="table table-sm">
+                          <thead>
+                            <th class="text-center">время смерти</th>
+                            <th>игрок\герой</th>
+                            <th>урон</th>
+                          </thead>
+                          {% for i in 0..2 %}
+                          <tr>
+                            <td class="text-center">
+                              <i class="fa fa-monument mr-1"></i>
+                              24:0{{i}}
+                            </td>
+                            <td>
+                              <div class="playHero">
+                                <picture class="hero">
+                                  <source type="image/webp" srcset="../img/dummy/hero2.png">
+                                  <img src="./img/dummy/hero2.png" alt="">
+                                  <span>Carry</span>
+                                </picture>
+                                <div class="name">
+                                  <a href="#">Bonus</a>
+                                  <span><s>20</s> Lion</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><b class="red">2{{i}} 6{{i}} dmg</b></td>
+                          </tr>
+                          {% endfor %}
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="rcol col-lg-5 col-xl-4">
+                <div>
+                  <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hblock">
+              <h2>Комментарии <s>34</s></h2><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Нет комментариев</strong> Зарегистрируйтесь и оставьте первый комментарий.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            {% include "./tpl/comments.html" %}
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

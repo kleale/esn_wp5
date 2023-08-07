@@ -1,0 +1,1647 @@
+{% set title = "News" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почкму я не
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set country = ["Россия", "США", "Китай", "Европа", "Корея"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+    {% include "./tpl/aside.html" %}
+    <main class="newsPage">
+      <noindex><a rel="nofollow" href="/ru/go?to=pm" class="bn900 upsrtm" target="_blank"><img
+            src="https://escorenews.com/media/esn/p4_4_ru.gif"></a></noindex>
+      <div class="container">
+        <!--d-flex-->
+
+        <div class="row">
+          <div class="center col-lg-8 col-xl-8">
+
+            <div class="teams-on-live">
+              <span>
+                <a href="/ru/dota-2/team/hellbear-smashers">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_90/t73112.webp, https://escorenews.com/media/logo/t73112.webp 2x" type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_90/t73112.png, https://escorenews.com/media/logo/t73112.png 2x">
+                    <img src="https://escorenews.com/media/logo/_90/t73112.png" alt="SMASH">
+                  </picture>
+                  <h2>Hellbear Smashers</h2>
+                </a>
+                <u>Европа</u>
+              </span>
+              <div class="score">
+                <h3><span class="sct" data-format="%j% %m% %y%, %h%:%i% %tz%" datetime="2021-08-04 09:22:00">4 августа,
+                    12:22 MSK</span>, Best of 3</h3>
+                
+                <span class="live ended">2<s>:</s>1</span>
+
+                <b>Матч окончен</b>
+                <!-- <span class="kf">Коэффициенты</span>
+                <div class="progress" id="odds" data-1="85" data-2="15">
+                  <div class="progress-bar bg-success tt" title="85%" role="progressbar" style="width:85%"
+                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-danger tt" title="15%" role="progressbar" style="width:15%"
+                    aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+              </div>
+              <span>
+                <a href="/ru/dota-2/team/chicken-fighters">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_90/t43499.webp, https://escorenews.com/media/logo/t43499.webp 2x" type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_90/t43499.png, https://escorenews.com/media/logo/t43499.png 2x">
+                    <img src="https://escorenews.com/media/logo/_90/t43499.png" alt="ChFight!">
+                  </picture>
+                  <h2>Chicken Fighters</h2>
+                </a>
+                <u>Европа</u>
+              </span>
+            </div>
+
+            <article itemscope="" itemtype="http://schema.org/NewsArticle">
+              <div style="display:none" itemprop="identifier" content="23931"></div>
+              <div style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <span itemprop="name">Денис Дунаев</span>
+              </div>
+              <div style="display:none" itemprop="inLanguage" content="ru"></div>
+              <div class="hblock">
+                <h4>Новости игр и киберспорта <u class="gl gl582"></u> Dota 2</h4><b></b>
+              </div>
+              <section class="text" itemprop="articleBody">
+                <h1 itemprop="headline">Team Spirit сыграет с Hellbear Smashers в полуфинале виннеров D2CL</h1>
+                <i class="time sct" itemprop="datePublished" content="2021-08-04T22:03:00+00:00"
+                  data-format="%j% %m% %y%, %h%:%i% %tz%" datetime="2021-08-04 22:03:00">5 августа, 01:03 MSK</i>
+                <!--<a href="#" class="continued-news"><strong></strong><span></span></a>-->
+
+
+
+
+                <p>Завершился первый игровой день плей-офф <a
+                    href="https://escorenews.com/ru/dota-2/d2cl-2021-season-2">Dota 2 Champions League 2021 Season
+                    2</a>. <a href="https://escorenews.com/ru/dota-2/team/spirit">Team Spirit</a> прошла в полуфинал
+                  верхней сетки, обыграв <a href="https://escorenews.com/ru/dota-2/team/puckchamp-ru">PuckChamp</a> со
+                  счётом 2:0. </p>
+                <p>Следующим соперником команды <a href="https://escorenews.com/ru/dota-2/player/miposhka">Ярослава
+                    «Miposhka» Найденова</a> станут <a
+                    href="https://escorenews.com/ru/dota-2/team/hellbear-smashers">Hellbear Smashers</a>, которые
+                  обыграли <a href="https://escorenews.com/ru/dota-2/team/chicken-fighters">Chicken Fighters</a> с <a
+                    href="https://escorenews.com/ru/dota-2/player/sonneiko">Акбаром «SoNNeikO» Бутаевым</a> в качестве
+                  стендина. Во втором полуфинале виннеров встретятся <a
+                    href="https://escorenews.com/ru/dota-2/team/unique">Team Unique</a><b> </b>и<b> </b><a
+                    href="https://escorenews.com/ru/dota-2/team/tundra">Tundra Esports</a>, одолевшие <a
+                    href="https://escorenews.com/ru/dota-2/team/nemiga">Nemiga Gaming</a> и <a
+                    href="https://escorenews.com/ru/dota-2/team/v">V-Gaming</a> соответственно.</p>
+                <p>5 августа также определятся первые команды, которые покинут турнир. В нижней сетке Chicken Fighters
+                  поборются с PuckChamp, а Nemiga Gaming — с V-Gaming. Начало игрового дня запланировано на 12:00 мск.
+                </p>
+                <h2>Матчи 5 августа</h2>
+                <ul>
+                  <li>Chicken Fighters против PuckChamp — 12:00 мск</li>
+                  <li>Nemiga Gaming против V-Gaming — 15:00 мск<br></li>
+                  <li>Team Spirit против Hellbear Smashers — 18:00 мск<br></li>
+                  <li>Team Unique против Tundra Esports — 21:00 мск<br></li>
+                </ul>
+                <p>Поединки Dota 2 Champions League 2021 проходят с 19 июля по 8 августа в онлайне. Двенадцать команд из
+                  СНГ и Европы сражаются за призовой фонд в $50 тыс. </p>
+                <div class="stage-block">
+                  <div class="hblock">
+                    <h4><strong>Положение команд</strong></h4><b></b>
+                  </div>
+                  <div id="stage-20984">
+                    <div class="torgrid">
+                      <div class="scroller">
+                        <div style="position: relative; width: 100%; height: 590px; margin-top: 14px;" id="grid-20984">
+                          <div style="position:absolute; top:0px; left:0px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Upper Bracket,
+                              Round 1</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/hellbear-smashers-vs-chicken-fighters-386449"><span
+                                class="mteamlogo" rel="t73112">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73112.webp, https://escorenews.com/media/logo/_60/t73112.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73112.png, https://escorenews.com/media/logo/_60/t73112.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t73112.png">
+                                </picture><em>SMASH</em><b class="mwin">2</b>
+                              </span><span class="mteamlogo" rel="t43499">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t43499.webp, https://escorenews.com/media/logo/_60/t43499.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t43499.png, https://escorenews.com/media/logo/_60/t43499.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t43499.png">
+                                </picture><em>ChFight!</em><b>1</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628068920">4 авг,
+                              12:22</div>
+                          </div>
+                          <div style="position:absolute; top:80px; left:0px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/puckchamp-ru-vs-spirit-386450"><span
+                                class="mteamlogo" rel="t73037">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.webp, https://escorenews.com/media/logo/_60/t73037.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.png, https://escorenews.com/media/logo/_60/t73037.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t73037.png">
+                                </picture><em>PC</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t6224">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t6224.webp, https://escorenews.com/media/logo/_60/t6224.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t6224.png, https://escorenews.com/media/logo/_60/t6224.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t6224.png">
+                                </picture><em>TSpirit</em><b class="mwin">2</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628080500">4 авг,
+                              15:35</div>
+                          </div>
+                          <div style="position:absolute; top:160px; left:0px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/unique-vs-nemiga-386451"><span
+                                class="mteamlogo" rel="t37431">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t37431.webp, https://escorenews.com/media/logo/_60/t37431.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t37431.png, https://escorenews.com/media/logo/_60/t37431.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t37431.png">
+                                </picture><em>Unique</em><b class="mwin">2</b>
+                              </span><span class="mteamlogo" rel="t16011">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t16011.webp, https://escorenews.com/media/logo/_60/t16011.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t16011.png, https://escorenews.com/media/logo/_60/t16011.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t16011.png">
+                                </picture><em>Nemiga</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628089380">4 авг,
+                              18:03</div>
+                          </div>
+                          <div style="position:absolute; top:240px; left:0px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/v-vs-tundra-386452"><span class="mteamlogo"
+                                rel="t66721">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t66721.webp, https://escorenews.com/media/logo/_60/t66721.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t66721.png, https://escorenews.com/media/logo/_60/t66721.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t66721.png">
+                                </picture><em>V</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t74703">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t74703.webp, https://escorenews.com/media/logo/_60/t74703.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t74703.png, https://escorenews.com/media/logo/_60/t74703.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t74703.png">
+                                </picture><em>Tundra</em><b class="mwin">2</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628101320">4 авг,
+                              21:22</div>
+                          </div>
+                          <div style="position:absolute; top:390px; left:0px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Lower Bracket,
+                              Round 1</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/chicken-fighters-vs-puckchamp-ru-386456"><span
+                                class="mteamlogo" rel="t43499">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t43499.webp, https://escorenews.com/media/logo/_60/t43499.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t43499.png, https://escorenews.com/media/logo/_60/t43499.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t43499.png">
+                                </picture><em>ChFight!</em><b>1</b>
+                              </span><span class="mteamlogo" rel="t73037">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.webp, https://escorenews.com/media/logo/_60/t73037.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.png, https://escorenews.com/media/logo/_60/t73037.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t73037.png">
+                                </picture><em>PC</em><b class="mwin">2</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628154000">5 авг,
+                              12:00</div>
+                          </div>
+                          <div style="position:absolute; top:470px; left:0px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/nemiga-vs-v-386457"><span class="mteamlogo"
+                                rel="t16011">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t16011.webp, https://escorenews.com/media/logo/_60/t16011.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t16011.png, https://escorenews.com/media/logo/_60/t16011.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t16011.png">
+                                </picture><em>Nemiga</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t66721">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t66721.webp, https://escorenews.com/media/logo/_60/t66721.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t66721.png, https://escorenews.com/media/logo/_60/t66721.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t66721.png">
+                                </picture><em>V</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628166000">5 авг,
+                              15:20</div>
+                          </div>
+                          <div style="position:absolute; top:40px; left:200px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Upper Bracket,
+                              Round 2</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/hellbear-smashers-vs-spirit-386453"><span
+                                class="mteamlogo" rel="t73112">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73112.webp, https://escorenews.com/media/logo/_60/t73112.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73112.png, https://escorenews.com/media/logo/_60/t73112.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t73112.png">
+                                </picture><em>SMASH</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t6224">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t6224.webp, https://escorenews.com/media/logo/_60/t6224.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t6224.png, https://escorenews.com/media/logo/_60/t6224.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t6224.png">
+                                </picture><em>TSpirit</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628176200">5 авг,
+                              18:10</div>
+                          </div>
+                          <div class="po1" style="width:15px; top:25px; left:170px;"></div>
+                          <div class="po2" style="height:40px; top:25px; left:185px;"></div>
+                          <div class="po1" style="width:15px; top:65px; left:185px;"></div>
+                          <div class="po2" style="height:42px; top:65px; left:185px;"></div>
+                          <div class="po1" style="width:15px; top:105px; left:170px;"></div>
+                          <div style="position:absolute; top:200px; left:200px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/unique-vs-tundra-386454"><span
+                                class="mteamlogo" rel="t37431">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t37431.webp, https://escorenews.com/media/logo/_60/t37431.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t37431.png, https://escorenews.com/media/logo/_60/t37431.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t37431.png">
+                                </picture><em>Unique</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t74703">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t74703.webp, https://escorenews.com/media/logo/_60/t74703.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t74703.png, https://escorenews.com/media/logo/_60/t74703.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t74703.png">
+                                </picture><em>Tundra</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628187000">5 авг,
+                              21:10</div>
+                          </div>
+                          <div class="po1" style="width:15px; top:185px; left:170px;"></div>
+                          <div class="po2" style="height:40px; top:185px; left:185px;"></div>
+                          <div class="po1" style="width:15px; top:225px; left:185px;"></div>
+                          <div class="po2" style="height:42px; top:225px; left:185px;"></div>
+                          <div class="po1" style="width:15px; top:265px; left:170px;"></div>
+                          <div style="position:absolute; top:376px; left:200px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Lower Bracket,
+                              Round 2</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-puckchamp-ru-386458"><span
+                                class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo" rel="t73037">
+                                <picture>
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.webp, https://escorenews.com/media/logo/_60/t73037.webp 2x"
+                                    type="image/webp">
+                                  <source srcset="https://escorenews.com/media/logo/_30/t73037.png, https://escorenews.com/media/logo/_60/t73037.png 2x"><img
+                                    src="https://escorenews.com/media/logo/_30/t73037.png">
+                                </picture><em>PC</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628262000">6 авг,
+                              18:00</div>
+                          </div>
+                          <div class="po1" style="width:30px; top:414px; left:170px;"></div>
+                          <div class="po1" style="width:15px; top:387px; left:185px;"></div>
+                          <div class="po2" style="height:15px; top:372px; left:185px;"></div>
+                          <div style="position:absolute; top:456px; left:200px;" class="match_qtip"><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386459"><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628272800">6 авг,
+                              21:00</div>
+                          </div>
+                          <div class="po1" style="width:30px; top:494px; left:170px;"></div>
+                          <div class="po1" style="width:15px; top:467px; left:185px;"></div>
+                          <div class="po2" style="height:15px; top:452px; left:185px;"></div>
+                          <div style="position:absolute; top:120px; left:400px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Upper Bracket,
+                              Round 3</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386455"><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628359200">7 авг,
+                              21:00</div>
+                          </div>
+                          <div class="po1" style="width:15px; top:65px; left:370px;"></div>
+                          <div class="po2" style="height:80px; top:65px; left:385px;"></div>
+                          <div class="po1" style="width:15px; top:145px; left:385px;"></div>
+                          <div class="po2" style="height:82px; top:145px; left:385px;"></div>
+                          <div class="po1" style="width:15px; top:225px; left:370px;"></div>
+                          <div style="position:absolute; top:416px; left:400px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Lower Bracket,
+                              Round 3</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386460"><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628348400">7 авг,
+                              18:00</div>
+                          </div>
+                          <div class="po1" style="width:15px; top:401px; left:370px;"></div>
+                          <div class="po2" style="height:40px; top:401px; left:385px;"></div>
+                          <div class="po1" style="width:15px; top:441px; left:385px;"></div>
+                          <div class="po2" style="height:42px; top:441px; left:385px;"></div>
+                          <div class="po1" style="width:15px; top:481px; left:370px;"></div>
+                          <div style="position:absolute; top:402px; left:600px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Lower Bracket,
+                              Round 4</div><a class="ul"
+                              href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386461"><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628434800">8 авг,
+                              18:00</div>
+                          </div>
+                          <div class="po1" style="width:30px; top:440px; left:570px;"></div>
+                          <div class="po1" style="width:15px; top:413px; left:585px;"></div>
+                          <div class="po2" style="height:15px; top:398px; left:585px;"></div>
+                          <div style="position:absolute; top:261px; left:800px;" class="match_qtip">
+                            <div style="position:absolute; top:-30px; left:0px;" class="match_round">Final</div><a
+                              class="ul" href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386462"><span
+                                class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span><span class="mteamlogo">
+                                <picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>
+                              </span></a>
+                            <div class="match_date sct" data-format="%j% %ms% %y%, %h%:%i%" datetime="1628445600">8 авг,
+                              21:00</div>
+                          </div>
+                          <div class="po1" style="width:215px; top:145px; left:570px;"></div>
+                          <div class="po2" style="height:141px; top:145px; left:785px;"></div>
+                          <div class="po1" style="width:15px; top:286px; left:785px;"></div>
+                          <div class="po2" style="height:143px; top:286px; left:785px;"></div>
+                          <div class="po1" style="width:15px; top:427px; left:770px;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    function get_stage(stage_id) {
+                      $.ajax({ type: 'POST', dataType: 'json', 'url': '/get/block.php', 'data': { 'game_id': game.id, 'bl': 6, 'id': stage_id, 'c': 0 } }).done(function (data) {
+                        if (data.form == 'grid') {
+                          $('#stage-' + stage_id).html('<div class="torgrid"><div class="scroller"><div style="position:relative; width:100%; height:400px; display:none" id="grid-' + stage_id + '"></div></div></div>');
+                          draw_grid(stage_id, data);
+                        } else if (game.id == 100) {
+                          var html = draw_pubg(data);
+                          $('#stage-' + stage_id).html(html);
+                        } else if (data.form == 'group') {
+                          var html = draw_group(data);
+                          $('#stage-' + stage_id).html(html);
+                        }
+                      });
+                    }
+                    function gety(grid, td, tr, dir) {
+                      if (dir == 1) {
+                        for (var j = td - 1; j >= 0; j--) {
+                          for (var i = tr; i >= 0; i--) {
+                            if (grid[j][i]) {
+                              return grid[j][i].y2;
+                            }
+                          }
+                        }
+                      } else {
+                        for (var j = td - 1; j >= 0; j--) {
+                          for (var i = tr; i <= 50; i++) {
+                            if (grid[j][i]) {
+                              return grid[j][i].y2;
+                            }
+                          }
+                        }
+                      }
+                      return -1;
+                    }
+                    function draw_grid(stage_id, data) {
+                      var type = data.type;
+                      var grid = data.cache.grid;
+                      var matches = data.cache.matches;
+                      var td = 0;
+                      var tr = 0;
+                      var left = 0;
+                      var top = 0;
+                      var mrg = 0;
+                      var prev_td = 0;
+                      var tr1;
+                      var tr2;
+                      var r = '';
+                      var max = 0;
+                      var tmp = [];
+                      var place = {};
+                      for (td in grid) {
+                        left = td * 200;
+                        var tdr = 0;
+                        for (tr in grid[td]) {
+                          top = -1;
+                          tr = parseInt(tr);
+                          var id = grid[td][tr];
+                          if (td > 0) {
+                            tr1 = gety(grid, td, tr, 1);
+                            tr2 = gety(grid, td, tr, 0);
+                            if (tr1 != -1 && tr2 != -1) {
+                              if (tr1 == tr2) {
+                                top = tr1 - 14;
+                              } else {
+                                top = tr1 + Math.round((tr2 - tr1) / 2);
+                              }
+                            }
+                          }
+                          if (top == -1) {
+                            top = tr * 40;
+                          }
+                          var result = id.match(/^#(\d+)$/);
+                          if (result[1].length) {
+                            var m = matches[result[1]];
+                            if (m) {
+                              if (r != m.r) {
+                                tdr += 1;
+                              }
+                              r = m.r;
+                            } else {
+                              r = '';
+                            }
+                          } else {
+                            var m = {};
+                            r = '';
+                          }
+                          if (td == 0 && tdr > 1) {
+                            top += (tdr - 1) * 30;
+                          }
+                          grid[td][tr] = {
+                            'x': left,
+                            'y': top,
+                            'y2': top,
+                            'm': m,
+                            'r': r,
+                            'l': ''
+                          };
+                          if (grid[td][tr].y2 < mrg) {
+                            mrg = grid[td][tr].y2;
+                          }
+                        }
+                        if (top > max) {
+                          max = top;
+                        }
+                      }
+                      var already = [];
+                      var key = '';
+                      var key2 = '';
+                      var html = '';
+                      var r = '';
+                      var gp;
+                      for (td in grid) {
+                        gp = {};
+                        for (tr in grid[td]) {
+                          var g = grid[td][tr];
+                          if (td > 0) {
+                            prev_td = td - 1;
+                            key = prev_td + '-' + tr;
+                            if (grid[prev_td][tr]) {
+                              g.l += '<div class="po1" style="width:30px; top:' + (g.y2 + 38) + 'px; left:' + (g.x - 30) + 'px;"></div>';
+                              if (grid[prev_td][tr].y2 != g.y2) {
+                                g.l += '<div class="po1" style="width:15px; top:' + (g.y2 + 11) + 'px; left:' + (g.x - 15) + 'px;"></div><div class="po2" style="height:15px; top:' + (g.y2 - 4) + 'px; left:' + (g.x - 15) + 'px;"></div>';
+                              }
+                              already.push(key);
+                            } else {
+                              var t1 = [];
+                              var t2 = [];
+                              loop1:
+                              for (var j = prev_td; j >= 0; j--) {
+                                for (var i = tr; i >= 0; i--) {
+                                  key2 = j + '-' + i;
+                                  if (grid[j][i] && already.indexOf(key2) == -1) {
+                                    t1 = [j, i];
+                                    break loop1;
+                                  }
+                                }
+                              }
+                              loop1:
+                              for (var j = prev_td; j >= 0; j--) {
+                                for (var i = tr; i <= 100; i++) {
+                                  key2 = j + '-' + i;
+                                  if (grid[j][i] && already.indexOf(key2) == -1) {
+                                    t2 = [j, i];
+                                    break loop1;
+                                  }
+                                }
+                              }
+                              if (t1.length > 0 && t2.length > 0 && tmp.indexOf(t1[1]) == -1 && tmp.indexOf(t2[1]) == -1) {
+                                tmp.push(t1[1]);
+                                tmp.push(t2[1]);
+                                g.l += '<div class="po1" style="width:' + (g.x - grid[t1[0]][t1[1]].x - 185) + 'px; top:' + (grid[t1[0]][t1[1]].y2 + 25) + 'px; left:' + (grid[t1[0]][t1[1]].x + 170) + 'px;"></div>';
+                                g.l += '<div class="po2" style="height:' + (g.y - grid[t1[0]][t1[1]].y2) + 'px; top:' + (grid[t1[0]][t1[1]].y2 + 25) + 'px; left:' + (g.x - 15) + 'px;"></div>';
+                                g.l += '<div class="po1" style="width:15px; top:' + (g.y + 25) + 'px; left:' + (g.x - 15) + 'px;"></div>';
+                                g.l += '<div class="po2" style="height:' + (grid[t2[0]][t2[1]].y2 - g.y + 2) + 'px; top:' + (g.y + 25) + 'px; left:' + (g.x - 15) + 'px;"></div>';
+                                g.l += '<div class="po1" style="width:' + (g.x - grid[t2[0]][t2[1]].x - 185) + 'px; top:' + (grid[t2[0]][t2[1]].y2 + 25) + 'px; left:' + (grid[t2[0]][t2[1]].x + 170) + 'px;"></div>';
+                              }
+                            }
+                          }
+                          html += '<div style="position:absolute; top:' + g.y2 + 'px; left:' + g.x + 'px;" class="match_qtip">';
+                          if (g.r != r) {
+                            html += '<div style="position:absolute; top:-30px; left:0px;" class="match_round">' + g.r + '</div>';
+                            r = g.r;
+                          }
+                          html += '<a class="ul" href="/' + lang + '/' + game.eng + '/' + g.m.link + '"><span class="mteamlogo"' + (g.m.t1 ? ' rel="t' + g.m.t1.id + '"' : '') + '><picture>';
+                          if (g.m.t1) {
+                            if (type == 'player') {
+                              if (g.m.t1.i) {
+                                html += '<img class="flag tt" src="/media/flags/' + g.m.t1.i + '.svg">';
+                              } else {
+                                html += '<img class="notsvg" src="https://escorenews.com/media/logo/nop.svg">';
+                              }
+                            } else {
+                              if (g.m.t1.l) {
+                                html += '<source srcset="https://escorenews.com/media/logo/_30/t' + g.m.t1.id + '.webp, https://escorenews.com/media/logo/_60/t' + g.m.t1.id + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + g.m.t1.id + '.png, https://escorenews.com/media/logo/_60/t' + g.m.t1.id + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + g.m.t1.id + '.png">';
+                              } else {
+                                html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                              }
+                            }
+                            html += '</picture><em>' + g.m.t1.t + '</em>';
+                            if (g.m.isc == '2' && g.m.t1s > g.m.t2s) {
+                              html += '<b class="mwin">' + (g.m.dw ? 'W' : g.m.t1s) + '</b>';
+                            } else {
+                              html += '<b>' + (g.m.dw ? '-' : g.m.t1s) + '</b>';
+                            }
+                          } else {
+                            html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>';
+                          }
+                          html += '</span><span class="mteamlogo"' + (g.m.t2 ? ' rel="t' + g.m.t2.id + '"' : '') + '><picture>';
+                          if (g.m.t2) {
+                            if (type == 'player') {
+                              if (g.m.t2.i) {
+                                html += '<img class="flag tt" src="/media/flags/' + g.m.t2.i + '.svg">';
+                              } else {
+                                html += '<img class="notsvg" src="https://escorenews.com/media/logo/nop.svg">';
+                              }
+                            } else {
+                              if (g.m.t2.l) {
+                                html += '<source srcset="https://escorenews.com/media/logo/_30/t' + g.m.t2.id + '.webp, https://escorenews.com/media/logo/_60/t' + g.m.t2.id + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + g.m.t2.id + '.png, https://escorenews.com/media/logo/_60/t' + g.m.t2.id + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + g.m.t2.id + '.png">';
+                              } else {
+                                html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                              }
+                            }
+                            html += '</picture><em>' + g.m.t2.t + '</em>';
+                            if (g.m.isc == '2' && g.m.t2s > g.m.t1s) {
+                              html += '<b class="mwin">' + (g.m.dw ? 'W' : g.m.t2s) + '</b>';
+                            } else {
+                              html += '<b>' + (g.m.dw ? '-' : g.m.t2s) + '</b>';
+                            }
+                          } else {
+                            html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><em>TBD</em><b>0</b>';
+                          }
+                          html += '</span></a>';
+                          if (g.m.data > 0) {
+                            html += '<div class="match_date sct" data-format="' + trsl.date_format + '" datetime="' + g.m.data + '"></div>';
+                          }
+                          html += '</div>';
+                          html += g.l;
+                        }
+                      }
+                      $('#grid-' + stage_id).html(html).css({ 'height': (max > 0 ? max + 120 : 120), 'margin-top': (Math.abs(mrg) + 14) }).show();
+                      convert_time();
+                      $('#grid-' + stage_id + ' span').mouseover(function () {
+                        var rel = $(this).attr('rel');
+                        if (rel) {
+                          $('#grid-' + stage_id + ' span[rel=' + rel + ']').addClass('active');
+                        }
+                      });
+                      $('#grid-' + stage_id + ' span').mouseout(function () {
+                        $('#grid-' + stage_id + ' span').removeClass('active');
+                      });
+                    }
+                    function draw_group(data) {
+                      var html = '<div class="gdiv">';
+                      for (var i in data.cache.rounds) {
+                        var score = data.cache.rounds[i];
+                        html += '<div class="gtable"><table class="table-striped table table-hover"><thead><tr><th colspan="2">' + i + '</th><th class="w2">G</th><th class="w2">W</th><th class="w2">D</th><th class="w2">L</th><th class="w2">P</th>';
+                        if ([200, 313, 582, 704, 800].indexOf(game.id)) {
+                          html += '<th class="tt w2" title="DIFF">DIFF</th>';
+                        }
+                        html += '</tr></thead><tbody>';
+                        var j = 1;
+                        for (var id in score.teams) {
+                          var c = score.teams[id];
+                          html += '<tr class="' + (score.colors[j] ? 'crows' + score.colors[j] : '') + '"><td>' + (c.dq ? 'DQ' : j) + '</td><td><a href="/' + lang + '/' + game.eng + '/' + data.type + '/' + c.team.eng + '" class="teamNameIco"><picture>';
+                          if (data.type == 'player') {
+                            if (c.team.logo.cid) {
+                              html += '<img class="flag" src="/media/flags/' + c.team.logo.cid + '.svg">';
+                            } else {
+                              html += '<img class="notsvg" src="https://escorenews.com/media/logo/nop.svg">';
+                            }
+                          } else {
+                            if (c.team.logo) {
+                              html += '<source srcset="https://escorenews.com/media/logo/_30/t' + c.team.id + '.webp, https://escorenews.com/media/logo/_60/t' + c.team.id + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + c.team.id + '.png, https://escorenews.com/media/logo/_60/t' + c.team.id + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + c.team.id + '.png">';
+                            } else {
+                              html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                            }
+                          }
+                          html += '</picture><span>' + c.team.title + ' <sup>' + c.team.name + '</sup></span></a></td>';
+                          html += '<td class="tpo">' + c.g + '</td>';
+                          html += '<td class="tpo">' + c.w + '</td>';
+                          html += '<td class="tpo">' + c.n + '</td>';
+                          html += '<td class="tpo">' + c.l + '</td>';
+                          html += '<td class="tpo">' + c.p + '</td>';
+                          if ([200, 313, 582, 704, 800].indexOf(game.id)) {
+                            html += '<td class="tpo">' + (c.k != undefined ? (c.k > 0 ? '<span class="green">+' : (c.k < 0 ? '<span class="red">' : '<span>')) + c.k + '</span>' : '&ndash;') + '</td>';
+                          }
+                          html += '</tr>';
+                          j++;
+                        }
+                        var kol = score.rows - 0;
+                        if (j <= kol) {
+                          for (var j2 = j; j2 <= kol; j2++) {
+                            html += '<tr class="' + (score.colors[j2] ? 'crows' + score.colors[j2] : '') + '"><td>' + j2 + '</td><td><span class="teamNameIco"><picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><span>TBD</span></span></td><td class="tpo">0</td><td class="tpo">0</td><td class="tpo">0</td><td class="tpo">0</td><td class="tpo">0</td>';
+                            if ([200, 313, 582, 704, 800].indexOf(game.id)) {
+                              html += '<td class="tpo">0</td>';
+                            }
+                            html += '</tr>';
+                          }
+                        }
+                        html += '</tbody></table></div>';
+                      }
+                      html += '</div>';
+                      return html;
+                    }
+                    function draw_pubg(data) {
+                      var html = '';
+                      for (var t in data.cache.rounds) {
+                        var scores = data.cache.rounds[t];
+                        for (var tab in scores) {
+                          var score = scores[tab];
+                          html += '<div class="gdiv pubg-rounds"><div class="scroller"><div class="gtable"><table class="table-striped table table-hover">';
+                          html += '<thead><tr><th class="thheadfixed" colspan="2">' + t + '</th><th></th><th></th>';
+                          for (var i in score.rounds) {
+                            var c = score.rounds[i];
+                            html += '<th colspan="2" class="pubg-th-round"><a href="/' + lang + c.u + '">R' + i + '</a></th>';
+                          }
+                          html += '</tr><tr class="thth"><th colspan="2" class="hided"></th><th>' + trsl.mt_pf + '</th><th>' + trsl.mt_kf + '</th>';
+                          for (i in score.rounds) {
+                            html += '<th>P</th><th>K</th>';
+                          }
+                          html += '</tr></thead><tbody>';
+                          var j = 1;
+                          for (i in score.teams) {
+                            c = score.teams[i];
+                            html += '<tr class="' + (score.colors[j] ? 'crows' + score.colors[j] : '') + '"><td class="headcol">' + j + '.</td><td class="headcol"><a href="/' + lang + '/' + game.eng + '/team/' + c.team.eng + '" class="teamNameIco"><picture>';
+                            if (c.team.logo) {
+                              html += '<source srcset="https://escorenews.com/media/logo/_30/t' + c.team.id + '.webp, https://escorenews.com/media/logo/_60/t' + c.team.id + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + c.team.id + '.png, https://escorenews.com/media/logo/_60/t' + c.team.id + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + c.team.id + '.png">';
+                            } else {
+                              html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                            }
+                            html += '</picture><span>' + c.team.title + ' <sup>' + c.team.name + '</sup></span></a></td>';
+                            html += '<td class="tpo tot" style="border-left:1px solid #dee2e6 !important;"><b>' + c.p + '</b></td>';
+                            html += '<td class="tpo tot" style="border-right:1px solid #dee2e6 !important;"><b>' + c.k + '</b></td>';
+                            for (r in score.rounds) {
+                              i = score.rounds[r];
+                              if (!i.teams[c.team.id]) {
+                                html += '<td class="tpo">&ndash;</td><td class="tpo">&ndash;</td>';
+                              } else {
+                                if (i.is == '2') {
+                                  html += '<td class="tpo tdc' + i.teams[c.team.id].r + '">' + i.teams[c.team.id].r + '</td><td class="tpo">' + i.teams[c.team.id].k + '</td>';
+                                } else {
+                                  html += '<td class="tpo"></td><td class="tpo"></td>';
+                                }
+                              }
+                            }
+                            html += '</tr>';
+                            j = j + 1;
+                          }
+                          var kol = score.rows - 0;
+                          if (j <= kol) {
+                            for (i = j; i <= kol; i++) {
+                              html += '<tr class="' + (score.colors[i] ? 'crows' + score.colors[i] : '') + '">';
+                              html += '<td class="headcol">' + i + '.</td>';
+                              html += '<td class="headcol"><span class="teamNameIco"><picture><img class="notsvg" src="https://escorenews.com/media/logo/not.svg"></picture><span>TBD</span></span></td>';
+                              html += '<td class="tpo tot"><b>0</b></td><td class="tpo tot"><b>0</b></td>';
+                              for (c in score.rounds) {
+                                html += '<td class="tpo"></td><td class="tpo"></td>';
+                              }
+                              html += '</tr>';
+                            }
+                          }
+                          html += '</tbody></table></div></div></div>';
+                        }
+                      }
+                      return html;
+                    }
+                    $(document).ready(function () {
+                      var id = 20984;
+                      if (id > 0) {
+                        get_stage(id);
+                      }
+                    });
+                  </script>
+                </div>
+              </section>
+            </article>
+            <section class="ratenews">
+              <div class="rate active"></div>
+              <div class="sc">
+                <a href="javascript:;" onclick="Share.vkontakte();" class="fab fa-vk"></a>
+                <a href="javascript:;" onclick="Share.facebook();" class="fab fa-facebook-f"></a>
+                <a href="javascript:;" onclick="Share.twitter();" class="fab fa-twitter"></a>
+              </div>
+            </section>
+            <div class="hblock">
+              <strong class="h4">Теги</strong><b></b>
+            </div>
+            <section class="tags" itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
+              <h4><a href="/ru/dota-2/d2cl-2021-season-2" class="tag tg_tour">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                    <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                    <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                  </picture>
+                  <span itemprop="name">D2CL 2021 S2</span>
+                </a></h4>
+              <h4><a href="/ru/dota-2/team/spirit" class="tag tg_team">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t6224.webp, https://escorenews.com/media/logo/_60/t6224.webp 2x" type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t6224.png, https://escorenews.com/media/logo/_60/t6224.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t6224.png" alt="TSpirit">
+                  </picture>
+                  <span itemprop="name">TSpirit</span>
+                </a></h4>
+              <h4><a href="/ru/dota-2/team/hellbear-smashers" class="tag tg_team">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t73112.webp, https://escorenews.com/media/logo/_60/t73112.webp 2x" type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t73112.png, https://escorenews.com/media/logo/_60/t73112.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t73112.png" alt="SMASH">
+                  </picture>
+                  <span itemprop="name">SMASH</span>
+                </a></h4>
+            </section>
+            <section class="mainNews">
+              <div class="hblock">
+                <h4>Другие новости</h4><b></b>
+              </div>
+              <div class="nb">
+                <i class="sct" data-format="%j% %ms% %y%" datetime="2021-08-04 09:53:00">4 авг</i> <a
+                  href="/ru/dota-2/news/23903-sonneiko-vystupil-v-chicken-fighters-vmesto-peksu-na-d2cl">SoNNeikO
+                  выступил в Chicken Fighters вместо Peksu на D2CL</a>
+              </div>
+              <div class="nb">
+                <i class="sct" data-format="%j% %ms% %y%" datetime="2021-08-01 21:17:00">2 авг</i> <a
+                  href="/ru/dota-2/news/23813-nemiga-gaming-vystupit-v-pley-off-dota-2-champions-league-2021-season-2">Nemiga
+                  Gaming выступит в плей-офф Dota 2 Champions League 2021 Season 2</a>
+              </div>
+              <div class="nb">
+                <i class="sct" data-format="%j% %ms% %y%" datetime="2021-07-31 20:50:00">31 июл</i> <a
+                  href="/ru/dota-2/news/23773-hellbear-smashers-poterpeli-pervoe-porajenie-na-dota-2-champions-league-2021">Hellbear
+                  Smashers потерпели первое поражение на Dota 2 Champions League 2021</a>
+              </div>
+              <div class="nb">
+                <i class="sct" data-format="%j% %ms% %y%" datetime="2021-07-29 21:00:00">30 июл</i> <a
+                  href="/ru/dota-2/news/23688-hellbear-smashers-garantirovali-sebe-mesto-v-pley-off-pervogo-diviziona-na-d2cl-season-2">Hellbear
+                  Smashers гарантировали себе место в плей-офф первого дивизиона на D2CL Season 2</a>
+              </div>
+            </section>
+            <div class="hblock">
+              <strong>Комментарии <s>0</s></strong><b></b>
+            </div>
+            
+            
+            {% include "./tpl/comments.html" %}
+
+
+            <script>
+              var text_for_edit = '';
+              function reply(id) {
+                remove_textareas();
+                var u = $('#com-' + id + ' a.name').text();
+                var html = '<div class="commment_form" id="comment_r">';
+                html += '<div class="tablock"><form method="POST" action="comments" name="comment_r" onsubmit="sform(\'comment_r\'); return false;">';
+                html += '<input type="hidden" name="mid" class="input" value="23931">';
+                html += '<input type="hidden" name="type" class="input" value="n">';
+                html += '<input type="hidden" name="game_id" class="input" value="582">';
+                html += '<input type="hidden" name="pid" class="input" value="' + id + '">';
+                html += '<div class="textareacom" rel="txt"><textarea name="txt" class="textarea input" placeholder="' + trsl.com_holder_r.replace(/%u%/gi, u) + '" autofocus oninput="auto_grow(this)"></textarea><button type="button" class="btn-com btn btn-primary" onclick="sform(\'comment_r\')"></button></div>';
+                html += '</form></div></div>';
+                if ($('#chi-' + id).length > 0) {
+                  $('#chi-' + id).append(html);
+                } else {
+                  html = '<div class="comment_child">' + html + '</div>';
+                  $('#com-' + id).after(html);
+                }
+              }
+              function cedit(id) {
+                remove_textareas();
+                text_for_edit = $('#com-' + id + ' p').html();
+                var txt = $('#com-' + id + ' p').text();
+                var html = '<div class="commment_form" id="comment_e" rel="' + id + '">';
+                html += '<div class="tablock"><form method="POST" action="comments" name="comment_e" onsubmit="sform(\'comment_e\'); return false;">';
+                html += '<input type="hidden" name="id" class="input" value="' + id + '">';
+                html += '<div class="textareacom" rel="txt"><textarea name="txt" class="textarea input" autofocus oninput="auto_grow(this)">' + txt + '</textarea><button type="button" class="btn-com btn btn-primary" onclick="sform(\'comment_e\')"></button></div>';
+                html += '</form></div></div>';
+                $('#com-' + id + ' p').html(html);
+                $('#com-' + id + ' div.action').hide();
+                $('#com-' + id + ' div.comment_prognoz').hide();
+                auto_grow(document.querySelectorAll('#com-' + id + ' textarea')[0]);
+              }
+              function remove_textareas() {
+                $('#comment_r').remove();
+                if ($('#comment_e').length > 0) {
+                  var id = $('#comment_e').attr('rel');
+                  $('#com-' + id + ' p').html(text_for_edit);
+                  text_for_edit = '';
+                  $('#com-' + id + ' div.action').show();
+                  $('#com-' + id + ' div.comment_prognoz').show();
+                }
+              }
+              function comment(data) {
+                var i = data.data;
+                var html = '<div class="rate active"><button class="like" onclick="com_rate(' + i.id + ',1)"></button><span id="crate' + i.id + '">' + i.rate + '</span><button class="dislike" onclick="com_rate(' + i.id + ',0)"></button></div>';
+                html += '<div class="cbody"><div class="ch"><a class="name" href="javascript:;">' + i.nick + '</a>';
+                if (i.fan != undefined) {
+                  html += '<a class="ut tt" href="/' + lang + '/' + games[i.game_id].eng + '/team/' + i.fan.e + '" title="' + trsl.com_fan.replace(/%t%/gi, i.fan.t) + '"><picture>';
+                  if (i.fan.l) {
+                    html += '<source srcset="https://escorenews.com/media/logo/_30/t' + i.fan.l + '.webp, https://escorenews.com/media/logo/_60/t' + i.fan.l + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + i.fan.l + '.png, https://escorenews.com/media/logo/_60/t' + i.fan.l + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + i.fan.l + '.png">';
+                  } else {
+                    html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                  }
+                  html += '</picture>' + i.fan.t + '</a>';
+                }
+                html += '<span class="sct" data-format="" datetime="' + i.date + '"></span></div><p>' + i.txt + '</p><div class="action"></div></div>';
+                if (i.win > 0) {
+                  html += '<div class="comment_prognoz"><span>' + trsl.com_win.replace(/%t%/gi, i.title) + '</span><picture>';
+                  if (i.logo) {
+                    html += '<source srcset="https://escorenews.com/media/logo/_30/t' + i.win + '.webp, https://escorenews.com/media/logo/_60/t' + i.win + '.webp 2x" type="image/webp"><source srcset="https://escorenews.com/media/logo/_30/t' + i.win + '.png, https://escorenews.com/media/logo/_60/t' + i.win + '.png 2x"><img src="https://escorenews.com/media/logo/_30/t' + i.win + '.png">';
+                  } else {
+                    html += '<img class="notsvg" src="https://escorenews.com/media/logo/not.svg">';
+                  }
+                  html += '</picture></div>';
+                }
+                if ($('#com-' + i.id).length > 0) {
+                  $('#com-' + i.id).html(html);
+                  $('#comment_r').remove();
+                  $('#comment_e').remove();
+                  $('form[name=comment] textarea').val('');
+                } else {
+                  html = '<article id="com-' + i.id + '">' + html + '</article>';
+                  var pid = i.pid - 0;
+                  if (!pid) {
+                    html = '<div class="comment">' + html + '</div>';
+                    $('#comments').append(html);
+                    $('form[name=comment] textarea').val('');
+                  } else {
+                    if ($('#chi-' + pid).length > 0) {
+                      $('#chi-' + pid).append(html);
+                    } else {
+                      html = '<div class="comment_child" id="chi-' + pid + '">' + html + '</div>';
+                      $('#com-' + pid).after(html);
+                    }
+                    $('#comment_r').remove();
+                    $('#comment_e').remove();
+                  }
+                }
+                convert_time();
+              }
+              function com_rate(id, v) {
+                $.ajax({ 'url': '/get/data.php', 'data': { 'rid': 'comments', 'ajax': 'rate', 'data': { 'id': id, 'v': v, 'lang': lang } } }).done(function (data) {
+                  if (data.err) {
+                    wms('', data.err);
+                  } else {
+                    $('#crate' + id).html(data.rate);
+                  }
+                });
+              }
+              function choose_win(id, title) {
+                id = id - 0;
+                $('#cwin').val(id);
+                if (id > 0) {
+                  $('#cwin').prop('checked', true);
+                }
+                $('#bwin').html((title != '' ? title : trsl.com_team));
+              }
+              $(document).ready(function () {
+                var num = window.location.href.match(/#c(\d+)/);
+                if (num) {
+                  num = num[1];
+                  $('#com-' + num).addClass('creply');
+                  $([document.documentElement, document.body]).animate({
+                    scrollTop: $('#com-' + num).offset().top - 43
+                  }, 1000);
+                }
+              });
+              function auto_grow(element) {
+                element.style.height = "39px";
+                element.style.height = (element.scrollHeight) + "px";
+              }
+            </script>
+          </div>
+          <div class="rcol col-lg-4 col-xl-4">
+            <noindex><a rel="nofollow" href="/ru/vacancy" class="rbn"><img src="https://escorenews.com/media/esn/p3_1.jpg"></a></noindex>
+            <div class="hblock">
+              <h2>Матчи <span class="sct" data-format="" datetime="2021-08-05 10:50:00">5 августа</span></h2>
+              <b></b><span><a href="/ru/dota-2/matches">все матчи</a></span>
+            </div>
+            <section class="matches">
+              <div class="flex-table" id="matches_s1">
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/execration-vs-army-geniuses-389702">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 10:50:00">13:50</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>XctN</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.webp, https://escorenews.com/media/logo/_60/t3617.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.png, https://escorenews.com/media/logo/_60/t3617.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t3617.png" alt="XctN">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type1">0 : 1</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.webp, https://escorenews.com/media/logo/_60/t45158.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.png, https://escorenews.com/media/logo/_60/t45158.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t45158.png" alt="AG">
+                      </picture>
+                      <b>AG</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-1/nemiga-vs-v-386457">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 12:20:00">15:20</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Nemiga</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t16011.webp, https://escorenews.com/media/logo/_60/t16011.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t16011.png, https://escorenews.com/media/logo/_60/t16011.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t16011.png" alt="Nemiga">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type1">0 : 0</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t66721.webp, https://escorenews.com/media/logo/_60/t66721.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t66721.png, https://escorenews.com/media/logo/_60/t66721.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t66721.png" alt="V">
+                      </picture>
+                      <b>V</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/galaxy-racer-vs-execration-389703">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 13:00:00">16:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>GXR</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t58180.webp, https://escorenews.com/media/logo/_60/t58180.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t58180.png, https://escorenews.com/media/logo/_60/t58180.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t58180.png" alt="GXR">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo2</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.webp, https://escorenews.com/media/logo/_60/t3617.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.png, https://escorenews.com/media/logo/_60/t3617.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t3617.png" alt="XctN">
+                      </picture>
+                      <b>XctN</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-1/hellbear-smashers-vs-spirit-386453">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 15:10:00">18:10</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>SMASH</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t73112.webp, https://escorenews.com/media/logo/_60/t73112.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t73112.png, https://escorenews.com/media/logo/_60/t73112.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t73112.png" alt="SMASH">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t6224.webp, https://escorenews.com/media/logo/_60/t6224.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t6224.png, https://escorenews.com/media/logo/_60/t6224.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t6224.png" alt="TSpirit">
+                      </picture>
+                      <b>TSpirit</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-1/unique-vs-tundra-386454">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 18:10:00">21:10</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Unique</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t37431.webp, https://escorenews.com/media/logo/_60/t37431.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t37431.png, https://escorenews.com/media/logo/_60/t37431.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t37431.png" alt="Unique">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t74703.webp, https://escorenews.com/media/logo/_60/t74703.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t74703.png, https://escorenews.com/media/logo/_60/t74703.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t74703.png" alt="Tundra">
+                      </picture>
+                      <b>Tundra</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article"
+                  href="/ru/dota-2/bts-pro-series-season-7/closed-qualifiers/furia-jovem-vs-unknown-389655">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 20:00:00">23:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>FJ</b>
+                      <picture>
+                        <img class="notsvg" src="https://escorenews.com/media/logo/not.svg">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t4613.webp, https://escorenews.com/media/logo/_60/t4613.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t4613.png, https://escorenews.com/media/logo/_60/t4613.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t4613.png" alt="UNK">
+                      </picture>
+                      <b>UNK</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article"
+                  href="/ru/dota-2/bts-pro-series-season-7/closed-qualifiers/infamous-vs-simply-toobased-389656">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-05 23:00:00">02:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Infamous</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t6274.webp, https://escorenews.com/media/logo/_60/t6274.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t6274.png, https://escorenews.com/media/logo/_60/t6274.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t6274.png" alt="Infamous">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t73811.webp, https://escorenews.com/media/logo/_60/t73811.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t73811.png, https://escorenews.com/media/logo/_60/t73811.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t73811.png" alt="sT">
+                      </picture>
+                      <b>sT</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/efusion-league/group-stage/veteran-vs-shinigami-383062">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 04:30:00">07:30</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Veteran</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t15463.webp, https://escorenews.com/media/logo/_60/t15463.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t15463.png, https://escorenews.com/media/logo/_60/t15463.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t15463.png" alt="Veteran">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t77484.webp, https://escorenews.com/media/logo/_60/t77484.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t77484.png, https://escorenews.com/media/logo/_60/t77484.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t77484.png" alt="Shinigami">
+                      </picture>
+                      <b>Shinigami</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="Efusion League">
+                      <source srcset="https://escorenews.com/media/event/_30/e5588.webp, https://escorenews.com/media/event/_60/e5588.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5588.png, https://escorenews.com/media/event/_60/e5588.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5588.png" alt="Efusion League">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/smg-vs-army-geniuses-389704">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 06:00:00">09:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>SMG</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t72813.webp, https://escorenews.com/media/logo/_60/t72813.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t72813.png, https://escorenews.com/media/logo/_60/t72813.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t72813.png" alt="SMG">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo2</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.webp, https://escorenews.com/media/logo/_60/t45158.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.png, https://escorenews.com/media/logo/_60/t45158.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t45158.png" alt="AG">
+                      </picture>
+                      <b>AG</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/cecilia-cup/group-stage/photon-vs-selemene-390728">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 06:00:00">09:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>PG</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t34275.webp, https://escorenews.com/media/logo/_60/t34275.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t34275.png, https://escorenews.com/media/logo/_60/t34275.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t34275.png" alt="PG">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t83799.webp, https://escorenews.com/media/logo/_60/t83799.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t83799.png, https://escorenews.com/media/logo/_60/t83799.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t83799.png" alt="Selemene">
+                      </picture>
+                      <b>Selemene</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="Cecilia Cup">
+                      <source srcset="https://escorenews.com/media/event/_30/e5730.webp, https://escorenews.com/media/event/_60/e5730.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5730.png, https://escorenews.com/media/event/_60/e5730.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5730.png" alt="Cecilia Cup">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/fnatic-vs-t1-389705">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 08:00:00">11:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Fnatic</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t15.webp, https://escorenews.com/media/logo/_60/t15.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t15.png, https://escorenews.com/media/logo/_60/t15.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t15.png" alt="Fnatic">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo2</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t39928.webp, https://escorenews.com/media/logo/_60/t39928.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t39928.png, https://escorenews.com/media/logo/_60/t39928.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t39928.png" alt="T1">
+                      </picture>
+                      <b>T1</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/efusion-league/group-stage/dota-geniuses-vs-army-geniuses-383064">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 08:30:00">11:30</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>DG</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t77533.webp, https://escorenews.com/media/logo/_60/t77533.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t77533.png, https://escorenews.com/media/logo/_60/t77533.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t77533.png" alt="DG">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.webp, https://escorenews.com/media/logo/_60/t45158.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t45158.png, https://escorenews.com/media/logo/_60/t45158.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t45158.png" alt="AG">
+                      </picture>
+                      <b>AG</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="Efusion League">
+                      <source srcset="https://escorenews.com/media/event/_30/e5588.webp, https://escorenews.com/media/event/_60/e5588.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5588.png, https://escorenews.com/media/event/_60/e5588.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5588.png" alt="Efusion League">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-2/fantastic-5-vs-khan-389256">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 09:00:00">12:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>F5</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t5423.webp, https://escorenews.com/media/logo/_60/t5423.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t5423.png, https://escorenews.com/media/logo/_60/t5423.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t5423.png" alt="F5">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t42311.webp, https://escorenews.com/media/logo/_60/t42311.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t42311.png, https://escorenews.com/media/logo/_60/t42311.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t42311.png" alt="Khan">
+                      </picture>
+                      <b>Khan</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/cecilia-cup/group-stage/selemene-vs-cosy-391224">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 09:00:00">12:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Selemene</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t83799.webp, https://escorenews.com/media/logo/_60/t83799.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t83799.png, https://escorenews.com/media/logo/_60/t83799.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t83799.png" alt="Selemene">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t39995.webp, https://escorenews.com/media/logo/_60/t39995.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t39995.png, https://escorenews.com/media/logo/_60/t39995.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t39995.png" alt="TC">
+                      </picture>
+                      <b>TC</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="Cecilia Cup">
+                      <source srcset="https://escorenews.com/media/event/_30/e5730.webp, https://escorenews.com/media/event/_60/e5730.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5730.png, https://escorenews.com/media/event/_60/e5730.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5730.png" alt="Cecilia Cup">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/fnatic-vs-execration-389706">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 10:00:00">13:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Fnatic</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t15.webp, https://escorenews.com/media/logo/_60/t15.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t15.png, https://escorenews.com/media/logo/_60/t15.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t15.png" alt="Fnatic">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo2</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.webp, https://escorenews.com/media/logo/_60/t3617.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.png, https://escorenews.com/media/logo/_60/t3617.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t3617.png" alt="XctN">
+                      </picture>
+                      <b>XctN</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/sea/trust-gaming-vs-execration-389707">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 12:00:00">15:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>MTG</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t44001.webp, https://escorenews.com/media/logo/_60/t44001.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t44001.png, https://escorenews.com/media/logo/_60/t44001.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t44001.png" alt="MTG">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo2</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.webp, https://escorenews.com/media/logo/_60/t3617.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t3617.png, https://escorenews.com/media/logo/_60/t3617.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t3617.png" alt="XctN">
+                      </picture>
+                      <b>XctN</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-2/spider-pigzs-vs-winstrike-389257">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 13:00:00">16:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>SP</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t7356.webp, https://escorenews.com/media/logo/_60/t7356.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t7356.png, https://escorenews.com/media/logo/_60/t7356.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t7356.png" alt="SP">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t24870.webp, https://escorenews.com/media/logo/_60/t24870.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t24870.png, https://escorenews.com/media/logo/_60/t24870.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t24870.png" alt="Winstrike">
+                      </picture>
+                      <b>Winstrike</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-puckchamp-ru-386458">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 15:00:00">18:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>TBD</b>
+                      <picture>
+                        <img class="notsvg" src="https://escorenews.com/media/logo/not.svg">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t73037.webp, https://escorenews.com/media/logo/_60/t73037.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t73037.png, https://escorenews.com/media/logo/_60/t73037.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t73037.png" alt="PC">
+                      </picture>
+                      <b>PC</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/d2cl-2021-season-2/division-1/tbd-vs-tbd-386459">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 18:00:00">21:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>TBD</b>
+                      <picture>
+                        <img class="notsvg" src="https://escorenews.com/media/logo/not.svg">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <img class="notsvg" src="https://escorenews.com/media/logo/not.svg">
+                      </picture>
+                      <b>TBD</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="D2CL 2021 S2">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.webp, https://escorenews.com/media/event/_60/e5657.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5657.png, https://escorenews.com/media/event/_60/e5657.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5657.png" alt="D2CL 2021 S2">
+                    </picture>
+                  </span>
+                </a>
+                <a class="article" href="/ru/dota-2/bts-pro-series-season-7/closed-qualifiers/hokori-vs-noping-389652">
+                  <div class="time">
+                    <i class="sct" data-format="%h%:%i%" datetime="2021-08-06 20:00:00">23:00</i>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b>Hokori</b>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t64293.webp, https://escorenews.com/media/logo/_60/t64293.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t64293.png, https://escorenews.com/media/logo/_60/t64293.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t64293.png" alt="Hokori">
+                      </picture>
+                    </span>
+                    <div class="score">
+                      <span class="type0">Bo3</span>
+                    </div>
+                    <span>
+                      <picture>
+                        <source srcset="https://escorenews.com/media/logo/_30/t23258.webp, https://escorenews.com/media/logo/_60/t23258.webp 2x" type="image/webp">
+                        <source srcset="https://escorenews.com/media/logo/_30/t23258.png, https://escorenews.com/media/logo/_60/t23258.png 2x">
+                        <img src="https://escorenews.com/media/logo/_30/t23258.png" alt="NoPing">
+                      </picture>
+                      <b>NoPing</b>
+                    </span>
+                  </div>
+                  <span class="tour" onclick="goevent(this); return false;">
+                    <picture class="tt" title="BTS Pro Series S7">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.webp, https://escorenews.com/media/event/_60/e5658.webp 2x" type="image/webp">
+                      <source srcset="https://escorenews.com/media/event/_30/e5658.png, https://escorenews.com/media/event/_60/e5658.png 2x">
+                      <img src="https://escorenews.com/media/event/_30/e5658.png" alt="BTS Pro Series S7">
+                    </picture>
+                  </span>
+                </a>
+              </div>
+              <div class="blockbot">Время <span class="stz">MSK</span></div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

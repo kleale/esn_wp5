@@ -1,0 +1,323 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почкму я не
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+{% set hscard = ["Искроцвет",
+"Озарение",
+"Ожившая метла",
+"Природоведение",
+"На глазок",
+"Зефрис Великий",
+"Солнечное затмение",
+"Лунное затмение",
+"Дыхание снов",
+"Нарастающий ветер",
+"Буйный рост",
+"ПЧЕЛЫ!!!",
+"Дремлющий дракон",
+"Лунный амулет",
+"Вестница Гайдра",
+"Болотный луч",
+"Размах",
+"Буйство природы",
+"Огромант",
+"Элиза Просвещенная",
+"Анубисат-защитник",
+"Одеревенение",
+"Страж леса Ому",
+"Зеленая исследовательница",
+"Теневая сова",
+"Переполнение",
+"Щит Кенария",
+"Королева Алекстраза",
+"Изера Освобожденная",
+"Йогг-Сарон, Владыка Судьбы"] %}
+
+
+
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<style>
+
+
+</style>
+
+<body class="">
+  <div class="wrap">
+    {% include "./tpl/aside.html" %}
+    <main class="match-page">
+
+
+      <div class="header">
+        <picture>
+          <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+          <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+        </picture>
+        <div class="hh">
+          <h1>Матч Gambit vs OG на <a href="#">Dream League 2019</a></h1>
+          <span>Group Stage • Group B • 19 марта 2019 • 13:00 MSK • Best of 3</span>
+        </div>
+        <div class="hr">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="gti-star" rel="5" onclick="rate(5)"></span>
+              <span class="gti-star" rel="4" onclick="rate(4)"></span>
+              <span class="gti-star starred-half" rel="3" onclick="rate(3)"></span>
+              <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span id="brate">4.5</span>
+          </div>
+          <div class="sc">
+            <a href="#" class="fab fa-vk"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+
+      {% include "./tpl/stages.html" %}
+
+      {% include "./tpl/matches/stream.html" %}
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-12">
+            <div class="teams-on-live">
+              <span>
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <img src="./img/dummy/team-lg.png" alt="">
+                  </picture>
+                  <b>{{ random(team) }}</b>
+                </a>
+                <u>Россия</u>
+                <s>23</s>
+                <sup>
+                  <a class="win tt mtype1" title="Победа"></a><a class="loose mtype-1 tt" title="Проигрыш"></a> <a
+                    href="#" class="mtype0"></a>
+                  <a class="mtype0" href="#"></a>
+                  <a class="mtype0" href="#"></a>
+                  <a href="#"></a><a href="#"></a><a href="#"></a>
+                  <a href="#"></a><a href="#"></a><a href="#"></a>
+                </sup>
+              </span>
+
+              <div class="score">
+                <h3>19 марта 2019, 13:00 MSK, Best of 3</h3>
+                <b>Матч окончен</b>
+                <span class="live ended">1<s>:</s>1</span>
+                <span class="kf">Коэффициенты</span>
+                <div class="progress">
+                  <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%" aria-valuenow="15"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%"
+                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <span>
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <img src="./img/dummy/team-lg.png" alt="">
+                  </picture>
+                  <h2>{{ random(team) }}</h2>
+                </a>
+                <u>Россия</u>
+                <s>23</s>
+                <sup>
+                  <a class="win tt" title="Победа"></a><a class="loose tt" title="Проигрыш"></a> <a href="#"></a><a
+                    href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a>
+                </sup>
+              </span>
+
+            </div>
+
+            <div class="hblock">
+              <h2>Результаты матча</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <section class="match-rezults">
+              <div class="flex-table openable">
+                {% for i in 0..3 %}
+                <article class="hsa frow{% if i == 0 %} active{% endif %}{% if i == 0 %}{% else %} collapsed{% endif %}"
+                  data-toggle="collapse" data-target="#colblock{{i}}">
+                  <strong class="map">Матч 1</strong>
+                  <div class="teams">
+                    
+                    <span rel="t1" class="team blue-dark">
+                      <u>RIkuwo</u>
+                      <b rel="t1s" class="heroIco" title="Warriar" style="background-image: url(https://d2q63o9r0h0ohi.cloudfront.net/images/card-gallery/icon_class_warrior-fe3e66592446de8a5d34f30599de3ace8c0a65968e260f05654094f3fdd9455847c85eec5ae20201a598fe96b93a13c51df0993164bc0792774eba2f13c395d1.png)">
+                      </b>
+                    </span>
+                      <s>vs</s>
+                      <span rel="t2" class="team blue-dark">
+                        <b rel="t2s" class="heroIco" title="Priest" style="background-image: url(https://d2q63o9r0h0ohi.cloudfront.net/images/card-gallery/icon_class_priest-93bbc19811732f7c4d3804371c0023a1ce57497a34c68e2f5ac020c3987fb310ae2eb5c60520cfd6070b47f4d9503a67d0947cd47bcb63584b4f126c50337785.png)">
+                        </b>
+                        qaz1291
+                      </span>
+                  </div>
+                  <a href="javascript:;" class="opener" data-toggle="collapse" data-target="#match_data1"
+                    aria-expanded="true"></a>
+                </article>
+                <div class="g582 collapse{% if i == 0 %} show{% endif %}" id="colblock{{i}}">
+                  <div class="shower">
+                    <div class="row">
+                      {% for i in 1..2 %}
+                      <div class="col-sm-6">
+                        <div class="hs-koloda {% if i == 1 %} hk1 {%endif%}">
+                          <div class="hs-koloda-header">
+                            <img
+                              src="https://cdn.discordapp.com/attachments/667340652387893249/821362298735558696/heroes_shaman_tile_hover.png"
+                              alt="">
+                            <div class="name"><span>RIkuwo {% if i == 1 %}<i class="fas fa-medal orange" title="Победа"></i>{%endif%}</span>
+                              <small>Воин</small>
+                            </div>
+                          </div>
+                          <div class="hs-koloda-body">
+                            {% for j in 1..30 %}
+                            <div class="hs-card">
+                              <b>{{random(["0","1","2","3"])}}</b>
+                              <span>{{random(hscard)}}</span>
+                              <small>{{random(["2", "⭐"])}}</small>
+                              <div class="hsbg" style="background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/c1c3468103288b4418ede6081b42f57181962a659ee6873c46e30c6ee663a60d.png);">
+                              </div>
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+            <div class="hblock">
+              <h2>Коэффициенты на матч</h2><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            <section class="kefs">
+              <div class="flex-table">
+                {% for i in 0..3 %}
+                <article class="frow">
+                  <a href="#" class="kl">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{ random(bet) }}.png">
+                      <img src="./img/dummy/{{ random(bet) }}.png" alt="">
+                    </picture>
+                  </a>
+                  <div>
+                    <a href="#">{{ random(team) }}</a>
+                    <b class="green">3.4</b>
+                    <s>:</s>
+                    <b class="red">1.23</b>
+                    <a href="#">{{ random(team) }}</a>
+                  </div>
+                  <span>
+                    <button class="btn btn-success btn-sm">
+                      Сделать ставку
+                    </button>
+                  </span>
+                </article>
+                {% endfor %}
+              </div>
+            </section>
+
+
+            <div class="hblock">
+              <h2>Комментарии <s>34</s></h2><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            {% include "./tpl/comments.html" %}
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+
+
+  <!-- https://www.chartjs.org/docs/latest/axes/cartesian/linear.html -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      lineTension: 0,
+      fill: false,
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3]
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+  <!-- <script>
+    $(document).ready(function() {
+      $('.match-rezults .openable .frow').on('click', function() {
+          $(this).toggleClass('active');
+      });
+    });
+  </script> -->
+
+</body>
+
+</html>

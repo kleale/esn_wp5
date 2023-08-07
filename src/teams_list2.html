@@ -1,0 +1,906 @@
+{% set title = "Рейтинг команд" %}
+{% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
+{% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        {% include "./tpl/gamenav.html" %}
+
+        <div class="hblock">
+          <h4>Трансферы Hearthstone</h4><b></b>
+        </div>
+
+        {#
+          <span class="datehead">20 декабря</span>
+        #}
+
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+            <span>{{ random(user) }} <sup>{{ random(["тренер", ""]) }}</sup></span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+            <span>{{ random(user) }} </span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+
+        <hr>
+
+        {% for i in 0..5 %}
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+            <sup>тренер</sup>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+        <hr>
+        {% for i in 0..5 %}
+
+        <a class="transferlink sctm" href="#">
+          <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <i class="fa fa-long-arrow-alt-right"></i>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+            <sup>тренер</sup>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+
+        <hr>
+
+        {% for i in 0..5 %}
+        <a class="transferlink sctm" href="#">
+          <span>
+            <i class="sct" data-format="%j% %ms%" datetime="2020-02-18 00:00:00">18 фев</i>
+          </span>
+          <b>
+            <span>{{ random(user) }}</span>
+          </b>
+          <span class="t1 teamNameIco">
+            <picture class="tt" title="Proj X">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="direction">
+            <i class="fa fa-long-arrow-alt-right"></i>
+            <sup>{{ random(['тренер','аренда','']) }}</sup>
+          </span>
+          <span class="t2 teamNameIco">
+            <picture class="tt" title="CR4ZY">
+              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+            </picture>
+          </span>
+          <span class="tlink">
+            {#
+              {{ random(['<a href="#"><i class="fa fa-chevron-right"></i></a>', ""]) }}
+            #}
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+        {% endfor %}
+
+        <hr>
+
+        {% for i in 0..5 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>19 декабря</span></div>#}
+        {% for i in 0..8 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+        {#<div class="hblock"><b></b><span>16 декабря</span></div>#}
+        {% for i in 0..1 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>15 декабря</span></div>#}
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        {#<div class="hblock"><b></b><span>5 декабря</span></div>#}
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+        <div class="hblock"><b></b><span>4 декабря</span></div>
+        {% for i in 0..0 %}
+        {% include "./tpl/transfer.html" %}
+        {% endfor %}
+
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">Все трансферы</button>
+        </div>
+        <br><br>
+      </div>
+    </aside>
+
+    <main class="teams_list">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+
+          <div class="center col-lg-7 col-xl-8">
+
+            <div class="nomsg mt-3 mb-1">
+              В связи с отсутствием международных турниров в период пандемии, посчитать мировой рейтинг команд не
+              представляется возможным
+            </div>
+
+            <div class="row">
+
+              <div class="col-xl-6">
+
+                <div class="hblock">
+                  <h1>Мировой рейтинг команд</h1><b></b>
+                </div>
+
+                <div id="mobile-filter-holder"></div>
+
+                <div class="table-responsive">
+                  <table class="table table-hover table-striped table-sm t-tbl">
+                    <thead id="lsort">
+                      <tr>
+                        <th class="place1 w1"></th>
+                        <th class=""></th>
+                        <th class="w3"><a href="javascript:;" rel="rate" onclick="filter('sort','rate')"
+                            class="down">Рейтинг</a></th>
+                        <!-- <th class="w3"><a href="javascript:;" rel="points" onclick="filter('sort','points')">DPC</a></th> -->
+                        <th class="w3"><a href="javascript:;" rel="money" onclick="filter('sort','money')" class="tt"
+                            title="Заработано за текущий сезон">деньги</a></th>
+                        <!-- <th class="w4 tt" title="" data-original-title="Дата последнего матча">матч</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for i in 1..15 %}
+                      <tr>
+                        <td class="place1">
+                          {{i}}
+                          {% if i == 1 %}<sup class="green">+ 2</sup>{% endif %}
+                          {% if i > 3 %}
+                          <sup class="red">-{{i}}</sup>
+                          {% endif %}
+                        </td>
+                        <!-- <td class="chbx">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ch{{i}}">
+                            <label class="custom-control-label" for="ch{{i}}"></label>
+                          </div>
+                        </td> -->
+                        <td class="tnm">
+                          <a href="#" class="teamNameIco">
+                            <!-- <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt=""> -->
+                            <picture>
+                              <source type="image/webp" srcset="../img/dummy/{{ random(teamlogo) }}.png">
+                              <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="">
+                            </picture>
+                            <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
+                            <span>{{ random(team) }}</span>
+                          </a>
+                        </td>
+                        <td>{{i}}3%</td>
+                        <!-- <td>-</td> -->
+                        <td class="scm" data-value="$200000">${{i}}00K</td>
+                        <!-- <td><span class="sct" rel="2" datetime="1599411600">{{i}}д</span></td> -->
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+
+                  {% include "./tpl/pager.html" %}
+                </div>
+
+              </div>
+
+              <div class="col-xl-6">
+
+                <div class="hblock">
+                  <h2>Региональные рейтинги</h2><b></b>
+                </div>
+
+
+                <div class="hblock hblock-sm">
+                  <h3>Европа</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=2">все</a></span>
+                </div>
+
+                <table class="table table-hover table-striped table-sm">
+                  <!-- <thead id="lsort">
+                    <tr>
+                      <th class="place1 w2"></th>
+                      <th></th>
+                      <th class="w2"></th>
+                      <th class="w4"><a href="javascript:;" rel="rate" onclick="filter('sort','rate')"
+                          class="down">Рейтинг</a></th>
+                    </tr>
+                  </thead> -->
+                  <tbody>
+                    {% for i in 1..3 %}
+                    <tr rel="">
+                      <td class="w1_5 pl-1">#{{i}}</td>
+                      <td class="">
+                        <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span rel="team">{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td class="w2 tar"><span class="green">+1</span></td>
+                      <td class="w4 tar">{{i}}0.00</td>
+                      <!-- <td>
+                        –
+                      </td>
+                      <td class="scm" data-value="$200000">$200K</td>
+                      <td><span class="sct" rel="2" datetime="1599411600">15ч</span></td> -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+                <div class="hblock hblock-sm">
+                  <h3>СНГ</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=2">все</a></span>
+                </div>
+
+                <table class="table table-hover table-striped table-sm">
+                  <tbody>
+                    {% for i in 1..3 %}
+                    <tr rel="">
+                      <td class="w1_5 pl-1">#{{i}}</td>
+                      <td class="">
+                        <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span rel="team">{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td class="w2 tar"><span class="green">+1</span></td>
+                      <td class="w4 tar">{{i}}0.00</td>
+                      <!-- <td>
+                        –
+                      </td>
+                      <td class="scm" data-value="$200000">$200K</td>
+                      <td><span class="sct" rel="2" datetime="1599411600">15ч</span></td> -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+                <div class="hblock hblock-sm">
+                  <h3>Северная Америка</h3><b></b><span><a id="ablock_teamsa"
+                      href="/ru/dota-2/team?region=2">все</a></span>
+                </div>
+
+                <table class="table table-hover table-striped table-sm">
+                  <tbody>
+                    {% for i in 1..3 %}
+                    <tr rel="">
+                      <td class="w1_5 pl-1">#{{i}}</td>
+                      <td class="">
+                        <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span rel="team">{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td class="w2 tar"><span class="green">+1</span></td>
+                      <td class="w4 tar">{{i}}0.00</td>
+                      <!-- <td>
+                        –
+                      </td>
+                      <td class="scm" data-value="$200000">$200K</td>
+                      <td><span class="sct" rel="2" datetime="1599411600">15ч</span></td> -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+                <div class="hblock hblock-sm">
+                  <h3>Китай</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=2">все</a></span>
+                </div>
+
+                <table class="table table-hover table-striped table-sm">
+                  <tbody>
+                    {% for i in 1..3 %}
+                    <tr rel="">
+                      <td class="w1_5 pl-1">#{{i}}</td>
+                      <td class="">
+                        <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span rel="team">{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td class="w2 tar"><span class="green">+1</span></td>
+                      <td class="w4 tar">{{i}}0.00</td>
+                      <!-- <td>
+                        –
+                      </td>
+                      <td class="scm" data-value="$200000">$200K</td>
+                      <td><span class="sct" rel="2" datetime="1599411600">15ч</span></td> -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+                <div class="hblock hblock-sm">
+                  <h3>SEA & Океания</h3><b></b><span><a id="ablock_teamsa"
+                      href="/ru/dota-2/team?region=2">все</a></span>
+                </div>
+
+                <table class="table table-hover table-striped table-sm">
+                  <tbody>
+                    {% for i in 1..3 %}
+                    <tr rel="">
+                      <td class="w1_5 pl-1">#{{i}}</td>
+                      <td class="">
+                        <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span rel="team">{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td class="w2 tar"><span class="green">+1</span></td>
+                      <td class="w4 tar">{{i}}0.00</td>
+                      <!-- <td>
+                        –
+                      </td>
+                      <td class="scm" data-value="$200000">$200K</td>
+                      <td><span class="sct" rel="2" datetime="1599411600">15ч</span></td> -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="rcol col-lg-5 col-xl-4">
+
+            <!-- rightcol -->
+
+
+            <div class="hblock">
+              <h4>Фильтр</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+
+            <div class="filter" id="filter">
+              <div class="searcher">
+                <input type="text" class="form-control form-control-sm mfilter" rel="t" data-del="" data-upd="" value=""
+                  placeholder="Название команды" autocomplete="off">
+                <a href="javascript:;" class="go" onclick="filter('t',0)"></a>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bplayer"><span>Игрок</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="player" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="player" data-del="" data-upd="" id="fplayer">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id=""><span>Турнир</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="" data-del="" data-upd="" id="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bregion"><span>Регион</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="region" placeholder="Поиск по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="region" data-del="" data-upd="" id="fregion">
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="bcountry"><span>Страна</span><b></b></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-form">
+                    <input type="text" class="form-control flist" rel="country" placeholder="Страна по названию"
+                      autocomplete="off">
+                  </div>
+                  <div class="mfilter" rel="country" data-del="" data-upd="" id="fcountry">
+                  </div>
+                </div>
+              </div>
+
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Сравнение команд <i title="Типо хелптекст"
+                    class="tip" data-toggle="tip"></i></label>
+              </div>
+
+              <div class="hblock">
+                <b></b><button type="button" class="btn btn-sm btn-primary">Фильтровать</button><b></b>
+              </div>
+
+            </div> <!--  filter -->
+
+            <a href="#" class="rbn mt-4"><img src="../img/dummy/rbn.png" alt=""></a>
+
+            <!--
+
+            <div class="hblock">
+              <h2>Региональные рейтинги</h2><b></b>
+            </div>
+            <div class="nomsg">
+              В связи с отсутствием международных турниров в период пандемии, посчитать мировой рейтинг команд не
+              представляется возможным
+            </div>
+
+            <div class="hblock hblock-sm">
+              <h3>Европа таблицей</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=2">все</a></span>
+            </div>
+
+            <table class="table table-hover table-striped table-sm">
+              <tbody>
+                {% for i in 1..5 %}
+                <tr rel="">
+                  <td class="w1_5 pl-1">#{{i}}</td>
+                  <td class="">
+                    <a href="/ru/dota-2/team/secret-team" class="teamNameIco">
+                      <picture>
+                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                      </picture>
+                      <span rel="team">{{random(team)}}</span>
+                    </a>
+                  </td>
+                  <td class="w2 tar"><span class="green">+1</span></td>
+                  <td class="w4 tar">{{i}}0.00</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+            <style>
+              .frow .place {
+                width: 1.6rem;
+              }
+            </style>
+
+
+            <div class="hblock hblock-sm">
+              <h3>Европа</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=2">все</a></span>
+            </div>
+
+            <section class="teams">
+              <div class="flex-table">
+                <a class="frow" href="https://escorenews.com/ru/dota-2/team/secret-team">
+                  <s class="place">#1</s>
+                  <picture>
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t4051.webp, https://escorenews.com/media/logo/_60/t4051.webp 2x"
+                      type="image/webp">
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t4051.png, https://escorenews.com/media/logo/_60/t4051.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t4051.png" alt="Secret">
+                  </picture>
+                  <b class="active">Secret</b>
+                  <s class="green">+1</s>
+                  <i class="money">1849</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/nigma">
+                  <s class="place">#2</s>
+                  <picture>
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t43398.webp, https://escorenews.com/media/logo/_60/t43398.webp 2x"
+                      type="image/webp">
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t43398.png, https://escorenews.com/media/logo/_60/t43398.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t43398.png" alt="Nigma">
+                  </picture>
+                  <b class="active">Nigma</b>
+                  <s class="green">+2</s>
+                  <i class="money">880</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/alliance">
+                  <s class="place">#3</s>
+                  <picture>
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t11.webp, https://escorenews.com/media/logo/_60/t11.webp 2x"
+                      type="image/webp">
+                    <source
+                      srcset="https://escorenews.com/media/logo/_30/t11.png, https://escorenews.com/media/logo/_60/t11.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t11.png" alt="[A]">
+                  </picture>
+                  <b class="active">[A]</b>
+                  <s class="red">-3</s>
+                  <i class="money">766</i>
+                </a>
+              </div>
+            </section>
+
+
+
+            <div class="hblock hblock-sm">
+              <h3>СНГ</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=6">все</a></span>
+            </div>
+            <section class="teams">
+              <div class="flex-table">
+                <a class="frow" href="/ru/dota-2/team/virtus-pro">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t17.webp, https://escorenews.com/media/logo/_60/t17.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t17.png, https://escorenews.com/media/logo/_60/t17.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t17.png" alt="VP">
+                  </picture>
+                  <b class="active">VP</b>
+                  <s>1</s>
+                  <i class="money">728</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/flytomoon">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t23018.webp, https://escorenews.com/media/logo/_60/t23018.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t23018.png, https://escorenews.com/media/logo/_60/t23018.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t23018.png" alt="FTM">
+                  </picture>
+                  <b class="active">FTM</b>
+                  <s>2<span class="green">+1</span></s>
+                  <i class="money">553</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/virtus-pro-prodigy">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t48956.webp, https://escorenews.com/media/logo/_60/t48956.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t48956.png, https://escorenews.com/media/logo/_60/t48956.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t48956.png" alt="VP.P">
+                  </picture>
+                  <b class="active">VP.P</b>
+                  <s>3<span class="red">-1</span></s>
+                  <i class="money">512</i>
+                </a>
+              </div>
+            </section>
+            <div class="hblock hblock-sm">
+              <h3>Северная Америка</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=4">все</a></span>
+            </div>
+            <section class="teams">
+              <div class="flex-table">
+                <a class="frow" href="/ru/dota-2/team/quincy-crew">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t41121.webp, https://escorenews.com/media/logo/_60/t41121.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t41121.png, https://escorenews.com/media/logo/_60/t41121.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t41121.png" alt="QCY">
+                  </picture>
+                  <b class="active">QCY</b>
+                  <s>1</s>
+                  <i class="money">885</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/4-zoomers">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t50293.webp, https://escorenews.com/media/logo/_60/t50293.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t50293.png, https://escorenews.com/media/logo/_60/t50293.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t50293.png" alt="4Zs">
+                  </picture>
+                  <b class="active">4Zs</b>
+                  <s>2<span class="green">+1</span></s>
+                  <i class="money">411</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/cr4zy">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t47649.webp, https://escorenews.com/media/logo/_60/t47649.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t47649.png, https://escorenews.com/media/logo/_60/t47649.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t47649.png" alt="CR4ZY">
+                  </picture>
+                  <b class="active">CR4ZY</b>
+                  <s>3<span class="red">-1</span></s>
+                  <i class="money">342</i>
+                </a>
+              </div>
+            </section>
+            <div class="hblock hblock-sm">
+              <h3>Китай</h3><b></b><span><a id="ablock_teamsa" href="/ru/dota-2/team?region=3">все</a></span>
+            </div>
+            <section class="teams">
+              <div class="flex-table">
+                <a class="frow" href="/ru/dota-2/team/ig">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t6.webp, https://escorenews.com/media/logo/_60/t6.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t6.png, https://escorenews.com/media/logo/_60/t6.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t6.png" alt="IG">
+                  </picture>
+                  <b class="active">IG</b>
+                  <s>1</s>
+                  <i class="money">641</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/ehome">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t29.webp, https://escorenews.com/media/logo/_60/t29.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t29.png, https://escorenews.com/media/logo/_60/t29.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t29.png" alt="EHOME">
+                  </picture>
+                  <b class="active">EHOME</b>
+                  <s>2</s>
+                  <i class="money">549</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/cdec-gaming">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t4127.webp, https://escorenews.com/media/logo/_60/t4127.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t4127.png, https://escorenews.com/media/logo/_60/t4127.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t4127.png" alt="CDEC">
+                  </picture>
+                  <b class="active">CDEC</b>
+                  <s>3<span class="green">+1</span></s>
+                  <i class="money">418</i>
+                </a>
+              </div>
+            </section>
+            <div class="hblock hblock-sm">
+              <h3>SEA &amp; Океания</h3><b></b><span><a id="ablock_teamsa"
+                  href="/ru/dota-2/team?region=1">все</a></span>
+            </div>
+            <section class="teams">
+              <div class="flex-table">
+                <a class="frow" href="/ru/dota-2/team/execration">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t3617.webp, https://escorenews.com/media/logo/_60/t3617.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t3617.png, https://escorenews.com/media/logo/_60/t3617.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t3617.png" alt="XctN">
+                  </picture>
+                  <b class="active">XctN</b>
+                  <s>1</s>
+                  <i class="money">471</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/fnatic">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t15.webp, https://escorenews.com/media/logo/_60/t15.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t15.png, https://escorenews.com/media/logo/_60/t15.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t15.png" alt="Fnatic">
+                  </picture>
+                  <b class="active">Fnatic</b>
+                  <s>2</s>
+                  <i class="money">443</i>
+                </a>
+                <a class="frow" href="/ru/dota-2/team/boom">
+                  <picture>
+                    <source srcset="https://escorenews.com/media/logo/_30/t13740.webp, https://escorenews.com/media/logo/_60/t13740.webp 2x"
+                      type="image/webp">
+                    <source srcset="https://escorenews.com/media/logo/_30/t13740.png, https://escorenews.com/media/logo/_60/t13740.png 2x">
+                    <img src="https://escorenews.com/media/logo/_30/t13740.png" alt="BOOM">
+                  </picture>
+                  <b class="active">BOOM</b>
+                  <s>3</s>
+                  <i class="money">426</i>
+                </a>
+              </div>
+            </section>
+
+
+          -->
+
+
+
+
+
+            <div class="hblock">
+              <h4>Победители</h4><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+            </div>
+            <!-- <div class="game-select">
+                <a href="#" class="gl dota2 active"></a>
+                <a href="#" class="gl csgo"></a>
+                <a href="#" class="gl lol"></a>
+                <a href="#" class="gl hs"></a>
+                <a href="#" class="gl ow"></a>
+                <a href="#" class="gl fn"></a>
+                <a href="#" class="gl pubg"></a>
+                <a href="#" class="gl rl"></a>
+                <a href="#" class="gl rs"></a>
+                <a href="#" class="gl sc2"></a>
+            </div> -->
+            <section class="tours-winners">
+              <div class="flex-table">
+                {% for i in 0..5 %}
+                <div class="frow" href="#">
+                  <a href="#" class="tour">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                      <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                    </picture>
+                    {{random(tour)}}
+                  </a>
+                  <a href="#" class="team">
+                    <picture>
+                      <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                      <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                    </picture>
+                    {{random(team)}}
+                  </a>
+                  <i>
+                    $ 233K
+                  </i>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+
+
+            <div class="hblock">
+              <h4>Как рассчитывается рейтинг</h4><b></b><span><i title="Типо хелптекст" class="tip"
+                  data-toggle="tip"></i></span>
+            </div>
+
+            <section class="col-text">
+              <p>
+                The world ranking is based on teams' achievements over the past year (with severe decay in points
+                throughout each month), recent form over the last 2 months and performance at the last 10 LAN events.
+              </p>
+              <p>
+                All of that is predicated around a 3-man core each team is required to have in order to retain their
+                past points. Online matches and tournaments are included, but with a diminishing factor which means they
+                cannot make a big difference among the top teams, and mainly serve to put new teams on the map.
+              </p>
+            </section>
+
+          </div>
+        </div>
+    </main>
+  </div>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>

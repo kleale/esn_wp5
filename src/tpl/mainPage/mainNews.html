@@ -1,0 +1,71 @@
+{#
+  <section class="mainNews" id="articles-blocksmall">
+  <div class="hblock">
+    <h1>Главные новости</h1><b></b>
+  </div>
+  
+    {% for i in 0..10 %}
+
+    <div class="nb">
+      
+        <i>10:1{{i}}</i>
+        <b><a href="">{{ random(game) }}</a></b>
+        {% if i == 4 %}<span class="badge badge-danger">Важно</span>{% endif %}
+        {% if i == 3 %}<span class="badge badge-warning">Слухи</span>{% endif %}
+        {% if i == 2 %}<span class="badge badge-info">Видео</span>{% endif %}
+        <a href="">{{ random(news) }}</a>
+        <u>{{ random(num) }}</u>
+        {% if i == 0 %}
+          <div class="mCom">
+              <u>{{ random(user) }}</u>:
+              Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия... 
+          </div>
+        {% endif %}
+ 
+    </div>
+    {% endfor %}
+  
+</section>
+#}
+
+<section id=mnews class="bigNewsList">
+  <div class="hblock">
+    <h1>Самое интересное</h1><b></b>
+  </div>
+    {% for i in 0..10 %}
+      {% if i == 4 %}
+        <!-- <a href="" class="btn720">
+          <img src="../img/dummy/b720.png" alt="">
+        </a> -->
+        <noindex><a rel="nofollow" href="/ru/go?to=gg" class="btn720" target="_blank"><img src="/img/bnrs/ggbet630_3.jpg"></a></noindex>
+      {% else %}
+        <div class="media">
+          <a href="">
+            <picture>
+                <source type="image/webp" srcset="../img/dummy/npic.png">
+                <img src="../img/dummy/npic.png" alt="">
+            </picture>
+          </a>
+          <div class="media-body">
+            <div class="mh">
+              <b><a href="">{{ random(game) }}</a></b>
+              &bull;
+              {% if i == 4 %}<span class="badge badge-danger">Важно</span>&bull;{% endif %}{% if i == 3 %}<span class="badge badge-warning">Слухи</span>&bull;{% endif %}{% if i == 2 %}<span class="badge badge-info">Видео</span>&bull;{% endif %}
+              <i>2{{i}} января</i>
+              <u>{{ random(num) }}</u>
+            </div>
+            <a href="">{{ random(news) }}</a>
+            {% if i == 0 %}
+              <div class="mCom">
+                <a href="">{{ random(user) }}</a>:
+                Я пологаю Virtus.pro вылетела с квалификации по причине отсутвия...
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-sm">Все новости</button>
+    </div>
+</section>
