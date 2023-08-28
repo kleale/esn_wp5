@@ -1,4 +1,6 @@
-# Верстка проекта GT
+# Верстка проекта ESN
+старая копия
+Теперь основой проект в приватном репозитории в гатлабе
 
 This project has been created using **webpack-cli**, you can now run
 
