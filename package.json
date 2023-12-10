@@ -22,8 +22,8 @@
   "version": "1.0.0",
   "description": "ESN actual",
   "name": "esn",
-  "home": "https://kleale.github.io/gt2.0_nuxt/",
-  "homepage": "https://kleale.github.io/gt2.0_nuxt/",
+  "home": "https://github.com/kleale/esn_wp5/",
+  "homepage": "https://kleale.github.io/esn_wp5/",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",

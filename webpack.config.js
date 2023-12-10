@@ -25,7 +25,8 @@ const config = {
     output: {
         filename: `js/[name].js`,
         path: PATHS.dist,
-        publicPath: '/', // относительная ссылка в браузере на папку выходную
+        //publicPath: '/', // относительная ссылка в браузере на папку выходную
+        publicPath: './',
         clean: true,
     },
 
