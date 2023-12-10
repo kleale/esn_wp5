@@ -9,6 +9,7 @@ node_modules
 # Dist & test
 test
 #dist
+dist
 dist/*.eot
 dist/*.svg
 dist/*.ttf

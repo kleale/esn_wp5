@@ -1,7 +1,77 @@
-<!doctype html><html><head lang="ru"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Вход</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic" rel="stylesheet"><link rel="icon" type="image/png" href="./static/favicon32.png"><script defer="defer" src="/js/app.js"></script><script defer="defer" src="/js/darktheme.js"></script><link href="/css/app.css" rel="stylesheet"><link href="/css/darktheme.css" rel="stylesheet"></head><body class="loginPage"><style>:root {
+
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet'
+    type='text/css'>
+  <!-- <link rel="icon" type="image/png" href="./static/favicon.ico"> -->
+  <link rel="icon" type="image/png" href="./static/favicon32.png">
+<script defer src="/js/app.js"></script><script defer src="/js/darktheme.js"></script><link href="/css/app.css" rel="stylesheet"><link href="/css/darktheme.css" rel="stylesheet"></head>
+
+<body class="loginPage">
+
+  <style>
+  :root {
     --input-padding-x: 1rem;
     --input-padding-y: 0.75rem;
-  }</style><div class="container-fluid"><div class="row no-gutter"><div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div><div class="col-md-8 col-lg-6"><div class="login d-flex align-items-center py-5"><div class="container"><div class="row"><div class="col-md-8 col-lg-7 mx-auto"><h3 class="login-heading mb-4">Вход</h3><form><div class="form-label-group"><input type="email" id="inputEmail" class="form-control form-control-sm" placeholder="Email" required autofocus> <label for="inputEmail">Email</label></div><div class="form-label-group"><input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required> <label for="inputPassword">Пароль</label></div><div class="custom-control custom-checkbox mb-3"><input type="checkbox" class="custom-control-input" id="remember"> <label class="custom-control-label" for="remember">Запомнить меня</label></div><button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Войти</button><div class="text-center mb-3"><a class="small" href="#">Напомнить пароль</a></div><div class="text-center soc"><a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a></div></form></div></div></div></div></div></div></div><style>.project-menu{
+  }  
+  </style>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+      <div class="col-md-8 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 mx-auto">
+                <h3 class="login-heading mb-4">Вход</h3>
+                <form>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control form-control-sm" placeholder="Email" required
+                      autofocus>
+                    <label for="inputEmail">Email</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+                    <label for="inputPassword">Пароль</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="remember">
+                    <label class="custom-control-label" for="remember">Запомнить меня</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                    type="submit">Войти</button>
+                  <div class="text-center mb-3">
+                    <a class="small" href="#">Напомнить пароль</a>
+                  </div>
+                  <div class="text-center soc">
+                      <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  <!--PAGES select only dev-->
+<style>
+  
+  .project-menu{
     position: fixed;
     z-index: 1000;
     bottom: 0;
@@ -18,4 +88,67 @@
   }
   .project-menu a{
     font-size: 10px;
-  }</style><div class="project-menu"><div class="btn-group" role="group" id="hpages"><div class="dropdown"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сделано</a><div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a href="/" class="dropdown-item">index</a> <a href="/404.html" class="dropdown-item">404</a> <a href="/matches.html" class="dropdown-item">Матчи</a> <a href="/match_live.html" class="dropdown-item">Матч Live</a> <a href="/match_past.html" class="dropdown-item">Матч прош</a> <a href="/match_pubg.html" class="dropdown-item">Матч PUBG</a> <a href="/match_pubg_past.html" class="dropdown-item">Матч PUBG прош</a><a href="/match_cs_past.html" class="dropdown-item">Матч CS</a> <a href="/tours.html" class="dropdown-item">Турниры</a> <a href="/tour.html" class="dropdown-item">Турнир</a> <a href="/tour_stadia.html" class="dropdown-item">tour_stadia</a> <a href="/tour_group.html" class="dropdown-item">tour_group</a> <a href="/tour_group_stadia.html" class="dropdown-item">tour_group_stadia</a> <a href="/teams_list.html" class="dropdown-item">teams_list</a> <a href="/teams_list2.html" class="dropdown-item">teams_list 2 col</a> <a href="/team.html" class="dropdown-item">teamы</a> <a href="/team2.html" class="dropdown-item">team2</a> <a href="/players_list.html" class="dropdown-item">players_list</a> <a href="/player.html" class="dropdown-item">player</a> <a href="/player_pubg.html" class="dropdown-item">player_pubg</a> <a href="/video.html" class="dropdown-item">video</a> <a href="/highlight.html" class="dropdown-item">highlight</a> <a href="/highlights.html" class="dropdown-item">highlights</a> <a href="/search.html" class="dropdown-item">search</a> <a href="/transfers.html" class="dropdown-item">transfers</a> <a href="/match_HS.html" class="dropdown-item">match_HS</a> <a href="/player_hs.html" class="dropdown-item">player_hs</a> <a href="/news.html" class="dropdown-item">news</a> <a href="/news_list.html" class="dropdown-item">news_list</a> <a href="/news_list_word.html" class="dropdown-item">news_list_word</a></div></div><a href="/elements.html" class="m2 btn btn-sm btn-info">ALL elements</a> <a href="/icons.html" class="m2 btn btn-sm btn-info">icons</a></div></div></body></html>
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Сделано
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a href="/" class="dropdown-item">index</a>
+          <a href="/404.html" class="dropdown-item">404</a>
+          <a href="/matches.html" class="dropdown-item">Матчи</a>
+          <a href="/match_live.html" class="dropdown-item">Матч Live</a>
+          <a href="/match_past.html" class="dropdown-item">Матч прош</a>
+          <a href="/match_pubg.html" class="dropdown-item">Матч PUBG</a>
+          <a href="/match_pubg_past.html" class="dropdown-item">Матч PUBG прош</a>
+          <!-- <a href="/page_text.html" class="dropdown-item">Текст</a>
+          <a href="/user_account.html" class="dropdown-item">U acc</a>
+          <a href="/user_log.html" class="dropdown-item">U log</a>
+          <a href="/user_reg.html" class="dropdown-item">U reg</a>
+          a href="/mail.html" class="dropdown-item">news_list_word</a>
+          <a href="/reg.html" class="dropdown-item">news_list_word</a>
+          <a href="/pwd.html" class="dropdown-item">news_list_word</a>
+          <a href="/pwd_count.html" class="dropdown-item">news_list_word</a> -->
+          <a href="/match_cs_past.html" class="dropdown-item">Матч CS</a>
+          <a href="/tours.html" class="dropdown-item">Турниры</a>
+          <a href="/tour.html" class="dropdown-item">Турнир</a>
+          <a href="/tour_stadia.html" class="dropdown-item">tour_stadia</a>
+          <a href="/tour_group.html" class="dropdown-item">tour_group</a>
+          <a href="/tour_group_stadia.html" class="dropdown-item">tour_group_stadia</a>
+          <a href="/teams_list.html" class="dropdown-item">teams_list</a>
+          <a href="/teams_list2.html" class="dropdown-item">teams_list 2 col</a>
+          <a href="/team.html" class="dropdown-item">teamы</a>
+          <a href="/team2.html" class="dropdown-item">team2</a>
+          <a href="/players_list.html" class="dropdown-item">players_list</a>
+          <a href="/player.html" class="dropdown-item">player</a>
+          <a href="/player_pubg.html" class="dropdown-item">player_pubg</a>
+          <a href="/video.html" class="dropdown-item">video</a>
+          <a href="/highlight.html" class="dropdown-item">highlight</a>
+          <a href="/highlights.html" class="dropdown-item">highlights</a>
+          <a href="/search.html" class="dropdown-item">search</a>
+          <a href="/transfers.html" class="dropdown-item">transfers</a>
+          <a href="/match_HS.html" class="dropdown-item">match_HS</a>
+          <a href="/player_hs.html" class="dropdown-item">player_hs</a>
+      
+      
+          <a href="/news.html" class="dropdown-item">news</a>
+          <a href="/news_list.html" class="dropdown-item">news_list</a>
+          <a href="/news_list_word.html" class="dropdown-item">news_list_word</a>
+          
+        </div>
+    </div>
+
+    <a href="/elements.html" class="m2 btn btn-sm btn-info">ALL elements</a>
+    <a href="/icons.html" class="m2 btn btn-sm btn-info">icons</a>
+  </div>
+</div>
+
+<!--.PAGES navi dev-->
+
+</body>
+
+</html>
