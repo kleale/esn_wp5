@@ -222,11 +222,11 @@ const config = {
         //     filename: './match_live.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/match_past.html`,
-        //     filename: './match_past.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/match_past.html`,
+            filename: './match_past.html'
+        }),
 
         // new HtmlWebpackPlugin({
         //     hash: false,
