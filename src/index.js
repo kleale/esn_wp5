@@ -322,3 +322,12 @@ $('#themeToggle').on('click', function () {
     var element = document.body;
     element.classList.toggle("dark-mode");
 });
+
+
+// opener in tour_group.html
+$('.opener').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).parent().parent().toggleClass('active');
+    $(this).parent().parent().next().toggleClass('open');
+});
+
