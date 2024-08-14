@@ -204,11 +204,11 @@ const config = {
         //     filename: './404.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/tours.html`,
-        //     filename: './tours.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tours.html`,
+            filename: './tours.html'
+        }),
 
         // new HtmlWebpackPlugin({
         //     hash: false,
@@ -311,21 +311,22 @@ const config = {
         //     filename: './teams_list2.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/tour.html`,
-        //     filename: './tour.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/tour_stadia.html`,
-        //     filename: './tour_stadia.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/tour_group.html`,
-        //     filename: './tour_group.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tour.html`,
+            filename: './tour.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tour_stadia.html`,
+            filename: './tour_stadia.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tour_group.html`,
+            filename: './tour_group.html'
+        }),
+        
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/match_HS.html`,
