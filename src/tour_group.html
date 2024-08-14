@@ -44,15 +44,17 @@ Team X, по прошлым играм."] %}
             <b></b><span>20 декабря</span>
           </div>
 
-          {% for i in 0..5 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+            
+            {% for i in 0..5 %} {% include "./tpl/newsblock.html" %} {% endfor %}
 
-          <div class="hblock"><b></b><span>19 декабря</span></div>
-          {% for i in 0..8 %} {% include "./tpl/newsblock.html" %} {% endfor %}
-          <div class="hblock"><b></b><span>16 декабря</span></div>
-          {% for i in 0..1 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+            <div class="hblock"><b></b><span>19 декабря</span></div>
+            {% for i in 0..8 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+            <div class="hblock"><b></b><span>16 декабря</span></div>
+            {% for i in 0..1 %} {% include "./tpl/newsblock.html" %} {% endfor %}
 
-          <div class="hblock"><b></b><span>15 декабря</span></div>
-          {% for i in 0..0 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+            <div class="hblock"><b></b><span>15 декабря</span></div>
+            {% for i in 0..0 %} {% include "./tpl/newsblock.html" %} {% endfor %} 
+        
 
           <div class="d-flex justify-content-center mt-3">
             <button type="button" class="btn btn-sm btn-primary">
@@ -312,12 +314,14 @@ Team X, по прошлым играм."] %}
           </div>
 
           <style>
+            /* 
+              ВЫНЕС В ОБЩИЙ СТИЛЬ
             .opener {
               cursor: pointer;
               width: 20px;
               text-align: center;
             }
-            
+
             .opener:hover {
               color: #F14800;
             }
@@ -352,7 +356,7 @@ Team X, по прошлым играм."] %}
 
             .gtable .table tbody tr.active {
               background-color: rgba(127, 183, 212, 0.1803921569) !important;
-            }
+            } */
           </style>
         </div>
 

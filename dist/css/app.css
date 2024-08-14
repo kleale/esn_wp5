@@ -25394,6 +25394,52 @@ button.btn.collapse-arrow.collapsed {
   color: #718598;
 }
 
+/* https://task.esnadm.com/issues/382 
+*  Верстка вывода списка матчей под командой в типе стадий "Группа" 
+*/
+.opener {
+  cursor: pointer;
+  width: 20px;
+  text-align: center;
+}
+
+.opener:hover {
+  color: #F14800;
+}
+
+.opener.active {
+  transform: rotate(90deg);
+}
+
+.subinfo {
+  display: none;
+}
+
+.gtable .table tbody tr.subinfo:hover {
+  background-color: #fff !important;
+}
+
+.subinfo.open {
+  display: table-row;
+}
+
+.subinfo.open td {
+  border-right: 0px !important;
+}
+
+.gtable .table tbody tr:nth-of-type(2n + 1) {
+  background-color: #fff;
+}
+
+.gtable .table tbody tr:nth-of-type(4n-3) {
+  background-color: #f7f7f7;
+}
+
+.gtable .table tbody tr.active {
+  background-color: rgba(127, 183, 212, 0.1803921569) !important;
+}
+
+/**/
 .video-full .article {
   display: flex;
   align-items: center;
