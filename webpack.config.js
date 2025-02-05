@@ -26,7 +26,7 @@ const config = {
         filename: `js/[name].js`,
         path: PATHS.dist,
         //publicPath: '/', // относительная ссылка в браузере на папку выходную
-        publicPath: './',
+        publicPath: '/esn_wp5/',
         clean: true,
     },
 
@@ -210,11 +210,11 @@ const config = {
             filename: './tours.html'
         }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/matches.html`,
-        //     filename: './matches.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/matches.html`,
+            filename: './matches.html'
+        }),
 
         // new HtmlWebpackPlugin({
         //     hash: false,
@@ -264,16 +264,17 @@ const config = {
         //     filename: './user_reg.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/news.html`,
-        //     filename: './news.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/news_v2.html`,
-        //     filename: './news_v2.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/news.html`,
+            filename: './news.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/news_v2.html`,
+            filename: './news_v2.html'
+        }),
+
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/news_list.html`,

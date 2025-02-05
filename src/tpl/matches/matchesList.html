@@ -16,7 +16,7 @@
                 <span>
                     <b>{{ random(team) }}</b>
                     <picture class="logo">
-                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
                         <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
                     </picture>
                 </span>
@@ -29,16 +29,46 @@
                 </div>
                 <span>
                         <picture class="logo">
-                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
                         <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
                     </picture>
                     <b>{{ random(team) }}</b>
                 </span>
             </div>
-            <!-- <s><img src="../img/dummy/{{random(flag)}}.png" alt=""></s> -->
+            <!-- <s><img src="./img/dummy/{{random(flag)}}.png" alt=""></s> -->
             <div class="tour">
+
+                {% if i == 0 %}
+                    <div class="abrBlock">
+                        <!---->
+                        <noindex>
+                        <div>
+                            <span
+                                onclick=""
+                            class="abrILink"
+                            >
+                            <img class="abr" src="./img/bnrs/110x30.png" />
+                            </span>
+                        </div>
+                        </noindex>
+                        <style>
+                            .abrILink{
+                                cursor: pointer;
+                            }
+                            .abrBlock{
+                                position:absolute;
+                                top: 7px;
+                                right: 40px;
+                            }
+                            .abrBlock .abr{
+                                width: 77px;
+                            }
+                        </style>
+                        <!----->
+                    </div>
+                {% endif %}
                 <picture class="logo">
-                    <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                    <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png">
                     <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
                 </picture>
             </div>
@@ -56,7 +86,7 @@
             <div class="teams">
                 <a href="#">
                     <span>{{ random(team) }}</span>
-                    <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b>
+                    <b style="background-image: url(./img/dummy/{{random(teamlogo)}}.png)"></b>
                 </a>
                 <div class="score">
                     {% if i == 0 %}<a href="#" class="live">1:1</a>
@@ -66,11 +96,11 @@
                     {% endif %}
                 </div>
                 <a href="#">
-                    <b style="background-image: url(../img/dummy/{{random(teamlogo)}}.png)"></b>
+                    <b style="background-image: url(./img/dummy/{{random(teamlogo)}}.png)"></b>
                     <span>{{ random(team) }}</span>
                 </a>
             </div>
-            <a class="tour" href="#"><img src="../img/dummy/{{random(tourlogo)}}.png" alt=""></a>
+            <a class="tour" href="#"><img src="./img/dummy/{{random(tourlogo)}}.png" alt=""></a>
         </article>
         #}
 
@@ -79,12 +109,12 @@
             <span class="time"><i>21:10</i><u class="gl pubg"></u></span>
             <div class="teams">
                 <b>
-                    <!-- <s><img src="../img/dummy/{{random(flag)}}.png" alt=""></s> -->
+                    <!-- <s><img src="./img/dummy/{{random(flag)}}.png" alt=""></s> -->
                     PUBG Champions League R4
                 </b>
                 <div class="tour">
                     <picture>
-                        <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                        <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
                         <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
                     </picture>
                     <b>{{ random(team) }}</b>
@@ -94,7 +124,7 @@
 
             <span class="tour">
                 <picture>
-                    <source type="image/webp" srcset="../img/dummy/{{random(tourlogo)}}.png">
+                    <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png">
                     <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
                 </picture>
             </span>

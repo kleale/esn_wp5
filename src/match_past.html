@@ -26,8 +26,8 @@
     <main class="match-page">
       <div class="header">
         <picture>
-          <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
-          <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+          <source type="image/webp" srcset="./img/dummy/Dreamleague_logo_small.webp">
+          <img src="./img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
         </picture>
         <div class="hh">
           <h1>Матч Gambit vs OG на <a href="#">Dream League 2019</a></h1>
@@ -62,53 +62,82 @@
               <span>
                 <a href="#">
                   <picture>
-                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <source type="image/webp" srcset="./img/dummy/team-lg.png">
                     <img src="./img/dummy/team-lg.png" alt="">
                   </picture>
                   <b>{{ random(team) }}</b>
                 </a>
-                <u>Россия</u>
+                <u>Европа</u>
                 <s>23</s>
-                <sup>
+                <!-- <sup>
                   <a class="win tt mtype1" title="Победа"></a><a class="loose mtype-1 tt" title="Проигрыш"></a> <a
                     href="#" class="mtype0"></a>
                   <a class="mtype0" href="#"></a>
                   <a class="mtype0" href="#"></a>
                   <a href="#"></a><a href="#"></a><a href="#"></a>
                   <a href="#"></a><a href="#"></a><a href="#"></a>
-                </sup>
+                </sup> -->
               </span>
 
               <div class="score">
                 <h3>19 марта 2019, 13:00 MSK, Best of 3</h3>
                 <b>Матч окончен</b>
                 <span class="live ended">1<s>:</s>1</span>
-                <span class="kf">Коэффициенты</span>
+                <span class="kf">Коэффициенты 4</span>
                 <div class="progress">
                   <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%" aria-valuenow="15"
                     aria-valuemin="0" aria-valuemax="100"></div>
                   <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%"
                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+
+                <!---->
+                  <noindex>
+                    <div style="display: flex; justify-content: center; margin: 15px 0;">
+                      <a rel="nofollow" href="/ru/go?to=okko" class="abr-infbnr" target="_blank">
+                        <img class="abr" src="./img/bnrs/320x100.png">
+                        <img class="abr-mob" src="./img/bnrs/200x70.png">
+                      </a>
+                    </div>
+                  </noindex>
+                  <style> 
+                    .score .abr{
+                      width: 163px;
+                    }
+                    .abr-mob{
+                      display: none;
+                    }
+                  @media (max-width: 768px) {
+                    .abr{
+                      display: none;
+                    }
+                    .abr-mob{
+                      display: block;
+                    }
+                  }
+                  </style>
+                <!----->
               </div>
 
               <span>
                 <a href="#">
                   <picture>
-                    <source type="image/webp" srcset="../img/dummy/team-lg.png">
+                    <source type="image/webp" srcset="./img/dummy/team-lg.png">
                     <img src="./img/dummy/team-lg.png" alt="">
                   </picture>
                   <h2>{{ random(team) }}</h2>
                 </a>
-                <u>Россия</u>
+                <u>Европа</u>
                 <s>23</s>
-                <sup>
+                <!-- <sup>
                   <a class="win tt" title="Победа"></a><a class="loose tt" title="Проигрыш"></a> <a href="#"></a><a
                     href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a>
-                </sup>
+                </sup> -->
               </span>
 
             </div>
+
+            
 
             <div class="hblock">
               <h2>Результаты матча</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
@@ -125,7 +154,7 @@
                   <div class="heroes t1">
                     {% for i in 0..4 %}
                     <picture class="hero">
-                      <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                      <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                       <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                       <b>{{i}}</b>
                     </picture>
@@ -141,7 +170,7 @@
                   <div class="heroes t2">
                     {% for i in 0..4 %}
                     <picture class="hero">
-                      <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                      <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                       <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                       <b>{{i}}</b>
                     </picture>
@@ -162,7 +191,7 @@
                       <div class="banhero">
                         {% for i in 0..6 %}
                         <picture class="hero">
-                          <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                          <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                           <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                           <b>{{i}}</b>
                         </picture>
@@ -174,7 +203,7 @@
                       <div class="banhero">
                         {% for i in 0..6 %}
                         <picture class="hero">
-                          <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                          <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                           <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                           <b>{{i}}</b>
                         </picture>
@@ -223,7 +252,7 @@
                             <th scope="row" colspan="2">
                               <div class="playHero">
                                 <picture class="hero">
-                                  <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                                  <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                                   <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                                   <span>Carry</span>
                                 </picture>
@@ -241,7 +270,7 @@
                               <div class="items">
                                 {% for i in 0..3 %}
                                 <picture class="item">
-                                  <source type="image/webp" srcset="../img/dummy/item.png">
+                                  <source type="image/webp" srcset="./img/dummy/item.png">
                                   <img src="./img/dummy/item.png" alt="">
                                 </picture>
                                 {% endfor %}
@@ -274,7 +303,7 @@
                             <th scope="row" colspan="2">
                               <div class="playHero">
                                 <picture class="hero">
-                                  <source type="image/webp" srcset="../img/dummy/{{ random(hero) }}.png">
+                                  <source type="image/webp" srcset="./img/dummy/{{ random(hero) }}.png">
                                   <img src="./img/dummy/{{ random(hero) }}.png" alt="">
                                 </picture>
                                 <div class="name">
@@ -291,7 +320,7 @@
                               <div class="items">
                                 {% for i in 0..3 %}
                                 <picture class="item">
-                                  <source type="image/webp" srcset="../img/dummy/item.png">
+                                  <source type="image/webp" srcset="./img/dummy/item.png">
                                   <img src="./img/dummy/item.png" alt="">
                                 </picture>
                                 {% endfor %}
@@ -331,7 +360,7 @@
                 <article class="frow">
                   <a href="#" class="kl">
                     <picture>
-                      <source type="image/webp" srcset="../img/dummy/{{ random(bet) }}.png">
+                      <source type="image/webp" srcset="./img/dummy/{{ random(bet) }}.png">
                       <img src="./img/dummy/{{ random(bet) }}.png" alt="">
                     </picture>
                   </a>

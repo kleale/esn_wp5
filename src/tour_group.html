@@ -221,35 +221,37 @@ Team X, по прошлым играм."] %}
                             >
                               1{{i}} апр 2023
                             </i>
-                            <u class="gl gl582"></u>
+                            <!-- <u class="gl gl582"></u> -->
                           </div>
                           <div class="teams">
-                            <span>
-                              {% if i == 1 %}
-                              <b>Movistar Riders</b>
-                              {% else %}
-                              <b>{{ random(team) }}</b>
-                              {% endif %}
+                            <!--
+                              <span>
+                                {% if i == 1 %}
+                                <b>Movistar Riders</b>
+                                {% else %}
+                                <b>{{ random(team) }}</b>
+                                {% endif %}
 
-                              <picture>
-                                <source
-                                  srcset="
-                                    https://escorenews.com/media/logo/_30/t49.webp
-                                  "
-                                  type="image/webp"
-                                />
-                                <source
-                                  srcset="
-                                    https://escorenews.com//media/logo/_30/t49.png
-                                  "
-                                />
-                                <img
-                                  src="/media/logo/_30/t49.png"
-                                  loading="lazy"
-                                  alt="EG"
-                                />
-                              </picture>
-                            </span>
+                                <picture>
+                                  <source
+                                    srcset="
+                                      https://escorenews.com/media/logo/_30/t49.webp
+                                    "
+                                    type="image/webp"
+                                  />
+                                  <source
+                                    srcset="
+                                      https://escorenews.com//media/logo/_30/t49.png
+                                    "
+                                  />
+                                  <img
+                                    src="/media/logo/_30/t49.png"
+                                    loading="lazy"
+                                    alt="EG"
+                                  />
+                                </picture>
+                              </span>
+                            -->
                             <div class="score">
                               <span class="type0"
                                 >{{ random(['0','1','2']) }} : {{
@@ -356,7 +358,30 @@ Team X, по прошлым играм."] %}
 
             .gtable .table tbody tr.active {
               background-color: rgba(127, 183, 212, 0.1803921569) !important;
-            } */
+            } 
+            */
+
+            .matches .article{
+              font-size: 0.65rem;
+            }
+
+            .matches .article .time i{
+              font-weight: 500
+            }
+
+            .matches .article .teams .score .type0{
+              font-weight: 500
+            }
+
+            .matches .article picture{
+              width: 1rem;
+              min-width: 1rem;
+              height: 1rem;
+            }
+            
+            .matches-full .article .teams{
+              font-size: 0.7rem;
+            }
           </style>
         </div>
 
