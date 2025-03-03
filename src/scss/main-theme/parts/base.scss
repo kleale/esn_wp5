@@ -178,7 +178,7 @@ main {
     left: 17rem;
 
     @media (max-width: $md) {
-      left: 17rem !important;
+      left: -17rem !important;
 
       .sidebarOpener {
         width: 50rem;
