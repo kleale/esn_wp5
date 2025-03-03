@@ -48,6 +48,7 @@
                             class="abrILink"
                             >
                             <img class="abr" src="./img/bnrs/110x30.png" />
+                            <img class="abr-mob" src="./img/bnrs/okkoTV.svg" />
                             </span>
                         </div>
                         </noindex>
@@ -62,6 +63,18 @@
                             }
                             .abrBlock .abr{
                                 width: 77px;
+                            }
+                            .abr-mob{
+                                display: none;
+                                width: 35px;
+                            }
+                            @media (max-width: 768px) {
+                                .abr{
+                                    display: none;
+                                }
+                                .abr-mob{
+                                    display: block;
+                                }
                             }
                         </style>
                         <!----->
