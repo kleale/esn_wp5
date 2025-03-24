@@ -327,6 +327,11 @@ const config = {
             template: `${PATHS.src}/tour_group.html`,
             filename: './tour_group.html'
         }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tour_group_swiss.html`,
+            filename: './tour_group_swiss.html'
+        }),
         
         // new HtmlWebpackPlugin({
         //     hash: false,
@@ -343,11 +348,11 @@ const config = {
         //     template: `${PATHS.src}/player_hs.html`,
         //     filename: './player_hs.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/tour_group_stadia.html`,
-        //     filename: './tour_group_stadia.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/tour_group_stadia.html`,
+            filename: './tour_group_stadia.html'
+        }),
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/team.html`,
