@@ -69,13 +69,19 @@ function menuToAside() {
         // $("#navbarOpener").css("display","block");
         $("#navbarOpener").animate({"opacity":1});
         console.log('< 990');
+        
+        //added
         $('body').addClass('hidesidebar');
+        $("#navbarOpener").css("display","none");
     }
     else {
         console.log('> 990');
         $("#navbarOpener").css("display","flex");
         $("#navbarOpener").animate({"opacity":1});
         $("#navbarOpener").insertAfter("#site-logo");
+
+        //added
+        $('body').removeClass('hidesidebar');
     }
 }
 

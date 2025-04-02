@@ -175,7 +175,7 @@ main {
 
 .hidesidebar {
   .sidebar {
-    left: 17rem;
+    left: -17rem;
 
     @media (max-width: $md) {
       left: -17rem !important;

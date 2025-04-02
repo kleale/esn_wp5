@@ -3,7 +3,7 @@
 "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %} {% set team =
 ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire",
 "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %} {% set teamlogo = ["team",
-"team1", "team2", "team3", "team4", "team5"] %} {% set tourlogo = ["tour1",
+"team1", "team2", "team4", "team5"] %} {% set tourlogo = ["tour1",
 "tour2", "tour3", "tour4"] %} {% set gamelogo = ["dota2", "csgo", "lol", "hs",
 "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %} {% set tour = ["Overwatch
 Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League
@@ -156,9 +156,9 @@ Team X, по прошлым играм."] %}
                 <thead>
                   <tr>
                     <th colspan="2">Table</th>
-                    <th>И</th>
-                    <th>В</th>
-                    <th>П</th>
+                    <th class="w2">И</th>
+                    <th class="w2">В</th>
+                    <th class="w2">П</th>
                     <th
                       class="tt"
                       title="Разница по раундам (победы минус поражения)"
@@ -227,9 +227,9 @@ Team X, по прошлым играм."] %}
                     <!-- <td class="tpo">
                       <span class="opener fas fa-chevron-right"></span>
                     </td> -->
-                    <td class="tpo">5</td>
-                    <td class="tpo">3</td>
-                    <td class="tpo">1</td>
+                    <td class="tpo w2">5</td>
+                    <td class="tpo w2">3</td>
+                    <td class="tpo w2">1</td>
                     <td class="tpo"><span class="green">+12</span></td>
                     {% for i in 1..7 %}
                     <td class="text-md-center w4">
@@ -262,87 +262,6 @@ Team X, по прошлым играм."] %}
                     </td>
                     {% endfor %}
                   </tr>
-
-                  <tr class="subinfo">
-                    <td colspan="9">
-                      <div class="matches matches-full flex-table">
-                        {% for i in 1..8 %}
-                        <a
-                          class="article v_gl582"
-                          href="/ru/dota-2/dpc-2023-major-2/group-stage/evil-geniuses-vs-betboom-513502"
-                        >
-                          <div class="time">
-                            <i
-                              class="sct"
-                              rel="1"
-                              data-opt="ynt"
-                              data-format="%j% %ms% %y%, %h%:%i%"
-                              datetime="2023-04-30 18:19:00"
-                            >
-                              1{{i}} апр 2023
-                            </i>
-                            <!-- <u class="gl gl582"></u> -->
-                          </div>
-                          <div class="teams">
-                            <!--
-                              <span>
-                                {% if i == 1 %}
-                                <b>Movistar Riders</b>
-                                {% else %}
-                                <b>{{ random(team) }}</b>
-                                {% endif %}
-
-                                <picture>
-                                  <source
-                                    srcset="
-                                      https://escorenews.com/media/logo/_30/t49.webp
-                                    "
-                                    type="image/webp"
-                                  />
-                                  <source
-                                    srcset="
-                                      https://escorenews.com//media/logo/_30/t49.png
-                                    "
-                                  />
-                                  <img
-                                    src="/media/logo/_30/t49.png"
-                                    loading="lazy"
-                                    alt="EG"
-                                  />
-                                </picture>
-                              </span>
-                            -->
-                            <div class="score">
-                              <span class="type0"
-                                >{{ random(['0','1','2']) }} : {{
-                                random(['0','1','2']) }}</span
-                              >
-                            </div>
-                            <span>
-                              <picture>
-                                <source
-                                  type="image/webp"
-                                  srcset="./img/dummy/{{ random(teamlogo) }}.png"
-                                />
-                                <source
-                                  srcset="
-                                  ./img/dummy/{{ random(teamlogo) }}.png"
-                                />
-                                <img
-                                  src="./img/dummy/{{ random(teamlogo) }}.png"
-                                  loading="lazy"
-                                  alt="{{ random(team) }}"
-                                />
-                              </picture>
-                              <b>{{ random(team) }}</b>
-                            </span>
-                          </div>
-                        </a>
-                        {% endfor %}
-                      </div>
-                    </td>
-                  </tr>
-
                   {% endfor %}
                 </tbody>
               </table>
@@ -462,87 +381,6 @@ Team X, по прошлым играм."] %}
                     </td>
                     {% endfor %}
                   </tr>
-
-                  <tr class="subinfo">
-                    <td colspan="9">
-                      <div class="matches matches-full flex-table">
-                        {% for i in 1..8 %}
-                        <a
-                          class="article v_gl582"
-                          href="/ru/dota-2/dpc-2023-major-2/group-stage/evil-geniuses-vs-betboom-513502"
-                        >
-                          <div class="time">
-                            <i
-                              class="sct"
-                              rel="1"
-                              data-opt="ynt"
-                              data-format="%j% %ms% %y%, %h%:%i%"
-                              datetime="2023-04-30 18:19:00"
-                            >
-                              1{{i}} апр 2023
-                            </i>
-                            <!-- <u class="gl gl582"></u> -->
-                          </div>
-                          <div class="teams">
-                            <!--
-                              <span>
-                                {% if i == 1 %}
-                                <b>Movistar Riders</b>
-                                {% else %}
-                                <b>{{ random(team) }}</b>
-                                {% endif %}
-
-                                <picture>
-                                  <source
-                                    srcset="
-                                      https://escorenews.com/media/logo/_30/t49.webp
-                                    "
-                                    type="image/webp"
-                                  />
-                                  <source
-                                    srcset="
-                                      https://escorenews.com//media/logo/_30/t49.png
-                                    "
-                                  />
-                                  <img
-                                    src="/media/logo/_30/t49.png"
-                                    loading="lazy"
-                                    alt="EG"
-                                  />
-                                </picture>
-                              </span>
-                            -->
-                            <div class="score">
-                              <span class="type0"
-                                >{{ random(['0','1','2']) }} : {{
-                                random(['0','1','2']) }}</span
-                              >
-                            </div>
-                            <span>
-                              <picture>
-                                <source
-                                  type="image/webp"
-                                  srcset="./img/dummy/{{ random(teamlogo) }}.png"
-                                />
-                                <source
-                                  srcset="
-                                  ./img/dummy/{{ random(teamlogo) }}.png"
-                                />
-                                <img
-                                  src="./img/dummy/{{ random(teamlogo) }}.png"
-                                  loading="lazy"
-                                  alt="{{ random(team) }}"
-                                />
-                              </picture>
-                              <b>{{ random(team) }}</b>
-                            </span>
-                          </div>
-                        </a>
-                        {% endfor %}
-                      </div>
-                    </td>
-                  </tr>
-
                   {% endfor %}
                 </tbody>
               </table>
@@ -632,6 +470,172 @@ Team X, по прошлым играм."] %}
               font-size: 0.7rem;
             }
           </style>
+
+
+<!-- Ivan Samsonov, [24.03.2025 11:19]
+Если убрать счёт и оставить только иконки, то предлагаю победителя видеть полосой под лого
+
+Ivan Samsonov, [24.03.2025 11:19]
+Зелёная победа, красная поражение -->
+
+          <style>
+              @media (max-width: 768px) {
+                .stage-block .gtable .table tbody tr td,
+                .stage-block .gtable .table thead tr th{
+                  padding: 0.25rem 0.3rem;
+                }
+
+                .stage-block .tableWithLines .gtable .table tbody tr td,
+                .stage-block .tableWithLines .gtable .table thead tr th{
+                  padding: 0.25rem 0.1rem;
+                }
+              }
+              
+
+              .stage-block .tableWithLines .withLine {
+                  display: flex;
+                  flex-direction: column;
+              }
+              .stage-block .tableWithLines .teamNameIco.withLine picture{
+                margin-right: 0;
+              }
+              .stage-block .tableWithLines .win, 
+              .stage-block .tableWithLines .loose {
+                  font-size: 0;
+                  background: #ccc;
+                  width: 20px;
+                  height: 3px;
+                  margin-bottom: -6px;
+              }
+              .stage-block .tableWithLines  .win{
+                background: #82AC4E;
+              }
+              .stage-block .tableWithLines  .loose{
+                background: #EB5757;
+              }
+              .stage-block .tableWithLines .w4{
+                width: 3rem;
+              }
+          </style>
+          <div class="gdiv table-responsive tableWithLines">
+            <div class="gtable">
+              <table class="table-striped table table-hover">
+                <thead>
+                  <tr>
+                    <th colspan="2">Table</th>
+                    <th class="w2">И</th>
+                    <th class="w2">В</th>
+                    <th class="w2">П</th>
+                    <th
+                      class="tt"
+                      title="Разница по раундам (победы минус поражения)"
+                    >
+                      Раз
+                    </th>
+                    <th class="text-center w4">Раунд 1</th>
+                    <th class="text-center w4">Раунд 2</th>
+                    <th class="text-center w4">Раунд 3</th>
+                    <th class="text-center w4">Раунд 4</th>
+                    <th class="text-center w4">Раунд 5</th>
+                    <th class="text-center w4">Раунд 6</th>
+                    <th class="text-center w4">Раунд 7</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 1..8 %}
+                  <tr
+                    class="crows4 {% if i == 1 or i == 2 %} first{% endif %}{% if i == 3 or i == 4 %} second{% endif %}{% if i >= 5 %} third{% endif %}"
+                  >
+                    <td>{{i}}</td>
+                    <td>
+                      <a href="#" class="teamNameIco firstTeam">
+                        <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                        <picture>
+                          {% if i == 1 %}
+
+                          <source
+                            srcset="
+                              https://escorenews.com/media/logo/_30/t49.webp
+                            "
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="
+                              https://escorenews.com//media/logo/_30/t49.png
+                            "
+                          />
+                          <img
+                            src="/media/logo/_30/t49.png"
+                            loading="lazy"
+                            alt="EG"
+                          />
+
+                          {% else %}
+                          <source
+                            type="image/webp"
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png"
+                          />
+                          <img
+                            src="./img/dummy/{{ random(teamlogo) }}.png"
+                            alt=""
+                          />
+
+                          {% endif %}
+                        </picture>
+
+                        <span>
+                          {% if i == 1 %} Movistar Riders {% else %}
+                          {{random(team)}} {% endif %}
+                          <!-- .<u>{{ random(team) }}</u> -->
+                          <sup>{{ random(team) }}</sup>
+                        </span>
+                      </a>
+                    </td>
+                    <!-- <td class="tpo">
+                      <span class="opener fas fa-chevron-right"></span>
+                    </td> -->
+                    <td class="tpo">5</td>
+                    <td class="tpo">3</td>
+                    <td class="tpo">1</td>
+                    <td class="tpo"><span class="green">+12</span></td>
+                    {% for i in 1..7 %}
+                    <td class="text-md-center w4">
+                      <a
+                        href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
+                        class="teamNameIco withLine bs-tooltip-auto"
+                        data-toggle="tip" title="{{ random(['0','1','2']) }}&nbsp;:&nbsp;{{ random(['0','1','2']) }}"  
+                      >
+                        <span>
+                          <picture>
+                            <source
+                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                              type="image/webp"
+                            />
+                            <source
+                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                            />
+                            <img
+                              src="./img/dummy/{{ random(teamlogo) }}.png"
+                              loading="lazy"
+                              style="max-width: 20px; max-height: 20px"
+                              alt="36327"
+                            />
+                          </picture>
+                        </span>
+                        <span class="{{ random(['win','loose']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}
+                        </span>
+                      </a>
+                    </td>
+                    {% endfor %}
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
         </div>
 
         <div class="container">
