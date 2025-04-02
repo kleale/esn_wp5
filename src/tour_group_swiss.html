@@ -505,7 +505,7 @@ Ivan Samsonov, [24.03.2025 11:19]
               .stage-block .tableWithLines .win{
                 background: #82AC4E;
               }
-              .stage-block .tableWithLines .loose{
+              .stage-block .tableWithLines .lost{
                 background: #EB5757;
               }
               .stage-block .tableWithLines .w4{
@@ -620,7 +620,7 @@ Ivan Samsonov, [24.03.2025 11:19]
                         {% if i == 1 %} 
                           <span class="lined">FF&nbsp;:&nbsp;W</span>
                         {% else %}
-                          <span class="lined {{ random(['win','loose']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}</span>
+                          <span class="lined {{ random(['win','lost']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}</span>
                         {% endif %}
                       </a>
                     </td>
