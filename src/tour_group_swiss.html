@@ -150,7 +150,7 @@ Team X, по прошлым играм."] %}
             </span>
           </div>
 
-          <div class="gdiv table-responsive">
+          <div class="gdiv">
             <div class="gtable">
               <table class="table-striped table table-hover">
                 <thead>
@@ -267,7 +267,6 @@ Team X, по прошлым играм."] %}
               </table>
             </div>
           </div>
-
 
           <div class="gdiv table-responsive">
             <div class="gtable">
@@ -387,7 +386,6 @@ Team X, по прошлым играм."] %}
             </div>
           </div>
 
-
           <style>
              @media (max-width: 768px) {
               .firstTeam span{
@@ -471,7 +469,6 @@ Team X, по прошлым играм."] %}
             }
           </style>
 
-
 <!-- Ivan Samsonov, [24.03.2025 11:19]
 Если убрать счёт и оставить только иконки, то предлагаю победителя видеть полосой под лого
 
@@ -491,33 +488,31 @@ Ivan Samsonov, [24.03.2025 11:19]
                 }
               }
               
-
               .stage-block .tableWithLines .withLine {
-                  display: flex;
-                  flex-direction: column;
+                display: flex;
+                flex-direction: column;
               }
               .stage-block .tableWithLines .teamNameIco.withLine picture{
                 margin-right: 0;
               }
-              .stage-block .tableWithLines .win, 
-              .stage-block .tableWithLines .loose {
-                  font-size: 0;
-                  background: #ccc;
-                  width: 20px;
-                  height: 3px;
-                  margin-bottom: -6px;
+              .stage-block .tableWithLines .lined {
+                font-size: 0;
+                background: #ccc;
+                width: 20px;
+                height: 3px;
+                margin-bottom: -6px;
               }
-              .stage-block .tableWithLines  .win{
+              .stage-block .tableWithLines .win{
                 background: #82AC4E;
               }
-              .stage-block .tableWithLines  .loose{
+              .stage-block .tableWithLines .loose{
                 background: #EB5757;
               }
               .stage-block .tableWithLines .w4{
                 width: 3rem;
               }
           </style>
-          <div class="gdiv table-responsive tableWithLines">
+          <div class="gdiv table-responsive tableWithLines swiss">
             <div class="gtable">
               <table class="table-striped table table-hover">
                 <thead>
@@ -622,8 +617,11 @@ Ivan Samsonov, [24.03.2025 11:19]
                             />
                           </picture>
                         </span>
-                        <span class="{{ random(['win','loose']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}
-                        </span>
+                        {% if i == 1 %} 
+                          <span class="lined">FF&nbsp;:&nbsp;W</span>
+                        {% else %}
+                          <span class="lined {{ random(['win','loose']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}</span>
+                        {% endif %}
                       </a>
                     </td>
                     {% endfor %}
@@ -634,10 +632,7 @@ Ivan Samsonov, [24.03.2025 11:19]
             </div>
           </div>
 
-
-
         </div>
-
         <div class="container">
           <div class="row">
             <div class="center col-lg-7 col-xl-8">

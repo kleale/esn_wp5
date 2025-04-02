@@ -1,0 +1,64 @@
+<noindex>
+    <div class="cat_mob_b" style="z-index: 65000; position: fixed; width: 100%; height: 180px;  left: 0px;bottom: 0;">
+        <div style="z-index: 65000; position: fixed; width: 100%; bottom: 0;">
+            <a href="#" style="display: flex;justify-content: center;background: red;">
+                <!-- <img src="bnrplaces/catfish-1.png" alt="cf" style="max-width:100%" class="cat_desk"> -->
+                <img src="https://escorenews.com/media/a/banner1087.gif" alt="cf" style="max-width:100%" class="cat_mob">
+            </a>
+            <a href="#" class="closer">
+                <div class="times">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</noindex>
+<style>
+    .times {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: #6b6b6b;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .times:hover,
+    .times:focus {
+        background: #3764a0;
+    }
+
+    .closer {
+        position: absolute;
+        top: -20px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .closer:hover {
+        cursor: pointer;
+    }
+
+    .cat_desk {
+        display: block;
+    }
+
+    .cat_mob,
+    .cat_mob_b {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .cat_desk {
+            display: none;
+        }
+
+        .cat_mob,
+        .cat_mob_b {
+            display: block;
+        }
+    }
+</style>

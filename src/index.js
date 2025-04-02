@@ -66,7 +66,7 @@ function menuToAside() {
         var gameName = $(".mr-auto").find(".active").find("a").html();
         //console.log(gameName);
         $("#navbarDropdown").html(gameName);
-        // $("#navbarOpener").css("display","block");
+        $("#navbarOpener").css("display","block");
         $("#navbarOpener").animate({"opacity":1});
         console.log('< 990');
         
