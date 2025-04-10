@@ -240,11 +240,11 @@ const config = {
         //     filename: './match_pubg_past.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/page_text.html`,
-        //     filename: './page_text.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/page_text.html`,
+            filename: './page_text.html'
+        }),
 
         // new HtmlWebpackPlugin({
         //     hash: false,
@@ -285,11 +285,11 @@ const config = {
         //     template: `${PATHS.src}/news_list_word.html`,
         //     filename: './news_list_word.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/elements.html`,
-        //     filename: './elements.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/elements.html`,
+            filename: './elements.html'
+        }),
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/players_list.html`,
@@ -405,11 +405,16 @@ const config = {
         //     template: `${PATHS.src}/transfers.html`,
         //     filename: './transfers.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/team2.html`,
-        //     filename: './team2.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/team2.html`,
+            filename: './team2.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/team3.html`,
+            filename: './team3.html'
+        }),
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/mail.html`,
@@ -440,7 +445,6 @@ const config = {
             template: `${PATHS.src}/media_kit.html`,
             filename: './media_kit.html'
         })
-
 
     ],
 };

@@ -338,3 +338,13 @@ $('.opener').on('click', function() {
     $(this).parent().parent().next().toggleClass('open');
 });
 
+
+$('.openAllText').on('click', function() {
+    $('.spoiler-body').toggleClass('collapse');
+});
+
+$('.openLongRead').on('click', function() {
+    $('.longRead').toggleClass('hideLongRead');
+    $(this).html($(this).text() == 'скрыть' ? 'развернуть' : 'скрыть');
+});
+ 
