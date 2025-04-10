@@ -341,6 +341,7 @@ $('.opener').on('click', function() {
 
 $('.openAllText').on('click', function() {
     $('.spoiler-body').toggleClass('collapse');
+    $(this).html($(this).text() == 'Скрыть' ? 'Далее' : 'Скрыть');
 });
 
 $('.openLongRead').on('click', function() {
