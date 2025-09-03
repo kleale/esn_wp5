@@ -68,7 +68,7 @@
             <div class="row">
               <div class="col-md-8 col-lg-7 mx-auto">
                 <div class="flex">
-                  <h3 class="login-heading mb-4 mt-1"><i class="icon-main mr-1"></i> Регистрация</h3>
+                  <h3 class="login-heading mb-4 mt-1">Регистрация</h3>
                   <div class="text-right soc mb-3">
                     <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
                     <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -97,12 +97,34 @@
                     <label for="inputPassword2">Повторите пароль</label>
                   </div>
 
-                  <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="rules">
-                    <label class="custom-control-label" for="rules">Я согласен с <a href="">правилами сайта</a></label>
+                  <div rel="rules" class="mb-3">
+                    <div class="custom-control custom-checkbox" rel="rules">
+                      <input type="checkbox" name="rules" class="custom-control-input input " tabindex="8" id="s8" value="1" checked>
+                      <label class="custom-control-label" for="s8">Я согласен с <a href="/rules.pdf">правилами сайта</a></label>
+                    </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input " tabindex="9" id="s9" value="1" checked>
+                        <label class="custom-control-label" for="s9" style="font-size:11px; line-height: 10px; padding-top: 9px">
+                          Я, в соответствии со ст. 9 Федерального закона от 27.07.2006 N 152-ФЗ "О персональных данных" даю конкретное, предметное, информированное, сознательное и однозначное согласие на обработку своих персональных данных ООО "ДесайдерМедиа", с целью осуществления мной возможности использования всех ресурсов сайта https://escorenews.com/ru.
+                          Разрешаю оператору производить автоматизированную, а также осуществляемую без использования средств автоматизации обработку моих персональных данных, а именно: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирова-ние, удаление, уничтожение.
+                          ООО "ДесайдерМедиа" с моего настоящего согласия имеет право передавать мои персональные данные третьим лицам, для осуществления и достижения цели обработки персональных данных.
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input is-invalid" tabindex="10" id="s10" value="1">
+                        <label class="custom-control-label" for="s10" style="font-size:11px; line-height: 10px; padding-top: 9px">
+                          Настоящим, подтверждаю, что ознакомлен и согласен с <a href="/rules.pdf">правилами сайта и политикой обработки персональных данных</a>
+                        </label>
+                    </div>
+                    <p class="alert alert-warning" style="margin-top: 15px; padding: 10px; line-height: 14px;">Мы не можем вас зарегистрировать, если вы не согласны с нашими правилами</p>
                   </div>
-                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                    type="submit">Регистрация</button>
+
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-4"
+                    type="submit">Зарегистрироваться</button>
+                  
+                  <div class="text-center">
+                    <a class="small" href="https://escorenews.com/ru">Вернуться <i class="icon-main ml-1"></i></a>
+                  </div>
                   <!-- <div class="text-center">
                     <a class="small" href="#">А я уже зарегистрирован, хочу просто войти</a>
                   </div> -->

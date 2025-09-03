@@ -258,11 +258,11 @@ const config = {
         //     filename: './user_log.html'
         // }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/user_reg.html`,
-        //     filename: './user_reg.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/user_reg.html`,
+            filename: './user_reg.html'
+        }),
 
         new HtmlWebpackPlugin({
             hash: false,
