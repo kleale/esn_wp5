@@ -712,6 +712,48 @@ main {
         }
       }
 
+      &.crows4 {
+        &:before {
+          background: $gold;
+        }
+      }
+
+      &.crows5 {
+        &:before {
+          background: $lightblue;
+        }
+      }
+
+      &.crows6 {
+        &:before {
+          background: $purple;
+        }
+      }
+
+
+       &.four,
+        &.crows4 {
+          td:first-child {
+            border-color: $gold;
+          }
+        }
+
+        &.five,
+        &.crows5 {
+          td:first-child {
+            border-color: $lightblue;
+          }
+        }
+
+        &.six,
+        &.crows6 {
+          td:first-child {
+            border-color: $purple;
+          }
+        }
+
+
+
       &:before {
         content: "";
         display: block;
@@ -9568,16 +9610,39 @@ a.transferlink {
             border-color: $green;
           }
         }
+
         &.second,
         &.crows2 {
           td:first-child {
             border-color: $yellow;
           }
         }
+
         &.third,
         &.crows3 {
           td:first-child {
             border-color: $red;
+          }
+        }
+
+        &.four,
+        &.crows4 {
+          td:first-child {
+            border-color: $gold;
+          }
+        }
+
+        &.five,
+        &.crows5 {
+          td:first-child {
+            border-color: $lightblue;
+          }
+        }
+
+        &.six,
+        &.crows6 {
+          td:first-child {
+            border-color: $purple;
           }
         }
 

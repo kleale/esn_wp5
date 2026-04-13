@@ -30,63 +30,55 @@ Team X, по прошлым играм."] %}
 
 <!DOCTYPE html>
 <html>
-  {% include "./tpl/head.html" %}
+{% include "./tpl/head.html" %}
 
-  <body class="">
-    <div class="wrap">
-      <!-- aside -->
-      <aside class="sidebar">
-        <div class="scroller">
-          {% include "./tpl/gamenav.html" %}
+<body class="">
+  <div class="wrap">
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+        {% include "./tpl/gamenav.html" %}
 
-          <div class="hblock">
-            <h4>Новости DLS1</h4>
-            <b></b><span>20 декабря</span>
-          </div>
-
-          {% for i in 0..5 %} {% include "./tpl/newsblock.html" %} {% endfor %}
-
-          <div class="hblock"><b></b><span>19 декабря</span></div>
-          {% for i in 0..8 %} {% include "./tpl/newsblock.html" %} {% endfor %}
-          <div class="hblock"><b></b><span>16 декабря</span></div>
-          {% for i in 0..1 %} {% include "./tpl/newsblock.html" %} {% endfor %}
-
-          <div class="hblock"><b></b><span>15 декабря</span></div>
-          {% for i in 0..0 %} {% include "./tpl/newsblock.html" %} {% endfor %}
-
-          <div class="d-flex justify-content-center mt-3">
-            <button type="button" class="btn btn-sm btn-primary">
-              Все новости DLS1
-            </button>
-          </div>
-          <br /><br />
+        <div class="hblock">
+          <h4>Новости DLS1</h4>
+          <b></b><span>20 декабря</span>
         </div>
-      </aside>
 
-      <main class="tour-page">
-        <!--d-flex-->
-        <div class="header">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="./img/dummy/Dreamleague_logo_small.webp"
-            />
-            <img
-              src="./img/dummy/Dreamleague_logo_small.png"
-              alt="STREAM LOGO"
-            />
-          </picture>
-          <div class="hh">
-            <div class="hblock">
-              <h1>DreamLeague Seson 11</h1>
-              <b></b>
-            </div>
-            <span
-              >19 марта - 3 апреля &nbsp;•&nbsp;
-              <i class="fa fa-trophy"></i> 120 000$</span
-            >
+        {% for i in 0..5 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+
+        <div class="hblock"><b></b><span>19 декабря</span></div>
+        {% for i in 0..8 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+        <div class="hblock"><b></b><span>16 декабря</span></div>
+        {% for i in 0..1 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+
+        <div class="hblock"><b></b><span>15 декабря</span></div>
+        {% for i in 0..0 %} {% include "./tpl/newsblock.html" %} {% endfor %}
+
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn btn-sm btn-primary">
+            Все новости DLS1
+          </button>
+        </div>
+        <br /><br />
+      </div>
+    </aside>
+
+    <main class="tour-page">
+      <!--d-flex-->
+      <div class="header">
+        <picture>
+          <source type="image/webp" srcset="./img/dummy/Dreamleague_logo_small.webp" />
+          <img src="./img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO" />
+        </picture>
+        <div class="hh">
+          <div class="hblock">
+            <h1>DreamLeague Seson 11</h1>
+            <b></b>
           </div>
-          <!-- <div class="hr">
+          <span>19 марта - 3 апреля &nbsp;•&nbsp;
+            <i class="fa fa-trophy"></i> 120 000$</span>
+        </div>
+        <!-- <div class="hr">
             <div class="mr">
               <span id="rates" class="m-rate">
                 <span class="gti-star" rel="5" onclick="rate(5)"></span>
@@ -107,10 +99,10 @@ Team X, по прошлым играм."] %}
               <a href="#" class="fab fa-twitter"></a>
             </div>
           </div> -->
-        </div>
+      </div>
 
-        {% include "./tpl/stages.html" %}
-        <!-- <div class="substage">
+      {% include "./tpl/stages.html" %}
+      <!-- <div class="substage">
           <ul class="nav nav-pills">
             <li class="nav-item">
               <a class="nav-link active" href="#">Active</a>
@@ -127,271 +119,210 @@ Team X, по прошлым играм."] %}
           </ul>
         </div> -->
 
-        <!-- START -->
+      <!-- START -->
 
-        <div class="stage-block stage-collapse">
-          <div
-            class="hblock hblock-collapse ttip"
-            data-toggle="collapse"
-            data-target="#collapseBlock40394"
-            aria-expanded="false"
-            aria-controls="collapseBlock"
-          >
-            <h3>Group Stage 1</h3>
-            <b></b>
-            <span>
-              <span class="hlegend">
-                <s class="crows4">8 League Points</s>
-                <s class="crows1">5 League Points</s>
-                <s class="crows2">3 League Points</s>
-                <s class="crows5">2 League Points</s>
-                <s class="crows3">0 League Points</s>
-              </span>
+      <div class="stage-block stage-collapse">
+        <div class="hblock hblock-collapse ttip" data-toggle="collapse" data-target="#collapseBlock40394"
+          aria-expanded="false" aria-controls="collapseBlock">
+          <h3>Group Stage 1</h3>
+          <b></b>
+          <span>
+            <span class="hlegend">
+              <s class="crows4">8 League Points</s>
+              <s class="crows1">5 League Points</s>
+              <s class="crows2">3 League Points</s>
+              <s class="crows3">2 League Points</s>
+              <s class="crows5">0 League Points</s>
+              <s class="crows6">0 League Points</s>
             </span>
-          </div>
+          </span>
+        </div>
 
-          <div class="gdiv">
-            <div class="gtable">
-              <table class="table-striped table table-hover">
-                <thead>
-                  <tr>
-                    <th colspan="2">Table</th>
-                    <th class="w2">И</th>
-                    <th class="w2">В</th>
-                    <th class="w2">П</th>
-                    <th
-                      class="tt"
-                      title="Разница по раундам (победы минус поражения)"
-                    >
-                      Раз
-                    </th>
-                    <th class="text-center w4">Раунд 1</th>
-                    <th class="text-center w4">Раунд 2</th>
-                    <th class="text-center w4">Раунд 3</th>
-                    <th class="text-center w4">Раунд 4</th>
-                    <th class="text-center w4">Раунд 5</th>
-                    <th class="text-center w4">Раунд 6</th>
-                    <th class="text-center w4">Раунд 7</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for i in 1..8 %}
-                  <tr
-                    class="crows4 {% if i == 1 or i == 2 %} first{% endif %}{% if i == 3 or i == 4 %} second{% endif %}{% if i >= 5 %} third{% endif %}"
-                  >
-                    <td>{{i}}</td>
-                    <td>
-                      <a href="#" class="teamNameIco">
-                        <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
-                        <picture>
-                          {% if i == 1 %}
+        <div class="gdiv">
+          <div class="gtable">
+            <table class="table-striped table table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">Table</th>
+                  <th class="w2">И</th>
+                  <th class="w2">В</th>
+                  <th class="w2">П</th>
+                  <th class="tt" title="Разница по раундам (победы минус поражения)">
+                    Раз
+                  </th>
+                  <th class="text-center w4">Раунд 1</th>
+                  <th class="text-center w4">Раунд 2</th>
+                  <th class="text-center w4">Раунд 3</th>
+                  <th class="text-center w4">Раунд 4</th>
+                  <th class="text-center w4">Раунд 5</th>
+                  <th class="text-center w4">Раунд 6</th>
+                  <th class="text-center w4">Раунд 7</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in 1..8 %}
+                <tr
+                  class="{% if i == 1 or i == 2 %} crows6{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  <td>{{i}}</td>
+                  <td>
+                    <a href="#" class="teamNameIco">
+                      <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                      <picture>
+                        {% if i == 1 %}
 
-                          <source
-                            srcset="
+                        <source srcset="
                               https://escorenews.com/media/logo/_30/t49.webp
-                            "
-                            type="image/webp"
-                          />
-                          <source
-                            srcset="
+                            " type="image/webp" />
+                        <source srcset="
                               https://escorenews.com//media/logo/_30/t49.png
-                            "
-                          />
-                          <img
-                            src="/media/logo/_30/t49.png"
-                            loading="lazy"
-                            alt="EG"
-                          />
+                            " />
+                        <img src="/media/logo/_30/t49.png" loading="lazy" alt="EG" />
 
-                          {% else %}
-                          <source
-                            type="image/webp"
-                            srcset="./img/dummy/{{ random(teamlogo) }}.png"
-                          />
-                          <img
-                            src="./img/dummy/{{ random(teamlogo) }}.png"
-                            alt=""
-                          />
+                        {% else %}
+                        <source type="image/webp" srcset="./img/dummy/{{ random(teamlogo) }}.png" />
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="" />
 
-                          {% endif %}
-                        </picture>
+                        {% endif %}
+                      </picture>
 
-                        <span>
-                          {% if i == 1 %} Movistar Riders {% else %}
-                          {{random(team)}} {% endif %}
-                          <!-- .<u>{{ random(team) }}</u> -->
-                          <sup>{{ random(team) }}</sup>
-                        </span>
-                      </a>
-                    </td>
-                    <!-- <td class="tpo">
+                      <span>
+                        {% if i == 1 %} Movistar Riders {% else %}
+                        {{random(team)}} {% endif %}
+                        <!-- .<u>{{ random(team) }}</u> -->
+                        <sup>{{ random(team) }}</sup>
+                      </span>
+                    </a>
+                  </td>
+                  <!-- <td class="tpo">
                       <span class="opener fas fa-chevron-right"></span>
                     </td> -->
-                    <td class="tpo w2">5</td>
-                    <td class="tpo w2">3</td>
-                    <td class="tpo w2">1</td>
-                    <td class="tpo"><span class="green">+12</span></td>
-                    {% for i in 1..7 %}
-                    <td class="text-md-center w4">
-                      <a
-                        href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
-                        class="teamNameIco"
-                      >
-                        <span>
-                          <picture>
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                              type="image/webp"
-                            />
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                            />
-                            <img
-                              src="./img/dummy/{{ random(teamlogo) }}.png"
-                              loading="lazy"
-                              style="max-width: 20px; max-height: 20px"
-                              alt="36327"
-                            />
-                          </picture>
-                        </span>
-                        <span
-                          >{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
-                          random(['0','1','2','W']) }}</span
-                        >
-                      </a>
-                    </td>
-                    {% endfor %}
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="gdiv table-responsive">
-            <div class="gtable">
-              <table class="table-striped table table-hover">
-                <thead>
-                  <tr>
-                    <th colspan="2">Table</th>
-                    <th>И</th>
-                    <th>В</th>
-                    <th>П</th>
-                    <th
-                      class="tt"
-                      title="Разница по раундам (победы минус поражения)"
-                    >
-                      Раз
-                    </th>
-                    <th class="text-center w4">Раунд 1</th>
-                    <th class="text-center w4">Раунд 2</th>
-                    <th class="text-center w4">Раунд 3</th>
-                    <th class="text-center w4">Раунд 4</th>
-                    <th class="text-center w4">Раунд 5</th>
-                    <th class="text-center w4">Раунд 6</th>
-                    <th class="text-center w4">Раунд 7</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for i in 1..8 %}
-                  <tr
-                    class="crows4 {% if i == 1 or i == 2 %} first{% endif %}{% if i == 3 or i == 4 %} second{% endif %}{% if i >= 5 %} third{% endif %}"
-                  >
-                    <td>{{i}}</td>
-                    <td>
-                      <a href="#" class="teamNameIco firstTeam">
-                        <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                  <td class="tpo w2">5</td>
+                  <td class="tpo w2">3</td>
+                  <td class="tpo w2">1</td>
+                  <td class="tpo"><span class="green">+12</span></td>
+                  {% for i in 1..7 %}
+                  <td class="text-md-center w4">
+                    <a href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
+                      class="teamNameIco">
+                      <span>
                         <picture>
-                          {% if i == 1 %}
-
                           <source
-                            srcset="
-                              https://escorenews.com/media/logo/_30/t49.webp
-                            "
-                            type="image/webp"
-                          />
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                            type="image/webp" />
                           <source
-                            srcset="
-                              https://escorenews.com//media/logo/_30/t49.png
-                            "
-                          />
-                          <img
-                            src="/media/logo/_30/t49.png"
-                            loading="lazy"
-                            alt="EG"
-                          />
-
-                          {% else %}
-                          <source
-                            type="image/webp"
-                            srcset="./img/dummy/{{ random(teamlogo) }}.png"
-                          />
-                          <img
-                            src="./img/dummy/{{ random(teamlogo) }}.png"
-                            alt=""
-                          />
-
-                          {% endif %}
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x" />
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" loading="lazy"
+                            style="max-width: 20px; max-height: 20px" alt="36327" />
                         </picture>
+                      </span>
+                      <span>{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
+                        random(['0','1','2','W']) }}</span>
+                    </a>
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-                        <span>
-                          {% if i == 1 %} Movistar Riders {% else %}
-                          {{random(team)}} {% endif %}
-                          <!-- .<u>{{ random(team) }}</u> -->
-                          <sup>{{ random(team) }}</sup>
-                        </span>
-                      </a>
-                    </td>
-                    <!-- <td class="tpo">
+        <div class="gdiv table-responsive">
+          <div class="gtable">
+            <table class="table-striped table table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">Table</th>
+                  <th>И</th>
+                  <th>В</th>
+                  <th>П</th>
+                  <th class="tt" title="Разница по раундам (победы минус поражения)">
+                    Раз
+                  </th>
+                  <th class="text-center w4">Раунд 1</th>
+                  <th class="text-center w4">Раунд 2</th>
+                  <th class="text-center w4">Раунд 3</th>
+                  <th class="text-center w4">Раунд 4</th>
+                  <th class="text-center w4">Раунд 5</th>
+                  <th class="text-center w4">Раунд 6</th>
+                  <th class="text-center w4">Раунд 7</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in 1..8 %}
+                <tr
+                  class="{% if i == 1 or i == 2 %} crows5{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  <td>{{i}}</td>
+                  <td>
+                    <a href="#" class="teamNameIco firstTeam">
+                      <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                      <picture>
+                        {% if i == 1 %}
+
+                        <source srcset="
+                              https://escorenews.com/media/logo/_30/t49.webp
+                            " type="image/webp" />
+                        <source srcset="
+                              https://escorenews.com//media/logo/_30/t49.png
+                            " />
+                        <img src="/media/logo/_30/t49.png" loading="lazy" alt="EG" />
+
+                        {% else %}
+                        <source type="image/webp" srcset="./img/dummy/{{ random(teamlogo) }}.png" />
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="" />
+
+                        {% endif %}
+                      </picture>
+
+                      <span>
+                        {% if i == 1 %} Movistar Riders {% else %}
+                        {{random(team)}} {% endif %}
+                        <!-- .<u>{{ random(team) }}</u> -->
+                        <sup>{{ random(team) }}</sup>
+                      </span>
+                    </a>
+                  </td>
+                  <!-- <td class="tpo">
                       <span class="opener fas fa-chevron-right"></span>
                     </td> -->
-                    <td class="tpo">5</td>
-                    <td class="tpo">3</td>
-                    <td class="tpo">1</td>
-                    <td class="tpo"><span class="green">+12</span></td>
-                    {% for i in 1..7 %}
-                    <td class="text-md-center w4">
-                      <a
-                        href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
-                        class="teamNameIco"
-                      >
-                        <span>
-                          <picture>
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                              type="image/webp"
-                            />
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                            />
-                            <img
-                              src="./img/dummy/{{ random(teamlogo) }}.png"
-                              loading="lazy"
-                              style="max-width: 20px; max-height: 20px"
-                              alt="36327"
-                            />
-                          </picture>
-                        </span>
-                        <span
-                          >{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
-                          random(['0','1','2','W']) }}</span
-                        >
-                      </a>
-                    </td>
-                    {% endfor %}
-                  </tr>
+                  <td class="tpo">5</td>
+                  <td class="tpo">3</td>
+                  <td class="tpo">1</td>
+                  <td class="tpo"><span class="green">+12</span></td>
+                  {% for i in 1..7 %}
+                  <td class="text-md-center w4">
+                    <a href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
+                      class="teamNameIco">
+                      <span>
+                        <picture>
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                            type="image/webp" />
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x" />
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" loading="lazy"
+                            style="max-width: 20px; max-height: 20px" alt="36327" />
+                        </picture>
+                      </span>
+                      <span>{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
+                        random(['0','1','2','W']) }}</span>
+                    </a>
+                  </td>
                   {% endfor %}
-                </tbody>
-              </table>
-            </div>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          <style>
-             @media (max-width: 768px) {
-              .firstTeam span{
-                display: none;
-              }
-              /* td.text-md-center .teamNameIco {
+        <style>
+          @media (max-width: 768px) {
+            .firstTeam span {
+              display: none;
+            }
+
+            /* td.text-md-center .teamNameIco {
                 flex-direction: column;
                 gap: 2px;
               }
@@ -399,9 +330,9 @@ Team X, по прошлым играм."] %}
               td.text-md-center .teamNameIco picture {
                 margin: 0;
               } */
-            }
+          }
 
-            /* 
+          /* 
               ВЫНЕС В ОБЩИЙ СТИЛЬ
             .opener {
               cursor: pointer;
@@ -446,329 +377,291 @@ Team X, по прошлым играм."] %}
             } 
             */
 
-            .matches .article {
-              font-size: 0.65rem;
-            }
+          .matches .article {
+            font-size: 0.65rem;
+          }
 
-            .matches .article .time i {
-              font-weight: 500;
-            }
+          .matches .article .time i {
+            font-weight: 500;
+          }
 
-            .matches .article .teams .score .type0 {
-              font-weight: 500;
-            }
+          .matches .article .teams .score .type0 {
+            font-weight: 500;
+          }
 
-            .matches .article picture {
-              width: 1rem;
-              min-width: 1rem;
-              height: 1rem;
-            }
+          .matches .article picture {
+            width: 1rem;
+            min-width: 1rem;
+            height: 1rem;
+          }
 
-            .matches-full .article .teams {
-              font-size: 0.7rem;
-            }
-          </style>
+          .matches-full .article .teams {
+            font-size: 0.7rem;
+          }
+        </style>
 
-<!-- Ivan Samsonov, [24.03.2025 11:19]
+        <!-- Ivan Samsonov, [24.03.2025 11:19]
 Если убрать счёт и оставить только иконки, то предлагаю победителя видеть полосой под лого
 
 Ivan Samsonov, [24.03.2025 11:19]
 Зелёная победа, красная поражение -->
 
-          <style>
-              @media (max-width: 768px) {
-                .stage-block .gtable .table tbody tr td,
-                .stage-block .gtable .table thead tr th{
-                  padding: 0.25rem 0.3rem;
-                }
+        <style>
+          @media (max-width: 768px) {
 
-                .stage-block .tableWithLines .gtable .table tbody tr td,
-                .stage-block .tableWithLines .gtable .table thead tr th{
-                  padding: 0.25rem 0.1rem;
-                }
-              }
-              
-              .stage-block .tableWithLines .withLine {
-                display: flex;
-                flex-direction: column;
-              }
-              .stage-block .tableWithLines .teamNameIco.withLine picture{
-                margin-right: 0;
-              }
-              .stage-block .tableWithLines .lined {
-                font-size: 0;
-                background: #ccc;
-                width: 20px;
-                height: 3px;
-                margin-bottom: -6px;
-              }
-              .stage-block .tableWithLines .win{
-                background: #82AC4E;
-              }
-              .stage-block .tableWithLines .lost{
-                background: #EB5757;
-              }
-              .stage-block .tableWithLines .w4{
-                width: 3rem;
-              }
-          </style>
-          <div class="gdiv table-responsive tableWithLines swiss">
-            <div class="gtable">
-              <table class="table-striped table table-hover">
-                <thead>
-                  <tr>
-                    <th colspan="2">Table</th>
-                    <th class="w2">И</th>
-                    <th class="w2">В</th>
-                    <th class="w2">П</th>
-                    <th
-                      class="tt"
-                      title="Разница по раундам (победы минус поражения)"
-                    >
-                      Раз
-                    </th>
-                    <th class="text-center w4">Раунд 1</th>
-                    <th class="text-center w4">Раунд 2</th>
-                    <th class="text-center w4">Раунд 3</th>
-                    <th class="text-center w4">Раунд 4</th>
-                    <th class="text-center w4">Раунд 5</th>
-                    <th class="text-center w4">Раунд 6</th>
-                    <th class="text-center w4">Раунд 7</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for i in 1..8 %}
-                  <tr
-                    class="crows4 {% if i == 1 or i == 2 %} first{% endif %}{% if i == 3 or i == 4 %} second{% endif %}{% if i >= 5 %} third{% endif %}"
-                  >
-                    <td>{{i}}</td>
-                    <td>
-                      <a href="#" class="teamNameIco firstTeam">
-                        <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
-                        <picture>
-                          {% if i == 1 %}
+            .stage-block .gtable .table tbody tr td,
+            .stage-block .gtable .table thead tr th {
+              padding: 0.25rem 0.3rem;
+            }
 
-                          <source
-                            srcset="
+            .stage-block .tableWithLines .gtable .table tbody tr td,
+            .stage-block .tableWithLines .gtable .table thead tr th {
+              padding: 0.25rem 0.1rem;
+            }
+          }
+
+          .stage-block .tableWithLines .withLine {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .stage-block .tableWithLines .teamNameIco.withLine picture {
+            margin-right: 0;
+          }
+
+          .stage-block .tableWithLines .lined {
+            font-size: 0;
+            background: #ccc;
+            width: 20px;
+            height: 3px;
+            margin-bottom: -6px;
+          }
+
+          .stage-block .tableWithLines .win {
+            background: #82AC4E;
+          }
+
+          .stage-block .tableWithLines .lost {
+            background: #EB5757;
+          }
+
+          .stage-block .tableWithLines .w4 {
+            width: 3rem;
+          }
+        </style>
+        <div class="gdiv table-responsive tableWithLines swiss">
+          <div class="gtable">
+            <table class="table-striped table table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">Table</th>
+                  <th class="w2">И</th>
+                  <th class="w2">В</th>
+                  <th class="w2">П</th>
+                  <th class="tt" title="Разница по раундам (победы минус поражения)">
+                    Раз
+                  </th>
+                  <th class="text-center w4">Раунд 1</th>
+                  <th class="text-center w4">Раунд 2</th>
+                  <th class="text-center w4">Раунд 3</th>
+                  <th class="text-center w4">Раунд 4</th>
+                  <th class="text-center w4">Раунд 5</th>
+                  <th class="text-center w4">Раунд 6</th>
+                  <th class="text-center w4">Раунд 7</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in 1..8 %}
+                <tr
+                  class="{% if i == 1 or i == 2 %} crows4{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  <td>{{i}}</td>
+                  <td>
+                    <a href="#" class="teamNameIco firstTeam">
+                      <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                      <picture>
+                        {% if i == 1 %}
+
+                        <source srcset="
                               https://escorenews.com/media/logo/_30/t49.webp
-                            "
-                            type="image/webp"
-                          />
-                          <source
-                            srcset="
+                            " type="image/webp" />
+                        <source srcset="
                               https://escorenews.com//media/logo/_30/t49.png
-                            "
-                          />
-                          <img
-                            src="/media/logo/_30/t49.png"
-                            loading="lazy"
-                            alt="EG"
-                          />
+                            " />
+                        <img src="/media/logo/_30/t49.png" loading="lazy" alt="EG" />
 
-                          {% else %}
-                          <source
-                            type="image/webp"
-                            srcset="./img/dummy/{{ random(teamlogo) }}.png"
-                          />
-                          <img
-                            src="./img/dummy/{{ random(teamlogo) }}.png"
-                            alt=""
-                          />
+                        {% else %}
+                        <source type="image/webp" srcset="./img/dummy/{{ random(teamlogo) }}.png" />
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="" />
 
-                          {% endif %}
-                        </picture>
+                        {% endif %}
+                      </picture>
 
-                        <span>
-                          {% if i == 1 %} Movistar Riders {% else %}
-                          {{random(team)}} {% endif %}
-                          <!-- .<u>{{ random(team) }}</u> -->
-                          <sup>{{ random(team) }}</sup>
-                        </span>
-                      </a>
-                    </td>
-                    <!-- <td class="tpo">
+                      <span>
+                        {% if i == 1 %} Movistar Riders {% else %}
+                        {{random(team)}} {% endif %}
+                        <!-- .<u>{{ random(team) }}</u> -->
+                        <sup>{{ random(team) }}</sup>
+                      </span>
+                    </a>
+                  </td>
+                  <!-- <td class="tpo">
                       <span class="opener fas fa-chevron-right"></span>
                     </td> -->
-                    <td class="tpo">5</td>
-                    <td class="tpo">3</td>
-                    <td class="tpo">1</td>
-                    <td class="tpo"><span class="green">+12</span></td>
-                    {% for i in 1..7 %}
-                    <td class="text-md-center w4">
-                      <a
-                        href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
-                        class="teamNameIco withLine bs-tooltip-auto"
-                        data-toggle="tip" title="{{ random(['0','1','2']) }}&nbsp;:&nbsp;{{ random(['0','1','2']) }}"  
-                      >
-                        <span>
-                          <picture>
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                              type="image/webp"
-                            />
-                            <source
-                              srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
-                            />
-                            <img
-                              src="./img/dummy/{{ random(teamlogo) }}.png"
-                              loading="lazy"
-                              style="max-width: 20px; max-height: 20px"
-                              alt="36327"
-                            />
-                          </picture>
-                        </span>
-                        {% if i == 1 %} 
-                          <span class="lined">FF&nbsp;:&nbsp;W</span>
-                        {% else %}
-                          <span class="lined {{ random(['win','lost']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{ random(['0','1','2','W']) }}</span>
-                        {% endif %}
-                      </a>
-                    </td>
-                    {% endfor %}
-                  </tr>
+                  <td class="tpo">5</td>
+                  <td class="tpo">3</td>
+                  <td class="tpo">1</td>
+                  <td class="tpo"><span class="green">+12</span></td>
+                  {% for i in 1..7 %}
+                  <td class="text-md-center w4">
+                    <a href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
+                      class="teamNameIco withLine bs-tooltip-auto" data-toggle="tip"
+                      title="{{ random(['0','1','2']) }}&nbsp;:&nbsp;{{ random(['0','1','2']) }}">
+                      <span>
+                        <picture>
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                            type="image/webp" />
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x" />
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" loading="lazy"
+                            style="max-width: 20px; max-height: 20px" alt="36327" />
+                        </picture>
+                      </span>
+                      {% if i == 1 %}
+                      <span class="lined">FF&nbsp;:&nbsp;W</span>
+                      {% else %}
+                      <span class="lined {{ random(['win','lost']) }}">{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
+                        random(['0','1','2','W']) }}</span>
+                      {% endif %}
+                    </a>
+                  </td>
                   {% endfor %}
-                </tbody>
-              </table>
-            </div>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
           </div>
-
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="center col-lg-7 col-xl-8">
-              <div class="hblock">
-                <h2>Расписание матчей DreamLeague Seson 11</h2>
-                <b></b>
-                <span>
-                  <i
-                    title="Расписание пока не известно"
-                    class="tip"
-                    data-toggle="tip"
-                  ></i>
-                  <!-- <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a> -->
-                  <a
-                    href="#"
-                    title="Перезагрузить"
-                    class="moptions"
-                    data-toggle="tip"
-                  ></a>
-                </span>
+
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="center col-lg-7 col-xl-8">
+            <div class="hblock">
+              <h2>Расписание матчей DreamLeague Seson 11</h2>
+              <b></b>
+              <span>
+                <i title="Расписание пока не известно" class="tip" data-toggle="tip"></i>
+                <!-- <a href="#" title="Перезагрузить" class="refresh load" data-toggle="tip"></a> -->
+                <a href="#" title="Перезагрузить" class="moptions" data-toggle="tip"></a>
+              </span>
+            </div>
+
+            <section class="matches matches-full">
+              <div class="flex-table">
+                {% for i in 0..14 %}
+                <article class="article tbd">
+                  <div class="time">
+                    <b href="#" class="live"></b>
+                    <u></u>
+                  </div>
+                  <div class="teams">
+                    <span>
+                      <b></b>
+                      <picture> </picture>
+                    </span>
+                    <div class="score">
+                      <span class="live"></span>
+                    </div>
+                    <span>
+                      <picture> </picture>
+                      <b></b>
+                    </span>
+                  </div>
+                  <div class="tpic">
+                    <picture class="tour"> </picture>
+                  </div>
+                </article>
+                {% endfor %}
               </div>
+            </section>
 
-              <section class="matches matches-full">
-                <div class="flex-table">
-                  {% for i in 0..14 %}
-                  <article class="article tbd">
-                    <div class="time">
-                      <b href="#" class="live"></b>
-                      <u></u>
-                    </div>
-                    <div class="teams">
-                      <span>
-                        <b></b>
-                        <picture> </picture>
-                      </span>
-                      <div class="score">
-                        <span class="live"></span>
-                      </div>
-                      <span>
-                        <picture> </picture>
-                        <b></b>
-                      </span>
-                    </div>
-                    <div class="tpic">
-                      <picture class="tour"> </picture>
-                    </div>
-                  </article>
-                  {% endfor %}
-                </div>
-              </section>
-
-              <!-- <a href="#" class="btn720">
+            <!-- <a href="#" class="btn720">
             <img src="./img/dummy/b720.png" alt="">
           </a> -->
+          </div>
+          <div class="rcol col-lg-5 col-xl-4">
+            <!-- rightcol -->
+            <div class="card card-team-lg card-team-lg-bg mt-4">
+              <div class="tourlogo">
+                <picture>
+                  <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png" />
+                  <img src="./img/dummy/{{random(tourlogo)}}.png" alt="STREAM LOGO" />
+                </picture>
+              </div>
+              <table class="tinfo table table-sm">
+                <tr>
+                  <th>дата</th>
+                  <td>14 марта - 10 апреля</td>
+                </tr>
+                <tr>
+                  <th>призовые</th>
+                  <td>$ 1,000,000</td>
+                </tr>
+                <tr>
+                  <th>место</th>
+                  <td>
+                    Стокгольм, Швеция
+                    <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt="" />
+                    <br />
+                    стадион «Annexet»
+                  </td>
+                </tr>
+                <tr>
+                  <th>серия</th>
+                  <td>DreamLeague</td>
+                </tr>
+                <tr>
+                  <th>участвует</th>
+                  <td>20 команд</td>
+                </tr>
+              </table>
+              <div class="tourdescription">
+                <p>
+                  <b>DreamLeague Season 11</b> (или Chongqing Major) станет
+                  третьим major турниром сезона 2018/19 Dota Pro Circuit. 16
+                  команд сразятся за $1,000,000 и 15,000 DPC очков в марте
+                  2019. Последние 3 дня турнира пройдут перед живой
+                  аудиторией.
+                </p>
+              </div>
             </div>
-            <div class="rcol col-lg-5 col-xl-4">
-              <!-- rightcol -->
-              <div class="card card-team-lg card-team-lg-bg mt-4">
-                <div class="tourlogo">
-                  <picture>
-                    <source
-                      type="image/webp"
-                      srcset="./img/dummy/{{random(tourlogo)}}.png"
-                    />
-                    <img
-                      src="./img/dummy/{{random(tourlogo)}}.png"
-                      alt="STREAM LOGO"
-                    />
-                  </picture>
-                </div>
-                <table class="tinfo table table-sm">
-                  <tr>
-                    <th>дата</th>
-                    <td>14 марта - 10 апреля</td>
-                  </tr>
-                  <tr>
-                    <th>призовые</th>
-                    <td>$ 1,000,000</td>
-                  </tr>
-                  <tr>
-                    <th>место</th>
-                    <td>
-                      Стокгольм, Швеция
-                      <img
-                        class="flag"
-                        src="./img/dummy/{{random(flag)}}.png"
-                        alt=""
-                      />
-                      <br />
-                      стадион «Annexet»
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>серия</th>
-                    <td>DreamLeague</td>
-                  </tr>
-                  <tr>
-                    <th>участвует</th>
-                    <td>20 команд</td>
-                  </tr>
-                </table>
-                <div class="tourdescription">
-                  <p>
-                    <b>DreamLeague Season 11</b> (или Chongqing Major) станет
-                    третьим major турниром сезона 2018/19 Dota Pro Circuit. 16
-                    команд сразятся за $1,000,000 и 15,000 DPC очков в марте
-                    2019. Последние 3 дня турнира пройдут перед живой
-                    аудиторией.
-                  </p>
-                </div>
+
+            <section class="tour-teams-block">
+              <div class="hblock">
+                <h3>Участники неизвестны</h3>
+                <b></b>
               </div>
 
-              <section class="tour-teams-block">
-                <div class="hblock">
-                  <h3>Участники неизвестны</h3>
-                  <b></b>
-                </div>
+              {% for i in 0..3 %}
+              <a href="#" class="card-team tbd">
+                <span></span>
+                <picture> </picture>
+                <em></em>
+              </a>
+              {% endfor %}
+            </section>
 
-                {% for i in 0..3 %}
-                <a href="#" class="card-team tbd">
-                  <span></span>
-                  <picture> </picture>
-                  <em></em>
-                </a>
-                {% endfor %}
-              </section>
-
-              <!-- <a href="#" class="rbn mt-3"><img src="./img/dummy/rbn.png" alt=""></a> -->
-            </div>
+            <!-- <a href="#" class="rbn mt-3"><img src="./img/dummy/rbn.png" alt=""></a> -->
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
+  </div>
 
-    {% include "./tpl/footer.html" %} {#{% include "./tpl/leftcolumn.html" %}#}
-    {% include "./tpl/bar.html" %} {#{% include "./tpl/branding.html" %}#} {#{%
-    include "./tpl/modal.html" %}#} {% include "./tpl/devmenu.html" %}
-  </body>
+  {% include "./tpl/footer.html" %} {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %} {#{% include "./tpl/branding.html" %}#} {#{%
+  include "./tpl/modal.html" %}#} {% include "./tpl/devmenu.html" %}
+</body>
+
 </html>
