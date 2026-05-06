@@ -90,7 +90,7 @@
           }
 
           let lockClass = (ach.status === "locked" && ach.title === "???") ? "locked-hint" : "";
-          let rarityClass = `rarity-${ach.rarity} pattern-${ach.rarity}`;
+          let rarityClass = `rarity-${ach.rarity} skew-card ${ach.rarity}`;
 
           let pointsReward = "";
           if (ach.status !== "completed" && ach.target > 1) {
@@ -251,7 +251,7 @@
           });
         });</script></main></div><style>.achievement-icon {
       font-size: 36px;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
       display: block;
     }
 
@@ -398,92 +398,79 @@
 
     /* ========== ПАТТЕРНЫ ДЛЯ КАРТОЧЕК ========== */
     
-    /* 1. ОБЫЧНЫЕ — едва заметные точки */
-    .pattern-common {
-      background: 
-        linear-gradient(135deg, #FFFFFF 0%, #F8FAFE 100%),
-        repeating-linear-gradient(
-          45deg,
-          rgba(158, 158, 158, 0.03) 0px,
-          rgba(158, 158, 158, 0.03) 2px,
-          transparent 2px,
-          transparent 12px
-        );
-      background-blend-mode: overlay;
-    }
-    
-    /* 2. РЕДКИЕ — очень светлая диагональ */
-    .pattern-rare {
-      background: 
-        linear-gradient(135deg, #E3F2FD 0%, #FFFFFF 100%),
-        repeating-linear-gradient(
-          45deg,
-          rgba(33, 150, 243, 0.04) 0px,
-          rgba(33, 150, 243, 0.04) 1px,
-          transparent 1px,
-          transparent 16px
-        );
-      background-blend-mode: overlay;
-    }
-    
-    /* 3. ЭПИЧЕСКИЕ — едва уловимый ромб */
-    .pattern-epic {
-      background: 
-        linear-gradient(135deg, #F3E5F5 0%, #FFFFFF 100%),
-        repeating-linear-gradient(
-          45deg,
-          rgba(156, 39, 176, 0.03) 0px,
-          rgba(156, 39, 176, 0.03) 1px,
-          transparent 1px,
-          transparent 10px
-        ),
-        repeating-linear-gradient(
-          135deg,
-          rgba(156, 39, 176, 0.02) 0px,
-          rgba(156, 39, 176, 0.02) 1px,
-          transparent 1px,
-          transparent 10px
-        );
-      background-blend-mode: overlay;
-    }
-    
-    /* 4. ЛЕГЕНДАРНЫЕ — едва заметные круглые точки (вместо звёзд, чтобы не рябило) */
-    .pattern-legendary {
-      background: 
-        linear-gradient(135deg, #FFF8E1 0%, #FFFFFF 100%),
-        radial-gradient(circle at 20% 30%, rgba(255, 152, 0, 0.04) 1.5px, transparent 1.5px),
-        radial-gradient(circle at 70% 80%, rgba(255, 152, 0, 0.03) 1.5px, transparent 1.5px);
-      background-size: 32px 32px, 40px 40px;
-      background-blend-mode: overlay;
-    }
-    
-    /* 5. ПЛАТИНОВЫЕ — очень мягкая волна */
-    .pattern-platinum {
-      background: 
-        linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%),
-        repeating-linear-gradient(
-          45deg,
-          rgba(0, 188, 212, 0.03) 0px,
-          rgba(0, 188, 212, 0.03) 1px,
-          transparent 1px,
-          transparent 20px
-        );
-      background-blend-mode: overlay;
+         /* Базовый класс карточки с наклоном */
+    .skew-card {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 0;
+      padding: 14px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 5px;
+      
+      /* 🔥 СКОШЕННЫЕ ГРАНИ (параллелограмм) */
+      transform: skewX(-3deg);
+      
+      /* Тень */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.04);
     }
 
-    /* 6. ПЛАМЕННЫЙ — эксклюзив, тоже приглушён */
-    .pattern-fire {
-      background: 
-        linear-gradient(135deg, #FFF3E0 0%, #FFFFFF 100%),
-        repeating-linear-gradient(
-          0deg,
-          rgba(230, 126, 34, 0.04) 0px,
-          rgba(230, 126, 34, 0.04) 2px,
-          transparent 2px,
-          transparent 12px
-        );
-      background-blend-mode: overlay;
+    /* Компенсируем наклон у внутреннего контента (чтобы текст не был наклонным) */
+    .skew-card > * {
+      transform: skewX(3deg);
     }
+
+    /* Левая цветная рамка (тоже с наклоном, но она и так внутри) */
+    .skew-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      transform: skewX(0deg);
+      transform-origin: left;
+      opacity: 0.3;
+    }
+
+    /* Цвета левой полосы в зависимости от редкости */
+    .skew-card.common::before { background: #9E9E9E; }
+    .skew-card.rare::before { background: #2196F3; }
+    .skew-card.epic::before { background: #9C27B0; }
+    .skew-card.legendary::before { background: #FF9800; }
+    .skew-card.platinum::before { background: #00BCD4; }
+    .skew-card.fire::before { background: #E67E22; }
+
+    /* Приглушённые паттерны фона */
+    .skew-card.common { background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFE 100%), repeating-linear-gradient(45deg, rgba(158,158,158,0.03) 0px, rgba(158,158,158,0.03) 2px, transparent 2px, transparent 12px); background-blend-mode: overlay; }
+    .skew-card.rare { background: linear-gradient(135deg, #E3F2FD 0%, #FFFFFF 100%), repeating-linear-gradient(45deg, rgba(33,150,243,0.04) 0px, rgba(33,150,243,0.04) 1px, transparent 1px, transparent 16px); background-blend-mode: overlay; }
+    .skew-card.epic { background: linear-gradient(135deg, #F3E5F5 0%, #FFFFFF 100%), repeating-linear-gradient(45deg, rgba(156,39,176,0.03) 0px, rgba(156,39,176,0.03) 1px, transparent 1px, transparent 10px), repeating-linear-gradient(135deg, rgba(156,39,176,0.02) 0px, rgba(156,39,176,0.02) 1px, transparent 1px, transparent 10px); background-blend-mode: overlay; }
+    .skew-card.legendary { background: linear-gradient(135deg, #FFF8E1 0%, #FFFFFF 100%), radial-gradient(circle at 20% 30%, rgba(255,152,0,0.04) 1.5px, transparent 1.5px), radial-gradient(circle at 70% 80%, rgba(255,152,0,0.03) 1.5px, transparent 1.5px); background-size: 32px 32px, 40px 40px; background-blend-mode: overlay; }
+    .skew-card.platinum { background: linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%), repeating-linear-gradient(45deg, rgba(0,188,212,0.03) 0px, rgba(0,188,212,0.03) 1px, transparent 1px, transparent 20px); background-blend-mode: overlay; }
+    .skew-card.fire { background: linear-gradient(135deg, #FFF3E0 0%, #FFFFFF 100%), repeating-linear-gradient(0deg, rgba(230,126,34,0.04) 0px, rgba(230,126,34,0.04) 2px, transparent 2px, transparent 12px); background-blend-mode: overlay; }
+
+    /* Hover эффект */
+    .skew-card:hover {
+      transform: skewX(-3deg) translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Стили контента */
+    .card-icon {
+      font-size: 44px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1E2A3A;
+    }
+
      
 
     .progress-custom {
