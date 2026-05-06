@@ -269,11 +269,19 @@ const config = {
             template: `${PATHS.src}/news.html`,
             filename: './news.html'
         }),
+
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/news_v2.html`,
             filename: './news_v2.html'
         }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/achievments.html`,
+            filename: './achievments.html'
+        }),
+        
 
         // new HtmlWebpackPlugin({
         //     hash: false,

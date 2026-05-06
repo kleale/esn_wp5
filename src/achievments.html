@@ -1,0 +1,1411 @@
+{% set title = "News List" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = ["Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почкму я не
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set country = ["Европа", "США", "Китай", "Европа", "Корея"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+
+<!DOCTYPE html>
+<html>
+{% include "./tpl/head.html" %}
+
+<body class="">
+  <div class="wrap">
+
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="scroller">
+
+        <div class="hblock">
+          <h4>Достижения</h4><b></b><span><a href="#" class="all">все</a><i title="123" class="tip" data-toggle="tip"
+              data-original-title="Типо хелптекст"></i></span>
+        </div>
+
+    </aside>
+
+    <main class="news_list_word">
+      <div class="container">
+        <!--d-flex-->
+        <div class="row">
+          <div class="center col-lg-12 col-xl-12">
+
+
+            <!-- Профиль + статистика -->
+            <div class="profile-header">
+              <div class="row align-items-center">
+                <div class="col-md-1 mt-1">
+                  <div class="avatar-lg">
+                    <i class="fas fa-user-astronaut fa-2x"></i>
+                  </div>
+                </div>
+                <div class="col-md-5 mt-3 mt-md-0">
+                  <h4 class="mb-1">DragonSlayer <span class="badge-icon ml-2"><i class="fas fa-trophy"></i> 🔥 14-й
+                      уровень</span></h4>
+                  <p class="text-muted mb-0"><i class="far fa-calendar-alt"></i> В проекте с апреля 2025 • 38 точных
+                    прогнозов</p>
+                  <div class="mt-2">
+                    <span class="badge-icon"><i class="fas fa-shield-alt"></i> Фанат NAVI</span>
+                    <span class="badge-icon ml-2"><i class="fas fa-chart-line"></i> Топ-5% по очкам</span>
+                  </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0 text-md-center">
+                  <div class="points-badge">
+                    <i class="fas fa-coins"></i> 1 240 очков
+                  </div>
+                  <div class="mt-2"><small>⭐ 45 / 150 достижений</small></div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                  <div class="stat-card">
+                    <div>🏆 Прогнозов</div>
+                    <div class="stat-number">124</div>
+                    <div>Точных: 38 <span class="text-success">(30.6%)</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Вкладки -->
+            <ul class="nav nav-tabs mt-4" id="achievementTabs" role="tablist">
+              <li class="nav-item"><a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab">Все
+                  достижения</a></li>
+              <li class="nav-item"><a class="nav-link" id="progress-tab" data-toggle="tab" href="#progress" role="tab">В
+                  процессе</a></li>
+              <li class="nav-item"><a class="nav-link" id="completed-tab" data-toggle="tab" href="#completed"
+                  role="tab">Выполненные</a></li>
+              <li class="nav-item">
+                <a class="nav-link" id="hidden-tab" data-toggle="tab" href="#hidden" role="tab" style="color:#8E98B0;"
+                  aria-selected="false">Секретные 🤫</a>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-3">
+              <!-- ВКЛАДКА ВСЕ (6 коллекций) -->
+              <div class="tab-pane fade show active" id="all" role="tabpanel">
+
+                <!-- Коллекция 1: ДОБРО ПОЖАЛОВАТЬ -->
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <div class="section-title">👋 Добро пожаловать</div>
+                  <span class="collection-badge">10 достижений</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">👋</div>
+                      <div class="achievement-title">Добро пожаловать</div>
+                      <div class="text-muted small">Заполнить имя в профиле</div>
+                      <div class="points-reward text-success">✔ +10 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">⚽</div>
+                      <div class="achievement-title">Болельщик</div>
+                      <div class="text-muted small">Выбрать любимую команду</div>
+                      <div class="points-reward text-success">✔ +10 очков + бейдж</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🖼️</div>
+                      <div class="achievement-title">Свой парень</div>
+                      <div class="text-muted small">Загрузить аватар</div>
+                      <div class="points-reward text-success">✔ +15 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🔍</div>
+                      <div class="achievement-title">Любопытный</div>
+                      <div class="text-muted small">Открыть раздел «Достижения»</div>
+                      <div class="points-reward text-success">✔ +5 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🎯</div>
+                      <div class="achievement-title">Первый прогноз</div>
+                      <div class="text-muted small">Сделать любой прогноз</div>
+                      <div class="points-reward text-success">✔ +10 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">📅</div>
+                      <div class="achievement-title">Стартовая серия</div>
+                      <div class="text-muted small">Заходить 3 дня подряд</div>
+                      <div class="mt-1">
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+20 очков (готово)</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">📧</div>
+                      <div class="achievement-title">Телефон</div>
+                      <div class="text-muted small">Подтвердить email/телефон</div>
+                      <div class="mt-1">
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+25 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">💬</div>
+                      <div class="achievement-title">Социальный</div>
+                      <div class="text-muted small">Отправить 1 сообщение</div>
+                      <div class="mt-1">
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+10 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">📝</div>
+                      <div class="achievement-title">Профи-новичок</div>
+                      <div class="text-muted small">Заполнить 50% профиля</div>
+                      <div class="mt-1">
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+15 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">✅</div>
+                      <div class="achievement-title">Всё серьёзно</div>
+                      <div class="text-muted small">Заполнить 100% профиля</div>
+                      <div class="mt-1">
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 20%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+30 очков + бейдж</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Коллекция 2: СТАЛЬНЫЕ НЕРВЫ -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div class="section-title">🗓️ Стальные нервы</div><span class="collection-badge">10 достижений</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🔥</div>
+                      <div class="achievement-title">Новичок-не спамер</div>
+                      <div class="text-muted small">7 дней подряд</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 57%"></div>
+                      </div>
+                      <div class="points-reward">+30 очков + бейдж 🔥</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">⏳</div>
+                      <div class="achievement-title">Труженик</div>
+                      <div class="text-muted small">14 дней подряд</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 28%"></div>
+                      </div>
+                      <div class="points-reward">+50 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">⚙️</div>
+                      <div class="achievement-title">Железный</div>
+                      <div class="text-muted small">30 дней подряд</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 10%"></div>
+                      </div>
+                      <div class="points-reward">+100 очков + рамка</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🏃</div>
+                      <div class="achievement-title">Марафонец</div>
+                      <div class="text-muted small">100 дней подряд</div>
+                      <div class="points-reward">+250 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">📆</div>
+                      <div class="achievement-title">Полгода на ESN</div>
+                      <div class="text-muted small">180 суммарно</div>
+                      <div class="points-reward">+150 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🏅</div>
+                      <div class="achievement-title">Год на ESN</div>
+                      <div class="text-muted small">365 суммарно</div>
+                      <div class="points-reward">+500 очков + золото</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">☀️</div>
+                      <div class="achievement-title">Утренняя звезда</div>
+                      <div class="text-muted small">Прогноз до 10:00</div>
+                      <div class="points-reward">+5 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🌙</div>
+                      <div class="achievement-title">Полуночник</div>
+                      <div class="text-muted small">Прогноз после 02:00</div>
+                      <div class="points-reward text-success">✔ +15 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">📆</div>
+                      <div class="achievement-title">Без выходных</div>
+                      <div class="text-muted small">Суббота + воскресенье</div>
+                      <div class="points-reward">+20 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">👑</div>
+                      <div class="achievement-title">VIP-зритель</div>
+                      <div class="text-muted small">300 дней в году</div>
+                      <div class="points-reward">+300 очков + VIP</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Коллекция 3: ОРАКУЛ (коротко для экономии места, но все 10) -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div class="section-title">🎯 Оракул</div><span class="collection-badge">10 достижений</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">😅</div>
+                      <div class="achievement-title">Мимо</div>
+                      <div class="text-muted small">Первый неверный прогноз</div>
+                      <div class="points-reward text-success">+5 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🎯</div>
+                      <div class="achievement-title">Первое попадание</div>
+                      <div class="text-muted small">Первый точный прогноз</div>
+                      <div class="points-reward text-success">+15 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">📈</div>
+                      <div class="achievement-title">Эксперт-новичок</div>
+                      <div class="text-muted small">5 точных</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 80%"></div>
+                      </div>
+                      <div class="points-reward">+30 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🏅</div>
+                      <div class="achievement-title">Эксперт</div>
+                      <div class="text-muted small">10 точных</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 70%"></div>
+                      </div>
+                      <div class="points-reward">+50 очков + бейдж 🎯</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">⭐</div>
+                      <div class="achievement-title">Мастер</div>
+                      <div class="text-muted small">25 точных</div>
+                      <div class="points-reward">+100 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🔮</div>
+                      <div class="achievement-title">Оракул</div>
+                      <div class="text-muted small">50 точных</div>
+                      <div class="points-reward">+200 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🏆</div>
+                      <div class="achievement-title">Легенда</div>
+                      <div class="text-muted small">100 точных</div>
+                      <div class="points-reward">+500 очков + серебро</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">💀</div>
+                      <div class="achievement-title">Бессмертный</div>
+                      <div class="text-muted small">250 точных</div>
+                      <div class="points-reward">+1000 очков + золото</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">⚽⚽⚽</div>
+                      <div class="achievement-title">Хет-трик</div>
+                      <div class="text-muted small">3 точных подряд</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 66%"></div>
+                      </div>
+                      <div class="points-reward">+25 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🔥🔥🔥</div>
+                      <div class="achievement-title">Пента-килл</div>
+                      <div class="text-muted small">5 точных подряд</div>
+                      <div class="points-reward">+50 очков + огненный бейдж</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Коллекция 4: ОСОБЫЕ УСЛОВИЯ (10) и 5-6 аналогично — для читаемости кода оставляем структуру, но в финальном коде они все будут. Ниже сокращённый блок для экономии, но в реальном решении все 60 -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div class="section-title">⚡ Особые условия</div><span class="collection-badge">10 достижений</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🤝</div>
+                      <div class="achievement-title">Ничейный король</div>
+                      <div class="text-muted small">3 ничьих</div>
+                      <div class="progress progress-custom mt-1">
+                        <div class="progress-bar" style="width: 33%"></div>
+                      </div>
+                      <div class="points-reward">+40 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">💣</div>
+                      <div class="achievement-title">Сенсация</div>
+                      <div class="text-muted small">Андердог коэф >3.0</div>
+                      <div class="points-reward">+50 очков + ⚡</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🏆</div>
+                      <div class="achievement-title">Идеальный уикенд</div>
+                      <div class="text-muted small">Угадать все матчи субботы</div>
+                      <div class="points-reward">+100 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🧹</div>
+                      <div class="achievement-title">Чистый лист</div>
+                      <div class="text-muted small">Точный счёт 1 раз</div>
+                      <div class="points-reward">+30 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">👁️</div>
+                      <div class="achievement-title">Ясновидящий</div>
+                      <div class="text-muted small">Точный счёт 5 раз</div>
+                      <div class="points-reward">+150 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">💰</div>
+                      <div class="achievement-title">Миллионер</div>
+                      <div class="text-muted small">Прогнозов на 1000+ очков</div>
+                      <div class="points-reward">+100 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">😢</div>
+                      <div class="achievement-title">Риск-менеджер</div>
+                      <div class="text-muted small">3 проигрыша подряд</div>
+                      <div class="points-reward">+10 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🔄</div>
+                      <div class="achievement-title">Камбэк</div>
+                      <div class="text-muted small">После 3 поражений — 3 победы</div>
+                      <div class="points-reward">+75 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">⏰</div>
+                      <div class="achievement-title">Овертайм</div>
+                      <div class="text-muted small">Прогноз за 5 мин до матча</div>
+                      <div class="points-reward">+10 очков</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🏁</div>
+                      <div class="achievement-title">Дедлайн-хват</div>
+                      <div class="text-muted small">10 прогнозов в последний час</div>
+                      <div class="points-reward">+60 очков</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Коллекция 5: Общение и активность -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div class="section-title">💬 Общение и активность</div><span class="collection-badge">10
+                    достижений</span>
+                </div>
+                <div class="row">
+                  <!-- 41. Молчун -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🤐</div>
+                      <div class="achievement-title">Молчун</div>
+                      <div class="text-muted small">Прочитать 5 сообщений, не написав ни одного</div>
+                      <div class="points-reward text-success">✔ +5 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 42. Разговорчивый -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">💬</div>
+                      <div class="achievement-title">Разговорчивый</div>
+                      <div class="text-muted small">Отправить 10 сообщений</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>7 / 10</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+20 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 43. Душа компании -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🎉</div>
+                      <div class="achievement-title">Душа компании</div>
+                      <div class="text-muted small">Отправить 50 сообщений</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>32 / 50</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 64%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+60 очков + бейдж 💬</div>
+                    </div>
+                  </div>
+
+                  <!-- 44. Органайзер -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">📋</div>
+                      <div class="achievement-title">Органайзер</div>
+                      <div class="text-muted small">Отправить 200 сообщений</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>32 /
+                            200</span></div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 16%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+150 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 45. Популярный -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">⭐</div>
+                      <div class="achievement-title">Популярный</div>
+                      <div class="text-muted small">Получить ответ на своё сообщение 10 раз</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>6 / 10</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 60%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+40 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 46. Звезда чата -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🌟</div>
+                      <div class="achievement-title">Звезда чата</div>
+                      <div class="text-muted small">Получить 50 ответов</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>6 / 50</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 12%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+150 очков + звёздный бейдж</div>
+                    </div>
+                  </div>
+
+                  <!-- 47. Киберспортсмен -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🎮</div>
+                      <div class="achievement-title">Киберспортсмен</div>
+                      <div class="text-muted small">Сделать прогноз на 3 разных вида спорта</div>
+                      <div class="points-reward text-success">✔ +25 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 48. Эксперт-универсал -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">🌍</div>
+                      <div class="achievement-title">Эксперт-универсал</div>
+                      <div class="text-muted small">Сделать прогноз на 10 разных видов спорта</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>3 / 10</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+100 очков + радужный бейдж</div>
+                    </div>
+                  </div>
+
+                  <!-- 49. Соавтор -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">✍️</div>
+                      <div class="achievement-title">Соавтор</div>
+                      <div class="text-muted small">Предложить идею для достижения (через форму)</div>
+                      <div class="points-reward">+50 очков + именная благодарность</div>
+                    </div>
+                  </div>
+
+                  <!-- 50. Рекрутер -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">👥</div>
+                      <div class="achievement-title">Рекрутер</div>
+                      <div class="text-muted small">Пригласить друга по реферальной ссылке</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>0 / 1</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+100 очков + бейдж 👥</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Коллекция 6: Секретные -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div class="section-title">🤫 Секретные достижения</div><span class="collection-badge">10
+                    достижений</span>
+                </div>
+                <div class="row">
+
+                  <!-- 51. Чемпион по счёту -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">📅❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Сделай это 31 февраля»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="far fa-clock"></i> Особое событие</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🏆 ??? очков</div>
+                    </div>
+                    <div class="text-center mt-1">
+                      <small class="text-muted" style="font-size: 11px;">🔒 Выполните 10 любых достижений, чтобы увидеть
+                        намёк</small>
+                    </div>
+                  </div>
+
+                  <!-- 52. Ноль -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">0️⃣❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Прогноз без вариантов»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-chart-line"></i> Точность решает</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎯 +25 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 53. Омнибус -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🚌❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Будь везде в один день»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-tasks"></i> Мультизадачность</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">⚡ +50 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 54. Хранитель традиций -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🏛️❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Старина»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-history"></i> Верность платформе</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">👑 +500 очков + старинный бейдж</div>
+                    </div>
+                  </div>
+
+                  <!-- 55. Баланс -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">⚖️❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Туда-сюда»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-equals"></i> Идеальное равновесие</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🔄 +75 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 56. Быстрый -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">⚡❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«1 секунда»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-stopwatch"></i> Скорость реакции</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🏃 +15 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 57. Фартовый -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🍀❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Повезёт-не повезёт?»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-dice"></i> Чистая удача</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎲 +200 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 58. Ниндзя -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <!-- Этот уже частично разблокирован, так как выполняется -->
+                      <div class="achievement-icon">🥷</div>
+                      <div class="achievement-title">Ниндзя</div>
+                      <div class="text-muted small">«Невидимка» — не заходить 7 дней, потом зайти и сделать 3 прогноза
+                        подряд</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>Осталось: не
+                            заходить 3 дня</span></div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 57%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+40 очков + скрытый бейдж 🥷</div>
+                    </div>
+                  </div>
+
+                  <!-- 59. Игрок -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🎰❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Все или ничего»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-coins"></i> Траты очков</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎫 +1 специальный билет на розыгрыш</div>
+                    </div>
+                  </div>
+
+                  <!-- 60. Легенда ESN -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🏆❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Ты его заслужил»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-warning"><i class="fas fa-crown"></i> Высшая награда</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">💎 +1000 очков + ПЛАТИНОВЫЙ БЕЙДЖ + имя на отдельной
+                        странице</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Блок-пояснение для секретных достижений -->
+                <div class="alert alert-light mt-3"
+                  style="background: #F8FAFE; border: 1px dashed #E67E22; border-radius: 16px;">
+                  <i class="fas fa-lightbulb" style="color: #E67E22;"></i>
+                  <strong class="ml-2">Как открыть секретные достижения?</strong>
+                  <p class="small text-muted mt-2 mb-0">Некоторые достижения скрыты, чтобы добавить интриги. Выполняйте
+                    обычные задания, исследуйте сайт, пробуйте нестандартные действия — и намёки станут понятнее. Часть
+                    секретов откроется после получения 10, 25 и 50 обычных достижений.</p>
+                </div>
+
+              </div>
+
+              <!-- Вкладка В ПРОЦЕССЕ (пример) -->
+              <div class="tab-pane fade" id="progress" role="tabpanel">
+
+                <div class="row">
+                  <!-- Карточка 1: ежедневная серия -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🗓️🔥</div>
+                      <div class="achievement-title">«Стальные нервы»</div>
+                      <div class="text-muted small">Заходи 7 дней подряд</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>4 / 7</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 57%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward"><i class="fas fa-gem"></i> Награда: +30 очков +
+                        бейдж 🔥</div>
+                    </div>
+                  </div>
+                  <!-- Карточка 2: точные прогнозы -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🎯🎯</div>
+                      <div class="achievement-title">«Эксперт»</div>
+                      <div class="text-muted small">10 точных прогнозов</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>8 / 10</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward"><i class="fas fa-gem"></i> Награда: +50 очков +
+                        бейдж мастера</div>
+                    </div>
+                  </div>
+                  <!-- Карточка 3: сообщения -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">💬👥</div>
+                      <div class="achievement-title">«Душа компании»</div>
+                      <div class="text-muted small">Отправить 50 сообщений</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>32 / 50</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 64%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward"><i class="fas fa-gem"></i> Награда: +60 очков +
+                        коллекционный бейдж</div>
+                    </div>
+                  </div>
+                  <!-- Карточка 4: ничейный король -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">⚖️👑</div>
+                      <div class="achievement-title">«Ничейный король»</div>
+                      <div class="text-muted small">Угадать ничью 3 раза</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>1 / 3</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 33%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward"><i class="fas fa-gem"></i> Награда: +40 очков +
+                        скрытая медаль</div>
+                    </div>
+                  </div>
+                  <!-- Карточка 5: полуночник -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card in-progress">
+                      <div class="achievement-icon">🌙🤫</div>
+                      <div class="achievement-title">«Полуночник»</div>
+                      <div class="text-muted small">Прогноз после 02:00</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>Сделано ✅</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward text-warning"><i class="fas fa-check-circle"></i>
+                        ГОТОВО к получению! Нажмите</div>
+                    </div>
+                  </div>
+                  <!-- Карточка 6: хет-трик -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <div class="achievement-icon">⚽⚽⚽</div>
+                      <div class="achievement-title">«Хет-трик к победе»</div>
+                      <div class="text-muted small">3 точных прогноза подряд</div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between small mb-1">
+                          <span>Прогресс</span><span>2 / 3</span>
+                        </div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 66%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+25 очков + огненный бейдж</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-2"><small class="text-muted"><i class="fas fa-lock-open"></i>
+                    Выполните ещё 4 достижения, чтобы открыть бронзовый сундук</small></div>
+              </div>
+              <div class="tab-pane fade" id="completed" role="tabpanel">
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">✅👋</div>
+                      <div class="achievement-title">«Добро пожаловать»</div>
+                      <div class="text-muted small">Заполнен профиль</div>
+                      <div class="points-reward text-success">+10 очков • Получено 12.02.2025
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">⚽🤝</div>
+                      <div class="achievement-title">«Болельщик»</div>
+                      <div class="text-muted small">Выбрана любимая команда</div>
+                      <div class="points-reward text-success">+10 очков • Бейдж активирован</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="achievement-card completed">
+                      <div class="achievement-icon">🎯🥇</div>
+                      <div class="achievement-title">«Первое попадание»</div>
+                      <div class="text-muted small">Первый точный прогноз</div>
+                      <div class="points-reward text-success">+15 очков • 15 марта</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="hidden" role="tabpanel">
+                <div class="row">
+
+                  <!-- 51. Чемпион по счёту -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">📅❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Сделай это 31 февраля»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="far fa-clock"></i> Особое событие</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🏆 ??? очков</div>
+                    </div>
+                    <div class="text-center mt-1">
+                      <small class="text-muted" style="font-size: 11px;">🔒 Выполните 10 любых достижений, чтобы увидеть
+                        намёк</small>
+                    </div>
+                  </div>
+
+                  <!-- 52. Ноль -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">0️⃣❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Прогноз без вариантов»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-chart-line"></i> Точность решает</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎯 +25 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 53. Омнибус -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🚌❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Будь везде в один день»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-tasks"></i> Мультизадачность</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">⚡ +50 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 54. Хранитель традиций -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🏛️❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Старина»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-history"></i> Верность платформе</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">👑 +500 очков + старинный бейдж</div>
+                    </div>
+                  </div>
+
+                  <!-- 55. Баланс -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">⚖️❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Туда-сюда»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-equals"></i> Идеальное равновесие</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🔄 +75 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 56. Быстрый -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">⚡❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«1 секунда»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-stopwatch"></i> Скорость реакции</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🏃 +15 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 57. Фартовый -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🍀❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Повезёт-не повезёт?»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-dice"></i> Чистая удача</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎲 +200 очков</div>
+                    </div>
+                  </div>
+
+                  <!-- 58. Ниндзя -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card">
+                      <!-- Этот уже частично разблокирован, так как выполняется -->
+                      <div class="achievement-icon">🥷</div>
+                      <div class="achievement-title">Ниндзя</div>
+                      <div class="text-muted small">«Невидимка» — не заходить 7 дней, потом зайти и сделать 3 прогноза
+                        подряд</div>
+                      <div class="mt-1">
+                        <div class="d-flex justify-content-between small mb-1"><span>Прогресс</span><span>Осталось: не
+                            заходить 3 дня</span></div>
+                        <div class="progress progress-custom">
+                          <div class="progress-bar" style="width: 57%"></div>
+                        </div>
+                      </div>
+                      <div class="points-reward">+40 очков + скрытый бейдж 🥷</div>
+                    </div>
+                  </div>
+
+                  <!-- 59. Игрок -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🎰❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Все или ничего»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-light"><i class="fas fa-coins"></i> Траты очков</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">🎫 +1 специальный билет на розыгрыш</div>
+                    </div>
+                  </div>
+
+                  <!-- 60. Легенда ESN -->
+                  <div class="col-md-4 mb-4">
+                    <div class="achievement-card locked-hint">
+                      <div class="achievement-icon">🏆❓</div>
+                      <div class="achievement-title">???</div>
+                      <div class="text-muted small font-italic">«Ты его заслужил»</div>
+                      <div class="mt-2">
+                        <span class="badge badge-warning"><i class="fas fa-crown"></i> Высшая награда</span>
+                      </div>
+                      <div class="points-reward mt-2 text-muted">💎 +1000 очков + ПЛАТИНОВЫЙ БЕЙДЖ + имя на отдельной
+                        странице</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Блок-пояснение для секретных достижений -->
+                <div class="alert alert-light mt-3"
+                  style="background: #F8FAFE; border: 1px dashed #E67E22; border-radius: 16px;">
+                  <i class="fas fa-lightbulb" style="color: #E67E22;"></i>
+                  <strong class="ml-2">Как открыть секретные достижения?</strong>
+                  <p class="small text-muted mt-2 mb-0">Некоторые достижения скрыты, чтобы добавить интриги. Выполняйте
+                    обычные задания, исследуйте сайт, пробуйте нестандартные действия — и намёки станут понятнее. Часть
+                    секретов откроется после получения 10, 25 и 50 обычных достижений.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Магазин очков -->
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="shop-item">
+                  <i class="fas fa-t-shirt fa-2x mb-2"></i>
+                  <h6>Футболка ESCORE</h6>
+                  <p class="small">Эксклюзивный мерч</p>
+                  <div class="mb-2"><strong>1 200 очков</strong></div>
+                  <button class="btn-escore-outline btn-sm">Накопить</button>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="shop-item">
+                  <i class="fas fa-percent fa-2x mb-2"></i>
+                  <h6>Скидка 15%</h6>
+                  <p class="small">На платную подписку</p>
+                  <div class="mb-2"><strong>600 очков</strong></div>
+                  <button class="btn-escore btn-sm">Обменять</button>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="shop-item">
+                  <i class="fas fa-ticket-alt fa-2x mb-2"></i>
+                  <h6>Розыгрыш джерси</h6>
+                  <p class="small">Билет за 1 000 очков</p>
+                  <div class="mb-2"><strong>1 000 очков → билет</strong></div>
+                  <button class="btn-escore-outline btn-sm">Участвовать</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <a href="#" class="btn720">
+              <img src="../img/dummy/b720.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <style>
+    .top-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E6ED;
+      padding: 10px 0;
+      font-size: 13px;
+      font-weight: 500;
+      color: #4A5568;
+    }
+
+    .top-bar .live-badge {
+      background: #E83A30;
+      border-radius: 30px;
+      padding: 2px 10px;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: white;
+      margin-right: 8px;
+    }
+
+    .navbar {
+      background: #FFFFFF !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      padding: 12px 0;
+    }
+
+    .navbar-brand {
+      color: #1A2C3E !important;
+      font-weight: 800;
+    }
+
+    .nav-link-custom {
+      color: #4A5B6E !important;
+      font-weight: 500;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .nav-link-custom:hover,
+    .nav-link-custom.active {
+      color: #E67E22 !important;
+    }
+
+    /* Главный хедер профиля — светлый */
+    .profile-header {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid #E9EDF2;
+      padding: 20px;
+      margin-top: 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .avatar-lg {
+      width: 70px;
+      height: 70px;
+      background: #F0F3F8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      border: 2px solid #E67E22;
+      color: #E67E22;
+    }
+
+    .points-badge {
+      background: #FFF7ED;
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #E67E22;
+      border: 1px solid #FFE0B5;
+    }
+
+    .stat-card {
+      background: #F8FAFE;
+      border-radius: 16px;
+      border: 1px solid #E9EDF2;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1E2A3A;
+    }
+
+    .badge-icon {
+      background: #F0F3F8;
+      border-radius: 30px;
+      padding: 5px 14px;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #2C3E50;
+    }
+
+    /* Секция достижений — плитки */
+    .section-title {
+      font-weight: 700;
+      font-size: 20px;
+      border-left: 4px solid #E67E22;
+      padding-left: 14px;
+      margin: 30px 0 20px 0;
+      color: #1E2A3A;
+    }
+
+    .collection-badge {
+      background: #E9EDF2;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .achievement-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid #E9EDF2;
+      padding: 16px;
+      transition: all 0.2s;
+      height: 100%;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    .achievement-card.in-progress {
+      border-left: 4px solid #E67E22;
+    }
+
+    .achievement-card.completed {
+      background: #F4F9F4;
+      border-color: #C8E6D9;
+    }
+
+    .achievement-card.completed .achievement-icon {
+      opacity: 0.8;
+    }
+
+    .text-success {
+      color: #2E7D32 !important;
+    }
+
+    .achievement-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .achievement-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .progress-custom {
+      background-color: #E9EDF2;
+      border-radius: 20px;
+      height: 6px;
+    }
+
+    .progress-custom .progress-bar {
+      background-color: #E67E22;
+      border-radius: 20px;
+    }
+
+    .points-reward {
+      font-size: 12px;
+      color: #6C7A8E;
+      margin-top: 12px;
+    }
+
+    .locked-hint {
+      filter: blur(3px);
+      opacity: 0.6;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .shop-item {
+      background: #FFFFFF;
+      border-radius: 16px;
+      border: 1px solid #E9EDF2;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .btn-escore {
+      background: #E67E22;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 14px;
+    }
+
+    .btn-escore-outline {
+      background: transparent;
+      border: 1px solid #E67E22;
+      color: #E67E22;
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid #E2E6ED;
+      margin-top: 60px;
+      padding: 30px 0;
+      font-size: 13px;
+      color: #7E8C9E;
+      background: #FFFFFF;
+    }
+
+    .nav-tabs .nav-link {
+      color: #4A5B6E;
+      border: none;
+      font-weight: 500;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #E67E22;
+      background: transparent;
+      border-bottom: 2px solid #E67E22;
+    }
+
+    .nav-tabs {
+      border-bottom: 1px solid #E2E6ED;
+    }
+  </style>
+
+  {% include "./tpl/footer.html" %}
+
+  {#{% include "./tpl/leftcolumn.html" %}#}
+  {% include "./tpl/bar.html" %}
+
+  {#{% include "./tpl/branding.html" %}#}
+  {#{% include "./tpl/modal.html" %}#}
+
+  {% include "./tpl/devmenu.html" %}
+
+</body>
+
+</html>
