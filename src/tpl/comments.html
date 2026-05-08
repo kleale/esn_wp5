@@ -210,9 +210,9 @@
 </div>
 
 <div class="commment_form">
-    <picture class="ava">
+    <!-- <picture class="ava">
         <img src="../img/ico/user5.svg" alt="">
-    </picture>
+    </picture> -->
     <div class="tablock">
         <div class="textareacom">
             <textarea class="textarea" placeholder="Напиши, комментарий и нажми «Ctrl + Enter»" oninput="auto_grow(this)"></textarea>
@@ -258,3 +258,39 @@
         </div>
     </div>
 </div>
+
+
+<div class="commment_form">
+    <!-- <picture class="ava">
+        <img src="../img/ico/user5.svg" alt="">
+    </picture> -->
+    <div class="tablock">
+        <div class="textareacom disabled">
+            <textarea class="textarea" placeholder="Напиши, комментарий и нажми «Ctrl + Enter»" oninput="auto_grow(this)"></textarea>
+            <button class="btn-com btn btn-primary"></button>
+            <p id="ferr" class="invalid-feedback" >Сначала нужно <a href="javascript:;" onclick="wmsc(); window.open('/ru/login?c');" target="_blank">войти</a> или <a href="javascript:;" onclick="wmsc(); window.open('/ru/login?c');" target="_blank">зарегистрироваться</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .textareacom{
+        position: relative;
+    }
+    .textareacom.disabled .btn-com:hover {
+        cursor: not-allowed;
+        color: #ccc!important;
+    }
+    .textareacom.disabled textarea {
+        background-color: #f8f9fa;
+        border-color: #ced4da;
+        color: #6c757d;
+        cursor: not-allowed;
+    }
+    .textareacom.disabled .invalid-feedback {
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+    }
+</style>
