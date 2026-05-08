@@ -18623,6 +18623,7 @@ a.transferlink:hover .tlink a {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  vertical-align: text-bottom;
 }
 .plc {
   display: inline-block;

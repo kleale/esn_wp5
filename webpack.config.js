@@ -282,12 +282,11 @@ const config = {
             filename: './achievments.html'
         }),
         
-
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/news_list.html`,
-        //     filename: './news_list.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/news_list.html`,
+            filename: './news_list.html'
+        }),
         // new HtmlWebpackPlugin({
         //     hash: false,
         //     template: `${PATHS.src}/news_list_word.html`,
