@@ -6,91 +6,251 @@
 
 
 <div class="hblock">
-  <h2>Составы</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
+  <h2>Составы команд</h2>
+  <b></b>
+  <span><i title="Нажмите на игрока для просмотра детальной статистики" class="tip" data-toggle="tip">?</i></span>
 </div>
+
 
 <div class="consist">
   <article class="playersats">
-
-    <div class="t1">
-      {% for i in 0..4 %}
-      <a href="#" class="pl">
-        <span>
-          <b>{{ random(user) }}</b>
-          {{ random(role) }}
-        </span>
-        <picture>
-          <source type="image/webp" srcset="./img/dummy/{{ random(srcset) }}">
-          <img src="./img/ico/player30.png" alt="ИГРОК">
-        </picture>
-      </a>
-      {% endfor %}
-    </div>
-    <div class="selected_player">
-      <picture>
-        <source type="image/webp" srcset="./img/dummy/{{ random(srcsetFull) }}">
-        <img src="./img/dummy/player30.png" alt="ИГРОК">
-      </picture>
-    </div>
-
-    <div class="stat_lines">
-      {% for i in 0..4 %}
-      <div><b>{{ stat[i] }} </b>
-        <div class="pline">
-          <u>{{ random(1..100) }}</u>
-          <div class="progress">
-            <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%" aria-valuenow="15"
-              aria-valuemin="0" aria-valuemax="100"></div>
-            <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%" aria-valuenow="30"
-              aria-valuemin="0" aria-valuemax="100"></div>
+    <!-- Левая команда (T1) -->
+    <div class="team-section">
+      <div class="team">
+        <div class="team-players">
+          <div class="t1">
+            <a href="#" class="pl" data-team="t1" data-player="player1">
+              <span>
+                <b>AlexStorm</b>
+                Carry
+              </span>
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285.webp" alt="ИГРОК">
+              </picture>
+            </a>
+            <a href="#" class="pl" data-team="t1" data-player="player2">
+              <span>
+                <b>MidKing</b>
+                Mid
+              </span>
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285.webp" alt="ИГРОК">
+              </picture>
+            </a>
+            <a href="#" class="pl" data-team="t1" data-player="player3">
+              <span>
+                <b>OfflaneGod</b>
+                Offlane
+              </span>
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p34507.webp">
+                <img src="./img/dummy/p34507.webp" alt="ИГРОК">
+              </picture>
+            </a>
+            <a href="#" class="pl" data-team="t1" data-player="player4">
+              <span>
+                <b>SupportHero</b>
+                Support
+              </span>
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285.webp" alt="ИГРОК">
+              </picture>
+            </a>
+            <a href="#" class="pl" data-team="t1" data-player="player5">
+              <span>
+                <b>HardSave</b>
+                Hard Support
+              </span>
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p34507.webp">
+                <img src="./img/dummy/p34507.webp" alt="ИГРОК">
+              </picture>
+            </a>
           </div>
-          <u>{{ random(1..100) }}</u>
+        </div>
+        <div class="team-selected-player">
+          <div class="selected_player selected_player_t1">
+            <picture>
+              <source type="image/webp" srcset="./img/dummy/p34507_full.webp">
+              <img src="./img/dummy/p34507_full.webp" alt="ИГРОК">
+            </picture>
+          </div>
         </div>
       </div>
-      {% endfor %}
 
+      <!-- Блок статистики -->
+      <div class="stats-container">
+        <div class="stat_lines">
+          <div>
+            <b>KDA</b>
+            <div class="pline">
+              <u>85</u>
+              <div class="progress">
+                <div class="progress-bar tt" title="85%" role="progressbar" style="width: 85%"></div>
+                <div class="progress-bar bg-success tt" title="15%" role="progressbar" style="width: 15%"></div>
+              </div>
+              <u>15</u>
+            </div>
+          </div>
+          <div>
+            <b>NET</b>
+            <div class="pline">
+              <u>70</u>
+              <div class="progress">
+                <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%"></div>
+                <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%"></div>
+              </div>
+              <u>30</u>
+            </div>
+          </div>
+          <div>
+            <b>GPM</b>
+            <div class="pline">
+              <u>92</u>
+              <div class="progress">
+                <div class="progress-bar tt" title="92%" role="progressbar" style="width: 92%"></div>
+                <div class="progress-bar bg-success tt" title="8%" role="progressbar" style="width: 8%"></div>
+              </div>
+              <u>8</u>
+            </div>
+          </div>
+          <div>
+            <b>XPM</b>
+            <div class="pline">
+              <u>78</u>
+              <div class="progress">
+                <div class="progress-bar tt" title="78%" role="progressbar" style="width: 78%"></div>
+                <div class="progress-bar bg-success tt" title="22%" role="progressbar" style="width: 22%"></div>
+              </div>
+              <u>22</u>
+            </div>
+          </div>
+          <div>
+            <b>DMG</b>
+            <div class="pline">
+              <u>88</u>
+              <div class="progress">
+                <div class="progress-bar tt" title="88%" role="progressbar" style="width: 88%"></div>
+                <div class="progress-bar bg-success tt" title="12%" role="progressbar" style="width: 12%"></div>
+              </div>
+              <u>12</u>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline-secondary btn-xs">Полное сравнение</button>
+      </div>
+
+      <!-- Правая команда (T2) -->
+      <div class="team">
+        <div class="team-selected-player">
+          <div class="selected_player selected_player_t2">
+            <picture>
+              <source type="image/webp" srcset="./img/dummy/p111285_full.webp">
+              <img src="./img/dummy/p111285_full.webp" alt="ИГРОК">
+            </picture>
+          </div>
+        </div>
+        <div class="team-players">
+          <div class="t2">
+            <a href="#" class="pl" data-team="t2" data-player="player6">
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285_full.webp" alt="ИГРОК">
+              </picture>
+              <span>
+                <b>ShadowCarry</b>
+                Carry
+              </span>
+            </a>
+            <a href="#" class="pl" data-team="t2" data-player="player7">
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p34507.webp">
+                <img src="./img/dummy/p34507_full.webp" alt="ИГРОК">
+              </picture>
+              <span>
+                <b>MagicMid</b>
+                Mid
+              </span>
+            </a>
+            <a href="#" class="pl" data-team="t2" data-player="player8">
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285_full.webp" alt="ИГРОК">
+              </picture>
+              <span>
+                <b>TankOff</b>
+                Offlane
+              </span>
+            </a>
+            <a href="#" class="pl" data-team="t2" data-player="player9">
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p34507.webp">
+                <img src="./img/dummy/p34507_full.webp" alt="ИГРОК">
+              </picture>
+              <span>
+                <b>WardMaster</b>
+                Support
+              </span>
+            </a>
+            <a href="#" class="pl" data-team="t2" data-player="player10">
+              <picture>
+                <source type="image/webp" srcset="./img/dummy/p111285.webp">
+                <img src="./img/dummy/p111285_full.webp" alt="ИГРОК">
+              </picture>
+              <span>
+                <b>SaveBot</b>
+                Hard Support
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="selected_player">
-      <picture>
-        <source type="image/webp" srcset="./img/dummy/{{ random(srcsetFull) }}">
-        <img src="./img/dummy/player30.png" alt="ИГРОК">
-      </picture>
-    </div>
-
-    <div class="t2">
-      {% for i in 0..4 %}
-      <a href="#" class="pl">
-        <picture>
-          <source type="image/webp" srcset="./img/dummy/{{ random(srcset) }}">
-          <img src="./img/dummy/player30.png" alt="ИГРОК">
-        </picture>
-        <span>
-          <b>{{ random(user) }}</b>
-          Carry
-        </span>
-      </a>
-      {% endfor %}
-
-    </div>
-
   </article>
-
 </div>
 
 <style>
+  .team-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .team {
+    /* flex: 1; */
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .team-players {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .team-selected-player {
+    width: 150px;
+  }
+
   .playersats {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
   }
 
   .stat_lines {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 180px;
+    gap: 0px;
+    min-width: 100px;
     text-align: center;
+    width: 100%;
   }
 
   .consist .pline {
@@ -98,34 +258,38 @@
   }
 
   .stat_lines b {
-    font-size: 0.67rem;
+    font-size: 0.75rem;
     color: #707070;
-    line-height: 0.8rem;
     position: relative;
-    bottom: 0px;
-    height: 0px;
+    bottom: -16px;
     display: block;
   }
 
   .selected_player {
     display: flex;
     justify-content: center;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 60px;
+    height: 160px;
   }
 
   .selected_player picture {
     width: 100%;
-    max-width: 180px;
+    max-width: 150px;
+    animation: slideUp 0.4s ease-out;
   }
 
   .selected_player picture img {
     width: 100%;
+    border-radius: 8px;
   }
 
   .consist article .t1,
   .consist article .t2 {
     flex-direction: column;
     display: flex;
-    gap: 5px;
+    min-width: 150px;
   }
 
   .consist article .t1 .pl {
@@ -136,37 +300,520 @@
   .consist article .pl {
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
+  .consist article .pl:hover {
+    background: #f0f4f9;
+    transform: translateX(-5px);
+  }
+
+  .consist article .t1 .pl:hover {
+    transform: translateX(3px);
+  }
 
   .consist article .pl picture {
     background: #eceef2;
     border-radius: 50%;
-    width: 35px;
-    min-width: 35px;
-    height: 35px;
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
     overflow: hidden;
-    padding: 2px;
+    padding: 3px;
+    transition: background 0.3s ease;
   }
 
   .consist article .pl img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .consist article .pl span {
-    font-size: 0.67rem;
+    font-size: 0.75rem;
     color: #707070;
-    line-height: 0.8rem;
+    line-height: 0.9rem;
   }
 
   .consist article .pl span b {
     display: block;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 600;
     color: #3764a0;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 8rem;
   }
+
+  .pline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .pline u {
+    min-width: 35px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .progress {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .progress-bar {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .progress-bar.tt {
+    background-color: #3764a0;
+  }
+
+  .progress-bar.bg-success {
+    background-color: #28a745;
+  }
+
+  .active-player {
+    background: #e8f0fe !important;
+    transform: scale(0.98);
+  }
+
+  .consist article .pl.active-player picture {
+    background: #fff;
+  }
+
+  .selected_player.loading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .selected_player.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3764a0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .player-info-overlay {
+    position: absolute;
+    top: 155px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #f0f2fd, transparent);
+    padding: 8px;
+    text-align: center;
+    border-radius: 6px;
+    animation: slideUp 0.1s ease-out;
+  }
+
+  .player-info-overlay strong {
+    color: #000000;
+    display: block;
+    font-size: 14px;
+  }
+
+  .player-info-overlay small {
+    color: #444444;
+    font-size: 11px;
+    display: block;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 230px;
+  }
+
+  @media (max-width: 1024px) {
+    .team {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-selected-player {
+      order: -1;
+      margin-bottom: 20px;
+    }
+
+    .team-players {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .consist article .t1,
+    .consist article .t2 {
+      gap: 2px;
+    }
+
+    .consist article .t1 .pl {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 2px;
+      border: 1px solid #ececec;
+    }
+
+    .consist article .t2 .pl {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      border: 1px solid #ececec;
+    }
+
+    .team-selected-player {
+      display: none;
+    }
+
+    .stat_lines {
+      width: 100%;
+    }
+
+    .consist article .t1,
+    .consist article .t2 {
+      min-width: 50px;
+    }
+
+    .consist article .pl span b {
+      display: block;
+      font-size: 0.75rem;
+    }
+
+    .team-section {
+      gap: 10px;
+    }
+
+    .stat_lines {
+      gap: 30px;
+    }
+  }
 </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Мокап данных игроков
+    const playersMockData = {
+      "player1": {
+        name: "AlexStorm",
+        role: "Carry",
+        team: "t1",
+        fullImage: "./img/dummy/pl_full.svg",
+        stats: [
+          { value1: 92, value2: 8 },
+          { value1: 85, value2: 15 },
+          { value1: 88, value2: 12 },
+          { value1: 79, value2: 21 },
+          { value1: 94, value2: 6 }
+        ]
+      },
+      "player2": {
+        name: "MidKing",
+        role: "Mid",
+        team: "t1",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 78, value2: 22 },
+          { value1: 82, value2: 18 },
+          { value1: 75, value2: 25 },
+          { value1: 88, value2: 12 },
+          { value1: 85, value2: 15 }
+        ]
+      },
+      "player3": {
+        name: "OfflaneGod",
+        role: "Offlane",
+        team: "t1",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 65, value2: 35 },
+          { value1: 70, value2: 30 },
+          { value1: 68, value2: 32 },
+          { value1: 72, value2: 28 },
+          { value1: 60, value2: 40 }
+        ]
+      },
+      "player4": {
+        name: "SupportHero",
+        role: "Support",
+        team: "t1",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 45, value2: 55 },
+          { value1: 50, value2: 50 },
+          { value1: 42, value2: 58 },
+          { value1: 48, value2: 52 },
+          { value1: 35, value2: 65 }
+        ]
+      },
+      "player5": {
+        name: "HardSave",
+        role: "Hard Support",
+        team: "t1",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 25, value2: 75 },
+          { value1: 30, value2: 70 },
+          { value1: 28, value2: 72 },
+          { value1: 32, value2: 68 },
+          { value1: 20, value2: 80 }
+        ]
+      },
+      "player6": {
+        name: "ShadowCarry",
+        role: "Carry",
+        team: "t2",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 88, value2: 12 },
+          { value1: 79, value2: 21 },
+          { value1: 84, value2: 16 },
+          { value1: 81, value2: 19 },
+          { value1: 90, value2: 10 }
+        ]
+      },
+      "player7": {
+        name: "MagicMid",
+        role: "Mid",
+        team: "t2",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 82, value2: 18 },
+          { value1: 86, value2: 14 },
+          { value1: 79, value2: 21 },
+          { value1: 91, value2: 9 },
+          { value1: 87, value2: 13 }
+        ]
+      },
+      "player8": {
+        name: "TankOff",
+        role: "Offlane",
+        team: "t2",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 58, value2: 42 },
+          { value1: 62, value2: 38 },
+          { value1: 55, value2: 45 },
+          { value1: 60, value2: 40 },
+          { value1: 52, value2: 48 }
+        ]
+      },
+      "player9": {
+        name: "WardMaster",
+        role: "Support",
+        team: "t2",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 38, value2: 62 },
+          { value1: 42, value2: 58 },
+          { value1: 35, value2: 65 },
+          { value1: 40, value2: 60 },
+          { value1: 30, value2: 70 }
+        ]
+      },
+      "player10": {
+        name: "SaveBot",
+        role: "Hard Support",
+        team: "t2",
+        fullImage: "./img/dummy/p34507_full.webp",
+        stats: [
+          { value1: 18, value2: 82 },
+          { value1: 22, value2: 78 },
+          { value1: 15, value2: 85 },
+          { value1: 20, value2: 80 },
+          { value1: 12, value2: 88 }
+        ]
+      }
+    };
+
+    // Функция анимации чисел
+    function animateNumber($element, start, end, duration = 500) {
+      const startNum = parseInt(start) || 0;
+      const endNum = parseInt(end) || 0;
+      const range = endNum - startNum;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.floor(startNum + (range * progress));
+        $element.text(current);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          $element.text(endNum);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Функция загрузки данных с сервера (эмуляция)
+    function loadPlayerData(playerId) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = playersMockData[playerId];
+          if (data) {
+            resolve(data);
+          } else {
+            reject(new Error('Игрок не найден'));
+          }
+        }, 300);
+      });
+    }
+
+    // Функция обновления изображения для конкретной команды
+    async function updatePlayerImage(playerData, team) {
+      const $selectedPlayer = $(`.selected_player_${team}`);
+
+      return new Promise((resolve) => {
+        $selectedPlayer.fadeOut(200, function () {
+          const pictureHtml = `
+                            <picture>
+                                <source type="image/webp" srcset="${playerData.fullImage}">
+                                <img src="${playerData.fullImage}" alt="${playerData.name}">
+                            </picture>
+                        `;
+          $selectedPlayer.html(pictureHtml);
+          $selectedPlayer.fadeIn(200, resolve);
+        });
+      });
+    }
+
+    // Функция обновления информации об игроке для конкретной команды
+    function updatePlayerInfo(playerData, team) {
+      const $selectedPlayer = $(`.selected_player_${team}`);
+      $selectedPlayer.find('.player-info-overlay').remove();
+      $selectedPlayer.css('position', 'relative');
+
+      const infoHtml = `
+                    <div class="player-info-overlay">
+                        <strong>${playerData.name}</strong>
+                        <small>${playerData.role}</small>
+                        <button class="btn btn-outline-secondary btn-xs">Профиль</button>
+                    </div>
+                `;
+      $selectedPlayer.append(infoHtml);
+    }
+
+    // Функция обновления статистики (общая для всех)
+    function updatePlayerStats(playerData) {
+      const $statItems = $('.stat_lines > div');
+
+      playerData.stats.forEach((stat, index) => {
+        if (index < $statItems.length) {
+          const $statItem = $statItems.eq(index);
+          const $leftValue = $statItem.find('u').first();
+          const $rightValue = $statItem.find('u').last();
+          const $progressBars = $statItem.find('.progress-bar');
+
+          const currentLeft = $leftValue.text();
+          const currentRight = $rightValue.text();
+
+          animateNumber($leftValue, currentLeft, stat.value1);
+          animateNumber($rightValue, currentRight, stat.value2);
+
+          $progressBars.each(function (i) {
+            const $bar = $(this);
+            const targetWidth = i === 0 ? stat.value1 : stat.value2;
+            $bar.attr('title', targetWidth + '%');
+            $bar.stop().animate({ width: targetWidth + '%' }, 500);
+          });
+        }
+      });
+    }
+
+    // Основная функция смены игрока
+    async function switchPlayer(playerId, $clickedElement, team) {
+      const $selectedPlayer = $(`.selected_player_${team}`);
+      $selectedPlayer.addClass('loading');
+
+      try {
+        const playerData = await loadPlayerData(playerId);
+        await updatePlayerImage(playerData, team);
+        updatePlayerInfo(playerData, team);
+
+        // Обновляем статистику только если это активная команда
+        // (можно сделать переключатель для отображения статистики выбранной команды)
+        updatePlayerStats(playerData);
+
+        // Убираем активный класс у всех игроков этой команды
+        $(`.pl[data-team="${team}"]`).removeClass('active-player');
+        $clickedElement.addClass('active-player');
+      } catch (error) {
+        console.error('Ошибка:', error);
+        $selectedPlayer.html('<div style="color: red; text-align: center; padding: 20px;">Ошибка загрузки данных</div>');
+      } finally {
+        $selectedPlayer.removeClass('loading');
+      }
+    }
+
+    // Обработчик клика по игрокам
+    $(document).on('click', '.pl', function (e) {
+      e.preventDefault();
+      const playerId = $(this).data('player');
+      const team = $(this).data('team');
+      if (playerId && team) {
+        switchPlayer(playerId, $(this), team);
+      }
+    });
+
+    // Загружаем первых игроков при старте
+    const firstPlayerT1 = $('.pl[data-team="t1"]').first().data('player');
+    const firstPlayerT2 = $('.pl[data-team="t2"]').first().data('player');
+
+    if (firstPlayerT1) {
+      switchPlayer(firstPlayerT1, $('.pl[data-team="t1"]').first(), 't1');
+    }
+    if (firstPlayerT2) {
+      switchPlayer(firstPlayerT2, $('.pl[data-team="t2"]').first(), 't2');
+    }
+  });
+</script>
