@@ -1,7 +1,163 @@
-<!doctype html><html><head lang="ru"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Регистрация</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic" rel="stylesheet"><link rel="icon" type="image/png" href="./static/favicon32.png"><script defer="defer" src="/esn_wp5/js/app.js"></script><script defer="defer" src="/esn_wp5/js/darktheme.js"></script><link href="/esn_wp5/css/app.css" rel="stylesheet"><link href="/esn_wp5/css/darktheme.css" rel="stylesheet"></head><body class="loginPage"><style>:root {
+
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet'
+    type='text/css'>
+  <!-- <link rel="icon" type="image/png" href="./static/favicon.ico"> -->
+  <link rel="icon" type="image/png" href="./static/favicon32.png">
+<script defer src="/esn_wp5/js/app.js"></script><script defer src="/esn_wp5/js/darktheme.js"></script><link href="/esn_wp5/css/app.css" rel="stylesheet"><link href="/esn_wp5/css/darktheme.css" rel="stylesheet"></head>
+
+<body class="loginPage">
+
+  <style>
+    :root {
       --input-padding-x: 1rem;
       --input-padding-y: 0.75rem;
-    }</style><div class="container-fluid"><div class="row no-gutter"><div class="col-md-12 col-lg-6 bg-image"><div class="login d-flex align-items-center py-5"><div class="container"><div class="row"><div class="col-md-8 col-lg-7 mx-auto"><div class="flex"><h3 class="login-heading mb-4 mt-1"><i class="icon-main mr-1"></i> Вход</h3><div class="text-right soc mb-3"><a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a></div></div><form><div class="form-label-group"><input type="email" id="inputEmailLog" class="form-control form-control-sm" placeholder="Email" required autofocus> <label for="inputEmailLog">Email</label></div><div class="form-label-group"><input type="password" id="inputPasswordLog" class="form-control" placeholder="Пароль" required> <label for="inputPasswordLog">Пароль</label></div><div class="custom-control custom-checkbox mb-3"><input type="checkbox" class="custom-control-input" id="remember"> <label class="custom-control-label" for="remember">Запомнить меня</label></div><button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Войти</button><div class="text-center mb-3"><a class="small" href="#">Напомнить пароль</a></div></form></div></div></div></div></div><div class="col-md-12 col-lg-6"><div class="login d-flex align-items-center py-5"><div class="container"><div class="row"><div class="col-md-8 col-lg-7 mx-auto"><div class="flex"><h3 class="login-heading mb-4 mt-1">Регистрация</h3><div class="text-right soc mb-3"><a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a> <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a></div></div><form><div class="form-label-group"><input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus> <label for="inputEmail">Email</label></div><div class="form-label-group"><input type="" id="nik" class="form-control" placeholder="Ник" required autofocus> <label for="nik">Ник</label></div><div class="form-label-group"><input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required> <label for="inputPassword">Пароль</label></div><div class="form-label-group"><input type="password" id="inputPassword2" class="form-control" placeholder="Повторите пароль" required> <label for="inputPassword2">Повторите пароль</label></div><div rel="rules" class="mb-3"><div class="custom-control custom-checkbox" rel="rules"><input type="checkbox" name="rules" class="custom-control-input input" tabindex="8" id="s8" value="1" checked="checked"> <label class="custom-control-label" for="s8">Я согласен с <a href="/rules.pdf">правилами сайта</a></label></div><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" tabindex="9" id="s9" value="1" checked="checked"> <label class="custom-control-label" for="s9" style="font-size:11px; line-height: 10px; padding-top: 9px">Я, в соответствии со ст. 9 Федерального закона от 27.07.2006 N 152-ФЗ "О персональных данных" даю конкретное, предметное, информированное, сознательное и однозначное согласие на обработку своих персональных данных ООО "ДесайдерМедиа", с целью осуществления мной возможности использования всех ресурсов сайта https://escorenews.com/ru. Разрешаю оператору производить автоматизированную, а также осуществляемую без использования средств автоматизации обработку моих персональных данных, а именно: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирова-ние, удаление, уничтожение. ООО "ДесайдерМедиа" с моего настоящего согласия имеет право передавать мои персональные данные третьим лицам, для осуществления и достижения цели обработки персональных данных.</label></div><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input is-invalid" tabindex="10" id="s10" value="1"> <label class="custom-control-label" for="s10" style="font-size:11px; line-height: 10px; padding-top: 9px">Настоящим, подтверждаю, что ознакомлен и согласен с <a href="/rules.pdf">правилами сайта и политикой обработки персональных данных</a></label></div><p class="alert alert-warning" style="margin-top: 15px; padding: 10px; line-height: 14px;">Мы не можем вас зарегистрировать, если вы не согласны с нашими правилами</p></div><button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-4" type="submit">Зарегистрироваться</button><div class="text-center"><a class="small" href="https://escorenews.com/ru">Вернуться <i class="icon-main ml-1"></i></a></div></form></div></div></div></div></div></div></div><style>.project-menu{
+    }
+  </style>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-md-12 col-lg-6 bg-image">
+
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 mx-auto">
+                <div class="flex">
+                  <h3 class="login-heading mb-4 mt-1"><i class="icon-main mr-1"></i> Вход</h3>
+                  <div class="text-right soc mb-3">
+                      <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                    </div>
+                </div>
+                <form>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmailLog" class="form-control form-control-sm" placeholder="Email"
+                      required autofocus>
+                    <label for="inputEmailLog">Email</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPasswordLog" class="form-control" placeholder="Пароль" required>
+                    <label for="inputPasswordLog">Пароль</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="remember">
+                    <label class="custom-control-label" for="remember">Запомнить меня</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                    type="submit">Войти</button>
+                  <div class="text-center mb-3">
+                    <a class="small" href="#">Напомнить пароль</a>
+                  </div>
+                  <!-- <div class="text-center soc">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-12 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 mx-auto">
+                <div class="flex">
+                  <h3 class="login-heading mb-4 mt-1">Регистрация</h3>
+                  <div class="text-right soc mb-3">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <label for="inputEmail">Email</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="" id="nik" class="form-control" placeholder="Ник" required autofocus>
+                    <label for="nik">Ник</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+                    <label for="inputPassword">Пароль</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword2" class="form-control" placeholder="Повторите пароль"
+                      required>
+                    <label for="inputPassword2">Повторите пароль</label>
+                  </div>
+
+                  <div rel="rules" class="mb-3">
+                    <div class="custom-control custom-checkbox" rel="rules">
+                      <input type="checkbox" name="rules" class="custom-control-input input " tabindex="8" id="s8" value="1" checked>
+                      <label class="custom-control-label" for="s8">Я согласен с <a href="/rules.pdf">правилами сайта</a></label>
+                    </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input " tabindex="9" id="s9" value="1" checked>
+                        <label class="custom-control-label" for="s9" style="font-size:11px; line-height: 10px; padding-top: 9px">
+                          Я, в соответствии со ст. 9 Федерального закона от 27.07.2006 N 152-ФЗ "О персональных данных" даю конкретное, предметное, информированное, сознательное и однозначное согласие на обработку своих персональных данных ООО "ДесайдерМедиа", с целью осуществления мной возможности использования всех ресурсов сайта https://escorenews.com/ru.
+                          Разрешаю оператору производить автоматизированную, а также осуществляемую без использования средств автоматизации обработку моих персональных данных, а именно: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирова-ние, удаление, уничтожение.
+                          ООО "ДесайдерМедиа" с моего настоящего согласия имеет право передавать мои персональные данные третьим лицам, для осуществления и достижения цели обработки персональных данных.
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input is-invalid" tabindex="10" id="s10" value="1">
+                        <label class="custom-control-label" for="s10" style="font-size:11px; line-height: 10px; padding-top: 9px">
+                          Настоящим, подтверждаю, что ознакомлен и согласен с <a href="/rules.pdf">правилами сайта и политикой обработки персональных данных</a>
+                        </label>
+                    </div>
+                    <p class="alert alert-warning" style="margin-top: 15px; padding: 10px; line-height: 14px;">Мы не можем вас зарегистрировать, если вы не согласны с нашими правилами</p>
+                  </div>
+
+                  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-4"
+                    type="submit">Зарегистрироваться</button>
+                  
+                  <div class="text-center">
+                    <a class="small" href="https://escorenews.com/ru">Вернуться <i class="icon-main ml-1"></i></a>
+                  </div>
+                  <!-- <div class="text-center">
+                    <a class="small" href="#">А я уже зарегистрирован, хочу просто войти</a>
+                  </div> -->
+                  <!-- <div class="text-center soc">
+                    <a class="small btn btn-default" href="#"><i class="fab fa-vk"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="small btn btn-default" href="#"><i class="fab fa-steam-symbol"></i></a>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  <!--PAGES select only dev-->
+<style>
+  
+  .project-menu{
     position: fixed;
     z-index: 1000;
     bottom: 0;
@@ -18,4 +174,67 @@
   }
   .project-menu a{
     font-size: 10px;
-  }</style><div class="project-menu"><div class="btn-group" role="group" id="hpages"><div class="dropdown"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сделано</a><div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a href="/esn_wp5/esn_wp5/" class="dropdown-item">index</a> <a href="/esn_wp5/404.html" class="dropdown-item">404</a> <a href="/esn_wp5/matches.html" class="dropdown-item">Матчи</a> <a href="/esn_wp5/match_live.html" class="dropdown-item">Матч Live</a> <a href="/esn_wp5/match_past.html" class="dropdown-item">Матч прош</a> <a href="/esn_wp5/match_pubg.html" class="dropdown-item">Матч PUBG</a> <a href="/esn_wp5/match_pubg_past.html" class="dropdown-item">Матч PUBG прош</a><a href="/esn_wp5/match_cs_past.html" class="dropdown-item">Матч CS</a> <a href="/esn_wp5/tours.html" class="dropdown-item">Турниры</a> <a href="/esn_wp5/tour.html" class="dropdown-item">Турнир</a> <a href="/esn_wp5/tour_stadia.html" class="dropdown-item">tour_stadia</a> <a href="/esn_wp5/tour_group.html" class="dropdown-item">tour_group</a> <a href="/esn_wp5/tour_group_stadia.html" class="dropdown-item">tour_group_stadia</a> <a href="/esn_wp5/teams_list.html" class="dropdown-item">teams_list</a> <a href="/esn_wp5/teams_list2.html" class="dropdown-item">teams_list 2 col</a> <a href="/esn_wp5/team.html" class="dropdown-item">teamы</a> <a href="/esn_wp5/team2.html" class="dropdown-item">team2</a> <a href="/esn_wp5/players_list.html" class="dropdown-item">players_list</a> <a href="/esn_wp5/player.html" class="dropdown-item">player</a> <a href="/esn_wp5/player_pubg.html" class="dropdown-item">player_pubg</a> <a href="/esn_wp5/video.html" class="dropdown-item">video</a> <a href="/esn_wp5/highlight.html" class="dropdown-item">highlight</a> <a href="/esn_wp5/highlights.html" class="dropdown-item">highlights</a> <a href="/esn_wp5/search.html" class="dropdown-item">search</a> <a href="/esn_wp5/transfers.html" class="dropdown-item">transfers</a> <a href="/esn_wp5/match_HS.html" class="dropdown-item">match_HS</a> <a href="/esn_wp5/player_hs.html" class="dropdown-item">player_hs</a> <a href="/esn_wp5/news.html" class="dropdown-item">news</a> <a href="/esn_wp5/news_list.html" class="dropdown-item">news_list</a> <a href="/esn_wp5/news_list_word.html" class="dropdown-item">news_list_word</a></div></div><a href="/esn_wp5/elements.html" class="m2 btn btn-sm btn-info">ALL elements</a> <a href="/esn_wp5/icons.html" class="m2 btn btn-sm btn-info">icons</a></div></div></body></html>
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Сделано
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a href="/esn_wp5/esn_wp5/" class="dropdown-item">index</a>
+          <a href="/esn_wp5/404.html" class="dropdown-item">404</a>
+          <a href="/esn_wp5/matches.html" class="dropdown-item">Матчи</a>
+          <a href="/esn_wp5/match_live.html" class="dropdown-item">Матч Live</a>
+          <a href="/esn_wp5/match_past.html" class="dropdown-item">Матч прош</a>
+          <a href="/esn_wp5/match_pubg.html" class="dropdown-item">Матч PUBG</a>
+          <a href="/esn_wp5/match_pubg_past.html" class="dropdown-item">Матч PUBG прош</a>
+          <!-- <a href="/esn_wp5/page_text.html" class="dropdown-item">Текст</a>
+          <a href="/esn_wp5/user_account.html" class="dropdown-item">U acc</a>
+          <a href="/esn_wp5/user_log.html" class="dropdown-item">U log</a>
+          <a href="/esn_wp5/user_reg.html" class="dropdown-item">U reg</a>
+          a href="/esn_wp5/mail.html" class="dropdown-item">news_list_word</a>
+          <a href="/esn_wp5/reg.html" class="dropdown-item">news_list_word</a>
+          <a href="/esn_wp5/pwd.html" class="dropdown-item">news_list_word</a>
+          <a href="/esn_wp5/pwd_count.html" class="dropdown-item">news_list_word</a> -->
+          <a href="/esn_wp5/match_cs_past.html" class="dropdown-item">Матч CS</a>
+          <a href="/esn_wp5/tours.html" class="dropdown-item">Турниры</a>
+          <a href="/esn_wp5/tour.html" class="dropdown-item">Турнир</a>
+          <a href="/esn_wp5/tour_stadia.html" class="dropdown-item">tour_stadia</a>
+          <a href="/esn_wp5/tour_group.html" class="dropdown-item">tour_group</a>
+          <a href="/esn_wp5/tour_group_stadia.html" class="dropdown-item">tour_group_stadia</a>
+          <a href="/esn_wp5/teams_list.html" class="dropdown-item">teams_list</a>
+          <a href="/esn_wp5/teams_list2.html" class="dropdown-item">teams_list 2 col</a>
+          <a href="/esn_wp5/team.html" class="dropdown-item">teamы</a>
+          <a href="/esn_wp5/team2.html" class="dropdown-item">team2</a>
+          <a href="/esn_wp5/players_list.html" class="dropdown-item">players_list</a>
+          <a href="/esn_wp5/player.html" class="dropdown-item">player</a>
+          <a href="/esn_wp5/player_pubg.html" class="dropdown-item">player_pubg</a>
+          <a href="/esn_wp5/video.html" class="dropdown-item">video</a>
+          <a href="/esn_wp5/highlight.html" class="dropdown-item">highlight</a>
+          <a href="/esn_wp5/highlights.html" class="dropdown-item">highlights</a>
+          <a href="/esn_wp5/search.html" class="dropdown-item">search</a>
+          <a href="/esn_wp5/transfers.html" class="dropdown-item">transfers</a>
+          <a href="/esn_wp5/match_HS.html" class="dropdown-item">match_HS</a>
+          <a href="/esn_wp5/player_hs.html" class="dropdown-item">player_hs</a>
+      
+      
+          <a href="/esn_wp5/news.html" class="dropdown-item">news</a>
+          <a href="/esn_wp5/news_list.html" class="dropdown-item">news_list</a>
+          <a href="/esn_wp5/news_list_word.html" class="dropdown-item">news_list_word</a>
+          
+        </div>
+    </div>
+
+    <a href="/esn_wp5/elements.html" class="m2 btn btn-sm btn-info">ALL elements</a>
+    <a href="/esn_wp5/icons.html" class="m2 btn btn-sm btn-info">icons</a>
+  </div>
+</div>
+
+<!--.PAGES navi dev-->
+
+</body>
+
+</html>
