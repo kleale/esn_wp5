@@ -18,6 +18,8 @@
 {% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
 Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
 
+
+
 <!DOCTYPE html>
 <html>
 {% include "./tpl/head.html" %}
@@ -151,47 +153,7 @@
               </div>
             </section>
 
-            <div class="hblock">
-              <h2>Составы</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>
-            </div>
-
-            <div class="consist">
-              <b>Сила</b>
-              {% for i in 0..4 %}
-              <article>
-                <a href="#">
-                  <span>
-                    <b>{{ random(user) }}</b>
-                    Carry
-                  </span>
-                  <picture>
-                    <source type="image/webp" srcset="../img/ico/player30.png">
-                    <img src="./img/ico/player30.png" alt="ИГРОК">
-                  </picture>
-                </a>
-                <div class="pline">
-                  <u>53</u>
-                  <div class="progress">
-                    <div class="progress-bar tt" title="70%" role="progressbar" style="width: 70%" aria-valuenow="15"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-success tt" title="30%" role="progressbar" style="width: 30%"
-                      aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <u>53</u>
-                </div>
-                <a href="#">
-                  <picture>
-                    <source type="image/webp" srcset="../img/dummy/player30.png">
-                    <img src="./img/dummy/player30.png" alt="ИГРОК">
-                  </picture>
-                  <span>
-                    <b>{{ random(user) }}</b>
-                    Carry
-                  </span>
-                </a>
-              </article>
-              {% endfor %}
-            </div>
+            {% include "./tpl/matches/sostav.html" %}
 
             <div class="hblock">
               <h2>Статистика команд</h2><b></b><span><i title="Типо хелптекст" class="tip" data-toggle="tip"></i></span>

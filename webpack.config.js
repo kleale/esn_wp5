@@ -216,11 +216,11 @@ const config = {
             filename: './matches.html'
         }),
 
-        // new HtmlWebpackPlugin({
-        //     hash: false,
-        //     template: `${PATHS.src}/match_live.html`,
-        //     filename: './match_live.html'
-        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/match_live.html`,
+            filename: './match_live.html'
+        }),
 
         new HtmlWebpackPlugin({
             hash: false,
