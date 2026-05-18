@@ -8,7 +8,7 @@
 <div class="hblock">
   <h2>Составы команд</h2>
   <b></b>
-  <span><i title="Нажмите на игрока для просмотра детальной статистики" class="tip" data-toggle="tip">?</i></span>
+  <span><i title="Нажмите на игрока для просмотра детальной статистики" class="tip" data-toggle="tip"></i></span>
 </div>
 
 
@@ -72,6 +72,7 @@
           </div>
         </div>
         <div class="team-selected-player">
+          <img class="selected_player_team" src="./img/dummy/team.png" />
           <div class="selected_player selected_player_t1">
             <picture>
               <source type="image/webp" srcset="./img/dummy/p34507_full.webp">
@@ -146,6 +147,7 @@
       <!-- Правая команда (T2) -->
       <div class="team">
         <div class="team-selected-player">
+          <img class="selected_player_team" style="right: inherit; left:0;" src="./img/dummy/sl0.png" />
           <div class="selected_player selected_player_t2">
             <picture>
               <source type="image/webp" srcset="./img/dummy/p111285_full.webp">
@@ -224,8 +226,9 @@
   .team {
     /* flex: 1; */
     display: flex;
-    gap: 6px;
+    gap: 10px;
     align-items: center;
+    z-index: 1;
   }
 
   .team-players {
@@ -233,10 +236,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 2;
+    position: relative;
   }
 
   .team-selected-player {
     width: 150px;
+    position: relative;
+    z-index: 1;
   }
 
   .playersats {
@@ -272,6 +279,17 @@
     flex-direction: column;
     margin-bottom: 60px;
     height: 160px;
+    z-index: 2;
+  }
+
+  .selected_player_team {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    opacity: .1;
+    filter: blur(1px);
+    z-index: 1;
+    width: 200px;
   }
 
   .selected_player picture {
@@ -526,6 +544,10 @@
 
     .team-section {
       gap: 10px;
+    }
+
+    .team {
+      gap: 5px;
     }
 
     .stat_lines {
