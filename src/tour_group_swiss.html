@@ -128,18 +128,18 @@ Team X, по прошлым играм."] %}
           <b></b>
           <span>
             <span class="hlegend">
-              <s class="crows4">8 League Points</s>
+              <s class="crows5">8 League Points</s>
               <s class="crows1">5 League Points</s>
               <s class="crows2">3 League Points</s>
               <s class="crows3">2 League Points</s>
-              <s class="crows5">0 League Points</s>
+              <s class="crows4">0 League Points</s>
               <s class="crows6">0 League Points</s>
             </span>
           </span>
         </div>
 
         <div class="gdiv">
-          <div class="gtable">
+          <div class="gtable table-responsive">
             <table class="table-striped table table-hover">
               <thead>
                 <tr>
@@ -162,7 +162,7 @@ Team X, по прошлым играм."] %}
               <tbody>
                 {% for i in 1..8 %}
                 <tr
-                  class="{% if i == 1 or i == 2 %} crows6{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  class="{% if i == 1 or i == 2 %} crows5{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
                   <td>{{i}}</td>
                   <td>
                     <a href="#" class="teamNameIco">
@@ -227,7 +227,7 @@ Team X, по прошлым играм."] %}
           </div>
         </div>
 
-        <div class="gdiv table-responsive">
+        <!-- <div class="gdiv table-responsive">
           <div class="gtable">
             <table class="table-striped table table-hover">
               <thead>
@@ -255,7 +255,7 @@ Team X, по прошлым играм."] %}
                   <td>{{i}}</td>
                   <td>
                     <a href="#" class="teamNameIco firstTeam">
-                      <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                       <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> 
                       <picture>
                         {% if i == 1 %}
 
@@ -277,14 +277,14 @@ Team X, по прошлым играм."] %}
                       <span>
                         {% if i == 1 %} Movistar Riders {% else %}
                         {{random(team)}} {% endif %}
-                        <!-- .<u>{{ random(team) }}</u> -->
+                         .<u>{{ random(team) }}</u> 
                         <sup>{{ random(team) }}</sup>
                       </span>
                     </a>
                   </td>
-                  <!-- <td class="tpo">
+                    <td class="tpo">
                       <span class="opener fas fa-chevron-right"></span>
-                    </td> -->
+                    </td>  
                   <td class="tpo">5</td>
                   <td class="tpo">3</td>
                   <td class="tpo">1</td>
@@ -398,7 +398,7 @@ Team X, по прошлым играм."] %}
           .matches-full .article .teams {
             font-size: 0.7rem;
           }
-        </style>
+        </style> -->
 
         <!-- Ivan Samsonov, [24.03.2025 11:19]
 Если убрать счёт и оставить только иконки, то предлагаю победителя видеть полосой под лого
@@ -448,6 +448,18 @@ Ivan Samsonov, [24.03.2025 11:19]
           .stage-block .tableWithLines .w4 {
             width: 3rem;
           }
+
+          /* //NEW */
+          tr:nth-last-child(1 of .crows5),
+          tr:nth-last-child(1 of .crows1),
+          tr:nth-last-child(1 of .crows2),
+          tr:nth-last-child(1 of .crows3),
+          tr:nth-last-child(1 of .crows4){
+            border-bottom: 2px solid #ccc;
+          }
+          .gtable .table tbody tr:nth-of-type(4n-3) {
+            background-color: #fff;
+          }
         </style>
         <div class="gdiv table-responsive tableWithLines swiss">
           <div class="gtable">
@@ -473,7 +485,7 @@ Ivan Samsonov, [24.03.2025 11:19]
               <tbody>
                 {% for i in 1..8 %}
                 <tr
-                  class="{% if i == 1 or i == 2 %} crows4{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  class="{% if i == 1 or i == 2 %} crows5{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
                   <td>{{i}}</td>
                   <td>
                     <a href="#" class="teamNameIco firstTeam">
