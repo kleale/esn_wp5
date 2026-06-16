@@ -455,7 +455,7 @@ Ivan Samsonov, [24.03.2025 11:19]
           .lines tr:nth-last-child(1 of .crows2),
           .lines tr:nth-last-child(1 of .crows3),
           .lines tr:nth-last-child(1 of .crows4){
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #c5d4da;
           }
           .gtable .table tbody tr:nth-of-type(4n-3) {
             background-color: #fff;
@@ -464,7 +464,7 @@ Ivan Samsonov, [24.03.2025 11:19]
           /* v2 */
           .bgg .gtable .table tbody tr.crows5,
           .bgg .gtable .table tbody tr.crows2,
-          .bgg .gtable .table tbody tr.crows4  {
+          .bgg .gtable .table tbody tr.crows4 {
             background-color: #f7f7f7;
           }
         </style>
@@ -491,9 +491,9 @@ Ivan Samsonov, [24.03.2025 11:19]
                 </tr>
               </thead>
               <tbody>
-                {% for i in 1..8 %}
+                {% for i in 1..18 %}
                 <tr
-                  class="{% if i == 1 or i == 2 %} crows5{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}{% if i >= 7 %} crows3{% endif %}">
+                  class="{% if i == 1 or i == 2 or i == 3 %} crows5{% endif %}{% if i == 4 or i == 5 or i == 5 or i == 6 %} crows1{% endif %}{% if i == 7 or i == 8 %} crows2{% endif %}{% if i >= 9 %} crows3{% endif %}">
                   <td>{{i}}</td>
                   <td>
                     <a href="#" class="teamNameIco firstTeam">
