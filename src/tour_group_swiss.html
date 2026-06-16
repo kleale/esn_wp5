@@ -140,7 +140,7 @@ Team X, по прошлым играм."] %}
 
         <div class="gdiv">
           <div class="gtable table-responsive">
-            <table class="table-striped table table-hover">
+            <table class="table-striped table table-hover lines">
               <thead>
                 <tr>
                   <th colspan="2">Table</th>
@@ -450,18 +450,26 @@ Ivan Samsonov, [24.03.2025 11:19]
           }
 
           /* //NEW */
-          tr:nth-last-child(1 of .crows5),
-          tr:nth-last-child(1 of .crows1),
-          tr:nth-last-child(1 of .crows2),
-          tr:nth-last-child(1 of .crows3),
-          tr:nth-last-child(1 of .crows4){
+          .lines tr:nth-last-child(1 of .crows5),
+          .lines tr:nth-last-child(1 of .crows1),
+          .lines tr:nth-last-child(1 of .crows2),
+          .lines tr:nth-last-child(1 of .crows3),
+          .lines tr:nth-last-child(1 of .crows4){
             border-bottom: 2px solid #ccc;
           }
           .gtable .table tbody tr:nth-of-type(4n-3) {
             background-color: #fff;
           }
+
+          /* v2 */
+          .bgg .gtable .table tbody tr.crows5,
+          .bgg .gtable .table tbody tr.crows2,
+          .bgg .gtable .table tbody tr.crows4  {
+            background-color: #f7f7f7;
+          }
         </style>
-        <div class="gdiv table-responsive tableWithLines swiss">
+
+        <div class="gdiv table-responsive tableWithLines swiss bgg">
           <div class="gtable">
             <table class="table-striped table table-hover">
               <thead>
