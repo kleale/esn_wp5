@@ -479,13 +479,23 @@ Ivan Samsonov, [24.03.2025 11:19]
             background: linear-gradient(to right, #f2c94c2B 0%, #fff 20%);
           }
           .grad .gtable .table tbody tr.crows3 {
-            background: linear-gradient(to right, #EB57572B 0%, #fff 20%);    
+            background: linear-gradient(to right, #EB575714 0%, #fff 20%);    
           }
           .grad .gtable .table tbody tr.crows4 {
-             background: linear-gradient(to right, #d390002B 0%, #fff 20%);
+             background: linear-gradient(to right, #d3900014 0%, #fff 20%);
           }
           .grad .gtable .table tbody tr.crows6 {
-             background: linear-gradient(to right, #a35ace2B 0%, #fff 20%);
+             background: linear-gradient(to right, #a35ace14 0%, #fff 20%);
+          }
+
+          .smalllines2 .gtable .table tbody tr td:first-child{
+            border-right-width: 2px
+          }
+          .smalllines1 .gtable .table tbody tr td:first-child{
+            border-right-width: 1px
+          }
+          .smalllines0 .gtable .table tbody tr td:first-child{
+            border-right-width: 0
           }
         </style>
 
@@ -586,7 +596,7 @@ Ivan Samsonov, [24.03.2025 11:19]
 
         <!-- v3 -->
          
-        <div class="gdiv swiss grad">
+        <div class="gdiv swiss grad smalllines2">
           <div class="gtable table-responsive">
             <table class="table-striped table table-hover lines">
               <thead>
@@ -675,8 +685,96 @@ Ivan Samsonov, [24.03.2025 11:19]
           </div>
         </div>
 
+        <div class="gdiv swiss grad smalllines1">
+          <div class="gtable table-responsive">
+            <table class="table-striped table table-hover lines">
+              <thead>
+                <tr>
+                  <th colspan="2">Table</th>
+                  <th class="w2">И</th>
+                  <th class="w2">В</th>
+                  <th class="w2">П</th>
+                  <th class="tt" title="Разница по раундам (победы минус поражения)">
+                    Раз
+                  </th>
+                  <th class="text-center w4">Раунд 1</th>
+                  <th class="text-center w4">Раунд 2</th>
+                  <th class="text-center w4">Раунд 3</th>
+                  <th class="text-center w4">Раунд 4</th>
+                  <th class="text-center w4">Раунд 5</th>
+                  <th class="text-center w4">Раунд 6</th>
+                  <th class="text-center w4">Раунд 7</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in 1..18 %}
+                <tr
+                  class="{% if i == 1 or i == 2 %} crows5{% endif %}{% if i == 3 or i == 4 %} crows1{% endif %}{% if i == 5 or i == 6 %} crows2{% endif %}   {% if i >= 7 %} crows3{% endif %}">
+                  <td>{{i}}</td>
+                  <td>
+                    <a href="#" class="teamNameIco">
+                      <!-- <img class="flag" src="./img/dummy/{{random(flag)}}.png" alt=""> -->
+                      <picture>
+                        {% if i == 1 %}
 
-        <div class="gdiv swiss grad">
+                        <source srcset="
+                              https://escorenews.com/media/logo/_30/t49.webp
+                            " type="image/webp" />
+                        <source srcset="
+                              https://escorenews.com//media/logo/_30/t49.png
+                            " />
+                        <img src="/media/logo/_30/t49.png" loading="lazy" alt="EG" />
+
+                        {% else %}
+                        <source type="image/webp" srcset="./img/dummy/{{ random(teamlogo) }}.png" />
+                        <img src="./img/dummy/{{ random(teamlogo) }}.png" alt="" />
+
+                        {% endif %}
+                      </picture>
+
+                      <span>
+                        {% if i == 1 %} Movistar Riders {% else %}
+                        {{random(team)}} {% endif %}
+                        <!-- .<u>{{ random(team) }}</u> -->
+                        <sup>{{ random(team) }}</sup>
+                      </span>
+                    </a>
+                  </td>
+                  <!-- <td class="tpo">
+                      <span class="opener fas fa-chevron-right"></span>
+                    </td> -->
+                  <td class="tpo w2">5</td>
+                  <td class="tpo w2">3</td>
+                  <td class="tpo w2">1</td>
+                  <td class="tpo"><span class="green">+12</span></td>
+                  {% for i in 1..7 %}
+                  <td class="text-md-center w4">
+                    <a href="/ru/lol/asia-masters-2025/group-stage-1/t1-esports-academy-vs-lng-academy-596179"
+                      class="teamNameIco">
+                      <span>
+                        <picture>
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x"
+                            type="image/webp" />
+                          <source
+                            srcset="./img/dummy/{{ random(teamlogo) }}.png, ./img/dummy/{{ random(teamlogo) }}.png 2x" />
+                          <img src="./img/dummy/{{ random(teamlogo) }}.png" loading="lazy"
+                            style="max-width: 20px; max-height: 20px" alt="36327" />
+                        </picture>
+                      </span>
+                      <span>{{ random(['0','1','2','FF']) }}&nbsp;:&nbsp;{{
+                        random(['0','1','2','W']) }}</span>
+                    </a>
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="gdiv swiss grad smalllines0">
           <div class="gtable table-responsive">
             <table class="table-striped table table-hover">
               <thead>
