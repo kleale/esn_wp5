@@ -1,22 +1,30 @@
 {% set title = "Турнир" %}
 {% set user = ["Progamer Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
 {% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
-{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG", "Virtus.Pro"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
 {% set teamlogo = ["team", "team1", "team2", "team3", "team4", "team5"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
 {% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
 {% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
 {% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
 {% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
-из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без 
-единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня возникает вопрос: почкму я не 
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почкму я не
 вижу результаты?»"] %}
 {% set date = ["1 января", "сегодня"] %}
 {% set flag = ["flag1", "flag2", "flag3"] %}
 {% set hero = ["hero1", "hero2", "hero3", "hero4"] %}
 {% set position = ["Carry", "Mid", "Jungle", "Top", "Support"] %}
-{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости. Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы друида...", "Миллиард процентов 322 !
-Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +37,7 @@
     <aside class="sidebar">
       <div class="scroller">
 
-          {% include "./tpl/gamenav.html" %}
+        {% include "./tpl/gamenav.html" %}
 
         <div class="hblock">
           <h4>Новости DLS1</h4><b></b><span>20 декабря</span>
@@ -65,9 +73,9 @@
       <!--d-flex-->
       <div class="header">
         <picture>
-            <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
-            <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
-          </picture>
+          <source type="image/webp" srcset="../img/dummy/Dreamleague_logo_small.webp">
+          <img src="../img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
+        </picture>
         <div class="hh">
           <div class="hblock">
             <h1>DreamLeague Seson 11</h1>
@@ -123,11 +131,257 @@
           <b></b>
           <span>
             <!-- <i title="Типо хелптекст" class="tip" data-toggle="tip"></i> -->
+            <button class="btn btn-outline-secondary btn-xs openModalBtn">Развернуть</button>
+
+            <style>
+              .window-block{
+                position: relative;
+              }
+              .expand{
+                position: absolute;
+                right: 0;
+                display: block;
+                top: 0;
+                width: 30px;
+                cursor: pointer;
+                z-index: 100;
+                transition: all 0.3s;
+              }
+              .expand:hover {
+                transform: rotate(90deg);
+              }
+              /* Стили для модального окна */
+              .modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 9998;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .modal-overlay.active {
+                display: flex;
+              }
+
+              .modal-content {
+                background: #edeef2 url(/img/tbg.jpg) 0 100% repeat-x;
+                border-radius: 6px;
+                padding: 20px;
+                position: relative;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+                /* КЛЮЧЕВОЕ: размеры по контенту */
+                width: auto;
+                max-width: calc(100vw - 40px);
+                /* Не больше экрана с отступами */
+                max-height: calc(100vh - 40px);
+                /* Не больше экрана с отступами */
+                overflow-y: auto;
+                /* Скролл, если контент не помещается */
+
+                /* Для точного подгоня под контент */
+                display: inline-block;
+              }
+
+              .modal-content .content-block {
+                margin: 0;
+                max-width: 100%;
+              }
+
+              .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background: #f14800;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                font-size: 24px;
+                cursor: pointer;
+                transition: all 0.3s;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .modal-close:hover {
+                background: #cc0000;
+                transform: rotate(90deg);
+              }
+
+              .modal-content .open-btn {
+                display: none;
+              }
+
+              /* Адаптация для маленьких экранов */
+              @media (max-width: 600px) {
+                .modal-content {
+                  padding: 15px;
+                  max-width: calc(100vw - 20px);
+                  max-height: calc(100vh - 20px);
+                }
+              }
+            </style>
+
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+            <script>
+              // Создаём jQuery плагин
+              (function ($) {
+                $.fn.modalWindow = function (options) {
+                  const settings = $.extend({
+                    closeOnOverlay: true,
+                    closeOnEsc: true,
+                    animationSpeed: 300,
+                    overlayClass: 'modal-overlay',
+                    contentClass: 'modal-content',
+                    closeClass: 'modal-close'
+                  }, options);
+
+                  let $modalOverlay = null;
+                  let isOpen = false;
+
+                  // Функция открытия
+                  function openModal($sourceElement) {
+                    if (isOpen) {
+                      closeModal();
+                      return;
+                    }
+
+                    // Создаём оверлей
+                    $modalOverlay = $('<div>', {
+                      class: settings.overlayClass,
+                      css: { display: 'flex' }
+                    }).hide().appendTo('body');
+
+                    // Контейнер с контентом
+                    const $modalContent = $('<div>', {
+                      class: settings.contentClass
+                    });
+
+                    // Кнопка закрытия
+                    const $closeBtn = $('<button>', {
+                      class: settings.closeClass,
+                      html: '✕'
+                    }).on('click', function (e) {
+                      e.stopPropagation();
+                      closeModal();
+                    });
+
+                    // Клонируем контент
+                    const $clonedContent = $sourceElement.clone(true, true);
+                    $clonedContent.find('.open-btn, [data-modal-open]').remove();
+
+                    // Собираем окно
+                    $modalContent.append($closeBtn);
+                    $modalContent.append($clonedContent);
+                    $modalOverlay.append($modalContent);
+
+                    // Показываем с анимацией
+                    $modalOverlay.fadeIn(settings.animationSpeed);
+
+                    // Блокируем скролл
+                    $('body').css('overflow', 'hidden');
+
+                    // Закрытие по клику на фон
+                    if (settings.closeOnOverlay) {
+                      $modalOverlay.on('click', function (e) {
+                        if (e.target === this) {
+                          closeModal();
+                        }
+                      });
+                    }
+
+                    // Закрытие по ESC
+                    if (settings.closeOnEsc) {
+                      $(document).on('keydown.modal', function (e) {
+                        if (e.key === 'Escape') {
+                          closeModal();
+                        }
+                      });
+                    }
+
+                    isOpen = true;
+                  }
+
+                  // Функция закрытия
+                  function closeModal() {
+                    if (!$modalOverlay) return;
+
+                    $modalOverlay.fadeOut(settings.animationSpeed, function () {
+                      $modalOverlay.remove();
+                      $('body').css('overflow', '');
+                      $(document).off('keydown.modal');
+                      isOpen = false;
+                      $modalOverlay = null;
+                    });
+                  }
+
+                  // Привязываем к событию клика
+                  return this.each(function () {
+                    const $sourceElement = $(this);
+
+                    $(this).on('click', function (e) {
+                      e.preventDefault();
+                      // Ищем целевой элемент для клонирования
+                      const target = $sourceElement.data('modal-target') || '#contentBlock';
+                      const $targetElement = $(target);
+
+                      if ($targetElement.length) {
+                        openModal($targetElement);
+                      } else {
+                        console.error('Элемент для модального окна не найден:', target);
+                      }
+                    });
+                  });
+                };
+              })(jQuery);
+
+              // Использование плагина:
+              $(document).ready(function () {
+                // Инициализация
+                $('.openModalBtn').modalWindow({
+                  closeOnOverlay: true,
+                  closeOnEsc: true,
+                  animationSpeed: 300
+                });
+
+                // Или можно открывать вручную
+                // $('#openModalBtn').on('click', function() {
+                //     $('#contentBlock').modalWindow('open');
+                // });
+              });
+            </script>
+
           </span>
         </div>
 
-        {% include "./tpl/playoff.html" %}
+        <div style="position: relative;">
+            <a href='#' class="expand openModalBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="#607d8b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4l4 0l0 4" />
+                <path d="M14 10l6 -6" />
+                <path d="M8 20l-4 0l0 -4" />
+                <path d="M4 20l6 -6" />
+                <path d="M16 20l4 0l0 -4" />
+                <path d="M14 14l6 6" />
+                <path d="M8 4l-4 0l0 4" />
+                <path d="M4 4l6 6" />
+              </svg>
+            </a>
 
+          <div class="window-block" id="contentBlock">
+            {% include "./tpl/playoff.html" %}
+          </div>
+        </div>
       </div>
 
       <div class="container">
@@ -186,7 +440,8 @@
                 <tr>
                   <th>место</th>
                   <td>Стокгольм, Швеция <img class="flag" src="../img/dummy/{{random(flag)}}.png" alt="">
-                    <br> стадион «Annexet»</td>
+                    <br> стадион «Annexet»
+                  </td>
                 </tr>
                 <tr>
                   <th>серия</th>
@@ -230,11 +485,11 @@
               <a href="#" class="card-team">
                 <span>{{random(team)}}</span>
                 <figure>
-                    <picture>
-                      <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
-                      <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
-                    </picture>
-                  </figure>
+                  <picture>
+                    <source type="image/webp" srcset="../img/dummy/{{random(teamlogo)}}.png">
+                    <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                  </picture>
+                </figure>
                 <em>Southeast Asia #1</em>
               </a>
               {% endfor %}
