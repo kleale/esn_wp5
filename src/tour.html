@@ -228,10 +228,11 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                 });
                 </script>
                 <style>
-                  .card-team .teamcard{display: unset;}
+                  .card-team .teamcard{display: none; transition: opacity 2s linear;}
                   .aslink{cursor:pointer; color: #4e6c7f;}
                   .aslink:hover{text-decoration:none; color: #4e6c7f;}
-                  .showPlayers .card-team .teamcard {display: block; opacity: .85; top: 17px; z-index: 2; bottom: 0; border: 0; padding-top: 3px;}
+                  .showPlayers .card-team .teamcard {display: block; opacity: .85; top: 22px; z-index: 2; bottom: 0; padding-top: 3px;}
+                  .card-team:hover .teamcard, .card-team:active .teamcard {box-shadow: 0}
                   .card-team .teamcard table img{max-width: 12px; margin: 0 0.2rem 3px 0;}
                   .cardsteam { 
                     display: grid;
