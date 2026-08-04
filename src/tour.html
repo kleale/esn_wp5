@@ -71,10 +71,34 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
 
     <main class="tour-page">
 
+
+      <style>
+        @media (max-width: 768px) {
+          .header {
+            margin: 0;
+            padding: 0.5rem 0;
+          }
+          .header picture {
+            width: 50px;
+          }
+
+          .header picture > * {
+            height: auto
+          }
+          .tour-page .header .hblock {
+              margin: 0;
+          }
+          .card-team-lg .tourlogo img, .card-player-lg .tourlogo img {
+            max-width: 100%;
+            max-height: 10rem;
+          }
+        }
+      </style>
+
       <!--d-flex-->
       <div class="header">
         <picture>
-          <source type="image/webp" srcset="./img/dummy/Dreamleague_logo_small.webp">
+          <source type="image/webp" srcset="https://escorenews.com/media/event/e11031.webp">
           <img src="./img/dummy/Dreamleague_logo_small.png" alt="STREAM LOGO">
         </picture>
         <div class="hh">
@@ -83,8 +107,8 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
           </div>
           <span>19 марта - 3 апреля &nbsp;•&nbsp; <i class="fa fa-trophy"></i> 120 000$</span>
         </div>
-        <div class="hr">
-          <!---->
+        <!-- <div class="hr">
+         
           <noindex>
             <div style="display: flex; justify-content: center; margin-top: 10px;">
               <a rel="nofollow" href="/ru/go?to=okko" class="abr-infbnr579" target="_blank">
@@ -117,7 +141,7 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
               }
             }
           </style>
-          <!----->
+          --->
           <!-- <div class="mr">
             <span id="rates" class="m-rate">
               <span class="gti-star" rel="5" onclick="rate(5)"></span>
@@ -132,8 +156,8 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
             <a href="#" class="fab fa-vk"></a>
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
-          </div> -->
-        </div>
+          </div> 
+        </div> -->
       </div>
 
       {% include "./tpl/stages.html" %}
@@ -234,16 +258,31 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                   .showPlayers .card-team .teamcard {display: block; opacity: .85; top: 22px; z-index: 2; bottom: 0; padding-top: 3px;}
                   .showPlayers .card-team:hover .teamcard, .card-team:active .teamcard {box-shadow: 0}
                   .card-team .teamcard table img{max-width: 12px; margin: 0 0.2rem 3px 0;}
-                  .cardsteam { 
-                    display: grid;
-                    grid-template-columns: auto auto auto auto auto;
-                  }
                   .card-team {
                     text-align: center;
                     width: 6rem;
                     height: 7.5rem;
                   }
+                  .cardsteam { 
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto;
+                  }
                   .card-team .teamcard table tr{border-top: 0}
+                  @media (max-width: 600px) {
+                    .cardsteam{
+                      grid-template-columns: auto auto auto auto
+                    }
+                  }
+                  @media (max-width: 520px) {
+                    .cardsteam{
+                      grid-template-columns: auto auto auto
+                    }
+                  }
+                  @media (max-width: 4240px) {
+                    .cardsteam{
+                      grid-template-columns: auto auto
+                    }
+                  }
                 </style>
               </div>
 
@@ -358,6 +397,79 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
             <!-- rightcol -->
 
             <div class="hblock">
+              <h3>Призовые 951</h3><b></b>
+            </div>
+            <section class="tours-winners">
+              <table class="table table-hover table-striped table-sm" style="table-layout: auto !important;">
+                <tbody>
+                  
+                  {% for i in 1..21 %}
+                    {% if i == 5 or i == 9 or i == 13 or i == 17 or i == 21 %}
+                    <tr style="border-top: 1px #E0E0E0 solid;">
+                    {% else %}
+                    <tr>
+                    {% endif %}
+
+                      {% if i == 5 %}
+                        <td class="tplc pl{{i}}" rowspan="4"> 
+                          5-8
+                        </td>
+                      {% elseif i == 6 or i == 7 or i == 8 %}
+
+                      {% elseif i == 9 %}
+                        <td class="tplc pl{{i}}" rowspan="4"> 
+                            9-12
+                        </td>
+                      {% elseif i == 10 or i == 11 or i == 12 %}
+                      {% elseif i == 13 %}
+                        <td class="tplc pl{{i}}" rowspan="4"> 
+                            13-16
+                        </td>
+                      {% elseif i == 14 or i == 15 or i == 16 %}
+                      {% elseif i == 17 %}
+                        <td class="tplc pl{{i}}" rowspan="4"> 
+                            17-20
+                        </td>
+                      {% elseif i == 18 or i == 19 or i == 20 %}
+                      {% else %}
+                        <td class="tplc pl{{i}}" style="width: 3rem;">
+                          {{i}}
+                        </td>
+                      {% endif %}
+
+                      <td>
+                        <a href="#" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span>{{random(team)}}</span>
+
+                        </a>
+                      </td>
+                      <td class="text-right">
+                        {% if i < 5 %} 
+                        ${{22-i}}5,000
+                        {% elseif i == 5 or i == 6 or i == 7 or i == 8 %}$120,000
+                        {% elseif i == 9 or i == 10 or i == 11 or i == 12 %}$70,000
+                        {% elseif i == 13 or i == 14 or i == 15 or i == 16 %}$40,000
+                        {% elseif i == 17 or i == 18 or i == 19 or i == 20 %}$20,000
+                        {% else %}
+                          ${{22-i}},000
+                        {% endif %}
+                      </td>
+                    
+                    </tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+            </section>
+
+            <hr>
+
+
+            <div class="hblock">
 
               <h3>Призовые NEW issue 933</h3><b></b>
             </div>
@@ -438,7 +550,7 @@ font-size: 11px;
               </table>
             </section>
 
-            <br><br><br><br>
+            <hr>
 
             <div class="hblock">
               <h3>Стримы DreamLeague Seson 11</h3><b></b>
