@@ -626,8 +626,8 @@ font-size: 11px;
             <section class="tours-winners">
               <table class="table table-hover table-striped table-sm">
                 <tbody>
+                  {% for i in 1..5 %}
                   <tr>
-                    {% for i in 1..5 %}
                     <td class="tplc pl{{i}}">{{i}}</td>
                     <td>
                       <!--<a href="//team/vg"></a>-->
@@ -659,14 +659,12 @@ font-size: 11px;
               </table>
             </section>
 
-
-
-
             <section class="tours-winners">
               <table class="table table-hover table-striped table-sm">
                 <tbody>
-                  <tr>
-                    {% for i in 1..5 %}
+                  
+                  {% for i in 1..5 %}
+                    <tr>
                     <td class="tplc pl{{i}}">{{i}}</td>
                     <td>
                       <!--<a href="//team/vg"></a>-->
