@@ -397,7 +397,93 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
             <!-- rightcol -->
 
             <div class="hblock">
-              <h3>Призовые 951</h3><b></b>
+              <h3>Призовые issue 951</h3><b></b>
+            </div>
+
+            <style>
+              .table td.td-gray{
+                /* background-color: #edeef2; */
+                background: linear-gradient(180deg, rgb(255, 255, 255) 0%, #edeef2 100%);
+                border-bottom: 1px solid #e0e0e0 ;
+              }
+            </style>
+
+            <section class="tours-winners">
+              <table class="table table-hover table-striped table-sm" style="table-layout: auto !important;">
+                <tbody>
+                  {% for i in 1..20 %}
+                    {% if i == 5 or i == 9 or i == 13 or i == 17 or i == 21 %}
+                    <tr>
+                      {% if i == 5 %}
+                        <td class="tplc pl{{i}} td-gray" colspan="3"> 
+                          5-8
+                        </td>
+                      {% elseif i == 6 or i == 7 or i == 8 %}
+
+                      {% elseif i == 9 %}
+                        <td class="tplc pl{{i}} td-gray" colspan="3"> 
+                            9-12
+                        </td>
+                      {% elseif i == 10 or i == 11 or i == 12 %}
+                      {% elseif i == 13 %}
+                        <td class="tplc pl{{i}} td-gray" colspan="3"> 
+                            13-16
+                        </td>
+                      {% elseif i == 14 or i == 15 or i == 16 %}
+                      {% elseif i == 17 %}
+                        <td class="tplc pl{{i}} td-gray" colspan="3"> 
+                            17-20
+                        </td>
+                      {% elseif i == 18 or i == 19 or i == 20 %}
+                      {% else %}
+                        <td class="tplc pl{{i}} td-gray" style="width: 3rem;">
+                          {{i}}
+                        </td>
+                      {% endif %}
+                    </tr>
+                    {% elseif i == 1 or i == 2 or i == 3 or i == 4 %}
+                      <td class="tplc pl{{i}} td-gray" colspan="3">
+                        {{i}}
+                      </td>
+                    {% endif %}
+                    <tr>
+                      <td>
+                        <a href="#" class="teamNameIco">
+                          <picture>
+                            <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
+                            <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
+                          </picture>
+                          <span>{{random(team)}}</span>
+                        </a>
+                      </td>
+                      <td>
+                        <a href="#" class="tour tour_sm">
+                          <!-- <picture>
+                            <source type="image/webp" srcset="./img/dummy/tour3.png">
+                            <img src="./img/dummy/tour4.png" alt="">
+                          </picture> -->
+                          Overwatch Contenders 2019
+                        </a>
+                      </td>
+                      <td class="text-right">
+                        {% if i < 5 %} 
+                        ${{22-i}}5,000
+                        {% elseif i == 5 or i == 6 or i == 7 or i == 8 %}$120,000
+                        {% elseif i == 9 or i == 10 or i == 11 or i == 12 %}$70,000
+                        {% elseif i == 13 or i == 14 or i == 15 or i == 16 %}$40,000
+                        {% elseif i == 17 or i == 18 or i == 19 or i == 20 %}$20,000
+                        {% else %}
+                          ${{22-i}},000
+                        {% endif %}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </section>
+
+            <div class="hblock">
+              <h3>Призовые issue 951</h3><b></b>
             </div>
             <section class="tours-winners">
               <table class="table table-hover table-striped table-sm" style="table-layout: auto !important;">
@@ -444,9 +530,22 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                             <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
                           </picture>
                           <span>{{random(team)}}</span>
-
                         </a>
                       </td>
+
+
+                      <td class="frow">
+                      <div class="tour_invite tour_sm">
+                        <a href="#" class="tour">
+                          <!-- <picture>
+                            <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png">
+                            <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
+                          </picture> -->
+                          {{random(tour)}}
+                        </a>
+                      </div>
+                    </td>
+
                       <td class="text-right">
                         {% if i < 5 %} 
                         ${{22-i}}5,000
@@ -465,9 +564,6 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                 </tbody>
               </table>
             </section>
-
-            <hr>
-
 
             <div class="hblock">
 
@@ -494,7 +590,7 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                     <td class="frow">
                       <style>
                         .tour_sm{
-font-size: 11px;
+                          font-size: 11px;
                           line-height: 11px;
                         }
                         .tour_invite {
@@ -502,14 +598,9 @@ font-size: 11px;
                           flex-direction: column;
                           gap: 2px;
                         }
-
                         .tour_invite a {
                           display: block;
                           padding: 2px;
-                        }
-
-                        .tour_invite a:last-child {
-                          border-top: 1px dotted #c5c5c5;
                         }
                       </style>
 
