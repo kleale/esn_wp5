@@ -47,11 +47,11 @@
                 <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png">
                 <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
             </picture>
-            <b class="active" style="display: flex; gap: 10px;">
+            <b class="active">
                 {{random(tour)}}
                 {% if i == 0 %}
                 <span class="tt" title="LAN - Shanghai Oriental Sports Center"
-                    style="background: #a03763;display: block;width: 24px;text-align: center;padding: 1px 2px;color: #fff;text-transform: uppercase;transform: skewX(-6deg);font-size: 10px;">lan</span>
+                    style="background: #a03763;display: inline-block;padding: 1px 2px;color: #fff;text-transform: uppercase;transform: skewX(-6deg);font-size: 10px;">lan</span>
                 {% endif %}
             </b>
             <s style="flex-basis: auto; flex-grow: 1;display: flex;">
@@ -64,8 +64,20 @@
                         color: #777;
                         margin-left: 5px;
                     }
+                    @media (max-width: 768px) {
+                        .tours .frow b{
+                            white-space: normal;
+                        }
+                        .stadiumFlag {
+                            display: none;
+                        }
+                        .stadium{
+                            font-size: 9px;
+                            line-height: 10px;
+                        }
+                    }
                 </style>
-                <img src="./img/dummy/{{random(flag)}}.png">
+                <img class="stadiumFlag" src="./img/dummy/{{random(flag)}}.png">
                 <div class="stadium"><b>{{random(city)}}</b><span>{{random(arena)}}<span></div>
                 {% endif %}
             </s>
