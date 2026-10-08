@@ -13,7 +13,8 @@
 <div class="hblock">
     <h1>Турниры</h1><b></b>
 </div>
-{% set city = ["Сан-Франциско", "Москва", "Пекин", "Владивосток", "село Кукуево"] %}
+{% set city = ["Shanghai", "New York", "Kuala-Lumpur", "LasVegas"] %}
+{% set arena = ["Super Arena", "OilBest stadium", "Arena Star", "PixelCLub place", "Arsenal Arena"] %}
 <section class="tours">
     <div class="flex-table table-lg">
         <div class="hblock" style="margin-top:0">
@@ -40,84 +41,42 @@
         </div>
 
         {% for i in 0..3 %}
-        <div class="frow m-result type1">
-            <span class="tplc pl3">3</span>
-            <b class="active"><a href="#"></a>Adrenaline Cyber League 2019</a></b>
-            <s style="width: 8rem;">
-                <div class="matches">
-                    <a class="article" href="/ru/dota-2/adrenaline-cyber-league-2019/finals/navi-vs-virtus-pro-213665">
-                        <div class="teams">
-                            <style>
-                                .stadium {
-                                    display: flex;
-                                    flex-direction: column;
-                                    font-size: 10px;
-                                    color: #777;
-                                    margin-left: 5px;
-                                }
-                            </style>
-                            {% if i == 0 %}
-                            <span class="tt" title="LAN - Shanghai Oriental Sports Center"
-                                style="background: #3764a0;display: block;width: 24px;text-align: center;padding: 1px 2px;color: #fff;text-transform: uppercase;transform: skewX(-6deg);font-size: 10px;">lan</span>
-                            <div class="stadium"><b>Shanghai</b><span>Oriental Sports Center<span></div>
-                            {% elseif i == 1 %}
-                            <svg class="tt" title="LAN - Shanghai Oriental Sports Center" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="#777777" stroke-width="1.25"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-stadium">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M4 12a8 2 0 1 0 16 0a8 2 0 1 0 -16 0" />
-                                <path d="M4 12v7c0 .94 2.51 1.785 6 2v-3h4v3c3.435 -.225 6 -1.07 6 -2v-7" />
-                                <path d="M15 6h4v-3h-4v7" />
-                                <path d="M7 6h4v-3h-4v7" />
-                            </svg>
 
-                            {% elseif i == 2 %}
-
-                            <span class="tt" title="LAN - Shanghai Oriental Sports Center"
-                                style="background: #3764a0;display: block;width: 24px;text-align: center;padding: 1px 2px;color: #fff;text-transform: uppercase;transform: skewX(-6deg);font-size: 10px;">lan</span>
-                            {% elseif i == 3 %}
-
-                            <svg class="tt" title="LAN - Shanghai Oriental Sports Center" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="#777777" stroke-width="1.25"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="icon icon-tabler icons-tabler-outline icon-tabler-timezone">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M20.884 10.554a9 9 0 1 0 -10.337 10.328" />
-                                <path d="M3.6 9h16.8" />
-                                <path d="M3.6 15h6.9" />
-                                <path d="M11.5 3a17 17 0 0 0 -1.502 14.954" />
-                                <path d="M12.5 3a17 17 0 0 1 2.52 7.603" />
-                                <path d="M14 18a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                <path d="M18 16.5v1.5l.5 .5" />
-                            </svg>
-
-                            <!-- <div class="score">
-                                <span class="type2">1 : 2</span>
-                            </div>
-                            <span>
-                                 -->
-                            <!-- <picture>
-                                <source type="image/webp" srcset="./img/dummy/{{random(teamlogo)}}.png">
-                                <img src="./img/dummy/{{random(teamlogo)}}.png" alt="">
-                            </picture>
-                            <b>VP</b> -->
-                            {% endif %}
-
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </s>
-            <i class="date">
-                <span class="sct" data-format="%j% %m% %y%" datetime="2019-05-25 15:41:00">25 мая</span>
-                <span class="scm" data-nsrt="1" data-value="$5000">$5,000</span>
-            </i>
-            <picture class="tourlogo">
+        <a class="frow type2" data-test-id="events-item-2" href="/ru/pubg/pgs-2026-circuit-4-series-1">
+            <picture>
                 <source type="image/webp" srcset="./img/dummy/{{random(tourlogo)}}.png">
                 <img src="./img/dummy/{{random(tourlogo)}}.png" alt="">
             </picture>
-        </div>
+            <b class="active" style="display: flex; gap: 10px;">
+                {{random(tour)}}
+                {% if i == 0 %}
+                <span class="tt" title="LAN - Shanghai Oriental Sports Center"
+                    style="background: #a03763;display: block;width: 24px;text-align: center;padding: 1px 2px;color: #fff;text-transform: uppercase;transform: skewX(-6deg);font-size: 10px;">lan</span>
+                {% endif %}
+            </b>
+            <s style="flex-basis: auto; flex-grow: 1;display: flex;">
+                {% if i == 0 %}
+                <style>
+                    .stadium {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 10px;
+                        color: #777;
+                        margin-left: 5px;
+                    }
+                </style>
+                <img src="./img/dummy/{{random(flag)}}.png">
+                <div class="stadium"><b>{{random(city)}}</b><span>{{random(arena)}}<span></div>
+                {% endif %}
+            </s>
+            <i class="date">
+                <span class="sct" data-format="" datetime="2026-10-14 - 0000-00-00">14 октября</span>
+                <span class="scm" data-nsrt="1" data-value="$100000">$100,000</span>
+            </i>
+            <u class="gl gl100"></u>
+        </a>
+
+
         {% endfor %}
 
         <div class="hblock">
