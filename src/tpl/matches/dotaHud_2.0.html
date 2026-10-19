@@ -274,6 +274,22 @@ lh: 30, dn: 1, gpm: 260, xpm: 380, dmg: '4.1k', heal: 600, bld: 0.2
 ]
 } %}
 
+{% set item_timings = {
+    'magic_wand': 120, 'ring_of_basilius': 180, 'wind_lace': 240,
+    'power_treads': 300, 'phase_boots': 360, 'arcane_boots': 240,
+    'travel_boots': 1200, 'guardian_greaves': 1500,
+    'blink': 600, 'force_staff': 720, 'glimmer_cape': 300,
+    'aether_lens': 900, 'witch_blade': 1000, 'cyclone': 1100,
+    'orchid': 1200, 'kaya_and_sange': 1320, 'ethereal_blade': 1500,
+    'bfury': 1080, 'manta': 1320, 'black_king_bar': 1080,
+    'ultimate_scepter': 900, 'aghanims_shard': 1200, 'bloodthorn': 1680,
+    'skadi': 1500, 'satanic': 1680, 'butterfly': 1800,
+    'shivas_guard': 1680, 'assault': 1800, 'heart': 1800,
+    'pipe': 1200, 'crimson_guard': 1320,
+    'enchanted_quiver': 900, 'flicker': 900, 'searing_signet': 900,
+    'trusty_shovel': 600, 'broom_handle': 600, 'possessed_mask': 900,
+    'ascetic_cap': 900, 'stormcrafter': 900, 'pig_pole': 600
+} %}
 
 
 {# ============================================================
@@ -359,7 +375,7 @@ STYLES
   }
 
   .draft-slot.pick {
-    width: 55px;
+    width: 45px;
     box-shadow: 3px 3px #0000003d;
   }
 
@@ -508,7 +524,7 @@ STYLES
 
   .match-rezults .shower .reztable .items {
     display: flex;
-    gap: 2px;
+    gap: 1px;
     min-width: auto;
   }
 
@@ -926,7 +942,13 @@ STYLES
                     <div class="items main-inventory">
                       {% for i in 0..5 %}
                       {% if player.inventory[i] %}
-                      <picture class="item"><img src="{{ player.inventory[i].img }}"></picture>
+                      {% set item_key = player.inventory[i].img|split('/')|last|replace({'.png': ''}) %}
+                      {% set time_sec = item_timings[item_key]|default(0) %}
+                      {% set time_min = (time_sec / 60)|round(0, 'floor') %}
+                      <picture class="item">
+                        <img src="{{ player.inventory[i].img }}">
+                        {% if time_min > 0 %}<i>{{ time_min }}m</i>{% endif %}
+                      </picture>
                       {% else %}
                       <div class="item empty"></div>
                       {% endif %}
@@ -1523,21 +1545,41 @@ STYLES
               if (player.buffs.aghs) row.querySelector('.buff.aghs').classList.toggle('active', time >= 900);
               if (player.buffs.shard) row.querySelector('.buff.shard').classList.toggle('active', time >= 1200);
 
-              row.querySelectorAll('.main-inventory .item').forEach((slot, i) => {
-                const itemData = player.inventory[i];
-                if (itemData) {
-                  const name = Object.keys(itemTimings).find(k => itemData.img.includes(k));
-                  const buyTime = name ? itemTimings[name] : 0;
-                  if (time >= buyTime) {
-                    slot.innerHTML = `<img src="${itemData.img}">`;
-                    slot.classList.remove('empty');
-                  } else {
-                    slot.innerHTML = ''; slot.classList.add('empty');
-                  }
-                } else {
-                  slot.innerHTML = ''; slot.classList.add('empty');
-                }
-              });
+
+
+      // === ОСНОВНОЙ ИНВЕНТАРЬ (Сортировка слева направо по времени покупки) ===
+      // 1. Собираем только те предметы, которые уже куплены на текущий момент времени
+      const boughtItems = [];
+      player.inventory.forEach(item => {
+        if (item) {
+          const name = Object.keys(itemTimings).find(k => item.img.includes(k));
+          const buyTime = name ? itemTimings[name] : 0;
+          
+          // Если время покупки уже наступило (или предмет без тайминга)
+          if (time >= buyTime) {
+            boughtItems.push({ ...item, buyTime: buyTime });
+          }
+        }
+      });
+
+      // 2. Сортируем купленные предметы по времени (от ранних к поздним)
+      boughtItems.sort((a, b) => a.buyTime - b.buyTime);
+
+      // 3. Заполняем слоты слева направо
+      row.querySelectorAll('.main-inventory .item').forEach((slot, i) => {
+        if (boughtItems[i]) {
+          const item = boughtItems[i];
+          const buyMin = Math.floor(item.buyTime / 60);
+          const badge = buyMin > 0 ? `<i>${buyMin}m</i>` : '';
+          
+          slot.innerHTML = `<img src="${item.img}">${badge}`;
+          slot.classList.remove('empty');
+        } else {
+          // Если предметов меньше, чем слотов, оставшиеся слоты пустые
+          slot.innerHTML = ''; 
+          slot.classList.add('empty');
+        }
+      });
 
               row.querySelectorAll('.backpack .item').forEach((slot, i) => {
                 const itemData = player.backpack[i];
